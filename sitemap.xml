@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.haneycodes.net/new-blog-and-hiring-needs/</loc>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.haneycodes.net/on-hiring-developers-are-like-stocks/</loc>
     <lastmod>2017-02-10T11:11:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -382,7 +389,7 @@
   
   <url>
     <loc>http://www.haneycodes.net/categories/blog/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -403,14 +410,14 @@
   
   <url>
     <loc>http://www.haneycodes.net/tags/career/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.haneycodes.net/categories/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -487,7 +494,14 @@
   
   <url>
     <loc>http://www.haneycodes.net/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/hiring/</loc>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -543,7 +557,7 @@
   
   <url>
     <loc>http://www.haneycodes.net/tags/management/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -592,7 +606,7 @@
   
   <url>
     <loc>http://www.haneycodes.net/tags/open-source/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -613,7 +627,7 @@
   
   <url>
     <loc>http://www.haneycodes.net/post/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

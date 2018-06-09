@@ -59,7 +59,7 @@
 
 
 
-<meta property="og:updated_time" content="2013-02-11T15:15:46&#43;00:00"/>
+<meta property="og:updated_time" content="2013-02-12T12:07:12&#43;00:00"/>
 
 
 
@@ -135,6 +135,33 @@
   <section id="posts" class="posts">
     
     
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/a-better-mime-mapping-stealer/">A Better MIME Mapping Stealer!</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-02-12 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 179 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Funcinstead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):
+/// &lt;summary&gt; /// Exposes the Mime Mapping method that Microsoft hid from us.
+    </div>
+    <div class="read-more">
+      <a href="/a-better-mime-mapping-stealer/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     
       <article class="post">
   <header class="post-header">
@@ -374,33 +401,6 @@ Continuing where we left off last, the following code will utilize a Task Contin
     </div>
     <div class="read-more">
       <a href="/tpl-and-error-handling-continuations/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/tpl-and-error-handling/">TPL and Error Handling</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-08-05 </span>
-      <div class="post-category">
-          
-            <a href="/categories/blog/"> blog </a>
-          
-        </div>
-      <span class="more-meta"> 1019 words </span>
-      <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
-Let&#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:
-    </div>
-    <div class="read-more">
-      <a href="/tpl-and-error-handling/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
