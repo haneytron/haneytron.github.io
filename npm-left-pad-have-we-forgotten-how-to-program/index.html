@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>NPM &amp; left-pad: Have We Forgotten How To Program? - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
+A simple NPM package called left-pad that was a dependency of their code.
+left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="NPM &amp; left-pad: Have We Forgotten How To Program?" />
+<meta property="og:description" content="Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
+A simple NPM package called left-pad that was a dependency of their code.
+left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/" />
+
+
+
+<meta property="article:published_time" content="2016-03-23T18:01:52&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-03-23T18:01:52&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="NPM &amp; left-pad: Have We Forgotten How To Program?">
+<meta itemprop="description" content="Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
+A simple NPM package called left-pad that was a dependency of their code.
+left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.">
+
+
+<meta itemprop="datePublished" content="2016-03-23T18:01:52&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-23T18:01:52&#43;00:00" />
+<meta itemprop="wordCount" content="930">
+
+
+
+<meta itemprop="keywords" content="left-pad,npm,packages,programming," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NPM &amp; left-pad: Have We Forgotten How To Program?"/>
+<meta name="twitter:description" content="Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
+A simple NPM package called left-pad that was a dependency of their code.
+left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">NPM &amp; left-pad: Have We Forgotten How To Program?</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-03-23 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 930 words </span>
+        <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#have-we-forgotten-how-to-program">Have We Forgotten How To Program?</a></li>
+<li><a href="#functions-are-not-packages">Functions Are Not Packages</a></li>
+<li><a href="#third-party-problems">Third Party Problems</a></li>
+<li><a href="#strive-for-few-dependencies">Strive For Few Dependencies</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="intro">Intro</h1>
+
+<p>Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:</p>
+
+<p>A simple NPM package called <a href="https://www.npmjs.com/package/left-pad">left-pad</a> that was a dependency of their code.</p>
+
+<p>left-pad, at the time of writing this, <a href="https://github.com/azer/left-pad">has 11 stars on GitHub</a>. The entire package is <a href="https://github.com/azer/left-pad/blob/master/index.js">11 simple lines that implement a basic left-pad string function</a>. In case those links ever die, here is the entire code of the left-pad package:</p>
+
+<pre><code>module.exports = leftpad;
+function leftpad (str, len, ch) {
+  str = String(str);
+  var i = -1;
+  if (!ch &amp;&amp; ch !== 0) ch = ' ';
+  len = len - str.length;
+  while (++i &lt; len) {
+    str = ch + str;
+  }
+  return str;
+}
+</code></pre>
+
+<p>What concerns me here is that <em>so many packages and projects</em> took on a <strong>dependency</strong> for a simple left padding string function, rather than their developers taking 2 minutes to write such a basic function themselves.</p>
+
+<p>As a result of learning about the left-pad disaster, I started investigating the NPM ecosystem. Here are some of the things that I observed:</p>
+
+<ul>
+<li><p>There&#8217;s a package called <a href="https://www.npmjs.com/package/isarray">isArray</a> that has 880,000 downloads a day, and 18 million downloads in February of 2016. It has <strong>72 dependent NPM packages</strong>. Here&#8217;s its <strong>entire 1 line of code</strong>:</p>
+
+<p><code>return toString.call(arr) == '[object Array]';</code></p></li>
+
+<li><p>There&#8217;s a package called <a href="https://www.npmjs.com/package/is-positive-integer">is-positive-integer</a> (<a href="https://github.com/tjmehta/is-positive-integer">GitHub</a>) that is <strong><a href="https://github.com/tjmehta/is-positive-integer/blob/master/index.js">4 lines long</a></strong> and as of yesterday required <strong>3 dependencies</strong> to use. The author has since refactored it to require 0 dependencies, but I have to wonder why it wasn&#8217;t that way in the first place.</p></li>
+
+<li><p>A fresh install of the <a href="https://www.npmjs.com/package/babel">Babel</a> package includes <strong>41,000 files</strong></p></li>
+
+<li><p>A <strong>blank jspm/npm-based app template</strong> now starts with <strong>28,000+ files</strong></p></li>
+</ul>
+
+<p>All of this leads me to wonder&#8230;</p>
+
+<h1 id="have-we-forgotten-how-to-program">Have We Forgotten How To Program?</h1>
+
+<p>On what possible plane of existence is this a better solution to past problems? How are hundreds of dependencies and 28,000 files for a blank project template anything but overly complicated and insane?</p>
+
+<p>I get the impression that the NPM ecosystem participants have created a penchant for micro-packages. Rather than write any functions or code, it seems that they prefer to depend on something that someone else has written. It feels to me as if the entire job of an NPM-participating developer is writing the smallest amount of code possible to string existing library calls together in order to create something new that functions uniquely for their personal or business need.</p>
+
+<h1 id="functions-are-not-packages">Functions Are Not Packages</h1>
+
+<p>Functions are too small to make into a package and dependency. Pure functions don&#8217;t have cohesion; they are random snippets of code and nothing more. Who really wants a &#8220;cosine&#8221; dependency? We&#8217;d all really like a &#8220;trigonometry&#8221; dependency instead which encompasses many &#8220;tricky&#8221; functions that we don&#8217;t want to have to write ourselves. This is much more akin to how .NET and other frameworks create a &#8220;core&#8221; library of basic functionality. Such a library is vetted by the creators of the language and pretty much guaranteed to be correct and bug-free.</p>
+
+<h1 id="third-party-problems">Third Party Problems</h1>
+
+<p>There&#8217;s absolutely no guarantee that what someone else has written is correct, or even works well. Even if correct, is it the most optimal solution possible? At least when you write the code yourself, you can easily modify it to fix bugs and improve its efficiency. Not that there should be many bugs in 1 line functions.</p>
+
+<p>Second, even if the package&#8217;s logic is correct, I can&#8217;t help but be amazed by the fact that developers are taking on dependencies for single line functions that they should be able to write with their eyes closed. In my opinion, if you cannot write a left-pad, is-positive-integer, or isArray function in 5 minutes flat (including the time you spend Googling), then <strong>you don&#8217;t actually know how to code</strong>. Any of these would make a great code screening interview question to determine whether or not a candidate can code.</p>
+
+<p>Finally, stringing APIs together and calling it programming doesn&#8217;t make it programming. It&#8217;s some crazy form of dependency hacking that involves the cloud, over-engineering things, and complexity far beyond what&#8217;s actually needed to create great applications.</p>
+
+<p>What&#8217;s worse is that if any of your code (or the 3rd party dependency code) has a bug or breaks, you won&#8217;t know how to debug or fix it if you don&#8217;t know how to program.</p>
+
+<h1 id="strive-for-few-dependencies">Strive For Few Dependencies</h1>
+
+<p>Every package that you use adds yet another <strong>dependency</strong> to your project. Dependencies, by their very name, are things you <strong>need</strong> in order for your code to function. The more dependencies you take on, the more points of failure you have. Not to mention the more chance for error: have you vetted any of the programmers who have written these functions that you depend on daily?</p>
+
+<p>Take on a dependency for any complex functionality that would take a lot of time, money, and/or debugging to write yourself. Things like a database access layer (ORM) or caching client should be dependencies because they&#8217;re complicated and the risk of the dependency is well worth the savings and efficiency.</p>
+
+<p>But, for the love of all that is programming, write your own bloody basic programming functions. Taking on dependencies for these one-liners is just nuts. Don&#8217;t believe me? Just ask the React team how well their week has been going, and whether they wish they had written those 11 lines for left-padding a string themselves.</p>
+
+<p><em>Follow David Haney on Twitter at <a href="http://www.twitter.com/haneycodes">@haneycodes</a></em></p>
+
+<p><em>Updated Jan 13 2017 with some minor grammar and sentence structure changes.</em></p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/left-pad/">left-pad</a>
+          
+          <a href="/tags/npm/">npm</a>
+          
+          <a href="/tags/packages/">packages</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/lets-talk-about-rock-stars-egos/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Let&#39;s Talk About Rock Stars &amp; Egos</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/developer-compensation-stack-overflow-doesnt-stack-rank/">
+            <span class="next-text nav-default">Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Diversity Is Really Freaking Hard - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="Background I&amp;#8217;m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won&amp;#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&amp;#8217;m going to tell you about the things I&amp;#8217;ve experienced working on diversity &amp;#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It&amp;#8217;s no secret that the tech industry is not that diverse." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/diversity-is-really-freaking-hard/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Diversity Is Really Freaking Hard" />
+<meta property="og:description" content="Background I&#8217;m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won&#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&#8217;m going to tell you about the things I&#8217;ve experienced working on diversity &#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It&#8217;s no secret that the tech industry is not that diverse." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/diversity-is-really-freaking-hard/" />
+
+
+
+<meta property="article:published_time" content="2015-09-24T11:23:38&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-09-24T11:23:38&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Diversity Is Really Freaking Hard">
+<meta itemprop="description" content="Background I&#8217;m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won&#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&#8217;m going to tell you about the things I&#8217;ve experienced working on diversity &#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It&#8217;s no secret that the tech industry is not that diverse.">
+
+
+<meta itemprop="datePublished" content="2015-09-24T11:23:38&#43;00:00" />
+<meta itemprop="dateModified" content="2015-09-24T11:23:38&#43;00:00" />
+<meta itemprop="wordCount" content="2182">
+
+
+
+<meta itemprop="keywords" content="conflict,culture,diversity,mistakes,workplace," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Diversity Is Really Freaking Hard"/>
+<meta name="twitter:description" content="Background I&#8217;m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won&#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&#8217;m going to tell you about the things I&#8217;ve experienced working on diversity &#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It&#8217;s no secret that the tech industry is not that diverse."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Diversity Is Really Freaking Hard</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-09-24 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 2182 words </span>
+        <span class="more-meta"> 11 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#diversity-page-goes-live">Diversity Page Goes Live</a></li>
+<li><a href="#the-blog-post">The Blog Post</a></li>
+<li><a href="#i-felt-wronged">I Felt Wronged</a></li>
+<li><a href="#the-company-wide-revelation">The Company-Wide Revelation</a></li>
+<li><a href="#i-felt-even-more-wronged">I Felt Even More Wronged</a></li>
+<li><a href="#this-wasn-8217-t-about-me-at-all">This Wasn&#8217;t About Me At All</a></li>
+<li><a href="#diversity-at-stack-overflow">Diversity At Stack Overflow</a></li>
+<li><a href="#what-8217-s-next">What&#8217;s Next</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="background">Background</h1>
+
+<p>I&#8217;m going to discuss an important topic that affects everybody in tech: diversity.</p>
+
+<p>No, this won&#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&#8217;m going to tell you about the things I&#8217;ve experienced working on diversity &#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.</p>
+
+<p>It&#8217;s no secret that the tech industry is not that diverse. It&#8217;s mostly dominated by white males, with a few women and minorities making appearances. Those who do enter the industry as a minority often feel marginalized and excluded.</p>
+
+<p>Of about 40 engineering employees at Stack Overflow, maybe 8 are not white men. We can clearly do better.</p>
+
+<p>As you may have learned in <a href="http://www.haneycodes.net/developer-turned-manager">my last post</a>, earlier this year I was promoted to Engineering Manager at Stack Overflow (formerly Stack Exchange (formerly Stack Overflow)). One of my first projects was to work on diversity at our company. As a part of this goal, I was given the opportunity to create a new diversity page to showcase our efforts.</p>
+
+<p>There&#8217;s a volunteer group that we have internally called the Diversity &amp; Inclusion Panel (DIP). This group works to make Stack Overflow a more open, diverse, and welcoming environment.</p>
+
+<p>There were some awkward feelings that came with taking the lead on the diversity page project. For one, I was a straight white male running a project about diversity, which might raise some eyebrows or make people feel weird/jaded. To mitigate those feelings, and also because I value their opinions, I took the approach of including the DIP in the creation and review of the page. My rationale was that by including a group of self-selected folks who are passionate about diversity, we could reach a solid page design that wasn&#8217;t biased by building it myself. To this end the DIP were consulted multiple times and ultimately had the final say on the copy of the page.</p>
+
+<h1 id="diversity-page-goes-live">Diversity Page Goes Live</h1>
+
+<p>After a few months of iterating with designers and the DIP, last week we rolled out the new page. Here&#8217;s what it looked like in all its glory (please don&#8217;t critique it in the comments &#8211; if you do, you missed the point of this post):</p>
+
+
+<figure>
+    
+        <img src="/img/diversity-page.png" />
+    
+    
+    <figcaption>
+        <h4>Our Shiny New Diversity Page</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>I was excited that we had made progress on such an important and sensitive topic. I announced the roll-out to the DIP group with little feedback or response, which at the time I didn&#8217;t think much of. I also broadcast it on Twitter, with very few others from Stack Overflow doing as such themselves. Again, I thought nothing of the lack of engagement.</p>
+
+<p>A few days go by with the new page rolled out where things are mostly business-as-usual from my perspective. And then, last weekend, something really interesting happened.</p>
+
+<h1 id="the-blog-post">The Blog Post</h1>
+
+<p>An employee at our company wrote a blog post titled &#8220;Discussing diversity terrifies me&#8221; on their personal blog. They have since taken the post down &#8211; a decision they made themselves. The post described this person&#8217;s feelings about our new page and how it made them feel uncomfortable in ways that they couldn&#8217;t fully explain. This person also explained how they felt terrified to discuss diversity with anyone, ever &#8211; even their best friends. This was because of prior experiences at prior companies where the discussion went poorly.</p>
+
+<p>I came across the post on Saturday night at about 9pm. It did not call out me or the page as doing something wrong; it was a way for this person to express some thoughts that were very important to them, but that they otherwise felt they could not bring up.</p>
+
+<h1 id="i-felt-wronged">I Felt Wronged</h1>
+
+<p>Upon reading it, I was really pissed off. I couldn&#8217;t believe that this person, given numerous opportunities to shape the page as part of the DIP, had remained silent during the project. I couldn&#8217;t believe that they didn&#8217;t come to me or anyone else at work, and instead took to talking about their issues on their blog, in public, which at the time I felt served to embarrass me in front of the company. After all, they were given tons of opportunities to talk about it internally, so why didn&#8217;t they? I felt slighted and wronged. I selfishly felt that this was all a personal attack on my work. I wasn&#8217;t happy.</p>
+
+<h1 id="the-company-wide-revelation">The Company-Wide Revelation</h1>
+
+<p>On Monday afternoon I had a private conversation with the person who wrote the blog post. We had a really constructive chat about how the person felt, and ways to improve upon the new page and make it more sincere and reflective of our true values and current workplace diversity. It ended on a positive note. Later Monday evening, I sent out an anonymous survey to solicit broad feedback from folks on how to improve the page. The plan was to iterate to a better version ASAP. Satisfied with trying to improve the situation, I went to bed.</p>
+
+<p>On Tuesday I found myself in a few conversations about our new page. The people engaging me were mostly straight white males (not unlike myself) who all said something similar: &#8220;talking about diversity scares me to death&#8221; and &#8220;it feels like one wrong word and I&#8217;m fired.&#8221; These conversations continued until about 1pm, when a forward-thinking co-worker realized that we all needed to get on the same page. They brought the diversity page controversy up in our company-wide chat room for literally anyone and everyone to discuss. Many people jumped in and what followed, for lack of better description, was quite an epic conversation. It involved a lot of people from a lot of departments &#8211; both people who were visibly diverse and those who were not &#8211; and even included 4 executives. The conversation rolled on for a few hours and culminated in a few important outcomes:</p>
+
+<ul>
+<li>The person who wrote the blog post felt very uncomfortable talking about diversity at all, with anyone</li>
+<li>Their blog post gave a voice to many others who felt the same way but were afraid to speak up</li>
+<li>The diversity page was making people within Stack Overflow uncomfortable</li>
+</ul>
+
+<p>As a result of the company-wide chat, the new diversity page was taken offline.</p>
+
+<h1 id="i-felt-even-more-wronged">I Felt Even More Wronged</h1>
+
+<p>Conveniently, all of this discussion happened while I was at the doctor&#8217;s office for a check-up. As a result of the timing I didn&#8217;t get to participate at all. When I returned from the doctor and read the chat transcript, I became very, very upset and angry. I felt betrayed by the company and wronged by almost everybody who participated in the conversation. In hindsight, I think that I probably would have said some things that I&#8217;d now regret had I been around to participate in the chat. Ignorance is sometimes bliss.</p>
+
+<p>I was boiling over. Many unfair, selfish, and angry thoughts crossed my mind as I read the chat transcript. I thought things like &#8220;f*** it, I&#8217;m never touching another diversity project ever again&#8221; and &#8220;how could these people do this to me?&#8221; and even, for a brief moment, &#8220;what am I doing working somewhere where I&#8217;m undermined and treated unfairly?&#8221;</p>
+
+<p>I called it quits a few hours early on Tuesday and had a few drinks of the alcoholic nature. I was fuming, and ranting to my wife, and otherwise upset about how I had been so wronged by the people that I was trying to help. I took some ibuprofen (for the impending hangover and headache) and passed out, unsure of what Wednesday would bring.</p>
+
+<p>Worth noting, I don&#8217;t recommend self-medicating with alcohol when you&#8217;re upset &#8211; it&#8217;s a bad strategy.</p>
+
+<h1 id="this-wasn-8217-t-about-me-at-all">This Wasn&#8217;t About Me At All</h1>
+
+<p>I awoke Wednesday morning with a clear mind and new perspective on the events of the past few days. I realized some really important things:</p>
+
+<ul>
+<li>Absolutely, literally, none of this was about me. I was being selfish and making it about how I felt, when in reality it was about how we all felt.</li>
+<li>We had created a diversity page that did a poor job of accomplishing our goals on diversity.</li>
+<li>Taking the page offline was the right thing to do, because it was making a lot of people in our company uncomfortable. If it had this effect internally, it surely had a similar effect externally. In this case, the page existing was perhaps worse than having no page at all.</li>
+<li>The person who wrote the blog post was completely in the right, and arguably did the right thing. The alternative was that if they hadn&#8217;t spoken up on their blog, nobody may have. This would leave everyone silently feeling uncomfortable.</li>
+<li>The person who wrote the blog post felt uncomfortable speaking up about diversity at work. They talked about it on their personal blog to keep it outside of the company. This was an important revelation as it showed me that we have a serious issue at our company: people feel as if they don&#8217;t always have the right to speak up about difficult subjects like diversity. One person described it as &#8220;a manager&#8217;s word being law and difficult to contest.&#8221;</li>
+<li>Nobody had been malicious at all. We were all trying to do the right thing, assumed the best of intentions in each other, and were simply expressing our honest feelings on the topic. Feelings are always valid.</li>
+</ul>
+
+<h1 id="diversity-at-stack-overflow">Diversity At Stack Overflow</h1>
+
+<p>Through all of this I realized some of why diversity is such a hard topic for people to discuss: no matter what position you are in, you probably feel like you&#8217;re not entitled to participate in the conversation. When nobody feels like they&#8217;re able to talk, silence soon becomes apathy.</p>
+
+<p>On the topic of diversity issues, apathy rules all. It&#8217;s a safe and easy play to do nothing at all. Taking a stance means meeting resistance and having conversations where everyone feels invalidated. Unfortunately, doing nothing enables and furthers the issue.</p>
+
+<p>One of the mistakes that I made was not considering the emotional response of the new diversity page that we created. How the page makes people feel is the only measure of success. The people in our company felt that the page was insincere and made them uncomfortable.</p>
+
+<p>Here&#8217;s the truth: despite what the page said, we&#8217;re not great at diversity. We have about 40 engineering team members, and only 4 of them are women. At most, 8 or 9 total are of a visible minority. We certainly have a diverse team in the sense that we&#8217;re located all over the world, but that isn&#8217;t how everybody defines diversity, and maybe isn&#8217;t even the most important form of diversity since those geographically diverse people aren&#8217;t necessarily marginalized.</p>
+
+<p>It&#8217;s really easy to feel as if your company sucks at diversity when any discussion is met with frustration and hurt feelings. However, I am really proud of the fact that at Stack Overflow we are able to have these conversations. We had a company-wide discussion on how the page made everybody feel, and even though that discussion got extremely heated and many people felt many strong emotions, not one person made it personal. There were 4 executives in the conversation and nobody quit or got fired.</p>
+
+<p>I&#8217;m thankful that one person had the courage to write a blog post and speak up about their overarching fear of discussing diversity. What scares me as a manager is the idea that people might feel as if there&#8217;s no channel to talk about things that make them uncomfortable. If people don&#8217;t express their concerns, they suffer silently. It was the actions of one person that saved us all from a much worse outcome.</p>
+
+<p>Ultimately, we made a company diversity page that&#8217;s like every other company&#8217;s diversity page, at a company that prides itself in not being like any other company. We&#8217;ve identified that people at Stack Overflow sometimes feel like they are unable to speak up on difficult topics &#8211; both inside and outside of the company &#8211; and that&#8217;s something that we need to work on.</p>
+
+<h1 id="what-8217-s-next">What&#8217;s Next</h1>
+
+<p>As I said earlier, the easy and safe play is to do nothing. We could leave things in their current state of no longer having a diversity page, but it would also be the wrong thing to do.</p>
+
+<p>What we must do now is continue the conversation. We need to talk honestly about diversity and discuss the feelings that we have around it. We need to channel those feelings into a better diversity page that accurately reflects our company and how we feel on the subject. We need to admit that diversity is hard, but that we&#8217;re working on it. Most importantly, we need to assume the best intentions of each other and make progress together in all of our diversity initiatives.</p>
+
+<p>I hope that in reading this, you feel inspired to start or continue the conversation about diversity in your workplace. Like many companies, we have a long way to go. It&#8217;s challenging, but as a co-worker said, &#8220;the hardest conversations are often the ones most worth having.&#8221;</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/conflict/">conflict</a>
+          
+          <a href="/tags/culture/">culture</a>
+          
+          <a href="/tags/diversity/">diversity</a>
+          
+          <a href="/tags/mistakes/">mistakes</a>
+          
+          <a href="/tags/workplace/">workplace</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/developer-compensation-stack-overflow-doesnt-stack-rank/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/developer-turned-manager/">
+            <span class="next-text nav-default">Developer Turned Manager</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

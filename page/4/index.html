@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/" />
+<link href="http://www.haneycodes.net/index.xml" rel="alternate" type="application/rss+xml" title="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+  <link href="http://www.haneycodes.net/index.xml" rel="feed" type="application/rss+xml" title="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+<meta property="og:description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.haneycodes.net/" />
+
+
+
+<meta property="og:updated_time" content="2013-02-11T15:15:46&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Haney Codes .NET - Sharing my experiences as a developer and engineering manager.">
+<meta itemprop="description" content="A blog by David Haney, Engineering Manager at Stack Overflow.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Haney Codes .NET - Sharing my experiences as a developer and engineering manager."/>
+<meta name="twitter:description" content="A blog by David Haney, Engineering Manager at Stack Overflow."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/determine-mime-type-from-file-name/">Determine MIME Type from File Name</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-02-11 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 654 words </span>
+      <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&#8230; A sort of &#8220;pass-through&#8221; if you will. Normally I&#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &#8220;directory&#8221; to switch behind the scenes based on Session settings&#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.
+    </div>
+    <div class="read-more">
+      <a href="/determine-mime-type-from-file-name/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/published-by-red-gate/">Published by Red Gate</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-01-18 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 88 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      As of today I&#8217;ve been published in an e-Book offered for free by Red Gate! It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
+My tip is #3 and has to do with debugging Microsoft symbols.
+Get a free copy here &#8211; it has already taught me a few things I had never thought to consider!
+    </div>
+    <div class="read-more">
+      <a href="/published-by-red-gate/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/but-it-didnt-happen-in-dev-or-qa/">But it Didn&#39;t Happen in DEV or QA!</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-12-02 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 1451 words </span>
+      <span class="more-meta"> 7 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Most of us have been there: you&#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
+Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&#8217;d be able to solve the problem.
+    </div>
+    <div class="read-more">
+      <a href="/but-it-didnt-happen-in-dev-or-qa/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/visual-studio-2012-intellisense-not-working-solved/">Visual Studio 2012 Intellisense Not Working - SOLVED</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-11-20 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 302 words </span>
+      <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      So, this post is about our beloved IDE instead of actual code.
+I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself &#8220;what the hell Visual Studio? 2010 didn&#8217;t have these problems?!&#8221; and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.
+    </div>
+    <div class="read-more">
+      <a href="/visual-studio-2012-intellisense-not-working-solved/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/static-vs-instance-string-equals-benchmark/">Static vs Instance string.Equals Benchmark</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-10-24 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 184 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:
+static void Main(string[] args) { var stopwatch = new Stopwatch(); string a = &quot;hello&quot;; string b = &quot;hi&quot;; stopwatch.Start(); for (int i = 0; i &lt; 10000000; i++) { a.Equals(b); } stopwatch.Stop(); Console.WriteLine(&quot;Instance string.Equals over 10,000,000 iterations: &quot; + stopwatch.
+    </div>
+    <div class="read-more">
+      <a href="/static-vs-instance-string-equals-benchmark/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/stats-vs-reference-string-equals/">Static vs Instance string.Equals</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-10-22 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 196 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals method in .NET, but if that doesn&#8217;t do it for you, allow me to present a simple example.
+string a = &quot;hello&quot;; string b = &quot;hi&quot;; bool result = a.Equals(b);  What is the expected result of these lines? A boolean value of false, of course.
+    </div>
+    <div class="read-more">
+      <a href="/stats-vs-reference-string-equals/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/the-joel-test-really-is-meaningful/">The Joel Test Really is Meaningful</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-10-14 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 717 words </span>
+      <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Well, it&#8217;s been nearly 2 months since my last post&#8230; I&#8217;m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
+The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.
+    </div>
+    <div class="read-more">
+      <a href="/the-joel-test-really-is-meaningful/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/published-by-mdsn-uk-blog/">Published by MDSN UK Blog</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-08-26 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 35 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This isn&#8217;t a very technical post, but I was published by Microsoft recently via their MSDN UK Blog! The article is on creating and maintaining a successful User Group.
+Click here to read the article!
+    </div>
+    <div class="read-more">
+      <a href="/published-by-mdsn-uk-blog/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/tpl-and-error-handling-continuations/">TPL and Error Handling &amp; Continuation Tasks</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-08-12 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 261 words </span>
+      <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
+Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.
+    </div>
+    <div class="read-more">
+      <a href="/tpl-and-error-handling-continuations/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/tpl-and-error-handling/">TPL and Error Handling</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-08-05 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 1019 words </span>
+      <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:
+    </div>
+    <div class="read-more">
+      <a href="/tpl-and-error-handling/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+  </section>
+  
+  <nav class="pagination">
+    
+      <a class="prev" href="/page/3/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+      <a class="next" href="/page/5/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+  </nav>
+
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

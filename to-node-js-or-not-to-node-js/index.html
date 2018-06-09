@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>To Node.js Or Not To Node.js - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="Intro Node.js &amp;#8211; it has rapidly become the &amp;#8220;new hotness&amp;#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&amp;#8217;t worry, they&amp;#8217;ll let you know.
+One day you&amp;#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &amp;#8220;Have you guys tried Node." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/to-node-js-or-not-to-node-js/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="To Node.js Or Not To Node.js" />
+<meta property="og:description" content="Intro Node.js &#8211; it has rapidly become the &#8220;new hotness&#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&#8217;t worry, they&#8217;ll let you know.
+One day you&#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &#8220;Have you guys tried Node." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/to-node-js-or-not-to-node-js/" />
+
+
+
+<meta property="article:published_time" content="2014-03-24T16:41:25&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-03-24T16:41:25&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="To Node.js Or Not To Node.js">
+<meta itemprop="description" content="Intro Node.js &#8211; it has rapidly become the &#8220;new hotness&#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&#8217;t worry, they&#8217;ll let you know.
+One day you&#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &#8220;Have you guys tried Node.">
+
+
+<meta itemprop="datePublished" content="2014-03-24T16:41:25&#43;00:00" />
+<meta itemprop="dateModified" content="2014-03-24T16:41:25&#43;00:00" />
+<meta itemprop="wordCount" content="2609">
+
+
+
+<meta itemprop="keywords" content=".net,analysis,node.js,performance,programming," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="To Node.js Or Not To Node.js"/>
+<meta name="twitter:description" content="Intro Node.js &#8211; it has rapidly become the &#8220;new hotness&#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&#8217;t worry, they&#8217;ll let you know.
+One day you&#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &#8220;Have you guys tried Node."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">To Node.js Or Not To Node.js</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-03-24 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 2609 words </span>
+        <span class="more-meta"> 13 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#complexity-matters">Complexity Matters</a></li>
+<li><a href="#misunderstandings">Misunderstandings</a></li>
+<li><a href="#owin-a-better-net">OWIN &amp; A Better .NET</a></li>
+<li><a href="#owin-net-vs-node-js">OWIN .NET vs Node.js</a></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+<li><a href="#conclusions">Conclusions</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="intro">Intro</h1>
+
+<p><strong>Node.js &#8211; it has rapidly become the &#8220;new hotness&#8221; in the tech start-up realm.</strong> With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&#8217;t worry, they&#8217;ll let you know.</p>
+
+<p>One day you&#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &#8220;Have you guys tried Node.js?&#8221; asks one of the people in your group. &#8220;It&#8217;s all the rage. All of the cool kids in Silicon Valley are using it!&#8221; &#8220;What does it do?&#8221; you ask, only to be bombarded with a sales pitch worthy of the best of used car lots. &#8220;Oh, it&#8217;s amazing!&#8221; they reply, sipping their diet coke and shuffling their hipster fedora and backpack with MacBook Pro in it (or something like that), &#8220;It&#8217;s server side JavaScript. It runs on a single thread and it can do 100,000 web requests a second!&#8221; They glance at the group for the oohs and ahhs, but most people just stare back with amazement in their eyes. Then, your hipster Node-loving friend drops the words that start wars: <strong>&#8220;It&#8217;s way better than .NET&#8221;</strong> &#8211; and just like that, your group is hooked. They go home, download the Node.js tools, write &#8220;Hello World&#8221;, and suddenly they&#8217;re on their way to the next user group meeting to talk about how great Node is.</p>
+
+<p>Okay, so I might be exaggerating the appearance and demeanour of your average Node lover a little (read: a lot, almost entirely in fact). However, I have had this exact scenario happen repeatedly over the last six months, with ever-increasing intensity and frequency. Node users love Node. They want you to love Node. They&#8217;re excited about it.</p>
+
+<p>Having given it some thought, why wouldn&#8217;t Node.js developers be excited? Want to fire up a &#8220;Hello World&#8221; web server in Node? It&#8217;s trivial:</p>
+
+<pre><code>// Load the http module to create an http server.
+var http = require('http');
+
+// Configure our HTTP server to respond with Hello World to all requests.
+var server = http.createServer(function (request, response) {
+  response.writeHead(200, {&quot;Content-Type&quot;: &quot;text/plain&quot;});
+  response.end(&quot;Hello World\n&quot;);
+});
+
+// Listen on port 8000, IP defaults to 127.0.0.1
+server.listen(8000);
+</code></pre>
+
+<p>Want to do the same thing in .NET? Be prepared to learn about IIS, the Machine.config, the Web.config, the Process Model, how Global.asax works, either ASP.NET MVC or WebForms (huge paradigms in themselves), and how Visual Studio works. Don&#8217;t forget to learn how to create a solution, at least one web project, and how to deploy the application to IIS. Oh, and one little detail: go ahead and learn C# while you&#8217;re at it. All of that&#8217;s pretty much just as easy and intuitive as Node.js, right?</p>
+
+<h1 id="complexity-matters">Complexity Matters</h1>
+
+<p>.NET is incredibly complicated. Node.js is incredibly simple. On the merits of that fact alone it&#8217;s no wonder that these .NET developers and fresh-out-of-college kids who have already dabbled in JavaScript are transferring these skills to the server side and standing up web servers in literally 5 minutes and 5 lines of code. How can you deny the sexiness of that? The bragging rights it gives you? The ease and comfort of a language you&#8217;re already familiar with?</p>
+
+<p>This, in my opinion, is why Node.js is becoming huge. It has simplified and streamlined the development process and made programming very accessible to almost everyone (or at least anyone who has ever played with JavaScript).</p>
+
+<p><strong>However, to those who sell Node.js as single-threaded, and to those who sell Node.js as having significantly better performance than .NET, I say this: you are wrong.</strong></p>
+
+<h1 id="misunderstandings">Misunderstandings</h1>
+
+<p>With simplicity comes misunderstanding and the concept of &#8220;Leaky Abstractions.&#8221; As my good friend and colleague Thomas B. said to me during dinner last week: <strong>Node.js is <em>opinionated</em></strong>. It has an opinion on how you should do things, and it forces you to do them a certain way.</p>
+
+<p><strong>Node.js is not single-threaded</strong>, though many Node developers in my experience believe it to be. Node&#8217;s creator believes that a single-threaded listener delegating I/O-bound work to a thread pool is the key to a highly available application. As a result, Node.js forces you into this paradigm of event-based asynchronous execution of I/O operations via a thread pool.</p>
+
+<p><strong>Node.js has a single thread listening for connections. All of the code which you as the Node developer write is executed on this single thread. This single thread is all that is exposed to you.</strong> As soon as a connection is received, Node&#8217;s listening thread executes your coded event on the same listener thread. This event either does quick, non-CPU intensive work (like returning static content to a client), or long-running I/O bound operations (like reading data from a database). In the case of the former, the listener thread does in fact block for the duration of the request, but the request happens so quickly that the delay is trivial. <strong>In the case of the latter, Node uses V8 and libuv (which it is built upon) to delegate the I/O work to a thread from an underlying pool of native C++ threads.</strong> The single listening thread kicks off the work to an I/O worker thread with a callback that says &#8220;tell me when you&#8217;re done&#8221; and immediately returns to listening for the next connection. <strong>It is thus plain to see that Node.js is indeed multi-threaded, though this functionality is not directly exposed to the Node developer.</strong></p>
+
+<p><strong>An important note regarding Node.js is that any CPU-intensive code which you write will block the entire system and make your application scale poorly or become entirely unresponsive.</strong> As a result, you would not want to use Node.js when you need to write an application that will do CPU-intensive work such as performing calculations or creating reports.</p>
+
+<p>This is how a single thread can handle multiple requests at once; receiving a request and either serving static/simple content or delegating it to an I/O thread from a thread pool are both very cheap and quick operations. When the thread pool thread that is doing the long-running I/O work signals to the single listener thread that the work is done, the listener thread picks up the response and sends it back to the user; this is another very cheap operation. The core idea is that the single listener thread never blocks: it only does fast, cheap processing or delegation of requests to other threads and the serving of responses to clients. The diagram below (<a href="http://stackoverflow.com/a/14797071/2420979">taken from Stack Overflow</a>) explains this visually:</p>
+
+
+<figure>
+    
+        <img src="/img/node-processing-model.png" />
+    
+    
+    <figcaption>
+        <h4>Node.js Processing Model</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p><strong>This is a very good, scalable, highly-available way to write code; Node.js nailed their approach and developers benefit from it.</strong> However, as of .NET 4.5, you can easily create this exact paradigm/pattern in your .NET applications. <strong><em>The difference is that .NET does not force you to do so.</em></strong></p>
+
+<h1 id="owin-a-better-net">OWIN &amp; A Better .NET</h1>
+
+<p>With the introduction of a very tidy wrapper around asynchronous programming in .NET 4.5 (<strong>async</strong>/<strong>await</strong> keywords), Microsoft made asynchronous, event-based programming quite a bit easier and more intuitive. And with recent conformance by Microsoft to the jointly-created <a href="http://www.owin.org">OWIN specification</a>, the web pipeline of .NET has become much simpler.</p>
+
+<p><strong>In fact, you can now write the &#8220;Hello World&#8221; asynchronous web server in .NET in about as few lines as Node.js!</strong> In this example, I host a web server in a console application which is terminated when a key is pressed:</p>
+
+<pre><code>/// &lt;summary&gt;
+/// A simple program to show off an OWIN self-hosted web app.
+/// &lt;/summary&gt;
+public class Program
+{
+    /// &lt;summary&gt;
+    /// The entry point for the console application.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;args&quot;&gt;The args to the console application. Ignored.&lt;/param&gt;
+    static void Main(string[] args)
+    {
+        // Start OWIN host
+        using (WebApp.Start&lt;Startup&gt;(url: &quot;http://localhost:8000&quot;))
+        {
+            // Runs until a key is pressed
+            Console.ReadKey();
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// This code configures the OWIN web app. The Startup class is specified as a 
+    /// type parameter in the WebApp.Start method.
+    /// &lt;/summary&gt;
+    private class Startup
+    {
+        /// &lt;summary&gt;
+        /// Configures the web app.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;app&quot;&gt;The app builder.&lt;/param&gt;
+        public void Configuration(IAppBuilder app)
+        {
+            // We ignore any rules here and just return the same response for any request
+            app.Run(context =&gt;
+            {
+                context.Response.ContentType = &quot;text/plain&quot;;
+                return context.Response.WriteAsync(&quot;Hello World\n&quot;);
+            } );
+        }
+    }
+}
+</code></pre>
+
+<p>One of the big positives of Node.js is that you opt-in to complexity. You start very simply and add on functionality as you need it. I&#8217;m a big fan of this approach and I feel that this is where Node really shines. Nothing bothers me more than starting an &#8220;Empty MVC 4 Web Application&#8221; from template in Visual Studio only to have it install about 15 Nuget packages, one of which is Entity Framework. Great, I fired up a blank application and already my ORM has been decided for me. Who said I even needed one in the first place?!</p>
+
+<p>The above OWIN-based approach to hosting a web app in .NET allows you to benefit from Node&#8217;s simplistic approach. I have started out simply, and can now add Dapper if I need an ORM, Newtonsoft.Json if I need to serialize to and from JSON, Unity if I care about dependency injection, etc. It&#8217;s a nice, clean slate upon which I can build any framework that I desire.</p>
+
+<h1 id="owin-net-vs-node-js">OWIN .NET vs Node.js</h1>
+
+<p>The OWIN approach in .NET is very comparable to Node.js, with a few differences:</p>
+
+<ul>
+<li>Node.js uses 1 listener thread, while .NET uses N listener threads. If your Node.js application does CPU-intensive work at all, it will block the entire system and potentially cause your application to become unresponsive. .NET, on the other hand, is designed to do CPU intensive work. Tying up a thread to do some CPU work is not of concern because there are other threads available in the listener thread pool to take other requests while this is happening. However, both Node.js and .NET are limited by the server resources; in either case, if you max out the CPU or RAM, your app will perform horribly, regardless of thread delegation. This is known as resource contention.</li>
+<li>Node.js delegates I/O bound work to an I/O thread worker pool, and .NET implemented asynchronously (async methods and the async/await keywords) does the same.</li>
+<li>Node.js uses an event-based paradigm, and .NET does also when implemented asynchronously.</li>
+<li>Node.js offers high performance for I/O bound, low CPU operations, and .NET offers comparable performance when you skip the IIS pipeline. IIS tacks on a significant amount of performance overhead due to things like session state management, forms authentication, the process model, request lifecycle events, etc. These are not bad things to have and use, but if you don&#8217;t need IIS, session state, forms auth, request lifecycle events, or the process model, then don&#8217;t use them!</li>
+<li>Node.js must parse/serialize to and from JSON, and .NET must serialize to and from JSON to interact with .NET objects. Parsing is going to be much cheaper in Node.js than serializing is in .NET, but .NET also enables you to serialize to XML, Atom RSS, and anything else that you desire. With Node, this is a bit trickier, and the serialization overhead comes back into play to even the field.</li>
+</ul>
+
+<p>When someone compares Node.js to .NET, I find that they often actually compare Node.js to IIS hosted frameworks such as ASP.NET MVC, ASP.NET WebForms, and ASP.NET Web API (in IIS hosted mode). These are all tools built on top of ASP.NET to simplify enterprise web development and to do CPU-intensive calculations. In these scenarios, Node.js will have an advantage, because it is designed specifically to NOT do CPU-intensive calculations. You are effectively comparing CPU-intensive Apples to low-CPU-usage Oranges. It is not a fair comparison.</p>
+
+<p>When someone compares Node.js to a self-hosted .NET web app which does I/O-bound long-running operations via asynchronous thread pool delegation, they find that there is not much of a difference in performance between the two runtimes. In fact, comparing Node.js to self-hosted Web API (NOT using IIS) doing low-CPU work, the numbers are very close:</p>
+
+
+<figure>
+    
+        <img src="/img/webapi-vs-node.png" />
+    
+    
+    <figcaption>
+        <h4>WebAPI vs Node.js</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>This image was taken from <a href="http://mikaelkoskinen.net/asp-net-web-api-vs-node-js-benchmark-take-2">a benchmark done in 2012 with the Web API Release Candidate (not Web API 2, and NOT OWIN hosted)</a>. Given that Web API 2 exists, and can be self-hosted via OWIN, I&#8217;d love to see a more recent benchmark comparing the two. In fact, I will try and do this for my next blog post.</p>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>I guess the point of all of this has been that neither Node.js or .NET is necessarily better/the best/the new hotness. They both serve a purpose, and while Node.js is much easier to use and more accessible to developers, .NET is very versatile and powerful as well. They are built to do different things: Node.js specializes in performing and scaling well for low-CPU, highly I/O-bound operations. .NET can perform well in this scenario as well, but can also perform well with high-CPU operations. In fact, I would argue that .NET excels at CPU-intensive operations, especially when compared to Node.</p>
+
+<p>There are many .NET developers in the current tech scene that are capable and competent. This means that it&#8217;s not too hard to find, hire, and retain good .NET talent. They can pick up self-hosted OWIN web apps in a matter of days, and begin to write very scalable, high-performance web apps and services based on it. They can even easily host Web API in an OWIN web app via console, a Windows service, or Azure. There&#8217;s a community that has existed for over a decade that evolves the .NET framework with amazing tools and add-ons like Dapper, Unity, and Newtonsoft.Json. This community is mature and there are many prominent voices within it that offer advice and help.</p>
+
+<p>Relative to .NET, there aren&#8217;t as many Node.js developers in the current tech scene that are capable and competent. This is because fortune favours the bold, and only a few have been early adopters of Node.js. In my experience, few Node developers will truly understand what is going on in the Node.js processing model and how to exploit it for maximum performance, though the <em>opinionated</em> paradigm of Node.js will force developers to write good asynchronous code. It can be hard to find, hire, and retain good Node.js talent. This will become less of a concern as Node&#8217;s following grows. The Node.js community is budding and has created some amazing tools and add-ons for Node.js as well such as ORMs and DI frameworks. This community is not yet mature and I am not aware of many prominent voices within it that offer advice and help. As a result, it could be difficult to find support and tools for Node.js if you encounter a problem.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p><strong>In conclusion, both Node.js and .NET are great.</strong> Which one to pick for a particular solution/application, however, depends on many factors; it is not black and white but a full colour spectrum. It would be very foolish and naive for a .NET developer to use .NET to solve every single problem just because &#8220;that&#8217;s what we use.&#8221; It would be similarly foolish for a Node.js developer to propose Node.js as a solution for every project or problem that he or she encounters. One must choose the right tool for a given job, and be open to different paradigms in order to truly excel.</p>
+
+<p><strong>In general, use Node.js when you have highly I/O-bound operations that don&#8217;t use much CPU. Use .NET when you need to calculate things and use a lot of CPU.</strong></p>
+
+<p><strong>Don&#8217;t use Node.js solely on the reasoning that it&#8217;s <em>much faster and performs way better</em> than .NET: it depends on how you use .NET. And don&#8217;t use .NET if all you&#8217;re doing is heavily I/O-bound operations with low CPU usage: that&#8217;s where Node.js excels.</strong></p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/analysis/">analysis</a>
+          
+          <a href="/tags/node.js/">node.js</a>
+          
+          <a href="/tags/performance/">performance</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/how-to-guarantee-dev-team-failure/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How To Guarantee Dev Team Failure</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/c-probably-getting-new-safe-navigation-operator/">
+            <span class="next-text nav-default">C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

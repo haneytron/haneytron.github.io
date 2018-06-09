@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+    <link>http://www.haneycodes.net/categories/blog/</link>
+    <description>Recent content in Blog on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>David Haney</copyright>
+    <lastBuildDate>Fri, 10 Feb 2017 11:11:30 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.haneycodes.net/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On Hiring: Developers Are Like Stocks</title>
+      <link>http://www.haneycodes.net/on-hiring-developers-are-like-stocks/</link>
+      <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/on-hiring-developers-are-like-stocks/</guid>
+      <description>This post is for those of you who hire developers, and also junior developers who want to be hired. Let&amp;#8217;s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you&amp;#8217;re now a stock market investor.
+As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It&amp;#8217;s made very clear that the future of the company depends on the return on investment (herein called ROI) &amp;#8211; &amp;#8220;gains&amp;#8221; &amp;#8211; that your investments bring to the company.</description>
+    </item>
+    
+    <item>
+      <title>GitLab Data Loss: A Discussion</title>
+      <link>http://www.haneycodes.net/gitlab-data-loss-a-discussion/</link>
+      <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/gitlab-data-loss-a-discussion/</guid>
+      <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&amp;#8230; only to find that none of them actually worked.
+Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
+    </item>
+    
+    <item>
+      <title>Dev Team Interactions: Conducting Good Code Reviews</title>
+      <link>http://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</link>
+      <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</guid>
+      <description>In part 2 of my series on dev team interactions, I&amp;#8217;d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I&amp;#8217;ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
+    </item>
+    
+    <item>
+      <title>Dev Team Interactions: Accountability &amp; Blame</title>
+      <link>http://www.haneycodes.net/dev-team-interactions-accountability-blame/</link>
+      <pubDate>Fri, 20 Jan 2017 13:20:59 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/dev-team-interactions-accountability-blame/</guid>
+      <description>As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What&amp;#8217;s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.</description>
+    </item>
+    
+    <item>
+      <title>Custom ASP.NET MVC Action Result Cache Attribute</title>
+      <link>http://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</link>
+      <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</guid>
+      <description>If you&amp;#8217;re working on an application built using ASP.NET MVC, you&amp;#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.</description>
+    </item>
+    
+    <item>
+      <title>Our Industry Needs Compassion</title>
+      <link>http://www.haneycodes.net/our-industry-needs-compassion/</link>
+      <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/our-industry-needs-compassion/</guid>
+      <description>Well, I&amp;#8217;ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I&amp;#8217;ve really let my readers &amp;#8211; and myself &amp;#8211; down.
+So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
+      <link>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</link>
+      <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</guid>
+      <description>On Plumbers Picture this situation: you woke up this morning to find that there&amp;#8217;s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
+Plumber #1 Plumber #1, let&amp;#8217;s call him Mario, tells you he can&amp;#8217;t be bothered to come check out your issue because it&amp;#8217;s minor and he&amp;#8217;s very important and too busy for it.</description>
+    </item>
+    
+    <item>
+      <title>NPM &amp; left-pad: Have We Forgotten How To Program?</title>
+      <link>http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</link>
+      <pubDate>Wed, 23 Mar 2016 18:01:52 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</guid>
+      <description>Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
+A simple NPM package called left-pad that was a dependency of their code.
+left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.</description>
+    </item>
+    
+    <item>
+      <title>Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</title>
+      <link>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
+      <pubDate>Fri, 26 Feb 2016 14:05:41 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
+      <description>Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.
+How Does Your Company Determine Compensation? When you hire developers, how do you decide on their salary?</description>
+    </item>
+    
+    <item>
+      <title>Diversity Is Really Freaking Hard</title>
+      <link>http://www.haneycodes.net/diversity-is-really-freaking-hard/</link>
+      <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/diversity-is-really-freaking-hard/</guid>
+      <description>Background I&amp;#8217;m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won&amp;#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&amp;#8217;m going to tell you about the things I&amp;#8217;ve experienced working on diversity &amp;#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It&amp;#8217;s no secret that the tech industry is not that diverse.</description>
+    </item>
+    
+    <item>
+      <title>Developer Turned Manager</title>
+      <link>http://www.haneycodes.net/developer-turned-manager/</link>
+      <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/developer-turned-manager/</guid>
+      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
+There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#8217;ve learned the hard way. There&amp;#8217;s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
+    </item>
+    
+    <item>
+      <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
+      <link>http://www.haneycodes.net/developers-shouldnt-measure-twice-cut-once/</link>
+      <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/developers-shouldnt-measure-twice-cut-once/</guid>
+      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
+    </item>
+    
+    <item>
+      <title>On Secretly Terrible Engineers - A Rebuttal</title>
+      <link>http://www.haneycodes.net/on-secretly-terrible-engineers-a-rebuttal/</link>
+      <pubDate>Mon, 09 Mar 2015 18:32:37 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/on-secretly-terrible-engineers-a-rebuttal/</guid>
+      <description>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
+Spoiler: I strongly disagree with most of this article.</description>
+    </item>
+    
+    <item>
+      <title>The Recruiting Competitive Advantage</title>
+      <link>http://www.haneycodes.net/the-recruiting-competitive-advantage/</link>
+      <pubDate>Fri, 23 Jan 2015 12:04:37 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/the-recruiting-competitive-advantage/</guid>
+      <description>A Job Listing Let&amp;#8217;s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:
+ HELP WANTED:
+Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014).</description>
+    </item>
+    
+    <item>
+      <title>On Credentialism In Software Development</title>
+      <link>http://www.haneycodes.net/on-credentialism-in-software-development/</link>
+      <pubDate>Mon, 29 Dec 2014 16:00:27 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/on-credentialism-in-software-development/</guid>
+      <description>Intro We&amp;#8217;re just two days from a brand new year and yet the primary measurement of a developer&amp;#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</description>
+    </item>
+    
+    <item>
+      <title>The Trouble With Job Titles</title>
+      <link>http://www.haneycodes.net/the-trouble-with-job-titles/</link>
+      <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/the-trouble-with-job-titles/</guid>
+      <description>Intro I&amp;#8217;ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
+I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+    </item>
+    
+    <item>
+      <title>iPhone 6: Style Over Substance</title>
+      <link>http://www.haneycodes.net/iphone-6-style-over-substance/</link>
+      <pubDate>Tue, 09 Sep 2014 19:22:53 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/iphone-6-style-over-substance/</guid>
+      <description>Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I&amp;#8217;m not going to talk about the watch, but instead about the phone.
+For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don&amp;#8217;t blame anyone for owning an iPhone: they&amp;#8217;re reasonably sexy and you get to show off the Apple branding.</description>
+    </item>
+    
+    <item>
+      <title>How I Got A Job At Stack Exchange</title>
+      <link>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</link>
+      <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</guid>
+      <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
+    </item>
+    
+    <item>
+      <title>How To Guarantee Dev Team Failure</title>
+      <link>http://www.haneycodes.net/how-to-guarantee-dev-team-failure/</link>
+      <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/how-to-guarantee-dev-team-failure/</guid>
+      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on &amp;#8220;good&amp;#8221; code and more emphasis on &amp;#8220;working&amp;#8221; code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you&amp;#8217;ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
+    </item>
+    
+    <item>
+      <title>To Node.js Or Not To Node.js</title>
+      <link>http://www.haneycodes.net/to-node-js-or-not-to-node-js/</link>
+      <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/to-node-js-or-not-to-node-js/</guid>
+      <description>Intro Node.js &amp;#8211; it has rapidly become the &amp;#8220;new hotness&amp;#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&amp;#8217;t worry, they&amp;#8217;ll let you know.
+One day you&amp;#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &amp;#8220;Have you guys tried Node.</description>
+    </item>
+    
+    <item>
+      <title>C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</title>
+      <link>http://www.haneycodes.net/c-probably-getting-new-safe-navigation-operator/</link>
+      <pubDate>Fri, 28 Feb 2014 11:47:08 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/c-probably-getting-new-safe-navigation-operator/</guid>
+      <description>It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release. This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.
+This new operator is likely going to take the syntax of ?. and is known as the Safe Navigation Operator.</description>
+    </item>
+    
+    <item>
+      <title>Trigger IValidatableObject.Validate When ModelState.IsValid is false</title>
+      <link>http://www.haneycodes.net/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</link>
+      <pubDate>Wed, 05 Feb 2014 15:55:40 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</guid>
+      <description>I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
+Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject.</description>
+    </item>
+    
+    <item>
+      <title>Interview with InfoQ on SimplSockets</title>
+      <link>http://www.haneycodes.net/interview-with-infoq-on-simplsockets/</link>
+      <pubDate>Wed, 11 Dec 2013 10:54:43 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/interview-with-infoq-on-simplsockets/</guid>
+      <description>Jonathan Allen of InfoQ conducted an interview with me about one of my open source initiatives, SimplSockets. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.
+I&amp;#8217;d like to thank Jonathan and InfoQ for the opportunity &amp;#8211; it was a great discussion. Check it out here: http://www.infoq.com/news/2013/12/SimplSockets</description>
+    </item>
+    
+    <item>
+      <title>MVC4 Conditional HTML Attributes</title>
+      <link>http://www.haneycodes.net/mvc4-conditional-html-attributes/</link>
+      <pubDate>Wed, 27 Nov 2013 00:34:25 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/mvc4-conditional-html-attributes/</guid>
+      <description>MVC4 made one simple and yet awesome improvement to View rendering that I don&amp;#8217;t think many people are aware of.
+Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable? The typical use case is applying a CSS class to a div. Most of the time that code looks something like this:
+&amp;lt;div @(myClass == null ?</description>
+    </item>
+    
+    <item>
+      <title>Automatically Generate POCOs From DB With T4</title>
+      <link>http://www.haneycodes.net/automatically-generate-pocos-from-db-with-t4/</link>
+      <pubDate>Wed, 16 Oct 2013 21:35:51 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/automatically-generate-pocos-from-db-with-t4/</guid>
+      <description>The T4 template engine is insanely powerful. I didn&amp;#8217;t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn&amp;#8217;t want to code all of this by hand &amp;#8211; it would take literally days.</description>
+    </item>
+    
+    <item>
+      <title>Web API Mapping QueryString/Form Input</title>
+      <link>http://www.haneycodes.net/web-api-mapping-querystringform-input/</link>
+      <pubDate>Wed, 24 Jul 2013 17:55:12 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/web-api-mapping-querystringform-input/</guid>
+      <description>If you&amp;#8217;re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn&amp;#8217;t very clear, so let&amp;#8217;s do this by example. Consider part of the Facebook API:
+ Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
+    </item>
+    
+    <item>
+      <title>Generic Comparer</title>
+      <link>http://www.haneycodes.net/generic-comparer/</link>
+      <pubDate>Mon, 22 Apr 2013 14:53:17 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/generic-comparer/</guid>
+      <description>Have you ever had to write a comparer for a specific type, only to be frustrated when you needed to write a second and third comparer for other types? Fear not, a generic comparer can take care of this for you!
+/// &amp;lt;summary&amp;gt; /// Compares two objects of any type. /// &amp;lt;/summary&amp;gt; /// &amp;lt;typeparam name=&amp;quot;T&amp;quot;&amp;gt;The type to be compared.&amp;lt;/typeparam&amp;gt; public class GenericComparer&amp;lt;T&amp;gt; : IComparer&amp;lt;T&amp;gt; { // The compare method private readonly Func&amp;lt;T, T, int&amp;gt; _compareMethod = null; /// &amp;lt;summary&amp;gt; /// The constructor.</description>
+    </item>
+    
+    <item>
+      <title>One More Thing About List Binary Search</title>
+      <link>http://www.haneycodes.net/one-more-thing-about-list-binary-search/</link>
+      <pubDate>Sat, 30 Mar 2013 15:36:24 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/one-more-thing-about-list-binary-search/</guid>
+      <description>I wanted to point people to this link at DotNetPearls:
+http://www.dotnetperls.com/binarysearch
+They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
+    </item>
+    
+    <item>
+      <title>Make Mostly Read, Seldom-Written Lists Much More Efficient</title>
+      <link>http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</link>
+      <pubDate>Fri, 15 Mar 2013 17:11:42 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
+      <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.</description>
+    </item>
+    
+    <item>
+      <title>A Better MIME Mapping Stealer!</title>
+      <link>http://www.haneycodes.net/a-better-mime-mapping-stealer/</link>
+      <pubDate>Tue, 12 Feb 2013 12:07:12 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/a-better-mime-mapping-stealer/</guid>
+      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Funcinstead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):
+/// &amp;lt;summary&amp;gt; /// Exposes the Mime Mapping method that Microsoft hid from us.</description>
+    </item>
+    
+    <item>
+      <title>Determine MIME Type from File Name</title>
+      <link>http://www.haneycodes.net/determine-mime-type-from-file-name/</link>
+      <pubDate>Mon, 11 Feb 2013 15:15:46 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/determine-mime-type-from-file-name/</guid>
+      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&amp;#8230; A sort of &amp;#8220;pass-through&amp;#8221; if you will. Normally I&amp;#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &amp;#8220;directory&amp;#8221; to switch behind the scenes based on Session settings&amp;#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</description>
+    </item>
+    
+    <item>
+      <title>Published by Red Gate</title>
+      <link>http://www.haneycodes.net/published-by-red-gate/</link>
+      <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/published-by-red-gate/</guid>
+      <description>As of today I&amp;#8217;ve been published in an e-Book offered for free by Red Gate! It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
+My tip is #3 and has to do with debugging Microsoft symbols.
+Get a free copy here &amp;#8211; it has already taught me a few things I had never thought to consider!</description>
+    </item>
+    
+    <item>
+      <title>But it Didn&#39;t Happen in DEV or QA!</title>
+      <link>http://www.haneycodes.net/but-it-didnt-happen-in-dev-or-qa/</link>
+      <pubDate>Sun, 02 Dec 2012 17:22:20 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/but-it-didnt-happen-in-dev-or-qa/</guid>
+      <description>Most of us have been there: you&amp;#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
+Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&amp;#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&amp;#8217;d be able to solve the problem.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio 2012 Intellisense Not Working - SOLVED</title>
+      <link>http://www.haneycodes.net/visual-studio-2012-intellisense-not-working-solved/</link>
+      <pubDate>Tue, 20 Nov 2012 21:12:41 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/visual-studio-2012-intellisense-not-working-solved/</guid>
+      <description>So, this post is about our beloved IDE instead of actual code.
+I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself &amp;#8220;what the hell Visual Studio? 2010 didn&amp;#8217;t have these problems?!&amp;#8221; and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.</description>
+    </item>
+    
+    <item>
+      <title>Static vs Instance string.Equals Benchmark</title>
+      <link>http://www.haneycodes.net/static-vs-instance-string-equals-benchmark/</link>
+      <pubDate>Wed, 24 Oct 2012 16:57:14 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/static-vs-instance-string-equals-benchmark/</guid>
+      <description>A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:
+static void Main(string[] args) { var stopwatch = new Stopwatch(); string a = &amp;quot;hello&amp;quot;; string b = &amp;quot;hi&amp;quot;; stopwatch.Start(); for (int i = 0; i &amp;lt; 10000000; i++) { a.Equals(b); } stopwatch.Stop(); Console.WriteLine(&amp;quot;Instance string.Equals over 10,000,000 iterations: &amp;quot; + stopwatch.</description>
+    </item>
+    
+    <item>
+      <title>Static vs Instance string.Equals</title>
+      <link>http://www.haneycodes.net/stats-vs-reference-string-equals/</link>
+      <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/stats-vs-reference-string-equals/</guid>
+      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals method in .NET, but if that doesn&amp;#8217;t do it for you, allow me to present a simple example.
+string a = &amp;quot;hello&amp;quot;; string b = &amp;quot;hi&amp;quot;; bool result = a.Equals(b);  What is the expected result of these lines? A boolean value of false, of course.</description>
+    </item>
+    
+    <item>
+      <title>The Joel Test Really is Meaningful</title>
+      <link>http://www.haneycodes.net/the-joel-test-really-is-meaningful/</link>
+      <pubDate>Sun, 14 Oct 2012 22:10:54 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/the-joel-test-really-is-meaningful/</guid>
+      <description>Well, it&amp;#8217;s been nearly 2 months since my last post&amp;#8230; I&amp;#8217;m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
+The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.</description>
+    </item>
+    
+    <item>
+      <title>Published by MDSN UK Blog</title>
+      <link>http://www.haneycodes.net/published-by-mdsn-uk-blog/</link>
+      <pubDate>Sun, 26 Aug 2012 23:49:41 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/published-by-mdsn-uk-blog/</guid>
+      <description>This isn&amp;#8217;t a very technical post, but I was published by Microsoft recently via their MSDN UK Blog! The article is on creating and maintaining a successful User Group.
+Click here to read the article!</description>
+    </item>
+    
+    <item>
+      <title>TPL and Error Handling &amp; Continuation Tasks</title>
+      <link>http://www.haneycodes.net/tpl-and-error-handling-continuations/</link>
+      <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/tpl-and-error-handling-continuations/</guid>
+      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
+Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
+    </item>
+    
+    <item>
+      <title>TPL and Error Handling</title>
+      <link>http://www.haneycodes.net/tpl-and-error-handling/</link>
+      <pubDate>Sun, 05 Aug 2012 13:39:38 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/tpl-and-error-handling/</guid>
+      <description>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&amp;#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:</description>
+    </item>
+    
+    <item>
+      <title>Compiler Tricks - Inferred Types</title>
+      <link>http://www.haneycodes.net/compiler-tricks-inferred-types/</link>
+      <pubDate>Mon, 16 Jul 2012 00:33:54 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/compiler-tricks-inferred-types/</guid>
+      <description>The .NET compiler is a terrific thing&amp;#8230; After all, it turns your C# into an executable program!
+One nice feature of the .NET compiler, which is becoming better each release, is inferred typing. I&amp;#8217;d like to lay out a few short examples that might help you develop your programming standards and practices.
+Inferring a type when creating an array.
+// Create and initialize an array var myArray = new int[] { 1, 2, 3 };  Becomes:</description>
+    </item>
+    
+    <item>
+      <title>Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!</title>
+      <link>http://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</link>
+      <pubDate>Wed, 20 Jun 2012 00:47:52 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
+      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
+    </item>
+    
+    <item>
+      <title>LINQ and Deferred Execution</title>
+      <link>http://www.haneycodes.net/linq-and-deferred-execution/</link>
+      <pubDate>Mon, 11 Jun 2012 00:57:15 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/linq-and-deferred-execution/</guid>
+      <description>As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed.</description>
+    </item>
+    
+    <item>
+      <title>Make Your Debugging Life Easier</title>
+      <link>http://www.haneycodes.net/make-your-debugging-life-easier/</link>
+      <pubDate>Fri, 25 May 2012 20:25:36 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/make-your-debugging-life-easier/</guid>
+      <description>Sorry for the delay in posts, May has been a very busy month.
+In order to accurately debug or profile an external assembly or library (AKA one you&amp;#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
+    </item>
+    
+    <item>
+      <title>Who Loves Interns?</title>
+      <link>http://www.haneycodes.net/who-loves-interns/</link>
+      <pubDate>Wed, 02 May 2012 23:50:20 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/who-loves-interns/</guid>
+      <description>The topic at hand is interning. More specifically, string interning.
+&amp;#8220;What is string interning?&amp;#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&amp;#8217;s location on the heap. Typically, a new string is created and stored within your application&amp;#8217;s memory each time that you assign a string &amp;#8211; even if the same string is defined repeatedly.</description>
+    </item>
+    
+    <item>
+      <title>What is a Virtual Method, Anyway?</title>
+      <link>http://www.haneycodes.net/what-is-a-virtual-method-anyway/</link>
+      <pubDate>Sun, 29 Apr 2012 23:26:41 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/what-is-a-virtual-method-anyway/</guid>
+      <description>Something which I feel carries a lot of confusion in the .NET realm is virtual methods. During interviews, I tend to ask candidates about virtual methods: why and when they&amp;#8217;d use one, what the purposes is, how a virtual method &amp;#8220;works&amp;#8221; under the hood, and how it differs from &amp;#8220;shadowing&amp;#8221;. Surprisingly, in what has probably been over one hundred interviews with senior-ish candidates, I don&amp;#8217;t believe that more than one or two of them have answered anything about virtual methods correctly.</description>
+    </item>
+    
+    <item>
+      <title>Why Use Interfaces?</title>
+      <link>http://www.haneycodes.net/why-use-interfaces/</link>
+      <pubDate>Thu, 26 Apr 2012 23:51:18 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/why-use-interfaces/</guid>
+      <description>I&amp;#8217;m a bit tipsy at the moment, so hopefully this post goes well.
+A question that I like to ask while interviewing individuals is: &amp;#8220;why would you want to use an interface?&amp;#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&amp;#8217;d like to share some input on what I feel is the importance of interfaces.</description>
+    </item>
+    
+    <item>
+      <title>An Overview of Generic Constraints</title>
+      <link>http://www.haneycodes.net/an-overview-of-generic-constraints/</link>
+      <pubDate>Tue, 24 Apr 2012 21:46:41 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/an-overview-of-generic-constraints/</guid>
+      <description>This is my first post. I hope that it doesn&amp;#8217;t suck.
+As of .NET 2.0, Microsoft introduced the concept of generics. Generics is a concept that allow you to &amp;#8220;template&amp;#8221; methods and types such as classes and interfaces in a (generally) type-safe way. Upon compilation, generic type metadata is stored in IL, and JIT&amp;#8217;d as you reference the generic method or class with an actual type at runtime. Value types each get their own &amp;#8220;copy&amp;#8221; of the JIT&amp;#8217;d generic code, whereas reference types share a single instance of the code.</description>
+    </item>
+    
+  </channel>
+</rss>

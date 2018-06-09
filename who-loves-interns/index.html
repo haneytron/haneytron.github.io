@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Who Loves Interns? - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="The topic at hand is interning. More specifically, string interning.
+&amp;#8220;What is string interning?&amp;#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&amp;#8217;s location on the heap. Typically, a new string is created and stored within your application&amp;#8217;s memory each time that you assign a string &amp;#8211; even if the same string is defined repeatedly." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/who-loves-interns/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Who Loves Interns?" />
+<meta property="og:description" content="The topic at hand is interning. More specifically, string interning.
+&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/who-loves-interns/" />
+
+
+
+<meta property="article:published_time" content="2012-05-02T23:50:20&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-05-02T23:50:20&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Who Loves Interns?">
+<meta itemprop="description" content="The topic at hand is interning. More specifically, string interning.
+&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly.">
+
+
+<meta itemprop="datePublished" content="2012-05-02T23:50:20&#43;00:00" />
+<meta itemprop="dateModified" content="2012-05-02T23:50:20&#43;00:00" />
+<meta itemprop="wordCount" content="1069">
+
+
+
+<meta itemprop="keywords" content=".net,c#,memory,performance,programming," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Who Loves Interns?"/>
+<meta name="twitter:description" content="The topic at hand is interning. More specifically, string interning.
+&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Who Loves Interns?</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-05-02 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 1069 words </span>
+        <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>The topic at hand is interning. More specifically, string interning.</p>
+
+<p>&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; <em>even if the same string is defined repeatedly.</em> What this means is that you can define the same string N times and have it take up the string&#8217;s memory N times. This sucks when dealing with repeating string data.</p>
+
+<p>Enter string interning. <strong>String interning is the process by which you defer your string reference to the .NET runtime&#8217;s string intern pool, thereby conserving memory as N identical strings point to the same single reference</strong>. From <a href="http://msdn.microsoft.com/en-us/library/system.string.intern.aspx">MSDN</a>:</p>
+
+<p>&#8220;The common language runtime conserves string storage by maintaining a table, called the intern pool, that contains a single reference to each unique literal string declared or created programmatically in your program. Consequently, an instance of a literal string with a particular value only exists once in the system. For example, if you assign the same literal string to several variables, the runtime retrieves the same reference to the literal string from the intern pool and assigns it to each variable. The Intern method uses the intern pool to search for a string equal to the value of str. If such a string exists, its reference in the intern pool is returned. If the string does not exist, a reference to str is added to the intern pool, then that reference is returned.&#8221;</p>
+
+<p>Up until this point, you may not have been aware of this pool or the string interning behaviour at all. This is understandable because the .NET compiler does a bloody good job of interning strings for you. In fact, any literal string will be automatically interned by the compiler. Almost any late-bound (at runtime) string, however, is not. A quick code example &#8211; let us define a program that simply creates 10,000,000 of the same string and assigns it to a Dictionary:</p>
+
+<pre><code>class Program
+{
+    // The Dictionary that will be used to store our strings at an int 
+    // (so that they are not de-referenced and GC'd)
+    private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
+
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        // Loop 10,000,000 times
+        for (int i = 0; i &lt; 10000000; i++)
+        {
+            // Define the same string repeatedly
+            string blah = &quot;Hello! This Is A String!&quot;;
+            // Add it to the Dictionary at the index of i
+            _dict.Add(i, blah);
+        }
+
+        stopwatch.Stop();
+
+        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
+        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
+
+        Console.WriteLine(&quot;Press any key&quot;);
+        Console.ReadKey();
+    }
+}
+</code></pre>
+
+<p>Running this program results in the following output:</p>
+
+
+<figure>
+    
+        <img src="/img/repeated-literal-string.png" />
+    
+    
+    <figcaption>
+        <h4>A Repeated Literal String</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>It uses a relatively small amount of memory (269 megs) and takes very little time, since the compiler detects that the string which we&#8217;re creating is a literal and thus interns it for us automatically. Now, let us make a slight change to the application by creating a late-bound string which won&#8217;t be interned automatically:</p>
+
+<pre><code>class Program
+{
+    // The Dictionary that will be used to store our strings at an int 
+    // (so that they are not de-referenced and GC'd)
+    private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
+
+    static void Main(string[] args)
+    {
+        // Define a string which will be concatenated with another string later
+        string dynamicString = &quot;Some Other Large String&quot;;
+
+        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
+
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        // Loop 10,000,000 times
+        for (int i = 0; i &lt; 10000000; i++)
+        {
+            // Define the same string repeatedly
+            string blah = &quot;Hello! This Is A String!&quot; + dynamicString;
+            // Add it to the Dictionary at the index of i
+            _dict.Add(i, blah);
+        }
+
+        stopwatch.Stop();
+
+        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
+        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
+
+        Console.WriteLine(&quot;Press any key&quot;);
+        Console.ReadKey();
+    }
+}
+</code></pre>
+
+<p>Running THIS code yields crappier results:</p>
+
+
+<figure>
+    
+        <img src="/img/repeated-late-bound-string.png" />
+    
+    
+    <figcaption>
+        <h4>Repeated Late Bound String</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Note that we use nearly <strong>five times</strong> as much memory (1.379 gigs) as we did before! And that our application got considerably slower! Sadly, we can&#8217;t do much about the slower part because concatenating strings takes time and effort. However, we can intern the string to return our memory usage back to something realistic while adding minimal computational cost. We do this with the <strong>string.Intern(string)</strong> method:</p>
+
+<pre><code>class Program
+{
+    // The Dictionary that will be used to store our strings at an int 
+    // (so that they are not de-referenced and GC'd)
+    private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
+
+    static void Main(string[] args)
+    {
+        // Define a string which will be concatenated with another string later
+        string dynamicString = &quot;Some Other Large String&quot;;
+
+        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
+
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        // Loop 10,000,000 times
+        for (int i = 0; i &lt; 10000000; i++)
+        {
+            // Define the same string repeatedly
+            string blah = &quot;Hello! This Is A String!&quot; + dynamicString;
+            // Add it to the Dictionary at the index of i
+            // Intern string &quot;blah&quot; to save memory!
+            _dict.Add(i, string.Intern(blah));
+        }
+
+        stopwatch.Stop();
+
+        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess()
+            .PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
+        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
+
+        Console.WriteLine(&quot;Press any key&quot;);
+        Console.ReadKey();
+    }
+}
+</code></pre>
+
+<p>And the results:</p>
+
+
+<figure>
+    
+        <img src="/img/repeated-late-bound-string-interned.png" />
+    
+    
+    <figcaption>
+        <h4>Repeated Late Bound String (Interned)</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Note that by interning the late-bound string, we reduced memory usage considerably (272 megs, with only an additional 4 megs used for pointers) while adding only a minimal amount of additional computation (600 milliseconds)&#8230; 80% less memory used for the cost of an additional 20% computation is generally a good trade.</p>
+
+<p>Now the icing on the cake. Compile and run your code in <strong>Release mode</strong> to allow for even more compiler optimizations:</p>
+
+
+<figure>
+    
+        <img src="/img/repeated-late-bound-string-interned-release-mode.png" />
+    
+    
+    <figcaption>
+        <h4>Repeated Late Bound String (Interned) - Release Mode</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Even less memory and even less interning costs! It&#8217;s win-win and just a friendly reminder to always release your code in Release mode. 🙂</p>
+
+<p>So, who loves interns? You do. <strong>Remember: when you must use the same string repeatedly in an application (perhaps when storing a huge collection of User objects with a FirstName property, where many of your users are &#8220;David&#8221;, &#8220;John&#8221;, &#8220;Tim&#8221;, etc.), intern the string.</strong> Why create N copies of the exact same object, all using up your precious managed memory?</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/c/">c#</a>
+          
+          <a href="/tags/memory/">memory</a>
+          
+          <a href="/tags/performance/">performance</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/make-your-debugging-life-easier/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Make Your Debugging Life Easier</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/what-is-a-virtual-method-anyway/">
+            <span class="next-text nav-default">What is a Virtual Method, Anyway?</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

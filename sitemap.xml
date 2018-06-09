@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.haneycodes.net/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://www.haneycodes.net/on-hiring-developers-are-like-stocks/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/gitlab-data-loss-a-discussion/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</loc>
+    <lastmod>2017-01-27T10:03:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/dev-team-interactions-accountability-blame/</loc>
+    <lastmod>2017-01-20T13:20:59+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/our-industry-needs-compassion/</loc>
+    <lastmod>2017-01-03T12:37:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</loc>
+    <lastmod>2016-06-17T17:02:13+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</loc>
+    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/diversity-is-really-freaking-hard/</loc>
+    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/developer-turned-manager/</loc>
+    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/developers-shouldnt-measure-twice-cut-once/</loc>
+    <lastmod>2015-04-15T16:25:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/on-secretly-terrible-engineers-a-rebuttal/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/the-recruiting-competitive-advantage/</loc>
+    <lastmod>2015-01-23T12:04:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/on-credentialism-in-software-development/</loc>
+    <lastmod>2014-12-29T16:00:27+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/the-trouble-with-job-titles/</loc>
+    <lastmod>2014-10-17T18:41:14+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/iphone-6-style-over-substance/</loc>
+    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</loc>
+    <lastmod>2014-06-20T16:59:10+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/how-to-guarantee-dev-team-failure/</loc>
+    <lastmod>2014-05-07T13:27:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/to-node-js-or-not-to-node-js/</loc>
+    <lastmod>2014-03-24T16:41:25+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/c-probably-getting-new-safe-navigation-operator/</loc>
+    <lastmod>2014-02-28T11:47:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</loc>
+    <lastmod>2014-02-05T15:55:40+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/interview-with-infoq-on-simplsockets/</loc>
+    <lastmod>2013-12-11T10:54:43+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/mvc4-conditional-html-attributes/</loc>
+    <lastmod>2013-11-27T00:34:25+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/automatically-generate-pocos-from-db-with-t4/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/web-api-mapping-querystringform-input/</loc>
+    <lastmod>2013-07-24T17:55:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/generic-comparer/</loc>
+    <lastmod>2013-04-22T14:53:17+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/one-more-thing-about-list-binary-search/</loc>
+    <lastmod>2013-03-30T15:36:24+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</loc>
+    <lastmod>2013-03-15T17:11:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/a-better-mime-mapping-stealer/</loc>
+    <lastmod>2013-02-12T12:07:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/determine-mime-type-from-file-name/</loc>
+    <lastmod>2013-02-11T15:15:46+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/published-by-red-gate/</loc>
+    <lastmod>2013-01-18T15:10:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/but-it-didnt-happen-in-dev-or-qa/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/visual-studio-2012-intellisense-not-working-solved/</loc>
+    <lastmod>2012-11-20T21:12:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/static-vs-instance-string-equals-benchmark/</loc>
+    <lastmod>2012-10-24T16:57:14+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/stats-vs-reference-string-equals/</loc>
+    <lastmod>2012-10-22T14:57:14+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/the-joel-test-really-is-meaningful/</loc>
+    <lastmod>2012-10-14T22:10:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/published-by-mdsn-uk-blog/</loc>
+    <lastmod>2012-08-26T23:49:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tpl-and-error-handling-continuations/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tpl-and-error-handling/</loc>
+    <lastmod>2012-08-05T13:39:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/compiler-tricks-inferred-types/</loc>
+    <lastmod>2012-07-16T00:33:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</loc>
+    <lastmod>2012-06-20T00:47:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/linq-and-deferred-execution/</loc>
+    <lastmod>2012-06-11T00:57:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/make-your-debugging-life-easier/</loc>
+    <lastmod>2012-05-25T20:25:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/who-loves-interns/</loc>
+    <lastmod>2012-05-02T23:50:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/what-is-a-virtual-method-anyway/</loc>
+    <lastmod>2012-04-29T23:26:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/why-use-interfaces/</loc>
+    <lastmod>2012-04-26T23:51:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/an-overview-of-generic-constraints/</loc>
+    <lastmod>2012-04-24T21:46:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/.net/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/analysis/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/android/</loc>
+    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/async/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/attitude/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/behavior/</loc>
+    <lastmod>2017-01-27T10:03:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/categories/blog/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/c#/</loc>
+    <lastmod>2014-02-28T11:47:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/caching/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/career/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/categories/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/commentary/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/compensation/</loc>
+    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/compiler/</loc>
+    <lastmod>2012-07-16T00:33:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/conflict/</loc>
+    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/credentialism/</loc>
+    <lastmod>2014-12-29T16:00:27+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/culture/</loc>
+    <lastmod>2017-01-27T10:03:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/debugging/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/diversity/</loc>
+    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/ego/</loc>
+    <lastmod>2016-06-17T17:02:13+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/generics/</loc>
+    <lastmod>2013-04-22T14:53:17+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/intellisense/</loc>
+    <lastmod>2012-11-20T21:12:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/interviews/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/iphone/</loc>
+    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/iteration/</loc>
+    <lastmod>2015-04-15T16:25:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/left-pad/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/lessons/</loc>
+    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/linq/</loc>
+    <lastmod>2012-06-11T00:57:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/management/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/memory/</loc>
+    <lastmod>2013-03-30T15:36:24+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/methodology/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/mistakes/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/mvc/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/node.js/</loc>
+    <lastmod>2014-03-24T16:41:25+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/npm/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/open-source/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/packages/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/performance/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/post/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/process/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/profiling/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/programming/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/promotion/</loc>
+    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/published/</loc>
+    <lastmod>2013-01-18T15:10:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/razor/</loc>
+    <lastmod>2013-11-27T00:34:25+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/rebuttal/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/recruiters/</loc>
+    <lastmod>2015-01-23T12:04:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/reflection/</loc>
+    <lastmod>2013-02-12T12:07:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/salary/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/sql/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/stack-overflow/</loc>
+    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/t4/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/tasks/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/tpl/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/transparency/</loc>
+    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/visual-studio/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/webapi/</loc>
+    <lastmod>2013-07-24T17:55:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/windbg/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/workplace/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

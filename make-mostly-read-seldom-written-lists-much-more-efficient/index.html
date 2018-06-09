@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Make Mostly Read, Seldom-Written Lists Much More Efficient - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Make Mostly Read, Seldom-Written Lists Much More Efficient" />
+<meta property="og:description" content="One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/" />
+
+
+
+<meta property="article:published_time" content="2013-03-15T17:11:42&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-03-15T17:11:42&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Make Mostly Read, Seldom-Written Lists Much More Efficient">
+<meta itemprop="description" content="One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.">
+
+
+<meta itemprop="datePublished" content="2013-03-15T17:11:42&#43;00:00" />
+<meta itemprop="dateModified" content="2013-03-15T17:11:42&#43;00:00" />
+<meta itemprop="wordCount" content="1700">
+
+
+
+<meta itemprop="keywords" content=".net,c#,memory,performance,programming," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Make Mostly Read, Seldom-Written Lists Much More Efficient"/>
+<meta name="twitter:description" content="One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Make Mostly Read, Seldom-Written Lists Much More Efficient</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-03-15 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 1700 words </span>
+        <span class="more-meta"> 8 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory. This was becoming too large as we added new products every single day.</p>
+
+<p>As of writing this, it now takes only 4.8 gigs of memory and is only slightly (1-3%) less performant than before. How did I do it? Believe it or not, a very simple data structure and algorithm change.</p>
+
+<p>In the Search Engine, a product&#8217;s properties are a key-value pairing of strings&#8230; Things like &#8220;isInStock&#8221; &#8220;1&#8221; or &#8220;color&#8221; &#8220;red&#8221; etc. We store the properties in a collection, per product. The collection was originally:</p>
+
+<pre><code>Dictionary&lt;string, HashSet&lt;string&gt;&gt; _entityProperties;
+</code></pre>
+
+<p>The key of the Dictionary was the property name and the HashSet of strings were the values for that property name (property names are not a &#8220;unique&#8221; key &#8211; a product could have multiple colors for example). I initially chose this data structure because we have a heavy need for DIRECT lookups to property names and values. Methods like HasProperties(string propertyName) and HasProperty(string propertyName, string propertyValue) are essential to the search engine&#8217;s function, and need to be performant. Thus, I figured that a Dictionary and HashSet would be best, since both offer O(1) lookup times and the index is read from 10000x more often than it is written to. O(1 + 1) is pretty good when it comes to complexity.</p>
+
+<p>It turns out that there was a simpler, better data structure for my goals which also satisfies the performance requirements of the aforementioned methods.</p>
+
+<p>As you may or may not know (and I learned the hard way), a <code>HashSet&lt;T&gt;</code> is actually not very efficient when you have only a few items in it. A <code>List&lt;T&gt;</code> is actually more performant for small collections (4 or fewer objects with simple <a href="http://msdn.microsoft.com/en-us/library/system.object.gethashcode.aspx">GetHashCode()</a> methods, such as strings, in my testing). This is true even though your average lookup/read case goes from O(1) to (1/2n) since you must traverse the List to find your desired object. The reason that List is faster is that there is no hash key computation, and the <code>List&lt;T&gt;</code> is basically an elastic array and thus takes less memory and has less overhead than a <code>HashSet&lt;T&gt;</code> with the same number of objects in it. Since my product properties typically only consist of 2 or 3 values for a given property name, I changed my data structure to this:</p>
+
+<pre><code>Dictionary&lt;string, List&lt;string&gt;&gt; _entityProperties;
+</code></pre>
+
+<p>This shaved approximately 10% off of the memory footprint and brought my memory usage down to 9.6 gigs. The performance was basically identical in all performance tests. This was better than my HashSet, but still not great. I wanted to do better. I was sure that somehow I could do better.</p>
+
+<p>I spent the good part of this week trying &#8211; and failing &#8211; to design a more efficient data structure than the above. I tried a string Trie with nodes that pointed to another Trie, I tried <a href="http://msdn.microsoft.com/en-us/library/ms132319.aspx">SortedList<TKey, TValue></a> instead of the above, and everything else that I could think of. Yet no matter what I did, the memory stayed the same and the performance was the same or worse. It sucked. I was still sure that somehow I could do better.</p>
+
+<p>Finally, Wednesday morning, I had a thought in the shower (where I do my best thinking): two dimensional Arrays suck. They are well documented to, in general, have worse memory usage metrics than a one dimensional array (a quick Google will fill you in). A Dictionary of Lists is certainly a two dimensional jagged Array of sorts, and it wasn&#8217;t doing what I wanted in terms of memory. So, I took another approach and changed my data structure wildly &#8211; I flattened it out and made it one dimensional:</p>
+
+<pre><code>List&lt;KeyValuePair&lt;string, string&gt;&gt; _entityProperties;
+</code></pre>
+
+<p>Seems insane, right? I go from a Dictionary with an O(1) key lookup to a linear List of all keys and values stored together. And yet, it did the trick for my memory: it went from 9.6 gigs to 4.8 gigs. Half of the amount of memory used. I was stoked.</p>
+
+<p>I saved this memory by both interning strings and taking advantage of the KeyValuePair being a struct. Structs are a lot more efficient than reference types when the object is small, and a KeyValuePair is indeed quite small.</p>
+
+<p>A new problem needed solving, however. Each product has around 60-100 properties associated with it, and I needed them to be accessed efficiently and quickly with near-direct lookups. Traversing the [now giant] List was not acceptable in terms of performance.</p>
+
+<p>As it stood, I went from an O(1 + 1) data structure (key and value lookup costs for Dictionary and HashSet) to an O(1 + 1/2n) data structure (Dictionary and List) and finally to an O(n) data structure (List). And to top it all off, the n in the 1/2n was 3 or 4 where the n in the flat List of KeyValuePair was between 60 and 100. Truly I was getting worse performance with each improvement &#8211; at least theoretically. Still, the allure of the memory savings was too great to ignore and I wanted to use this data structure.</p>
+
+<p>It then hit me: why not use <a href="http://msdn.microsoft.com/en-us/library/w4e7fxsh(v=vs.80).aspx">BinarySearch</a> on the <code>List&lt;T&gt;</code> to look up items quickly and keep the List sorted while I add AND be able to check for duplicates before adding? It was certainly worth a shot, since binary search is an O(log n) algorithm which is an improvement over the List&#8217;s O(n) traversal. So, I modified my Add(string propertyName, string propertyValue) method to keep the List sorted as things were added to it. This is surprisingly easy to do.</p>
+
+<blockquote>
+<p>note that from here on out I&#8217;m simplifying my code greatly to basic concepts from what actually exists in order to avoid giving away trade secrets or violating my NDA and being fired</p>
+</blockquote>
+
+<pre><code>public void Add(string propertyName, string propertyValue)
+{   
+    // TODO: null checks, etc.
+
+    var keyValuePair = new KeyValuePair&lt;string, string&gt;(propertyName, propertyValue);
+
+    // Add property name and value
+    // First find the identical item if it exists
+    var result = _entityProperties.BinarySearch(keyValuePair, _entityPropertiesComparer);
+    // If result is &gt;= 0, already exists, done
+    if (result &gt;= 0)
+    {
+        return;
+    }
+
+    // If it does not exist, a one's complement of the returned int tells us WHERE to insert to maintain the sort order
+    _entityProperties.Insert(~result, keyValuePair);
+}
+</code></pre>
+
+<p>The secret here is two-fold:</p>
+
+<ol>
+<li><p>I created a custom KeyValuePair<string, string> comparer class that implements <code>IComparer&lt;KeyValuePair&lt;string, string&gt;&gt;</code> and basically does a case-insensitive string compare of first the key strings, then the value strings. This IComparer is required by the List&#8217;s BinarySearch method to determine the ordering of objects in the List.</p></li>
+
+<li><p>The BinarySearch method returns a very useful value: a simple integer. If the int is &lt; 0, it means that the item was not found in the List. If it is &gt;= 0, it means that the item was found at the index of the value. If it returns a negative integer, it means not only that it was not found, <strong>but also that the proper index to insert the item at in order to keep the List sorted is the one&#8217;s complement of the value.</strong></p></li>
+</ol>
+
+<p>A super useful return type, indeed. This allows you to add your elements to a List while preserving an order, at the cost of your add being an O(log n) operation instead of a List&#8217;s usual O(1) add operation. However, if you don&#8217;t add things as much as you read the List (we only adjust the index once a day for example, but read it thousands of times per hour), this can be worthwhile. Additionally, you could add everything in O(1) time and then do a final List <a href="http://msdn.microsoft.com/en-us/library/3da4abas.aspx">Sort</a> in order to sort the List for a single O(log n) cost if the order of elements does not matter until you&#8217;re done adding everything. In my case, the order mattered as I added to the List because I did not ever want to add duplicates (same property name and value). The HashSet handles this for me &#8211; Lists do not.</p>
+
+<p>So, now my add costs O(log n) instead of O(n), but the payoff is now my lookups cost O(log n) instead of O(n) as well. I adjusted my earlier mentioned HasProperty and HasProperties methods accordingly:</p>
+
+<pre><code>public List&lt;string&gt; GetSpecificPropertyValues(string propertyName)
+{
+    // TODO: null checks, etc.
+
+    List&lt;string&gt; result = new List&lt;string&gt;();
+
+    // Binary search the property name - null is the smallest value of string for comparison
+    var keyValuePair = new KeyValuePair&lt;string, string&gt;(propertyName, null);
+    // One's complement the start index
+    var startIndex = ~_entityProperties.BinarySearch(keyValuePair, _entityPropertiesComparer);
+
+    for (int i = startIndex; i &lt; _entityProperties.Count; i++)
+    {
+        // Leave the loop when the property name no longer matches
+        if (!string.Equals(propertyName, _entityProperties[i].Key, 
+            StringComparison.OrdinalIgnoreCase))
+        {
+            // Leave the loop
+            break;
+        }
+
+        result.Add(_entityProperties[i].Value);
+    }
+
+    return result;
+}
+
+public bool HasProperty(string propertyName, string propertyValue)
+{
+    // TODO: null checks, etc.
+
+    // Binary search the property name
+    var keyValuePair = new KeyValuePair&lt;string, string&gt;(propertyName, propertyValue);
+    var startIndex = _entityProperties.BinarySearch(keyValuePair, _entityPropertiesComparer);
+    return startIndex &gt;= 0;
+}
+
+public bool HasProperties(string propertyName)
+{
+    // TODO: null checks, etc.
+
+    // Binary search the property name
+    var keyValuePair = new KeyValuePair&lt;string, string&gt;(propertyName, null);
+    // One's complement the start index
+    var startIndex = ~_entityProperties.BinarySearch(keyValuePair, _entityPropertiesComparer);
+    if (startIndex &gt;= _entityProperties.Count)
+    {
+        return false;
+    }
+
+    // Check that the next element matches the property name
+    return string.Equals(propertyName, _entityProperties[startIndex].Key, 
+        StringComparison.OrdinalIgnoreCase);
+}
+</code></pre>
+
+<p>Suddenly, I have the same &#8220;direct lookup&#8221; methods available as I did with my Dictionary and HashSet/List structure, but in a flat List with O(log n) complexity.</p>
+
+<p>This yielded 50% less memory usage and only a 1-3% increase in performance times. A very acceptable trade for the Search Engine.</p>
+
+<p>If you have a <code>List&lt;T&gt;</code> with a lot of objects in it, and performance is key to your application, consider using BinarySearch and/or Sort to access it in a much more efficient way. As long as you can create an <code>IComparer&lt;T&gt;</code> where T is your List objects type, you&#8217;ll have a more efficient List.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/c/">c#</a>
+          
+          <a href="/tags/memory/">memory</a>
+          
+          <a href="/tags/performance/">performance</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/one-more-thing-about-list-binary-search/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">One More Thing About List Binary Search</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/a-better-mime-mapping-stealer/">
+            <span class="next-text nav-default">A Better MIME Mapping Stealer!</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+    <link>http://www.haneycodes.net/categories/</link>
+    <description>Recent content in Categories on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>David Haney</copyright>
+    <lastBuildDate>Fri, 10 Feb 2017 11:11:30 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.haneycodes.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>http://www.haneycodes.net/categories/blog/</link>
+      <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

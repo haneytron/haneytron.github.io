@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GitLab Data Loss: A Discussion - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&amp;#8230; only to find that none of them actually worked.
+Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/gitlab-data-loss-a-discussion/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="GitLab Data Loss: A Discussion" />
+<meta property="og:description" content="In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&#8230; only to find that none of them actually worked.
+Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/gitlab-data-loss-a-discussion/" />
+
+
+
+<meta property="article:published_time" content="2017-02-02T11:33:02&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-02-02T11:33:02&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="GitLab Data Loss: A Discussion">
+<meta itemprop="description" content="In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&#8230; only to find that none of them actually worked.
+Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.">
+
+
+<meta itemprop="datePublished" content="2017-02-02T11:33:02&#43;00:00" />
+<meta itemprop="dateModified" content="2017-02-02T11:33:02&#43;00:00" />
+<meta itemprop="wordCount" content="759">
+
+
+
+<meta itemprop="keywords" content="attitude,methodology,mistakes,process," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GitLab Data Loss: A Discussion"/>
+<meta name="twitter:description" content="In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&#8230; only to find that none of them actually worked.
+Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">GitLab Data Loss: A Discussion</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-02-02 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 759 words </span>
+        <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#backup-prod-data-regularly">Backup Prod Data Regularly</a></li>
+<li><a href="#a-guide-to-good-backup-process">A Guide To Good Backup Process</a></li>
+<li><a href="#gitlab-did-one-thing-right">GitLab Did One Thing Right</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>In case you missed the big news in the industry this week, <a href="https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident">a GitLab employee accidentally deleted a ton of production data</a> and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&#8230; only to find that none of them actually worked.</p>
+
+<h1 id="backup-prod-data-regularly">Backup Prod Data Regularly</h1>
+
+<p>Not exactly a groundbreaking statement, right? Everybody <em>knows</em> this. If there was a &#8220;working in corporate IT 101&#8221; manual it would have a chapter on this concept. It&#8217;s common sense.</p>
+
+<p>Even still, a lot of people and companies &#8211; like GitLab &#8211; tend to &#8220;set and forget&#8221; their backups. They probably created their backup mechanism years ago, tested it at the time, confirmed that it worked, and then scheduled it to run every night at 1am EST or something. Then, since it was out of sight and out of mind, they promptly forgot about it and moved on to other things. After all, they never had a need to check on it right? Nothing had broken down. Until yesterday.</p>
+
+<h1 id="a-guide-to-good-backup-process">A Guide To Good Backup Process</h1>
+
+<p><strong>The secret to ensuring that your backup process is effective and functional is to integrate it into your daily work.</strong> One of the best ways to do this is to use it to set up a new dev&#8217;s local environment. Have them configure and install the IDE and related tools, and <strong>then have them pull down the most recent backup and restore from it to set up their local database.</strong> What&#8217;s that, you say? It has PII and sensitive data? You&#8217;re probably right, which is why your backup process should, as appropriate, create 2 copies: 1 that strips the data (for local dev env) and 1 that doesn&#8217;t (for prod restore).</p>
+
+<p>Great, so you&#8217;ve confirmed that your backups work for a local environment, but what about production? The next step in a good process is simple too: <strong>artificially destroy your production environment regularly.</strong> Set up fail-over tests at off hours (and compensate your amazing site reliability / IT team appropriately for conducting these tests in off hours too). I recommend once per quarter as a starting point: at 2am on Sunday drop your production database (but don&#8217;t delete it, just take it offline so you can bring it back if you find out that your backup system isn&#8217;t working). Let your staff work to restore a recent backup and bring the site back online. Announce the outage in advance to your users, and update people on social media or via email when it begins and ends.</p>
+
+<p>There is much to be learned and gained from this intrusive and destructive process. For one, you will force your dev team to create a good &#8220;the site is down&#8221; experience since your customers will otherwise see infinitely spinning web pages or terrible error dumps. Another is that you can time the average outage and thus discern how long you&#8217;ll be down if your production database ever actually takes a spill. Finally, your disaster recovery staff will be fresh on their skills and able to fix your real outages quickly and predictably. There are many tangible and hidden benefits derived from just a few hours of planned outage per year.</p>
+
+<h1 id="gitlab-did-one-thing-right">GitLab Did One Thing Right</h1>
+
+<p>The final step in your solid, functional backup process which you test quarterly and use to spin up new dev hires is to document the hell out of everything. When you do these planned outages, have the disaster recovery staff document, step by step, the actions taken to fix it. When you have real live outages, document those too and share the knowledge with the public.</p>
+
+<p>GitLab got this part right, and are being heralded as a great example and learning experience in the industry instead of spited for mysterious downtimes and no communication. I promise you that this week, many disaster recovery people are doing extra backup tests that they wouldn&#8217;t have thought to do otherwise &#8211; all as a direct result of the GitLab incident. Making your disasters and their recoveries public creates goodwill in the community, provides a learning experience, and shows people that you can be trusted.</p>
+
+<p>GitLab took a bad situation and created the best possible outcome, both for themselves and the entire community. For that they should be thanked, not mocked. After all, we are all human and we all make mistakes. Knowing this, you&#8217;ll be really glad that you practice making mistakes every quarter when your production database actually goes down in flames.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/attitude/">attitude</a>
+          
+          <a href="/tags/methodology/">methodology</a>
+          
+          <a href="/tags/mistakes/">mistakes</a>
+          
+          <a href="/tags/process/">process</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/on-hiring-developers-are-like-stocks/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">On Hiring: Developers Are Like Stocks</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/dev-team-interactions-conducting-good-code-reviews/">
+            <span class="next-text nav-default">Dev Team Interactions: Conducting Good Code Reviews</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tasks on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+    <link>http://www.haneycodes.net/tags/tasks/</link>
+    <description>Recent content in Tasks on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>David Haney</copyright>
+    <lastBuildDate>Sun, 12 Aug 2012 23:21:30 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.haneycodes.net/tags/tasks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TPL and Error Handling &amp; Continuation Tasks</title>
+      <link>http://www.haneycodes.net/tpl-and-error-handling-continuations/</link>
+      <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/tpl-and-error-handling-continuations/</guid>
+      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
+Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
+    </item>
+    
+    <item>
+      <title>TPL and Error Handling</title>
+      <link>http://www.haneycodes.net/tpl-and-error-handling/</link>
+      <pubDate>Sun, 05 Aug 2012 13:39:38 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/tpl-and-error-handling/</guid>
+      <description>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&amp;#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:</description>
+    </item>
+    
+  </channel>
+</rss>

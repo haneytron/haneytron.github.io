@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Credentialism on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+    <link>http://www.haneycodes.net/tags/credentialism/</link>
+    <description>Recent content in Credentialism on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>David Haney</copyright>
+    <lastBuildDate>Mon, 29 Dec 2014 16:00:27 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.haneycodes.net/tags/credentialism/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On Credentialism In Software Development</title>
+      <link>http://www.haneycodes.net/on-credentialism-in-software-development/</link>
+      <pubDate>Mon, 29 Dec 2014 16:00:27 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/on-credentialism-in-software-development/</guid>
+      <description>Intro We&amp;#8217;re just two days from a brand new year and yet the primary measurement of a developer&amp;#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</description>
+    </item>
+    
+    <item>
+      <title>The Trouble With Job Titles</title>
+      <link>http://www.haneycodes.net/the-trouble-with-job-titles/</link>
+      <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/the-trouble-with-job-titles/</guid>
+      <description>Intro I&amp;#8217;ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
+I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>TPL and Error Handling - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&amp;#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:" />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/tpl-and-error-handling/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="TPL and Error Handling" />
+<meta property="og:description" content="As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/tpl-and-error-handling/" />
+
+
+
+<meta property="article:published_time" content="2012-08-05T13:39:38&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-08-05T13:39:38&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="TPL and Error Handling">
+<meta itemprop="description" content="As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:">
+
+
+<meta itemprop="datePublished" content="2012-08-05T13:39:38&#43;00:00" />
+<meta itemprop="dateModified" content="2012-08-05T13:39:38&#43;00:00" />
+<meta itemprop="wordCount" content="1019">
+
+
+
+<meta itemprop="keywords" content=".net,async,c#,performance,programming,tasks,tpl," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TPL and Error Handling"/>
+<meta name="twitter:description" content="As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let&#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">TPL and Error Handling</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-08-05 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 1019 words </span>
+        <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.</p>
+
+<p>Let&#8217;s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:</p>
+
+<pre><code>static void Main(string[] args)
+{
+    try
+    {
+        // Initialize a Task which throws exception
+        var task = new Task(() =&gt;
+        {
+            throw new Exception(&quot;Task broke!&quot;);
+        });
+        // Start the Task
+        task.Start();
+    }
+    // Attempt to catch the Task Exception
+    catch (Exception ex)
+    {
+        Console.WriteLine(&quot;Caught the TPL exception&quot;);
+    }
+
+    Console.WriteLine(&quot;End of method reached&quot;);
+    Console.ReadKey();
+}
+</code></pre>
+
+<p>When we run it, we get this result:</p>
+
+
+<figure>
+    
+        <img src="/img/tpl-and-error-handling-first-output.png" />
+    
+    
+    <figcaption>
+        <h4>The Output</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>The Exception was not caught. This is because the Task is run on a different thread, which has its own Stack memory and execution path, which consists of the code inside of the Task and not much else. As a result, when the Task is run, the flow of control returns to the next line in our application, unaware of the Task or its outcome. Once the Exception in the Task is thrown, it is thrown in a different scope, effectively outside of our Main method. It&#8217;s almost as if we ran an entirely different application, but attempted to catch its Exception in this application. This just won&#8217;t work.</p>
+
+<p>There is a way to work around this however. One interesting thing about the TPL is the <a href="http://msdn.microsoft.com/en-us/library/dd270695.aspx">Task.WaitAll</a> method. It allows the control of flow of your executing Tasks/threads to return to your calling method. By adding this method to our code, we can make our main thread stall until the Task completes, which also enables it to catch the Task&#8217;s exception:</p>
+
+<pre><code>static void Main(string[] args)
+{
+    try
+    {
+        // Initialize a Task which throws exception
+        var task = new Task(() =&gt;
+        {
+            throw new Exception(&quot;Task broke!&quot;);
+        });
+        // Start the Task
+        task.Start();
+        // Wait for the Task to complete, thus keeping control of flow
+        Task.WaitAll(task);
+    }
+    // Attempt to catch the Task Exception
+    catch (Exception ex)
+    {
+        Console.WriteLine(&quot;Caught the TPL exception&quot;);
+    }
+
+    Console.WriteLine(&quot;End of method reached&quot;);
+    Console.ReadKey();
+}
+</code></pre>
+
+<p>The output is as follows:</p>
+
+
+<figure>
+    
+        <img src="/img/tpl-and-error-handling-second-output.png" />
+    
+    
+    <figcaption>
+        <h4>Second Output</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>This time we were able to catch the Exception. Of note, the Exception which is thrown by Tasks is typically the <a href="http://msdn.microsoft.com/en-us/library/system.aggregateexception.aspx">AggregateException</a> which allows you to catch multiple, often asynchronous Exceptions as one Exception (which is easier for a single thread to handle). A quick demo of this functionality (let&#8217;s have 5 threads each throw an Exception):</p>
+
+<pre><code>static void Main(string[] args)
+{
+    try
+    {
+        // A List of Tasks
+        var taskList = new List&lt;Task&gt;(5);
+
+        for (int i = 0; i &lt; 5; i++)
+        {
+            // Initialize a Task which throws exception
+            var task = new Task(() =&gt;
+            {
+                throw new Exception(&quot;It broke!&quot;);
+            });
+            // Start the Task
+            task.Start();
+            // Add to List
+            taskList.Add(task);
+        }
+        // Wait for all Tasks to complete, thus keeping control of flow
+        Task.WaitAll(taskList.ToArray());
+    }
+    // Attempt to catch the Task Exception
+    catch (AggregateException agex)
+    {
+        Console.WriteLine(&quot;Caught the TPL exception(s)&quot;);
+        // Output all actual Exceptions
+        foreach (var ex in agex.InnerExceptions)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    Console.WriteLine(&quot;End of method reached&quot;);
+    Console.ReadKey();
+}
+</code></pre>
+
+<p>And the output:</p>
+
+
+<figure>
+    
+        <img src="/img/tpl-and-error-handling-third-output.png" />
+    
+    
+    <figcaption>
+        <h4>Third Output</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>So as you can see, there are ways to handle Tasks throwing Exceptions, <em>if you have your calling thread pause and wait for the Tasks to complete</em>. This, of course, is not always practical so your other option is to handle the exception within the Task&#8217;s scope &#8211; just like you would with regular, single-threaded code. In effect you treat the code within the Task as isolated, single-threaded code, and catch and handle Exceptions accordingly. A slight mod to our application will show you this:</p>
+
+<pre><code>static void Main(string[] args)
+{
+    for (int i = 0; i &lt; 5; i++)
+    {
+        // Initialize a Task which throws exception
+        var task = new Task(() =&gt;
+        {
+            try
+            {
+                throw new Exception(&quot;It broke!&quot;);
+            }
+            catch (Exception ex)
+            {
+                // Output the Exception
+                Console.WriteLine(ex.Message);
+            }
+        });
+        // Start the Task
+        task.Start();
+        // Note: no longer waiting for Task to finish
+    }
+
+    Console.WriteLine(&quot;End of method reached&quot;);
+    Console.ReadKey();
+}
+</code></pre>
+
+<p>And the result of this change:</p>
+
+
+<figure>
+    
+        <img src="/img/tpl-and-error-handling-fourth-output.png" />
+    
+    
+    <figcaption>
+        <h4>Fourth Output</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Note the interesting results of this. Our main thread did not wait for the Tasks to complete, and so it the Task results were never returned back to the calling thread&#8217;s flow of control. As a result, the &#8220;End of method reached&#8221; text actually came <em>before</em> the threads crashed, because it happened sooner.</p>
+
+<p>Note also that only 4 of the 5 Exceptions were written to the Console. This is due to a race condition in your parallelized application: The Console is a single/static reference and so our 5 spawned threads plus 1 main thread all race to output to it. In this particular instance of the application being run, the Console.ReadKey method was executed after the first 4 Tasks had written their output, but before the 5th Task wrote its output. This does not mean that it was not handled; it simply means that, in a way that is classic to multi-threaded applications, we encountered a race condition. I ran this application another 10 or 20 times and saw many variations: sometimes 3 Exceptions were output, sometimes 4, and rarely all 5. This is a great example of a race condition within an application, and one which you could handle using the above strategy of Task.WaitAll prior to outputting your final Console.ReadKey statement and terminating your application.</p>
+
+<p>It&#8217;s up to you individually to decide which style of TPL error handling makes the most sense in each application. It depends on the purpose of each thread and the implications of having your application wait for threads to complete, considered on a per-application basis.</p>
+
+<p>One final note is that other parallel operations, such as <a href="http://msdn.microsoft.com/en-us/library/system.threading.tasks.parallel.foreach.aspx">Parallel.ForEach</a> and <a href="http://msdn.microsoft.com/en-us/library/dd460688.aspx">Parallel LINQ (PLINQ)</a> use <a href="http://msdn.microsoft.com/en-us/library/system.aggregateexception.aspx">AggregateException</a> as well to catch their thrown Exceptions, and that the AggregateException offers a <a href="http://msdn.microsoft.com/en-us/library/system.aggregateexception.flatten.aspx">Flatten method</a> for re-throwing nested AggregateExceptions as a one-level deep single AggregateException to simplify handling of them.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/async/">async</a>
+          
+          <a href="/tags/c/">c#</a>
+          
+          <a href="/tags/performance/">performance</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+          <a href="/tags/tasks/">tasks</a>
+          
+          <a href="/tags/tpl/">tpl</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/tpl-and-error-handling-continuations/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">TPL and Error Handling &amp; Continuation Tasks</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/compiler-tricks-inferred-types/">
+            <span class="next-text nav-default">Compiler Tricks - Inferred Types</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

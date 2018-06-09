@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webapi on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+    <link>http://www.haneycodes.net/tags/webapi/</link>
+    <description>Recent content in Webapi on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>David Haney</copyright>
+    <lastBuildDate>Wed, 24 Jul 2013 17:55:12 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.haneycodes.net/tags/webapi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web API Mapping QueryString/Form Input</title>
+      <link>http://www.haneycodes.net/web-api-mapping-querystringform-input/</link>
+      <pubDate>Wed, 24 Jul 2013 17:55:12 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/web-api-mapping-querystringform-input/</guid>
+      <description>If you&amp;#8217;re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn&amp;#8217;t very clear, so let&amp;#8217;s do this by example. Consider part of the Facebook API:
+ Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
+    </item>
+    
+  </channel>
+</rss>

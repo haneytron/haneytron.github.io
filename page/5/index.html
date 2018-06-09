@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/" />
+<link href="http://www.haneycodes.net/index.xml" rel="alternate" type="application/rss+xml" title="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+  <link href="http://www.haneycodes.net/index.xml" rel="feed" type="application/rss+xml" title="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+<meta property="og:description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.haneycodes.net/" />
+
+
+
+<meta property="og:updated_time" content="2012-07-16T00:33:54&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Haney Codes .NET - Sharing my experiences as a developer and engineering manager.">
+<meta itemprop="description" content="A blog by David Haney, Engineering Manager at Stack Overflow.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Haney Codes .NET - Sharing my experiences as a developer and engineering manager."/>
+<meta name="twitter:description" content="A blog by David Haney, Engineering Manager at Stack Overflow."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/compiler-tricks-inferred-types/">Compiler Tricks - Inferred Types</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-07-16 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 282 words </span>
+      <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The .NET compiler is a terrific thing&#8230; After all, it turns your C# into an executable program!
+One nice feature of the .NET compiler, which is becoming better each release, is inferred typing. I&#8217;d like to lay out a few short examples that might help you develop your programming standards and practices.
+Inferring a type when creating an array.
+// Create and initialize an array var myArray = new int[] { 1, 2, 3 };  Becomes:
+    </div>
+    <div class="read-more">
+      <a href="/compiler-tricks-inferred-types/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/custom-output-caching-with-mvc3-and-net-4-0-done-right/">Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-06-20 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 1231 words </span>
+      <span class="more-meta"> 6 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.
+    </div>
+    <div class="read-more">
+      <a href="/custom-output-caching-with-mvc3-and-net-4-0-done-right/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/linq-and-deferred-execution/">LINQ and Deferred Execution</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-06-11 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 690 words </span>
+      <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed.
+    </div>
+    <div class="read-more">
+      <a href="/linq-and-deferred-execution/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/make-your-debugging-life-easier/">Make Your Debugging Life Easier</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-05-25 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 477 words </span>
+      <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Sorry for the delay in posts, May has been a very busy month.
+In order to accurately debug or profile an external assembly or library (AKA one you&#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.
+    </div>
+    <div class="read-more">
+      <a href="/make-your-debugging-life-easier/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/who-loves-interns/">Who Loves Interns?</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-05-02 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 1069 words </span>
+      <span class="more-meta"> 6 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The topic at hand is interning. More specifically, string interning.
+&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly.
+    </div>
+    <div class="read-more">
+      <a href="/who-loves-interns/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/what-is-a-virtual-method-anyway/">What is a Virtual Method, Anyway?</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-29 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 692 words </span>
+      <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Something which I feel carries a lot of confusion in the .NET realm is virtual methods. During interviews, I tend to ask candidates about virtual methods: why and when they&#8217;d use one, what the purposes is, how a virtual method &#8220;works&#8221; under the hood, and how it differs from &#8220;shadowing&#8221;. Surprisingly, in what has probably been over one hundred interviews with senior-ish candidates, I don&#8217;t believe that more than one or two of them have answered anything about virtual methods correctly.
+    </div>
+    <div class="read-more">
+      <a href="/what-is-a-virtual-method-anyway/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/why-use-interfaces/">Why Use Interfaces?</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-26 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 876 words </span>
+      <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I&#8217;m a bit tipsy at the moment, so hopefully this post goes well.
+A question that I like to ask while interviewing individuals is: &#8220;why would you want to use an interface?&#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&#8217;d like to share some input on what I feel is the importance of interfaces.
+    </div>
+    <div class="read-more">
+      <a href="/why-use-interfaces/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/an-overview-of-generic-constraints/">An Overview of Generic Constraints</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-24 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 692 words </span>
+      <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This is my first post. I hope that it doesn&#8217;t suck.
+As of .NET 2.0, Microsoft introduced the concept of generics. Generics is a concept that allow you to &#8220;template&#8221; methods and types such as classes and interfaces in a (generally) type-safe way. Upon compilation, generic type metadata is stored in IL, and JIT&#8217;d as you reference the generic method or class with an actual type at runtime. Value types each get their own &#8220;copy&#8221; of the JIT&#8217;d generic code, whereas reference types share a single instance of the code.
+    </div>
+    <div class="read-more">
+      <a href="/an-overview-of-generic-constraints/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+  </section>
+  
+  <nav class="pagination">
+    
+      <a class="prev" href="/page/4/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+  </nav>
+
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

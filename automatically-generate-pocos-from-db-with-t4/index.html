@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Automatically Generate POCOs From DB With T4 - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="The T4 template engine is insanely powerful. I didn&amp;#8217;t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn&amp;#8217;t want to code all of this by hand &amp;#8211; it would take literally days." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/automatically-generate-pocos-from-db-with-t4/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Automatically Generate POCOs From DB With T4" />
+<meta property="og:description" content="The T4 template engine is insanely powerful. I didn&#8217;t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn&#8217;t want to code all of this by hand &#8211; it would take literally days." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/automatically-generate-pocos-from-db-with-t4/" />
+
+
+
+<meta property="article:published_time" content="2013-10-16T21:35:51&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-10-16T21:35:51&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Automatically Generate POCOs From DB With T4">
+<meta itemprop="description" content="The T4 template engine is insanely powerful. I didn&#8217;t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn&#8217;t want to code all of this by hand &#8211; it would take literally days.">
+
+
+<meta itemprop="datePublished" content="2013-10-16T21:35:51&#43;00:00" />
+<meta itemprop="dateModified" content="2013-10-16T21:35:51&#43;00:00" />
+<meta itemprop="wordCount" content="859">
+
+
+
+<meta itemprop="keywords" content=".net,c#,programming,sql,t4,visual studio," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Automatically Generate POCOs From DB With T4"/>
+<meta name="twitter:description" content="The T4 template engine is insanely powerful. I didn&#8217;t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn&#8217;t want to code all of this by hand &#8211; it would take literally days."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Automatically Generate POCOs From DB With T4</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-10-16 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 859 words </span>
+        <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>The T4 template engine is insanely powerful. I didn&#8217;t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn&#8217;t want to code all of this by hand &#8211; it would take literally days.</p>
+
+<p>Surprisingly, I got the whole thing done in about an hour with the help of the T4 template engine.</p>
+
+<p>For those who are not familiar, <a href="http://msdn.microsoft.com/en-us/library/vstudio/bb126445.aspx">T4 is a text template engine created by Microsoft</a> which combines plain text and control logic to generate text output. In reality it&#8217;s a lot like how you use Razor or WebForms view engines to generate HTML; you can embed &#8220;code nuggets&#8221; almost exactly like you do in WebForms. The only real difference is that with T4 you&#8217;re creating a text file instead of a webpage.</p>
+
+<p>To create a T4 template in Visual Studio 2010 or 2012, simply add a text file to your project&#8230; I called mine PocoGenerator.txt for example. Then, rename the file&#8217;s extension from &#8220;.txt&#8221; to &#8220;.tt&#8221; &#8211; the file will then be treated as a T4 Template by Visual Studio. Your output will appear in the code-behind .cs file attached to the .tt file you just created. In my scenario I wanted each of my POCOs to have their own file, so I did a bit of trickery to make that happen.</p>
+
+<p>I wrote this nifty T4 template which connects to a database, queries all tables (ignoring sys tables), and then creates one POCO per table under a file named <tablename>.cs which is placed in a directory relative to the template&#8217;s location. Give this a go &#8211; you won&#8217;t be disappointed! And of course, if you need it to do more than I do, just modify it and make it your own!</p>
+
+<pre><code>&lt;#@ template language=&quot;C#&quot; hostspecific=&quot;true&quot; debug=&quot;True&quot; #&gt;
+&lt;#@ assembly name=&quot;System.Core&quot; #&gt;
+&lt;#@ assembly name=&quot;System.Data&quot; #&gt;
+&lt;#@ assembly name=&quot;System.Xml&quot; #&gt;
+&lt;#@ assembly name=&quot;Microsoft.SqlServer.Smo&quot; #&gt;
+&lt;#@ assembly name=&quot;Microsoft.SqlServer.ConnectionInfo&quot; #&gt;
+&lt;#@ assembly name=&quot;Microsoft.SqlServer.Management.Sdk.Sfc&quot; #&gt;
+&lt;#@ import namespace=&quot;System&quot; #&gt;
+&lt;#@ import namespace=&quot;System.IO&quot; #&gt;
+&lt;#@ import namespace=&quot;System.Linq&quot; #&gt;
+&lt;#@ import namespace=&quot;System.Text&quot; #&gt;
+&lt;#@ import namespace=&quot;Microsoft.SqlServer.Management.Smo&quot; #&gt;
+&lt;#
+    //**********************************************************************************************
+    // This T4 generates POCOs from the specified DB and saves them to the specified folder which 
+    // is relative to the template's location. One file per table/POCO.
+    //**********************************************************************************************
+
+    //****************************
+    // DEFINE YOUR VARIABLES HERE
+    //****************************
+    // The SQL server name or IP
+    string sqlServer = &quot;9.9.9.9&quot;;
+    // The SQL username
+    string sqlLogin = &quot;admin&quot;;
+    // The SQL password
+    string sqlPassword = &quot;password&quot;;
+    // The SQL database to generate the POCOs for
+    string sqlDatabase = &quot;MyDatabase&quot;;
+    // The namespace to apply to the generated classes
+    string classNamespace = &quot;Your.Namespace.Here&quot;;
+    // The destination folder for the generated classes, relative to this file's location.
+    string destinationFolder = &quot;PocoFolder&quot;;
+
+    // Loop over each table and create a class file!
+    Server server = new Server(sqlServer);
+    server.ConnectionContext.LoginSecure = false;
+    server.ConnectionContext.Login = sqlLogin;
+    server.ConnectionContext.Password = sqlPassword;
+    server.ConnectionContext.Connect();
+
+    foreach (Table table in server.Databases[sqlDatabase].Tables)
+    {
+        // Skip sys tables
+        if (table.Name.StartsWith(&quot;sys&quot;))
+        {
+            continue;
+        }
+#&gt;
+using System;
+
+namespace &lt;#= classNamespace #&gt;
+{
+    /// &lt;summary&gt;
+    /// Represents a &lt;#= table.Name #&gt;.
+    /// NOTE: This class is generated from a T4 template - you should not modify it manually.
+    /// &lt;/summary&gt;
+    public class &lt;#= table.Name #&gt; 
+    {
+&lt;# 
+        // Keep count so we don't whitespace the last property/column
+        int columnCount = table.Columns.Count;
+        int i = 0;
+
+        // Iterate all columns
+        foreach (Column col in table.Columns)
+        {
+            i++;
+            string propertyType = GetNetDataType(col.DataType.Name);
+
+            // If we can't map it, skip it
+            if (string.IsNullOrWhiteSpace(propertyType))
+            {
+                // Skip
+                continue;
+            }
+
+            // Handle nullable columns by making the type nullable
+            if (col.Nullable &amp;&amp; propertyType != &quot;string&quot;)
+            {
+                propertyType += &quot;?&quot;;
+            }
+#&gt;
+        public &lt;#= propertyType #&gt; &lt;#= col.Name #&gt; { get; set; }
+&lt;#
+            // Do we insert the space?
+            if (i != columnCount)
+            {
+#&gt;
+
+&lt;#
+            }
+#&gt;
+&lt;#
+        }
+#&gt;
+    }
+}      
+&lt;#
+        // Write new POCO class to its own file
+        SaveOutput(table.Name + &quot;.cs&quot;, destinationFolder);
+    } 
+#&gt;
+&lt;#+
+    public static string GetNetDataType(string sqlDataTypeName)
+    {
+        switch (sqlDataTypeName.ToLower())
+        {
+            case &quot;bigint&quot;:
+                return &quot;Int64&quot;;
+            case &quot;binary&quot;:
+            case &quot;image&quot;:
+            case &quot;varbinary&quot;:
+                return &quot;byte[]&quot;;
+            case &quot;bit&quot;:
+                return &quot;bool&quot;;
+            case &quot;char&quot;:
+                return &quot;char&quot;;
+            case &quot;datetime&quot;:
+            case &quot;smalldatetime&quot;:
+                return &quot;DateTime&quot;;
+            case &quot;decimal&quot;:
+            case &quot;money&quot;:
+            case &quot;numeric&quot;:
+                return &quot;decimal&quot;;
+            case &quot;float&quot;:
+                return &quot;double&quot;;
+            case &quot;int&quot;:
+                return &quot;int&quot;;
+            case &quot;nchar&quot;:
+            case &quot;nvarchar&quot;:
+            case &quot;text&quot;:
+            case &quot;varchar&quot;:
+            case &quot;xml&quot;:
+                return &quot;string&quot;;
+            case &quot;real&quot;:
+                return &quot;single&quot;;
+            case &quot;smallint&quot;:
+                return &quot;Int16&quot;;
+            case &quot;tinyint&quot;:
+                return &quot;byte&quot;;
+            case &quot;uniqueidentifier&quot;:
+                return &quot;Guid&quot;;
+
+            default:
+                return null;
+        }
+    }
+
+    void SaveOutput(string outputFileName, string destinationFolder)
+    {
+        // Write to destination folder
+        string templateDirectory = Path.Combine(Path.GetDirectoryName(Host.TemplateFile), destinationFolder);
+        string outputFilePath = Path.Combine(templateDirectory, outputFileName);
+        File.Delete(outputFilePath);
+        File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString()); 
+
+        // Flush generation
+        this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+#&gt;
+</code></pre>
+
+<p>Note that when the files are generated, they will not automatically be included in the project. You will have to add them manually as existing items.</p>
+
+<p>This T4 Template supports regeneration, so anytime you update your database schema just re-run the template to create updated .cs files! Enjoy!</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/c/">c#</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+          <a href="/tags/sql/">sql</a>
+          
+          <a href="/tags/t4/">t4</a>
+          
+          <a href="/tags/visual-studio/">visual studio</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/mvc4-conditional-html-attributes/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">MVC4 Conditional HTML Attributes</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/web-api-mapping-querystringform-input/">
+            <span class="next-text nav-default">Web API Mapping QueryString/Form Input</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

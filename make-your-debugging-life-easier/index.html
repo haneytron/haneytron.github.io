@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Make Your Debugging Life Easier - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="Sorry for the delay in posts, May has been a very busy month.
+In order to accurately debug or profile an external assembly or library (AKA one you&amp;#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/make-your-debugging-life-easier/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Make Your Debugging Life Easier" />
+<meta property="og:description" content="Sorry for the delay in posts, May has been a very busy month.
+In order to accurately debug or profile an external assembly or library (AKA one you&#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/make-your-debugging-life-easier/" />
+
+
+
+<meta property="article:published_time" content="2012-05-25T20:25:36&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-05-25T20:25:36&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Make Your Debugging Life Easier">
+<meta itemprop="description" content="Sorry for the delay in posts, May has been a very busy month.
+In order to accurately debug or profile an external assembly or library (AKA one you&#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.">
+
+
+<meta itemprop="datePublished" content="2012-05-25T20:25:36&#43;00:00" />
+<meta itemprop="dateModified" content="2012-05-25T20:25:36&#43;00:00" />
+<meta itemprop="wordCount" content="477">
+
+
+
+<meta itemprop="keywords" content=".net,c#,debugging,performance,profiling,visual studio," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Make Your Debugging Life Easier"/>
+<meta name="twitter:description" content="Sorry for the delay in posts, May has been a very busy month.
+In order to accurately debug or profile an external assembly or library (AKA one you&#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Make Your Debugging Life Easier</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-05-25 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 477 words </span>
+        <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>Sorry for the delay in posts, May has been a very busy month.</p>
+
+<p>In order to accurately debug or profile an external assembly or library (AKA one you&#8217;re not directly compiling), you need the associated <b>PDB files</b> to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</p>
+
+<p>One thing that sucks is debugging and profiling native Microsoft .NET assemblies. When debugging an exception where you have no line number, or performance profiling an application and not knowing what method is being referred to, it&#8217;s easy to become very frustrated, very quickly. The latter scenario happened to me just this week. I was performance profiling my application at work and found that a large portion of the application&#8217;s time (~43%) was spent in a method called &#8220;clr.dll&#8221; (displayed here as memory addresses):</p>
+
+
+<figure>
+    
+        <img src="/img/performance-profiling-no-symbols.jpg" />
+    
+    
+    <figcaption>
+        <h4>Performance Profiling - No Symbols</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>This was not exactly a useful indication of what REALLY happened. What am I supposed to do with the knowledge that over 40% of my application&#8217;s time is spent in a Microsoft assembly called &#8220;clr.dll&#8221;? Not much, which is a little concerning. I needed to know what was really happening!</p>
+
+<p>Fortunately, there&#8217;s a solution for this very issue. A little known feature implemented in Visual Studio 2010 is the ability to connect to Microsoft&#8217;s Symbol Servers and obtain most of the debugging symbols for their assemblies and libraries!</p>
+
+<blockquote>
+<p>Just go to: Tools &#8211;&gt; Options &#8211;&gt; (expand) Debugging &#8211;&gt; Symbols</p>
+</blockquote>
+
+<p>Here, select/check the &#8220;Microsoft Symbol Servers&#8221; as a source for Symbols. Now, getting the symbols from Microsoft every time you debug or profile is going to be slow and painful (and it&#8217;ll even give you a pop-up saying as much once you check the Microsoft Symbol Servers), so be sure that you specify a directory for the &#8220;Cache symbols in this directory&#8221; input &#8211; it will keep a local copy of the PDBs and simply check for updates every so often. As a result, you get your regular debugging/profiling AND you can see the function names of the Microsoft assemblies!</p>
+
+<p>Using this feature, I was able to re-evaluate my latest performance tests and see that the supposed &#8220;clr.dll&#8221; method was actually &#8220;TransparentProxyStub_CrossContext&#8221; &#8211; a method buried deep within the WCF framework:</p>
+
+
+<figure>
+    
+        <img src="/img/performance-profiling-symbols.jpg" />
+    
+    
+    <figcaption>
+        <h4>Performance Profiling - Symbols</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>A little Google-Fu and a discussion with a co-worker who is well-versed in WCF told me that my application was actually spending its time waiting for a reply from a WCF request. Since this was expected behaviour (the application calls out to a service for every request), it put my performance profiling mind at ease.</p>
+
+<p>Take advantage of Microsoft&#8217;s PDBs, especially when the price is right &#8211; free. You&#8217;d be amazed how useful they are in your day-to-day debugging and profiling.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/c/">c#</a>
+          
+          <a href="/tags/debugging/">debugging</a>
+          
+          <a href="/tags/performance/">performance</a>
+          
+          <a href="/tags/profiling/">profiling</a>
+          
+          <a href="/tags/visual-studio/">visual studio</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/linq-and-deferred-execution/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">LINQ and Deferred Execution</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/who-loves-interns/">
+            <span class="next-text nav-default">Who Loves Interns?</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dev Team Interactions: Accountability &amp; Blame - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What&amp;#8217;s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/dev-team-interactions-accountability-blame/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Dev Team Interactions: Accountability &amp; Blame" />
+<meta property="og:description" content="As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What&#8217;s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/dev-team-interactions-accountability-blame/" />
+
+
+
+<meta property="article:published_time" content="2017-01-20T13:20:59&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-01-20T13:20:59&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Dev Team Interactions: Accountability &amp; Blame">
+<meta itemprop="description" content="As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What&#8217;s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.">
+
+
+<meta itemprop="datePublished" content="2017-01-20T13:20:59&#43;00:00" />
+<meta itemprop="dateModified" content="2017-01-20T13:20:59&#43;00:00" />
+<meta itemprop="wordCount" content="962">
+
+
+
+<meta itemprop="keywords" content="attitude,career,culture,workplace," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dev Team Interactions: Accountability &amp; Blame"/>
+<meta name="twitter:description" content="As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What&#8217;s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Dev Team Interactions: Accountability &amp; Blame</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-01-20 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 962 words </span>
+        <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#blame">Blame</a></li>
+<li><a href="#blame-never-helps-anything">Blame Never Helps Anything</a></li>
+<li><a href="#accountability">Accountability</a></li>
+<li><a href="#a-blameless-workplace">A Blameless Workplace</a></li>
+<li><a href="#creating-accountability">Creating Accountability</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What&#8217;s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.</p>
+
+<h1 id="blame">Blame</h1>
+
+<p>Blame is assigned <strong>externally</strong> &#8211; it comes from other people. You cannot control blame when it is directed at you. Blame tends to surface under tense circumstances, such as when the build has broken or a project has failed. It often rears its ugly head in the form of pithy and simplistic statements. &#8220;Jane broke the build again!&#8221; or &#8220;this is Mohinder&#8217;s fault!&#8221;</p>
+
+<p>Blame is often facilitated &#8211; if not encouraged &#8211; by a poor workplace culture. When the patterns and practices of the management team demand that heads roll when mistakes are made, blame is the obvious solution. It allows you shift the burden of responsibility to someone else, forcing them to defend themselves from an attack while you retreat to safety.</p>
+
+<h1 id="blame-never-helps-anything">Blame Never Helps Anything</h1>
+
+<p>Blame may solve the immediate problem of your head being on the proverbial chopping block, but it never solves the actual problem at hand. If anything it tends to distract from the issue as the discussion changes from &#8220;<strong>what</strong> went wrong&#8221; to &#8220;<strong>who</strong> caused this?&#8221; A challenging situation becomes even more complicated as strong negative feelings start to emerge.</p>
+
+<p>Another effect of blame is that people feel alienated and attacked. Team members disengage, afraid to speak up or make changes because they may be attacked for doing so. In this way it damages the innovation and progression of your people, product, and entire company. <strong>Blame holds your entire organization hostage.</strong></p>
+
+<p>It&#8217;s not hard to see that a workplace which embodies blame culture is really the root problem in-and-of itself.</p>
+
+<h1 id="accountability">Accountability</h1>
+
+<p>Unlike blame, accountability is assigned <strong>internally</strong> &#8211; it comes from within. It is a positive force of empowerment that requires courage and compassion. Accountability allows people to take control over themselves and their own actions. It destroys &#8220;fault&#8221; culture while building trust and communication channels with other team members. Statements like &#8220;that was my fault team, sorry about that&#8221; are welcomed and encouraged, but not necessary.</p>
+
+<p>Accountability can only thrive if the workplace culture is tolerant and accepting. In a blame culture, accountability cannot exist. The mere act of owning up to a mistake assigns the blame to you, and scrutiny and / or punishment is sure to follow. A good work culture is intolerant of blame, instead focusing on people learning from their mistakes and growing as professionals.</p>
+
+<h1 id="a-blameless-workplace">A Blameless Workplace</h1>
+
+<p>My personal take on accountability as a manager is that &#8220;everybody makes mistakes, and as long as you make new and interesting mistakes &#8211; rather than repeating them &#8211; you have nothing to worry about.&#8221;</p>
+
+<p>Mistakes are normal; we all make them regularly. A workplace culture that understands this fact and incorporates it into professional and personal development is one that succeeds with vibrant and engaged teams. Allow people to make mistakes, and follow-up only if they do not learn and grow from those mistakes. Shut down any and all blame conversations immediately. Communicate the difference between assigning blame to someone for their mistakes, and taking ownership of those mistakes themselves. Foster a workplace culture that is blameless.</p>
+
+<p>At Stack Overflow, we do this via a tool that we call the Wheel of Blame. When something goes wrong, anyone in a company chat room can say &#8220;not my fault&#8221; to spin the wheel. The wheel arbitrarily picks a person from those present in the room and blames them. With blame quickly and definitively assigned, we then move on to fixing the problem.</p>
+
+
+<figure>
+    
+        <img src="/img/wheel-of-blame-1.gif" />
+    
+    
+    <figcaption>
+        <h4>The Wheel of Blame in action.</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h1 id="creating-accountability">Creating Accountability</h1>
+
+<p>Despite the Wheel assigning blame &#8211; which clearly goes against the blameless culture which I described earlier &#8211; this tool is very powerful. It&#8217;s a clear and obvious signal to seasoned and new employees alike that we don&#8217;t care about blame. When someone is randomly assigned, it&#8217;s almost always the case that the problem wasn&#8217;t actually their fault. More often than not they had nothing at all to do with the current situation. An ironic and hilarious side effect of the Wheel is that when it does randomly assign the blame to the person who is accountable to the issue, it results in uncontrollable laughter and joking. This alone makes the Wheel worth using: it lightens the mood and communicates our rules around blame in a tribal way (there is no policy written anywhere).</p>
+
+<p>To shift a culture from blame to accountability, begin by shutting down blame discussions. Explain that blame is not helpful, and that the team needs to immediately focus on resolving the issue at hand. Once the problem is solved, consider doing a retrospective which explains what went wrong and who was involved. Circulate this retrospective to any and all interested parties with the clear intention of spreading information, not assigning blame. This allows people to learn and grow from what happened. Continuing this pattern will slowly shift the team away from blame. The trick here is that you don&#8217;t have to work on accountability: it will naturally follow when people stop fearing blame.</p>
+
+<p>I encourage you to work towards a culture of accountability on your development team, starting today. Sometimes this transformation can be very difficult to accomplish; particularly when the blame culture starts at the executive level. Nonetheless, do what you can to change the behavior in the part of the company that you influence. Your peers and reports will thank you for it.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/attitude/">attitude</a>
+          
+          <a href="/tags/career/">career</a>
+          
+          <a href="/tags/culture/">culture</a>
+          
+          <a href="/tags/workplace/">workplace</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/dev-team-interactions-conducting-good-code-reviews/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Dev Team Interactions: Conducting Good Code Reviews</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/custom-asp-net-mvc-action-result-cache-attribute/">
+            <span class="next-text nav-default">Custom ASP.NET MVC Action Result Cache Attribute</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>

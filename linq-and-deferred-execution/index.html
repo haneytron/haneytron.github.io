@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>LINQ and Deferred Execution - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="David Haney" />
+  <meta name="description" content="As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed." />
+
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://www.haneycodes.net/linq-and-deferred-execution/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="LINQ and Deferred Execution" />
+<meta property="og:description" content="As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.haneycodes.net/linq-and-deferred-execution/" />
+
+
+
+<meta property="article:published_time" content="2012-06-11T00:57:15&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-06-11T00:57:15&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="LINQ and Deferred Execution">
+<meta itemprop="description" content="As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed.">
+
+
+<meta itemprop="datePublished" content="2012-06-11T00:57:15&#43;00:00" />
+<meta itemprop="dateModified" content="2012-06-11T00:57:15&#43;00:00" />
+<meta itemprop="wordCount" content="690">
+
+
+
+<meta itemprop="keywords" content=".net,c#,linq,performance,programming," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LINQ and Deferred Execution"/>
+<meta name="twitter:description" content="As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Haney Codes .NET</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Haney Codes .NET</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">LINQ and Deferred Execution</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-06-11 </span>
+        <div class="post-category">
+            
+              <a href="/categories/blog/"> blog </a>
+            
+          </div>
+        <span class="more-meta"> 690 words </span>
+        <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.</p>
+
+<p>To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed. This means that the LINQ code that you write is not actually executed until you NEED to execute it &#8211; typically during an enumeration of the results.</p>
+
+<p>An example. Let&#8217;s create an array of 1,000,000 integers, all of random values between 1 and 10000, and sort them in an ascending fashion using LINQ:</p>
+
+<pre><code>static void Main(string[] args)
+{
+    // Anytime that you know the size of your list, specify 
+    // it in the constructor. This enables much more efficient 
+    // processor and memory usage
+    var myIntegers = new List&lt;int&gt;(1000000);
+
+    // Initialize RNG
+    var random = new Random();
+
+    // Populate the list with random numbers
+    for (int i = 0; i &lt; 1000000; i++)
+    {
+        myIntegers.Add(random.Next(1, 10000));
+    }
+
+    var stopwatch = new Stopwatch();
+    stopwatch.Start();
+
+    // LINQ time, let's sort them
+    var result = myIntegers.OrderBy(i =&gt; i);
+
+    stopwatch.Stop();
+    Console.WriteLine(&quot;LINQ OrderBy Time: &quot; + stopwatch.ElapsedMilliseconds + &quot; ms&quot;);
+
+    Console.ReadKey();
+}
+</code></pre>
+
+<p>And the output:</p>
+
+
+<figure>
+    
+        <img src="/img/linq-order-by-result.png" />
+    
+    
+    <figcaption>
+        <h4>LINQ OrderBy Result</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Note how little time it took to Order the results &#8211; only 0 ms! Seems a bit fishy that we sorted 1,000,000 integers in less than 1 millisecond, doesn&#8217;t it? This is because our application didn&#8217;t actually sort them at all. Via the power of Deferred Execution, your .NET application is intelligent enough to know not to actually execute any LINQ queries until you NEED to. Note that since we never did anything with the result, the sort never actually happened.</p>
+
+<p>What did happen, however, was the creation of a .NET object called an Expression Tree. An Expression Tree is used for &#8220;meta programming&#8221; &#8211; basically writing code that writes code. LINQ automatically generates an Expression Tree for your query &#8211; which it can build upon as you tag on additional queries &#8211; that isn&#8217;t executed until it needs to be executed. This allows you to do all of the neat things that LINQ supports like joins, selecting based on a particular class property or value, and so on. The generation of this Expression Tree is actually all that has happened so far in our application, and it took approximately 0 ms &#8211; cheap!</p>
+
+<p>Recall now that LINQ can be performed on 2 types of objects: <code>IEnumerable&lt;T&gt;</code> and <code>IQueryable&lt;T&gt;</code>. Since <code>IEnumerable&lt;T&gt;</code> exposes only one method, <code>GetEnumerator</code>, it is safe to say that LINQ queries against <code>IEnumerable&lt;T&gt;</code> objects are only actually executed whenever enumeration actually occurs. To prove this, let&#8217;s alter the code slightly by adding a <code>ToList()</code> call to our <code>OrderBy()</code> call &#8211; <code>ToList()</code> forces an enumeration of the collection to gather results, so our OrderBy will actually do the work of ordering things:</p>
+
+<pre><code>static void Main(string[] args)
+{
+    // Anytime that you know the size of your list, specify 
+    // it in the constructor. This enables much more efficient 
+    // processor and memory usage
+    var myIntegers = new List&lt;int&gt;(1000000);
+
+    // Initialize RNG
+    var random = new Random();
+
+    // Populate the list with random numbers
+    for (int i = 0; i &lt; 1000000; i++)
+    {
+        myIntegers.Add(random.Next(1, 10000));
+    }
+
+    var stopwatch = new Stopwatch();
+    stopwatch.Start();
+
+    // LINQ time, let's sort them
+    // This time we force the enumeration with ToList()
+    var result = myIntegers.OrderBy(i =&gt; i).ToList();
+
+    stopwatch.Stop();
+    Console.WriteLine(&quot;LINQ OrderBy Time: &quot; + stopwatch.ElapsedMilliseconds + &quot; ms&quot;);
+
+    Console.ReadKey();
+}
+</code></pre>
+
+<p>And the result:</p>
+
+
+<figure>
+    
+        <img src="/img/linq-order-by-then-any-result.png" />
+    
+    
+    <figcaption>
+        <h4>LINQ OrderBy Then Any Result</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>A whopping 356 ms &#8211; seems a little more realistic for performing a sort than 0 ms!</p>
+
+<p>Why is LINQ done this way? Why not execute each query immediately as the LINQ method is called? The answer is efficiency. I&#8217;d love to get further into the nitty gritty details of why, <a href="http://blogs.msdn.com/b/charlie/archive/2007/12/09/deferred-execution.aspx">but Charlie Calvert explains it better than I probably would.</a> I will, however, cover Expression Trees in a future post &#8211; they&#8217;re a ton of fun.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/.net/">.net</a>
+          
+          <a href="/tags/c/">c#</a>
+          
+          <a href="/tags/linq/">linq</a>
+          
+          <a href="/tags/performance/">performance</a>
+          
+          <a href="/tags/programming/">programming</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/custom-output-caching-with-mvc3-and-net-4-0-done-right/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/make-your-debugging-life-easier/">
+            <span class="next-text nav-default">Make Your Debugging Life Easier</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'haney';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
+  <a href="http://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">David Haney</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50502107-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html>
