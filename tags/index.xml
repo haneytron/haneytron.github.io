@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Tue, 10 Jan 2017 09:07:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2015 18:32:37 +0000</lastBuildDate>
     
 	<atom:link href="http://www.haneycodes.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>.net</title>
-      <link>http://www.haneycodes.net/tags/.net/</link>
-      <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
-      
-      <guid>http://www.haneycodes.net/tags/.net/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Analysis</title>
@@ -162,6 +153,15 @@
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       
       <guid>http://www.haneycodes.net/tags/diversity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dotnet</title>
+      <link>http://www.haneycodes.net/tags/dotnet/</link>
+      <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
+      
+      <guid>http://www.haneycodes.net/tags/dotnet/</guid>
       <description></description>
     </item>
     

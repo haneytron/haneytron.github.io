@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>One More Thing About List Binary Search - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <title>Dotnet · Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,10 +17,7 @@
 
 
 <meta name="author" content="David Haney" />
-  <meta name="description" content="I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearch
-They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!" />
-
+  <meta name="description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
   <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
 
 
@@ -31,7 +28,9 @@ They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch 
 <meta name="generator" content="Hugo 0.41" />
 
 
-<link rel="canonical" href="http://www.haneycodes.net/one-more-thing-about-list-binary-search/" />
+<link rel="canonical" href="http://www.haneycodes.net/tags/dotnet/" />
+<link href="http://www.haneycodes.net/tags/dotnet/index.xml" rel="alternate" type="application/rss+xml" title="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
+  <link href="http://www.haneycodes.net/tags/dotnet/index.xml" rel="feed" type="application/rss+xml" title="Haney Codes .NET - Sharing my experiences as a developer and engineering manager." />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -53,18 +52,14 @@ They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch 
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="One More Thing About List Binary Search" />
-<meta property="og:description" content="I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearch
-They do an excellent, quick demonstration of List&lt;T&gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.haneycodes.net/one-more-thing-about-list-binary-search/" />
+<meta property="og:title" content="Dotnet" />
+<meta property="og:description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.haneycodes.net/tags/dotnet/" />
 
 
 
-<meta property="article:published_time" content="2013-03-30T15:36:24&#43;00:00"/>
-
-<meta property="article:modified_time" content="2013-03-30T15:36:24&#43;00:00"/>
+<meta property="og:updated_time" content="2013-02-12T12:07:12&#43;00:00"/>
 
 
 
@@ -75,25 +70,12 @@ They do an excellent, quick demonstration of List&lt;T&gt;.BinarySearch and show
 
 
 
+<meta itemprop="name" content="Dotnet">
+<meta itemprop="description" content="A blog by David Haney, Engineering Manager at Stack Overflow.">
 
-<meta itemprop="name" content="One More Thing About List Binary Search">
-<meta itemprop="description" content="I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearch
-They do an excellent, quick demonstration of List&lt;T&gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!">
-
-
-<meta itemprop="datePublished" content="2013-03-30T15:36:24&#43;00:00" />
-<meta itemprop="dateModified" content="2013-03-30T15:36:24&#43;00:00" />
-<meta itemprop="wordCount" content="39">
-
-
-
-<meta itemprop="keywords" content="dotnet,csharp,memory,performance,programming," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="One More Thing About List Binary Search"/>
-<meta name="twitter:description" content="I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearch
-They do an excellent, quick demonstration of List&lt;T&gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!"/>
+<meta name="twitter:title" content="Dotnet"/>
+<meta name="twitter:description" content="A blog by David Haney, Engineering Manager at Stack Overflow."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -149,103 +131,139 @@ They do an excellent, quick demonstration of List&lt;T&gt;.BinarySearch and show
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">One More Thing About List Binary Search</h1>
+          
 
-      <div class="post-meta">
-        <span class="post-time"> 2013-03-30 </span>
-        <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 39 words </span>
-        <span class="more-meta"> 1 min read </span>
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
+<section id="archive" class="archive">
   
-  <div class="post-toc-content always-active">
-    
-  </div>
-</div>
 
-    
-    
-
-    
-    <div class="post-content">
-      <p>I wanted to point people to this link at DotNetPearls:</p>
-
-<p><a href="http://www.dotnetperls.com/binarysearch">http://www.dotnetperls.com/binarysearch</a></p>
-
-<p>They do an excellent, quick demonstration of <code>List&lt;T&gt;.BinarySearch</code> and show a graph that really drives home how much faster it is for large lists than a regular traversal!</p>
-
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2013-02-12
+      </span>
+      <span class="archive-post-title">
+        <a href="/a-better-mime-mapping-stealer/" class="archive-post-link">
+          A Better MIME Mapping Stealer!
+        </a>
+      </span>
     </div>
-
-    
-    
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/dotnet/">dotnet</a>
-          
-          <a href="/tags/csharp/">csharp</a>
-          
-          <a href="/tags/memory/">memory</a>
-          
-          <a href="/tags/performance/">performance</a>
-          
-          <a href="/tags/programming/">programming</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/generic-comparer/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Generic Comparer</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        
-          <a class="next" href="/make-mostly-read-seldom-written-lists-much-more-efficient/">
-            <span class="next-text nav-default">Make Mostly Read, Seldom-Written Lists Much More Efficient</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
   
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2013-02-11
+      </span>
+      <span class="archive-post-title">
+        <a href="/determine-mime-type-from-file-name/" class="archive-post-link">
+          Determine MIME Type from File Name
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2013-01-18
+      </span>
+      <span class="archive-post-title">
+        <a href="/published-by-red-gate/" class="archive-post-link">
+          Published by Red Gate
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-12-02
+      </span>
+      <span class="archive-post-title">
+        <a href="/but-it-didnt-happen-in-dev-or-qa/" class="archive-post-link">
+          But it Didn&#39;t Happen in DEV or QA!
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-10-24
+      </span>
+      <span class="archive-post-title">
+        <a href="/static-vs-instance-string-equals-benchmark/" class="archive-post-link">
+          Static vs Instance string.Equals Benchmark
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-10-22
+      </span>
+      <span class="archive-post-title">
+        <a href="/stats-vs-reference-string-equals/" class="archive-post-link">
+          Static vs Instance string.Equals
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-08-12
+      </span>
+      <span class="archive-post-title">
+        <a href="/tpl-and-error-handling-continuations/" class="archive-post-link">
+          TPL and Error Handling &amp; Continuation Tasks
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-08-05
+      </span>
+      <span class="archive-post-title">
+        <a href="/tpl-and-error-handling/" class="archive-post-link">
+          TPL and Error Handling
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-07-16
+      </span>
+      <span class="archive-post-title">
+        <a href="/compiler-tricks-inferred-types/" class="archive-post-link">
+          Compiler Tricks - Inferred Types
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2012-06-20
+      </span>
+      <span class="archive-post-title">
+        <a href="/custom-output-caching-with-mvc3-and-net-4-0-done-right/" class="archive-post-link">
+          Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!
+        </a>
+      </span>
+    </div>
+  
+</section>
+
+<nav class="pagination">
+  
+    <a class="prev" href="/tags/dotnet/">
+      <i class="iconfont icon-left"></i>
+      <span class="prev-text">Prev</span>
+    </a>
+  
+    <a class="next" href="/tags/dotnet/page/3/">
+      <span class="next-text">Next</span>
+      <i class="iconfont icon-right"></i>
+    </a>
+</nav>
+
+        </div>
+        
 
       </div>
     </main>
