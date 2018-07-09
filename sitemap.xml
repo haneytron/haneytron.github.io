@@ -395,13 +395,6 @@
   </url>
   
   <url>
-    <loc>http://www.haneycodes.net/tags/c#/</loc>
-    <lastmod>2014-02-28T11:47:08+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.haneycodes.net/tags/caching/</loc>
     <lastmod>2017-01-10T09:07:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -453,6 +446,13 @@
   <url>
     <loc>http://www.haneycodes.net/tags/credentialism/</loc>
     <lastmod>2014-12-29T16:00:27+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haneycodes.net/tags/csharp/</loc>
+    <lastmod>2014-02-28T11:47:08+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
