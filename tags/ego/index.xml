@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ego on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/ego/</link>
+    <link>https://www.haneycodes.net/tags/ego/</link>
     <description>Recent content in Ego on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Fri, 17 Jun 2016 17:02:13 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/ego/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/ego/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
-      <link>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</link>
+      <link>https://www.haneycodes.net/lets-talk-about-rock-stars-egos/</link>
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</guid>
+      <guid>https://www.haneycodes.net/lets-talk-about-rock-stars-egos/</guid>
       <description>On Plumbers Picture this situation: you woke up this morning to find that there&amp;#8217;s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
 Plumber #1 Plumber #1, let&amp;#8217;s call him Mario, tells you he can&amp;#8217;t be bothered to come check out your issue because it&amp;#8217;s minor and he&amp;#8217;s very important and too busy for it.</description>
     </item>
     
     <item>
       <title>How I Got A Job At Stack Exchange</title>
-      <link>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</link>
+      <link>https://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</link>
       <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</guid>
+      <guid>https://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</guid>
       <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
     </item>
     
     <item>
       <title>How To Guarantee Dev Team Failure</title>
-      <link>http://www.haneycodes.net/how-to-guarantee-dev-team-failure/</link>
+      <link>https://www.haneycodes.net/how-to-guarantee-dev-team-failure/</link>
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/how-to-guarantee-dev-team-failure/</guid>
+      <guid>https://www.haneycodes.net/how-to-guarantee-dev-team-failure/</guid>
       <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on &amp;#8220;good&amp;#8221; code and more emphasis on &amp;#8220;working&amp;#8221; code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you&amp;#8217;ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
     </item>
     

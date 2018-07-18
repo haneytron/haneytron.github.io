@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Packages on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/packages/</link>
+    <link>https://www.haneycodes.net/tags/packages/</link>
     <description>Recent content in Packages on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Wed, 23 Mar 2016 18:01:52 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/packages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/packages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NPM &amp; left-pad: Have We Forgotten How To Program?</title>
-      <link>http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</link>
+      <link>https://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</link>
       <pubDate>Wed, 23 Mar 2016 18:01:52 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</guid>
+      <guid>https://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/</guid>
       <description>Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
 A simple NPM package called left-pad that was a dependency of their code.
 left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.</description>

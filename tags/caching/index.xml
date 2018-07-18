@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Caching on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/caching/</link>
+    <link>https://www.haneycodes.net/tags/caching/</link>
     <description>Recent content in Caching on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Tue, 10 Jan 2017 09:07:15 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/caching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/caching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Custom ASP.NET MVC Action Result Cache Attribute</title>
-      <link>http://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</link>
+      <link>https://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</link>
       <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</guid>
+      <guid>https://www.haneycodes.net/custom-asp-net-mvc-action-result-cache-attribute/</guid>
       <description>If you&amp;#8217;re working on an application built using ASP.NET MVC, you&amp;#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.</description>
     </item>
     
     <item>
       <title>Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!</title>
-      <link>http://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</link>
+      <link>https://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</link>
       <pubDate>Wed, 20 Jun 2012 00:47:52 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
+      <guid>https://www.haneycodes.net/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
       <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
     </item>
     

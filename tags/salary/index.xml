@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Salary on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/salary/</link>
+    <link>https://www.haneycodes.net/tags/salary/</link>
     <description>Recent content in Salary on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Fri, 10 Feb 2017 11:11:30 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/salary/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/salary/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>On Hiring: Developers Are Like Stocks</title>
-      <link>http://www.haneycodes.net/on-hiring-developers-are-like-stocks/</link>
+      <link>https://www.haneycodes.net/on-hiring-developers-are-like-stocks/</link>
       <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/on-hiring-developers-are-like-stocks/</guid>
+      <guid>https://www.haneycodes.net/on-hiring-developers-are-like-stocks/</guid>
       <description>This post is for those of you who hire developers, and also junior developers who want to be hired. Let&amp;#8217;s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you&amp;#8217;re now a stock market investor.
 As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It&amp;#8217;s made very clear that the future of the company depends on the return on investment (herein called ROI) &amp;#8211; &amp;#8220;gains&amp;#8221; &amp;#8211; that your investments bring to the company.</description>
     </item>
     
     <item>
       <title>Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</title>
-      <link>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
+      <link>https://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
       <pubDate>Fri, 26 Feb 2016 14:05:41 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
+      <guid>https://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
       <description>Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.
 How Does Your Company Determine Compensation? When you hire developers, how do you decide on their salary?</description>
     </item>

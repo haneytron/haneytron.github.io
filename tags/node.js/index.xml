@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Node.js on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/node.js/</link>
+    <link>https://www.haneycodes.net/tags/node.js/</link>
     <description>Recent content in Node.js on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 24 Mar 2014 16:41:25 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>To Node.js Or Not To Node.js</title>
-      <link>http://www.haneycodes.net/to-node-js-or-not-to-node-js/</link>
+      <link>https://www.haneycodes.net/to-node-js-or-not-to-node-js/</link>
       <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/to-node-js-or-not-to-node-js/</guid>
+      <guid>https://www.haneycodes.net/to-node-js-or-not-to-node-js/</guid>
       <description>Intro Node.js &amp;#8211; it has rapidly become the &amp;#8220;new hotness&amp;#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&amp;#8217;t worry, they&amp;#8217;ll let you know.
 One day you&amp;#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &amp;#8220;Have you guys tried Node.</description>
     </item>

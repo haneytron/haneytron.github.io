@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Behavior on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/behavior/</link>
+    <link>https://www.haneycodes.net/tags/behavior/</link>
     <description>Recent content in Behavior on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Fri, 27 Jan 2017 10:03:20 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/behavior/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/behavior/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dev Team Interactions: Conducting Good Code Reviews</title>
-      <link>http://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</link>
+      <link>https://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</link>
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</guid>
+      <guid>https://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</guid>
       <description>In part 2 of my series on dev team interactions, I&amp;#8217;d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I&amp;#8217;ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
     </item>
     
     <item>
       <title>Our Industry Needs Compassion</title>
-      <link>http://www.haneycodes.net/our-industry-needs-compassion/</link>
+      <link>https://www.haneycodes.net/our-industry-needs-compassion/</link>
       <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/our-industry-needs-compassion/</guid>
+      <guid>https://www.haneycodes.net/our-industry-needs-compassion/</guid>
       <description>Well, I&amp;#8217;ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I&amp;#8217;ve really let my readers &amp;#8211; and myself &amp;#8211; down.
 So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
     </item>
     
     <item>
       <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
-      <link>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</link>
+      <link>https://www.haneycodes.net/lets-talk-about-rock-stars-egos/</link>
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/lets-talk-about-rock-stars-egos/</guid>
+      <guid>https://www.haneycodes.net/lets-talk-about-rock-stars-egos/</guid>
       <description>On Plumbers Picture this situation: you woke up this morning to find that there&amp;#8217;s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
 Plumber #1 Plumber #1, let&amp;#8217;s call him Mario, tells you he can&amp;#8217;t be bothered to come check out your issue because it&amp;#8217;s minor and he&amp;#8217;s very important and too busy for it.</description>
     </item>

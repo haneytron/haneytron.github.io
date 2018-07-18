@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stack overflow on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/stack-overflow/</link>
+    <link>https://www.haneycodes.net/tags/stack-overflow/</link>
     <description>Recent content in Stack overflow on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Fri, 26 Feb 2016 14:05:41 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/stack-overflow/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/stack-overflow/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</title>
-      <link>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
+      <link>https://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
       <pubDate>Fri, 26 Feb 2016 14:05:41 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
+      <guid>https://www.haneycodes.net/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
       <description>Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.
 How Does Your Company Determine Compensation? When you hire developers, how do you decide on their salary?</description>
     </item>
     
     <item>
       <title>The Trouble With Job Titles</title>
-      <link>http://www.haneycodes.net/the-trouble-with-job-titles/</link>
+      <link>https://www.haneycodes.net/the-trouble-with-job-titles/</link>
       <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/the-trouble-with-job-titles/</guid>
+      <guid>https://www.haneycodes.net/the-trouble-with-job-titles/</guid>
       <description>Intro I&amp;#8217;ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
 I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
     </item>
     
     <item>
       <title>How I Got A Job At Stack Exchange</title>
-      <link>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</link>
+      <link>https://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</link>
       <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</guid>
+      <guid>https://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/</guid>
       <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
     </item>
     

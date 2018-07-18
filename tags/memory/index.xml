@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Memory on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>http://www.haneycodes.net/tags/memory/</link>
+    <link>https://www.haneycodes.net/tags/memory/</link>
     <description>Recent content in Memory on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Sat, 30 Mar 2013 15:36:24 +0000</lastBuildDate>
     
-	<atom:link href="http://www.haneycodes.net/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haneycodes.net/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>One More Thing About List Binary Search</title>
-      <link>http://www.haneycodes.net/one-more-thing-about-list-binary-search/</link>
+      <link>https://www.haneycodes.net/one-more-thing-about-list-binary-search/</link>
       <pubDate>Sat, 30 Mar 2013 15:36:24 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/one-more-thing-about-list-binary-search/</guid>
+      <guid>https://www.haneycodes.net/one-more-thing-about-list-binary-search/</guid>
       <description>I wanted to point people to this link at DotNetPearls:
 http://www.dotnetperls.com/binarysearch
 They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
@@ -25,19 +25,19 @@ They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch 
     
     <item>
       <title>Make Mostly Read, Seldom-Written Lists Much More Efficient</title>
-      <link>http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</link>
+      <link>https://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</link>
       <pubDate>Fri, 15 Mar 2013 17:11:42 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
+      <guid>https://www.haneycodes.net/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
       <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.</description>
     </item>
     
     <item>
       <title>Who Loves Interns?</title>
-      <link>http://www.haneycodes.net/who-loves-interns/</link>
+      <link>https://www.haneycodes.net/who-loves-interns/</link>
       <pubDate>Wed, 02 May 2012 23:50:20 +0000</pubDate>
       
-      <guid>http://www.haneycodes.net/who-loves-interns/</guid>
+      <guid>https://www.haneycodes.net/who-loves-interns/</guid>
       <description>The topic at hand is interning. More specifically, string interning.
 &amp;#8220;What is string interning?&amp;#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&amp;#8217;s location on the heap. Typically, a new string is created and stored within your application&amp;#8217;s memory each time that you assign a string &amp;#8211; even if the same string is defined repeatedly.</description>
     </item>
