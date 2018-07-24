@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.haneycodes.net/writing-a-great-junior-tech-resume/</loc>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.haneycodes.net/new-blog-and-hiring-needs/</loc>
     <lastmod>2018-06-09T13:56:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -382,7 +389,7 @@
   
   <url>
     <loc>https://www.haneycodes.net/categories/blog/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -396,14 +403,14 @@
   
   <url>
     <loc>https://www.haneycodes.net/tags/career/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haneycodes.net/categories/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -494,14 +501,14 @@
   
   <url>
     <loc>https://www.haneycodes.net/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haneycodes.net/tags/hiring/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -515,7 +522,7 @@
   
   <url>
     <loc>https://www.haneycodes.net/tags/interviews/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -557,7 +564,7 @@
   
   <url>
     <loc>https://www.haneycodes.net/tags/management/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -627,7 +634,7 @@
   
   <url>
     <loc>https://www.haneycodes.net/post/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -774,7 +781,7 @@
   
   <url>
     <loc>https://www.haneycodes.net/tags/workplace/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
