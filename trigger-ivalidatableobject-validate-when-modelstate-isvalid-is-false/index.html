@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Trigger IValidatableObject.Validate When ModelState.IsValid is false - Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
+  <title>Trigger IValidatableObject.Validate When ModelState.IsValid is false - David Haney - Blogging my experiences as a developer and engineering manager.</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -20,7 +20,7 @@
   <meta name="description" content="I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
 Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject." />
 
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, code, stack, overflow, github, twitter, linkedin" />
+  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
@@ -30,7 +30,7 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 <meta name="generator" content="Hugo 0.41" />
 
 
-<link rel="canonical" href="https://www.haneycodes.net/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" />
+<link rel="canonical" href="https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -56,7 +56,7 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 <meta property="og:description" content="I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
 Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.haneycodes.net/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" />
+<meta property="og:url" content="https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" />
 
 
 
@@ -104,7 +104,7 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Haney Codes .NET</a>
+    <a href="/" class="logo">David Haney</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -126,7 +126,7 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Haney Codes .NET</a>
+  <a href="/" class="logo">David Haney</a>
 </div>
 
 <nav class="site-navbar">
@@ -336,10 +336,10 @@ public class ForceValidationModelBinderProvider : IModelBinderProvider
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneycodes" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.haneycodes.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">

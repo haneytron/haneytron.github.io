@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Process on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/process/</link>
-    <description>Recent content in Process on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Process on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/process/</link>
+    <description>Recent content in Process on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/process/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/process/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GitLab Data Loss: A Discussion</title>
-      <link>https://www.haneycodes.net/gitlab-data-loss-a-discussion/</link>
+      <link>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</link>
       <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/gitlab-data-loss-a-discussion/</guid>
+      <guid>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</guid>
       <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&amp;#8230; only to find that none of them actually worked.
 Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
     </item>
     
     <item>
       <title>Dev Team Interactions: Conducting Good Code Reviews</title>
-      <link>https://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</link>
+      <link>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</link>
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/dev-team-interactions-conducting-good-code-reviews/</guid>
+      <guid>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</guid>
       <description>In part 2 of my series on dev team interactions, I&amp;#8217;d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I&amp;#8217;ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
     </item>
     
     <item>
       <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
-      <link>https://www.haneycodes.net/developers-shouldnt-measure-twice-cut-once/</link>
+      <link>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</link>
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/developers-shouldnt-measure-twice-cut-once/</guid>
+      <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
       <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
     </item>
     
     <item>
       <title>How To Guarantee Dev Team Failure</title>
-      <link>https://www.haneycodes.net/how-to-guarantee-dev-team-failure/</link>
+      <link>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</link>
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/how-to-guarantee-dev-team-failure/</guid>
+      <guid>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</guid>
       <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on &amp;#8220;good&amp;#8221; code and more emphasis on &amp;#8220;working&amp;#8221; code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you&amp;#8217;ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
     </item>
     

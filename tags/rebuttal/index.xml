@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rebuttal on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/rebuttal/</link>
-    <description>Recent content in Rebuttal on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Rebuttal on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/rebuttal/</link>
+    <description>Recent content in Rebuttal on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 09 Mar 2015 18:32:37 +0000</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/rebuttal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/rebuttal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>On Secretly Terrible Engineers - A Rebuttal</title>
-      <link>https://www.haneycodes.net/on-secretly-terrible-engineers-a-rebuttal/</link>
+      <link>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</link>
       <pubDate>Mon, 09 Mar 2015 18:32:37 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/on-secretly-terrible-engineers-a-rebuttal/</guid>
+      <guid>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</guid>
       <description>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
 Spoiler: I strongly disagree with most of this article.</description>
     </item>

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Debugging on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/debugging/</link>
-    <description>Recent content in Debugging on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Debugging on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/debugging/</link>
+    <description>Recent content in Debugging on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Sun, 02 Dec 2012 17:22:20 +0000</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>But it Didn&#39;t Happen in DEV or QA!</title>
-      <link>https://www.haneycodes.net/but-it-didnt-happen-in-dev-or-qa/</link>
+      <link>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</link>
       <pubDate>Sun, 02 Dec 2012 17:22:20 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/but-it-didnt-happen-in-dev-or-qa/</guid>
+      <guid>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</guid>
       <description>Most of us have been there: you&amp;#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
 Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&amp;#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&amp;#8217;d be able to solve the problem.</description>
     </item>
     
     <item>
       <title>Make Your Debugging Life Easier</title>
-      <link>https://www.haneycodes.net/make-your-debugging-life-easier/</link>
+      <link>https://www.davidhaney.io/make-your-debugging-life-easier/</link>
       <pubDate>Fri, 25 May 2012 20:25:36 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/make-your-debugging-life-easier/</guid>
+      <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
       <description>Sorry for the delay in posts, May has been a very busy month.
 In order to accurately debug or profile an external assembly or library (AKA one you&amp;#8217;re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
     </item>

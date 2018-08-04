@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Open source on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/open-source/</link>
-    <description>Recent content in Open source on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Open source on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/open-source/</link>
+    <description>Recent content in Open source on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Sat, 09 Jun 2018 13:56:24 -0400</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Blog &amp; Hiring Needs</title>
-      <link>https://www.haneycodes.net/new-blog-and-hiring-needs/</link>
+      <link>https://www.davidhaney.io/new-blog-and-hiring-needs/</link>
       <pubDate>Sat, 09 Jun 2018 13:56:24 -0400</pubDate>
       
-      <guid>https://www.haneycodes.net/new-blog-and-hiring-needs/</guid>
+      <guid>https://www.davidhaney.io/new-blog-and-hiring-needs/</guid>
       <description>Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.
 Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!
 New blog engine I was previously using WordPress but had many issues and concerns with it.</description>
@@ -25,20 +25,20 @@ New blog engine I was previously using WordPress but had many issues and concern
     
     <item>
       <title>On Hiring: Developers Are Like Stocks</title>
-      <link>https://www.haneycodes.net/on-hiring-developers-are-like-stocks/</link>
+      <link>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</link>
       <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/on-hiring-developers-are-like-stocks/</guid>
+      <guid>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</guid>
       <description>This post is for those of you who hire developers, and also junior developers who want to be hired. Let&amp;#8217;s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you&amp;#8217;re now a stock market investor.
 As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It&amp;#8217;s made very clear that the future of the company depends on the return on investment (herein called ROI) &amp;#8211; &amp;#8220;gains&amp;#8221; &amp;#8211; that your investments bring to the company.</description>
     </item>
     
     <item>
       <title>Interview with InfoQ on SimplSockets</title>
-      <link>https://www.haneycodes.net/interview-with-infoq-on-simplsockets/</link>
+      <link>https://www.davidhaney.io/interview-with-infoq-on-simplsockets/</link>
       <pubDate>Wed, 11 Dec 2013 10:54:43 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/interview-with-infoq-on-simplsockets/</guid>
+      <guid>https://www.davidhaney.io/interview-with-infoq-on-simplsockets/</guid>
       <description>Jonathan Allen of InfoQ conducted an interview with me about one of my open source initiatives, SimplSockets. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.
 I&amp;#8217;d like to thank Jonathan and InfoQ for the opportunity &amp;#8211; it was a great discussion. Check it out here: http://www.infoq.com/news/2013/12/SimplSockets</description>
     </item>

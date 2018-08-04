@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Compiler on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/compiler/</link>
-    <description>Recent content in Compiler on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Compiler on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/compiler/</link>
+    <description>Recent content in Compiler on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 16 Jul 2012 00:33:54 +0000</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Compiler Tricks - Inferred Types</title>
-      <link>https://www.haneycodes.net/compiler-tricks-inferred-types/</link>
+      <link>https://www.davidhaney.io/compiler-tricks-inferred-types/</link>
       <pubDate>Mon, 16 Jul 2012 00:33:54 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/compiler-tricks-inferred-types/</guid>
+      <guid>https://www.davidhaney.io/compiler-tricks-inferred-types/</guid>
       <description>The .NET compiler is a terrific thing&amp;#8230; After all, it turns your C# into an executable program!
 One nice feature of the .NET compiler, which is becoming better each release, is inferred typing. I&amp;#8217;d like to lay out a few short examples that might help you develop your programming standards and practices.
 Inferring a type when creating an array.

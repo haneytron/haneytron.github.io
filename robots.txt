@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.haneycodes.net/sitemap.xml
+Sitemap: https://www.davidhaney.io/sitemap.xml

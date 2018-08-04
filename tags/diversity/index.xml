@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Diversity on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/diversity/</link>
-    <description>Recent content in Diversity on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Diversity on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/diversity/</link>
+    <description>Recent content in Diversity on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Thu, 24 Sep 2015 11:23:38 +0000</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/diversity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/diversity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Diversity Is Really Freaking Hard</title>
-      <link>https://www.haneycodes.net/diversity-is-really-freaking-hard/</link>
+      <link>https://www.davidhaney.io/diversity-is-really-freaking-hard/</link>
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/diversity-is-really-freaking-hard/</guid>
+      <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
       <description>Background I&amp;#8217;m going to discuss an important topic that affects everybody in tech: diversity.
 No, this won&amp;#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&amp;#8217;m going to tell you about the things I&amp;#8217;ve experienced working on diversity &amp;#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
 It&amp;#8217;s no secret that the tech industry is not that diverse.</description>

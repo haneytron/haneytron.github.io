@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lessons on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</title>
-    <link>https://www.haneycodes.net/tags/lessons/</link>
-    <description>Recent content in Lessons on Haney Codes .NET - Sharing my experiences as a developer and engineering manager.</description>
+    <title>Lessons on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <link>https://www.davidhaney.io/tags/lessons/</link>
+    <description>Recent content in Lessons on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 03 Aug 2015 14:18:02 +0000</lastBuildDate>
     
-	<atom:link href="https://www.haneycodes.net/tags/lessons/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.davidhaney.io/tags/lessons/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Developer Turned Manager</title>
-      <link>https://www.haneycodes.net/developer-turned-manager/</link>
+      <link>https://www.davidhaney.io/developer-turned-manager/</link>
       <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
       
-      <guid>https://www.haneycodes.net/developer-turned-manager/</guid>
+      <guid>https://www.davidhaney.io/developer-turned-manager/</guid>
       <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
 There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#8217;ve learned the hard way. There&amp;#8217;s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
     </item>
