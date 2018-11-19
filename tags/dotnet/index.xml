@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Tue, 10 Jan 2017 09:07:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://www.davidhaney.io/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>.NET Core Azure Functions Tutorial</title>
+      <link>https://www.davidhaney.io/net-core-azure-functions-tutorial/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/net-core-azure-functions-tutorial/</guid>
+      <description>In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!
+Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.</description>
+    </item>
     
     <item>
       <title>Custom ASP.NET MVC Action Result Cache Attribute</title>

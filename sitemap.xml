@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.davidhaney.io/net-core-azure-functions-tutorial/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/new-blog-name-and-domain/</loc>
     <lastmod>2018-08-03T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -388,6 +395,13 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/azure/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/tags/behavior/</loc>
     <lastmod>2017-01-27T10:03:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -403,7 +417,7 @@
   
   <url>
     <loc>https://www.davidhaney.io/categories/blog/</loc>
-    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -424,7 +438,7 @@
   
   <url>
     <loc>https://www.davidhaney.io/categories/</loc>
-    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -465,6 +479,13 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/core/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/tags/credentialism/</loc>
     <lastmod>2014-12-29T16:00:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -473,7 +494,7 @@
   
   <url>
     <loc>https://www.davidhaney.io/tags/csharp/</loc>
-    <lastmod>2014-02-28T11:47:08+00:00</lastmod>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -487,7 +508,7 @@
   
   <url>
     <loc>https://www.davidhaney.io/</loc>
-    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -508,7 +529,7 @@
   
   <url>
     <loc>https://www.davidhaney.io/tags/dotnet/</loc>
-    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -516,6 +537,13 @@
   <url>
     <loc>https://www.davidhaney.io/tags/ego/</loc>
     <lastmod>2016-06-17T17:02:13+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/functions/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -655,7 +683,7 @@
   
   <url>
     <loc>https://www.davidhaney.io/post/</loc>
-    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

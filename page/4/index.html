@@ -59,7 +59,7 @@
 
 
 
-<meta property="og:updated_time" content="2013-03-30T15:36:24&#43;00:00"/>
+<meta property="og:updated_time" content="2013-04-22T14:53:17&#43;00:00"/>
 
 
 
@@ -135,6 +135,33 @@
   <section id="posts" class="posts">
     
     
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/generic-comparer/">Generic Comparer</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-04-22 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      <span class="more-meta"> 187 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Have you ever had to write a comparer for a specific type, only to be frustrated when you needed to write a second and third comparer for other types? Fear not, a generic comparer can take care of this for you!
+/// &lt;summary&gt; /// Compares two objects of any type. /// &lt;/summary&gt; /// &lt;typeparam name=&quot;T&quot;&gt;The type to be compared.&lt;/typeparam&gt; public class GenericComparer&lt;T&gt; : IComparer&lt;T&gt; { // The compare method private readonly Func&lt;T, T, int&gt; _compareMethod = null; /// &lt;summary&gt; /// The constructor.
+    </div>
+    <div class="read-more">
+      <a href="/generic-comparer/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     
       <article class="post">
   <header class="post-header">
@@ -374,33 +401,6 @@ string a = &quot;hello&quot;; string b = &quot;hi&quot;; bool result = a.Equals(
     </div>
     <div class="read-more">
       <a href="/stats-vs-reference-string-equals/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/the-joel-test-really-is-meaningful/">The Joel Test Really is Meaningful</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-10-14 </span>
-      <div class="post-category">
-          
-            <a href="/categories/blog/"> blog </a>
-          
-        </div>
-      <span class="more-meta"> 717 words </span>
-      <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Well, it&#8217;s been nearly 2 months since my last post&#8230; I&#8217;m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
-The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.
-    </div>
-    <div class="read-more">
-      <a href="/the-joel-test-really-is-meaningful/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
