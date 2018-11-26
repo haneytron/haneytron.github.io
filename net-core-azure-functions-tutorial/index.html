@@ -204,7 +204,7 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
 
 <h1 id="introducing-realdonaldtron">Introducing realDonaldTron</h1>
 
-<p>So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a <a href="https://www.twitter.com/realDonaldTron">Twitter account</a> and genereted API keys. I then created an Azure Classic Cloud Service and
+<p>So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a <a href="https://www.twitter.com/realDonaldTron">Twitter account</a> and generated API keys. I then created an Azure Classic Cloud Service and
 wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&rsquo;t write words good), generates a <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chain</a>
 from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.</p>
 
@@ -516,7 +516,7 @@ and can be readily modified. The <code>ILogger</code> you see there is the logge
 
 <p>You might notice that all of my <code>Timer</code> stuff is gone. That&rsquo;s because Azure Functions natively support timed triggers, and the CRON syntax <code>0 0 * * * *</code> says &ldquo;run this every hour, on the hour&rdquo; which completely replaces my need for C# Timers!</p>
 
-<p>Note that unless your function <em>needs</em> to run continuously, you should have it terminate by exiting the <code>Run</code> method as soon as possible. realDonaldTron does not need to remain active - he grabs the latest Tweets and builds a new Markhov chain every hour instead. He terminates as
+<p>Note that unless your function <em>needs</em> to run continuously, you should have it terminate by exiting the <code>Run</code> method as soon as possible. realDonaldTron does not need to remain active - he grabs the latest Tweets and builds a new Markov chain every hour instead. He terminates as
 soon as the <code>GenerateTweet()</code> function call returns.</p>
 
 <p>After you&rsquo;ve written your function, it&rsquo;s time to publish it to Azure. Simply right click &ndash;&gt; Publish your project, to be met with this screen:</p>
