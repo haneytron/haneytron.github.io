@@ -16,22 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="David Haney" />
-  <meta name="description" content="The topic at hand is interning. More specifically, string interning.
-&amp;#8220;What is string interning?&amp;#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&amp;#8217;s location on the heap. Typically, a new string is created and stored within your application&amp;#8217;s memory each time that you assign a string &amp;#8211; even if the same string is defined repeatedly." />
-
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+<meta name="author" content="David Haney" /><meta name="description" content="The topic at hand is interning. More specifically, string interning.
+&amp;#8220;What is string interning?&amp;#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&amp;#8217;s location on the heap. Typically, a new string is created and stored within your application&amp;#8217;s memory each time that you assign a string &amp;#8211; even if the same string is defined repeatedly." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.davidhaney.io/who-loves-interns/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,17 +35,9 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="preload" as="style">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="preload" as="style">
-
-
-
-<link href="/css/custom.css" rel="preload" as="style">
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content="Who Loves Interns?" />
@@ -57,23 +45,8 @@
 &#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidhaney.io/who-loves-interns/" />
-
-
-
-<meta property="article:published_time" content="2012-05-02T23:50:20&#43;00:00"/>
-
-<meta property="article:modified_time" content="2012-05-02T23:50:20&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2012-05-02T23:50:20+00:00" />
+<meta property="article:modified_time" content="2012-05-02T23:50:20+00:00" />
 <meta itemprop="name" content="Who Loves Interns?">
 <meta itemprop="description" content="The topic at hand is interning. More specifically, string interning.
 &#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly.">
@@ -81,7 +54,7 @@
 
 <meta itemprop="datePublished" content="2012-05-02T23:50:20&#43;00:00" />
 <meta itemprop="dateModified" content="2012-05-02T23:50:20&#43;00:00" />
-<meta itemprop="wordCount" content="1069">
+<meta itemprop="wordCount" content="1170">
 
 
 
@@ -153,30 +126,20 @@
       <div class="post-meta">
         <span class="post-time"> 2012-05-02 </span>
         <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 1069 words </span>
-        <span class="more-meta"> 6 mins read </span>
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 1170 words </span>
+          <span class="more-meta"> 6 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
       <p>The topic at hand is interning. More specifically, string interning.</p>
 
@@ -187,16 +150,50 @@
 <p>&#8220;The common language runtime conserves string storage by maintaining a table, called the intern pool, that contains a single reference to each unique literal string declared or created programmatically in your program. Consequently, an instance of a literal string with a particular value only exists once in the system. For example, if you assign the same literal string to several variables, the runtime retrieves the same reference to the literal string from the intern pool and assigns it to each variable. The Intern method uses the intern pool to search for a string equal to the value of str. If such a string exists, its reference in the intern pool is returned. If the string does not exist, a reference to str is added to the intern pool, then that reference is returned.&#8221;</p>
 
 <p>Up until this point, you may not have been aware of this pool or the string interning behaviour at all. This is understandable because the .NET compiler does a bloody good job of interning strings for you. In fact, any literal string will be automatically interned by the compiler. Almost any late-bound (at runtime) string, however, is not. A quick code example &#8211; let us define a program that simply creates 10,000,000 of the same string and assigns it to a Dictionary:</p>
-
-<pre><code>class Program
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">class Program
 {
     // The Dictionary that will be used to store our strings at an int 
-    // (so that they are not de-referenced and GC'd)
+    // (so that they are not de-referenced and GC&#39;d)
     private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
 
     static void Main(string[] args)
     {
-        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
+        Console.WriteLine(&#34;Storing a non-constant string 10000000 times&#34;);
 
         var stopwatch = new Stopwatch();
         stopwatch.Start();
@@ -205,52 +202,82 @@
         for (int i = 0; i &lt; 10000000; i++)
         {
             // Define the same string repeatedly
-            string blah = &quot;Hello! This Is A String!&quot;;
+            string blah = &#34;Hello! This Is A String!&#34;;
             // Add it to the Dictionary at the index of i
             _dict.Add(i, blah);
         }
 
         stopwatch.Stop();
 
-        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
-        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
+        Console.WriteLine(&#34;Memory Used: &#34; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&#34;n&#34;) + &#34; bytes&#34;);
+        Console.WriteLine(&#34;Elapsed milliseconds: &#34; + stopwatch.ElapsedMilliseconds);
 
-        Console.WriteLine(&quot;Press any key&quot;);
+        Console.WriteLine(&#34;Press any key&#34;);
         Console.ReadKey();
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>Running this program results in the following output:</p>
 
-
 <figure>
-    
-        <img src="/img/repeated-literal-string.png" />
-    
-    
-    <figcaption>
-        <h4>A Repeated Literal String</h4>
-        
-    </figcaption>
-    
+    <img src="/img/repeated-literal-string.png"/> <figcaption>
+            <h4>A Repeated Literal String</h4>
+        </figcaption>
 </figure>
 
 
 <p>It uses a relatively small amount of memory (269 megs) and takes very little time, since the compiler detects that the string which we&#8217;re creating is a literal and thus interns it for us automatically. Now, let us make a slight change to the application by creating a late-bound string which won&#8217;t be interned automatically:</p>
-
-<pre><code>class Program
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">class Program
 {
     // The Dictionary that will be used to store our strings at an int 
-    // (so that they are not de-referenced and GC'd)
+    // (so that they are not de-referenced and GC&#39;d)
     private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
 
     static void Main(string[] args)
     {
         // Define a string which will be concatenated with another string later
-        string dynamicString = &quot;Some Other Large String&quot;;
+        string dynamicString = &#34;Some Other Large String&#34;;
 
-        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
+        Console.WriteLine(&#34;Storing a non-constant string 10000000 times&#34;);
 
         var stopwatch = new Stopwatch();
         stopwatch.Start();
@@ -259,52 +286,84 @@
         for (int i = 0; i &lt; 10000000; i++)
         {
             // Define the same string repeatedly
-            string blah = &quot;Hello! This Is A String!&quot; + dynamicString;
+            string blah = &#34;Hello! This Is A String!&#34; + dynamicString;
             // Add it to the Dictionary at the index of i
             _dict.Add(i, blah);
         }
 
         stopwatch.Stop();
 
-        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
-        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
+        Console.WriteLine(&#34;Memory Used: &#34; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&#34;n&#34;) + &#34; bytes&#34;);
+        Console.WriteLine(&#34;Elapsed milliseconds: &#34; + stopwatch.ElapsedMilliseconds);
 
-        Console.WriteLine(&quot;Press any key&quot;);
+        Console.WriteLine(&#34;Press any key&#34;);
         Console.ReadKey();
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>Running THIS code yields crappier results:</p>
 
-
 <figure>
-    
-        <img src="/img/repeated-late-bound-string.png" />
-    
-    
-    <figcaption>
-        <h4>Repeated Late Bound String</h4>
-        
-    </figcaption>
-    
+    <img src="/img/repeated-late-bound-string.png"/> <figcaption>
+            <h4>Repeated Late Bound String</h4>
+        </figcaption>
 </figure>
 
 
 <p>Note that we use nearly <strong>five times</strong> as much memory (1.379 gigs) as we did before! And that our application got considerably slower! Sadly, we can&#8217;t do much about the slower part because concatenating strings takes time and effort. However, we can intern the string to return our memory usage back to something realistic while adding minimal computational cost. We do this with the <strong>string.Intern(string)</strong> method:</p>
-
-<pre><code>class Program
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">class Program
 {
     // The Dictionary that will be used to store our strings at an int 
-    // (so that they are not de-referenced and GC'd)
+    // (so that they are not de-referenced and GC&#39;d)
     private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
 
     static void Main(string[] args)
     {
         // Define a string which will be concatenated with another string later
-        string dynamicString = &quot;Some Other Large String&quot;;
+        string dynamicString = &#34;Some Other Large String&#34;;
 
-        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
+        Console.WriteLine(&#34;Storing a non-constant string 10000000 times&#34;);
 
         var stopwatch = new Stopwatch();
         stopwatch.Start();
@@ -313,37 +372,30 @@
         for (int i = 0; i &lt; 10000000; i++)
         {
             // Define the same string repeatedly
-            string blah = &quot;Hello! This Is A String!&quot; + dynamicString;
+            string blah = &#34;Hello! This Is A String!&#34; + dynamicString;
             // Add it to the Dictionary at the index of i
-            // Intern string &quot;blah&quot; to save memory!
+            // Intern string &#34;blah&#34; to save memory!
             _dict.Add(i, string.Intern(blah));
         }
 
         stopwatch.Stop();
 
-        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess()
-            .PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
-        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
+        Console.WriteLine(&#34;Memory Used: &#34; + Process.GetCurrentProcess()
+            .PagedMemorySize64.ToString(&#34;n&#34;) + &#34; bytes&#34;);
+        Console.WriteLine(&#34;Elapsed milliseconds: &#34; + stopwatch.ElapsedMilliseconds);
 
-        Console.WriteLine(&quot;Press any key&quot;);
+        Console.WriteLine(&#34;Press any key&#34;);
         Console.ReadKey();
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>And the results:</p>
 
-
 <figure>
-    
-        <img src="/img/repeated-late-bound-string-interned.png" />
-    
-    
-    <figcaption>
-        <h4>Repeated Late Bound String (Interned)</h4>
-        
-    </figcaption>
-    
+    <img src="/img/repeated-late-bound-string-interned.png"/> <figcaption>
+            <h4>Repeated Late Bound String (Interned)</h4>
+        </figcaption>
 </figure>
 
 
@@ -351,17 +403,10 @@
 
 <p>Now the icing on the cake. Compile and run your code in <strong>Release mode</strong> to allow for even more compiler optimizations:</p>
 
-
 <figure>
-    
-        <img src="/img/repeated-late-bound-string-interned-release-mode.png" />
-    
-    
-    <figcaption>
-        <h4>Repeated Late Bound String (Interned) - Release Mode</h4>
-        
-    </figcaption>
-    
+    <img src="/img/repeated-late-bound-string-interned-release-mode.png"/> <figcaption>
+            <h4>Repeated Late Bound String (Interned) - Release Mode</h4>
+        </figcaption>
 </figure>
 
 
@@ -371,37 +416,21 @@
 
     </div>
 
-    
-    
-
-    
-    
-
     <footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/dotnet/">dotnet</a>
-          
           <a href="/tags/csharp/">csharp</a>
-          
           <a href="/tags/memory/">memory</a>
-          
           <a href="/tags/performance/">performance</a>
-          
           <a href="/tags/programming/">programming</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/make-your-debugging-life-easier/">
+        <a class="prev" href="/make-your-debugging-life-easier/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Make Your Debugging Life Easier</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
-          <a class="next" href="/what-is-a-virtual-method-anyway/">
+        <a class="next" href="/what-is-a-virtual-method-anyway/">
             <span class="next-text nav-default">What is a Virtual Method, Anyway?</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -410,8 +439,7 @@
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -425,8 +453,6 @@
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
 
       </div>
     </main>
@@ -454,8 +480,7 @@
 
   <span class="copyright-year">
     &copy; 
-    
-      2012 - 
+    2012 - 
     2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -470,40 +495,29 @@
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001" defer></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1" defer></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
 
 
+<script src="/js/custom.js"></script>
 
-<script src="/js/custom.js" defer></script>
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-<link href="/css/custom.css" rel="stylesheet">
 
 </body>
 </html>

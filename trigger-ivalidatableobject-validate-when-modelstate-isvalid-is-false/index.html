@@ -16,22 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="David Haney" />
-  <meta name="description" content="I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
-Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject." />
-
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+<meta name="author" content="David Haney" /><meta name="description" content="I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
+Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,17 +35,9 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="preload" as="style">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="preload" as="style">
-
-
-
-<link href="/css/custom.css" rel="preload" as="style">
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content="Trigger IValidatableObject.Validate When ModelState.IsValid is false" />
@@ -57,23 +45,8 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" />
-
-
-
-<meta property="article:published_time" content="2014-02-05T15:55:40&#43;00:00"/>
-
-<meta property="article:modified_time" content="2014-02-05T15:55:40&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2014-02-05T15:55:40+00:00" />
+<meta property="article:modified_time" content="2014-02-05T15:55:40+00:00" />
 <meta itemprop="name" content="Trigger IValidatableObject.Validate When ModelState.IsValid is false">
 <meta itemprop="description" content="I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
 Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject.">
@@ -81,7 +54,7 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 
 <meta itemprop="datePublished" content="2014-02-05T15:55:40&#43;00:00" />
 <meta itemprop="dateModified" content="2014-02-05T15:55:40&#43;00:00" />
-<meta itemprop="wordCount" content="509">
+<meta itemprop="wordCount" content="584">
 
 
 
@@ -153,30 +126,20 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
       <div class="post-meta">
         <span class="post-time"> 2014-02-05 </span>
         <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 509 words </span>
-        <span class="more-meta"> 3 mins read </span>
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 584 words </span>
+          <span class="more-meta"> 3 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
       <p>I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the <code>IValidatableObject</code> interface and thus the <code>Validate</code> method which did some specific logic to ensure the state of the Model (the <code>ModelState</code>). This Model also had some <code>DataAnnotation</code> attributes on it to validate basic input.</p>
 
@@ -187,8 +150,70 @@ Long story short, the issue I encountered was that when ModelState.IsValid == fa
 <p>To thwart this, I created a custom Model Binder, a custom Model Binder Provider (to serve my custom Model Binder), and then registered the Model Binder Provider in the <code>Application_Start</code> method of <code>Global.asax.cs</code>. Here&#8217;s the code for a custom Model Binder that always fires the <code>IValidatableObject.Validate</code> method, even if <code>ModelState.IsValid == false</code>:</p>
 
 <p><strong>ForceValidationModelBinder:</strong></p>
-
-<pre><code>/// &lt;summary&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/// &lt;summary&gt;
 /// A custom model binder to force an IValidatableObject to execute 
 /// the Validate method, even when the ModelState is not valid.
 /// &lt;/summary&gt;
@@ -233,8 +258,8 @@ public class ForceValidationModelBinder : DefaultModelBinder
 
             foreach (string memberName in errorMemberNames)
             {
-                // Only add errors that haven't already been added.
-                // (This can happen if the model's Validate(...) method is called more than once, which will happen when there are no property-level validation failures)
+                // Only add errors that haven&#39;t already been added.
+                // (This can happen if the model&#39;s Validate(...) method is called more than once, which will happen when there are no property-level validation failures)
                 int index = modelStateKeys.IndexOf(memberName);
 
                 // Try and find an already existing error in the model state
@@ -246,12 +271,25 @@ public class ForceValidationModelBinder : DefaultModelBinder
             }
         }
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p><strong>ForceValidationModelBinderProvider:</strong></p>
-
-<pre><code>/// &lt;summary&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/// &lt;summary&gt;
 /// A custom model binder provider to provide a binder that forces an IValidatableObject to execute the Validate method, even when the ModelState is not valid.
 /// &lt;/summary&gt;
 public class ForceValidationModelBinderProvider : IModelBinderProvider
@@ -260,50 +298,44 @@ public class ForceValidationModelBinderProvider : IModelBinderProvider
     {
         return new ForceValidationModelBinder();
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p><strong>Global.asax.cs:</strong></p>
-
-<pre><code>protected void Application_Start()
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">protected void Application_Start()
 {
     // Register the force validation model binder provider
     ModelBinderProviders.BinderProviders.Clear();
     ModelBinderProviders.BinderProviders.Add(new ForceValidationModelBinderProvider());
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
     </div>
-
-    
-    
-
-    
-    
 
     <footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/dotnet/">dotnet</a>
-          
           <a href="/tags/csharp/">csharp</a>
-          
           <a href="/tags/mvc/">mvc</a>
-          
           <a href="/tags/programming/">programming</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/c-probably-getting-new-safe-navigation-operator/">
+        <a class="prev" href="/c-probably-getting-new-safe-navigation-operator/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
-          <a class="next" href="/interview-with-infoq-on-simplsockets/">
+        <a class="next" href="/interview-with-infoq-on-simplsockets/">
             <span class="next-text nav-default">Interview with InfoQ on SimplSockets</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -312,8 +344,7 @@ public class ForceValidationModelBinderProvider : IModelBinderProvider
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -327,8 +358,6 @@ public class ForceValidationModelBinderProvider : IModelBinderProvider
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
 
       </div>
     </main>
@@ -356,8 +385,7 @@ public class ForceValidationModelBinderProvider : IModelBinderProvider
 
   <span class="copyright-year">
     &copy; 
-    
-      2012 - 
+    2012 - 
     2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -372,40 +400,29 @@ public class ForceValidationModelBinderProvider : IModelBinderProvider
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001" defer></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1" defer></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
 
 
+<script src="/js/custom.js"></script>
 
-<script src="/js/custom.js" defer></script>
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-<link href="/css/custom.css" rel="stylesheet">
 
 </body>
 </html>

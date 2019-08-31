@@ -16,21 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="David Haney" />
-  <meta name="description" content="If you&amp;#8217;re working on an application built using ASP.NET MVC, you&amp;#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again." />
-
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+<meta name="author" content="David Haney" /><meta name="description" content="If you&amp;#8217;re working on an application built using ASP.NET MVC, you&amp;#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,47 +34,24 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="preload" as="style">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="preload" as="style">
-
-
-
-<link href="/css/custom.css" rel="preload" as="style">
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content="Custom ASP.NET MVC Action Result Cache Attribute" />
 <meta property="og:description" content="If you&#8217;re working on an application built using ASP.NET MVC, you&#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/" />
-
-
-
-<meta property="article:published_time" content="2017-01-10T09:07:15&#43;00:00"/>
-
-<meta property="article:modified_time" content="2017-01-10T09:07:15&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-01-10T09:07:15+00:00" />
+<meta property="article:modified_time" content="2017-01-10T09:07:15+00:00" />
 <meta itemprop="name" content="Custom ASP.NET MVC Action Result Cache Attribute">
 <meta itemprop="description" content="If you&#8217;re working on an application built using ASP.NET MVC, you&#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.">
 
 
 <meta itemprop="datePublished" content="2017-01-10T09:07:15&#43;00:00" />
 <meta itemprop="dateModified" content="2017-01-10T09:07:15&#43;00:00" />
-<meta itemprop="wordCount" content="1041">
+<meta itemprop="wordCount" content="1214">
 
 
 
@@ -149,47 +122,189 @@
       <div class="post-meta">
         <span class="post-time"> 2017-01-10 </span>
         <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 1041 words </span>
-        <span class="more-meta"> 5 mins read </span>
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 1214 words </span>
+          <span class="more-meta"> 6 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
       <p>If you&#8217;re working on an application built using ASP.NET MVC, you&#8217;re hopefully aware of the <a href="https://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute(v=vs.118).aspx">OutputCacheAttribute</a> attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again. This is the essence of caching: trading memory for performance.</p>
 
 <p>The OutputCacheAttribute is a really powerful way to improve performance in your MVC application, but isn&#8217;t always the most practical. Because it caches the entire page as raw HTML, it circumvents a large part of the MVC pipeline and thus also skips the code that runs to generate the page. This means that if your view has dynamic content that comes from session or ViewData, such as displaying the currently logged in user&#8217;s name in the top bar, or the current time of day, or the resulting view of an invalid form post which tells your user to correct their input errors, you&#8217;ll quickly discover the error of your ways when you try to cache that page. When David accesses the logged in page for the first time and caches it, everybody else who logs in will be called David on the page. And if David fills out your empty form and presses submit, only to cache the resulting input validation error page, then everybody will see David&#8217;s completed form when they have errors too &#8211; maybe even including sensitive data like his username, password, or even his credit card information. I think that most of us have seen this kind of (often humorous) caching error before. It&#8217;s scary stuff, nonetheless.</p>
 
 <p>A great way to balance the benefits of output caching with the dynamic content and features that the modern ASP.NET MVC web application offers is to create a custom caching attribute. This attribute can cache the <strong>ActionResult</strong> instead of the raw HTML of the page, and in doing so will allow you to cache all of the work that is done to generate the ActionResult (be it ViewResult or otherwise). By executing <em>within</em> the MVC pipeline, this custom caching attribute will not interrupt or short-circuit the MVC pipeline. This allows for things like SessionState or ViewData to vary per cached request! It&#8217;s not quite as efficient as the true OutputCacheAttribute, but my custom ActionResultCacheAttribute is an excellent tradeoff between performance and dynamic data:</p>
-
-<pre><code>/// &lt;summary&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/// &lt;summary&gt;
 /// Caches the result of an action method.
-/// NOTE: you'll need refs to System.Web.Mvc and System.Runtime.Caching
+/// NOTE: you&#39;ll need refs to System.Web.Mvc and System.Runtime.Caching
 /// &lt;/summary&gt;
 [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
 public class ActionResultCacheAttribute : ActionFilterAttribute
 {
     private static readonly Dictionary&lt;string, string[]&gt; _varyByParamsSplitCache = new Dictionary&lt;string, string[]&gt;();
     private static readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();
-    private static readonly MemoryCache _cache = new MemoryCache(&quot;ActionResultCacheAttribute&quot;);
+    private static readonly MemoryCache _cache = new MemoryCache(&#34;ActionResultCacheAttribute&#34;);
 
     /// &lt;summary&gt;
     /// The comma separated parameters to vary the caching by.
@@ -209,7 +324,7 @@ public class ActionResultCacheAttribute : ActionFilterAttribute
     /// &lt;summary&gt;
     /// Occurs when an action is executing.
     /// &lt;/summary&gt;
-    /// &lt;param name=&quot;filterContext&quot;&gt;The filter context.&lt;/param&gt;
+    /// &lt;param name=&#34;filterContext&#34;&gt;The filter context.&lt;/param&gt;
     public override void OnActionExecuting(ActionExecutingContext filterContext)
     {
         // Create the cache key
@@ -225,23 +340,23 @@ public class ActionResultCacheAttribute : ActionFilterAttribute
         }
 
         // Store to HttpContext Items
-        filterContext.HttpContext.Items[&quot;__actionresultcacheattribute_cachekey&quot;] = cacheKey;
+        filterContext.HttpContext.Items[&#34;__actionresultcacheattribute_cachekey&#34;] = cacheKey;
     }
 
     /// &lt;summary&gt;
     /// Occurs when an action has executed.
     /// &lt;/summary&gt;
-    /// &lt;param name=&quot;filterContext&quot;&gt;The filter context.&lt;/param&gt;
+    /// &lt;param name=&#34;filterContext&#34;&gt;The filter context.&lt;/param&gt;
     public override void OnActionExecuted(ActionExecutedContext filterContext)
     {
-        // Don't cache errors
+        // Don&#39;t cache errors
         if (filterContext.Exception != null)
         {
             return;
         }
 
         // Get the cache key from HttpContext Items
-        var cacheKey = filterContext.HttpContext.Items[&quot;__actionresultcacheattribute_cachekey&quot;] as string;
+        var cacheKey = filterContext.HttpContext.Items[&#34;__actionresultcacheattribute_cachekey&#34;] as string;
         if (string.IsNullOrWhiteSpace(cacheKey))
         {
             return;
@@ -267,13 +382,13 @@ public class ActionResultCacheAttribute : ActionFilterAttribute
     /// &lt;summary&gt;
     /// Creates the cache key.
     /// &lt;/summary&gt;
-    /// &lt;param name=&quot;routeValues&quot;&gt;The route values.&lt;/param&gt;
+    /// &lt;param name=&#34;routeValues&#34;&gt;The route values.&lt;/param&gt;
     /// &lt;returns&gt;The cache key.&lt;/returns&gt;
     private string CreateCacheKey(RouteValueDictionary routeValues, IDictionary&lt;string, object&gt; actionParameters)
     {
         // Create the cache key prefix as the controller and action method
-        var sb = new StringBuilder(routeValues[&quot;controller&quot;].ToString());
-        sb.Append(&quot;_&quot;).Append(routeValues[&quot;action&quot;].ToString());
+        var sb = new StringBuilder(routeValues[&#34;controller&#34;].ToString());
+        sb.Append(&#34;_&#34;).Append(routeValues[&#34;action&#34;].ToString());
 
         if (string.IsNullOrWhiteSpace(VaryByParam))
         {
@@ -300,7 +415,7 @@ public class ActionResultCacheAttribute : ActionFilterAttribute
             _lock.EnterWriteLock();
             try
             {
-                varyByParamsSplit = VaryByParam.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                varyByParamsSplit = VaryByParam.Split(new[] { &#39;,&#39;, &#39; &#39; }, StringSplitOptions.RemoveEmptyEntries);
                 _varyByParamsSplitCache[VaryByParam] = varyByParamsSplit;
             }
             finally
@@ -323,38 +438,71 @@ public class ActionResultCacheAttribute : ActionFilterAttribute
                 continue;
             }
 
-            sb.Append(&quot;_&quot;).Append(varyByParamObject.ToString());
+            sb.Append(&#34;_&#34;).Append(varyByParamObject.ToString());
         }
 
         return sb.ToString();
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>You can use this method on a controller to affect all action methods:</p>
-
-<pre><code>[ActionResultCache(Duration = 60 * 60 * 24)]
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[ActionResultCache(Duration = 60 * 60 * 24)]
 public class HomeController : Controller
 {
     public async Task&lt;ActionResult&gt; TermsOfService()
     {
         return View();
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>Or just apply it to individual action methods:</p>
-
-<pre><code>[ActionResultCache(Duration = 60 * 60 * 24)]
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[ActionResultCache(Duration = 60 * 60 * 24)]
 public async Task&lt;ActionResult&gt; TermsOfService()
 {
     return View();
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>You can also use it with the <code>VaryByParam</code> property to vary the cached result by the parameter(s) of the action method:</p>
-
-<pre><code>[ActionResultCache(Duration = 60 * 60 * 24, VaryByParam = &quot;username&quot;)]
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[ActionResultCache(Duration = 60 * 60 * 24, VaryByParam = &#34;username&#34;)]
 public async Task&lt;ActionResult&gt; ViewUser(string username)
 {
     var model = new UserModel
@@ -364,46 +512,30 @@ public async Task&lt;ActionResult&gt; ViewUser(string username)
     };
 
     return View(model);
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>The main benefit of this custom caching attribute is that your session state and all global action filter attributes, etc. still run in the MVC pipeline as they would normally. The only code cached and skipped over is the method body of the action method.</p>
 
 <p>Please use and enjoy! Feedback welcomed in the comments.</p>
 
     </div>
 
-    
-    
-
-    
-    
-
     <footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/dotnet/">dotnet</a>
-          
           <a href="/tags/caching/">caching</a>
-          
           <a href="/tags/mvc/">mvc</a>
-          
           <a href="/tags/performance/">performance</a>
-          
           <a href="/tags/programming/">programming</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/dev-team-interactions-accountability-blame/">
+        <a class="prev" href="/dev-team-interactions-accountability-blame/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Dev Team Interactions: Accountability &amp; Blame</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
-          <a class="next" href="/our-industry-needs-compassion/">
+        <a class="next" href="/our-industry-needs-compassion/">
             <span class="next-text nav-default">Our Industry Needs Compassion</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -412,8 +544,7 @@ public async Task&lt;ActionResult&gt; ViewUser(string username)
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -427,8 +558,6 @@ public async Task&lt;ActionResult&gt; ViewUser(string username)
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
 
       </div>
     </main>
@@ -456,8 +585,7 @@ public async Task&lt;ActionResult&gt; ViewUser(string username)
 
   <span class="copyright-year">
     &copy; 
-    
-      2012 - 
+    2012 - 
     2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -472,40 +600,29 @@ public async Task&lt;ActionResult&gt; ViewUser(string username)
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001" defer></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1" defer></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
 
 
+<script src="/js/custom.js"></script>
 
-<script src="/js/custom.js" defer></script>
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-<link href="/css/custom.css" rel="stylesheet">
 
 </body>
 </html>

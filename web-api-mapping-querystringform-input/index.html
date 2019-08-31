@@ -16,22 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="David Haney" />
-  <meta name="description" content="If you&amp;#8217;re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn&amp;#8217;t very clear, so let&amp;#8217;s do this by example. Consider part of the Facebook API:
- Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription." />
-
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+<meta name="author" content="David Haney" /><meta name="description" content="If you&amp;#8217;re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn&amp;#8217;t very clear, so let&amp;#8217;s do this by example. Consider part of the Facebook API:
+ Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.davidhaney.io/web-api-mapping-querystringform-input/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,17 +35,9 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="preload" as="style">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="preload" as="style">
-
-
-
-<link href="/css/custom.css" rel="preload" as="style">
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content="Web API Mapping QueryString/Form Input" />
@@ -57,23 +45,8 @@
  Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidhaney.io/web-api-mapping-querystringform-input/" />
-
-
-
-<meta property="article:published_time" content="2013-07-24T17:55:12&#43;00:00"/>
-
-<meta property="article:modified_time" content="2013-07-24T17:55:12&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2013-07-24T17:55:12+00:00" />
+<meta property="article:modified_time" content="2013-07-24T17:55:12+00:00" />
 <meta itemprop="name" content="Web API Mapping QueryString/Form Input">
 <meta itemprop="description" content="If you&#8217;re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn&#8217;t very clear, so let&#8217;s do this by example. Consider part of the Facebook API:
  Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.">
@@ -81,7 +54,7 @@
 
 <meta itemprop="datePublished" content="2013-07-24T17:55:12&#43;00:00" />
 <meta itemprop="dateModified" content="2013-07-24T17:55:12&#43;00:00" />
-<meta itemprop="wordCount" content="193">
+<meta itemprop="wordCount" content="199">
 
 
 
@@ -153,30 +126,20 @@
       <div class="post-meta">
         <span class="post-time"> 2013-07-24 </span>
         <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 193 words </span>
-        <span class="more-meta"> 1 min read </span>
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 199 words </span>
+          <span class="more-meta"> 1 min read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
       <p>If you&#8217;re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn&#8217;t very clear, so let&#8217;s do this by example. Consider part of the Facebook API:</p>
 
@@ -193,50 +156,43 @@
 <p>Now if we wanted to use Web API to receive this data, we know that C# does not support the decimal character <code>.</code> existing in variable names. So, how do we bind this querystring data to variables of a different name?</p>
 
 <p>After a lot of searching, I discovered that the answer is surprisingly simple &#8211; just use the FromUriAttribute:</p>
-
-<pre><code>public string Get([FromUri(Name=&quot;hub.mode&quot;)]string mode, 
-    [FromUri(Name=&quot;hub.challenge&quot;)]string challenge, 
-    [FromUri(Name=&quot;hub.verify_token&quot;)]string verifyToken)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">public string Get([FromUri(Name=&#34;hub.mode&#34;)]string mode, 
+    [FromUri(Name=&#34;hub.challenge&#34;)]string challenge, 
+    [FromUri(Name=&#34;hub.verify_token&#34;)]string verifyToken)
 {
     /* method body */
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>Works like a charm!</p>
 
     </div>
 
-    
-    
-
-    
-    
-
     <footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/dotnet/">dotnet</a>
-          
           <a href="/tags/csharp/">csharp</a>
-          
           <a href="/tags/mvc/">mvc</a>
-          
           <a href="/tags/programming/">programming</a>
-          
           <a href="/tags/webapi/">webapi</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/automatically-generate-pocos-from-db-with-t4/">
+        <a class="prev" href="/automatically-generate-pocos-from-db-with-t4/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Automatically Generate POCOs From DB With T4</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
-          <a class="next" href="/generic-comparer/">
+        <a class="next" href="/generic-comparer/">
             <span class="next-text nav-default">Generic Comparer</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -245,8 +201,7 @@
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -260,8 +215,6 @@
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
 
       </div>
     </main>
@@ -289,8 +242,7 @@
 
   <span class="copyright-year">
     &copy; 
-    
-      2012 - 
+    2012 - 
     2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -305,40 +257,29 @@
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001" defer></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1" defer></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
 
 
+<script src="/js/custom.js"></script>
 
-<script src="/js/custom.js" defer></script>
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-<link href="/css/custom.css" rel="stylesheet">
 
 </body>
 </html>

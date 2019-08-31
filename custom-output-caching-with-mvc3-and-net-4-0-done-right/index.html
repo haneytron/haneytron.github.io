@@ -16,21 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="David Haney" />
-  <meta name="description" content="I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP." />
-
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+<meta name="author" content="David Haney" /><meta name="description" content="I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,47 +34,24 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="preload" as="style">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="preload" as="style">
-
-
-
-<link href="/css/custom.css" rel="preload" as="style">
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content="Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!" />
 <meta property="og:description" content="I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/" />
-
-
-
-<meta property="article:published_time" content="2012-06-20T00:47:52&#43;00:00"/>
-
-<meta property="article:modified_time" content="2012-06-20T00:47:52&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2012-06-20T00:47:52+00:00" />
+<meta property="article:modified_time" content="2012-06-20T00:47:52+00:00" />
 <meta itemprop="name" content="Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!">
 <meta itemprop="description" content="I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.">
 
 
 <meta itemprop="datePublished" content="2012-06-20T00:47:52&#43;00:00" />
 <meta itemprop="dateModified" content="2012-06-20T00:47:52&#43;00:00" />
-<meta itemprop="wordCount" content="1231">
+<meta itemprop="wordCount" content="1313">
 
 
 
@@ -149,30 +122,20 @@
       <div class="post-meta">
         <span class="post-time"> 2012-06-20 </span>
         <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 1231 words </span>
-        <span class="more-meta"> 6 mins read </span>
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 1313 words </span>
+          <span class="more-meta"> 7 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
       <p>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute(v=vs.98).aspx">OutputCacheAttribute</a> class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, <a href="http://weblogs.asp.net/scottgu/archive/2010/01/27/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series.aspx">I was delighted to learn of the Output Cache Provider functionality introduced in ASP.NET 4.</a> I implemented a custom <a href="http://msdn.microsoft.com/en-us/library/system.web.caching.outputcacheprovider.aspx">OutputCacheProvider</a>, registered it in my Web.config file as the Default Cache Provider, and I was well on my way.</p>
 
@@ -187,8 +150,38 @@
 <p>You may now see why you cannot cache Child Action Method calls using the regular old OutputCacheAttribute&#8230; Your MVC application needs to execute a Parent Action Method from which the Child Action Methods are executed. If your Child Action Method was cached in the same way as a Parent Action Method, the HttpModule would always perform a Cache-miss since the Child Request originates from the Parent and has a completely different method signature, parameters, etc. upon which the Cache Key is derived. How can you cache your Child Action Methods ahead of your MVC application when your MVC application needs to execute in order to generate the Child Action Method Requests? And so, OutputCacheAttribute only works in the traditional manner for Parent Action Method calls.</p>
 
 <p>So, how do you &#8220;fix&#8221; this and handle the Caching of Custom Child Action Methods in the same way as Parent Action Methods? First, create a custom class that inherits from the <a href="http://msdn.microsoft.com/en-us/library/system.runtime.caching.memorycache.aspx">MemoryCache</a> object. In this class you&#8217;re going to override 2 methods:</p>
-
-<pre><code>/// &lt;summary&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/// &lt;summary&gt;
 /// A Custom MemoryCache Class.
 /// &lt;/summary&gt;
 public class CustomMemoryCache : MemoryCache
@@ -201,7 +194,7 @@ public class CustomMemoryCache : MemoryCache
     public override bool Add(string key, object value, 
         DateTimeOffset absoluteExpiration, string regionName = null)
     {
-        // Do your custom caching here, in my example I'll use standard Http Caching
+        // Do your custom caching here, in my example I&#39;ll use standard Http Caching
         HttpContext.Current.Cache.Add(key, value, null, absoluteExpiration.DateTime, 
             System.Web.Caching.Cache.NoSlidingExpiration, 
             System.Web.Caching.CacheItemPriority.Normal, null);
@@ -211,15 +204,58 @@ public class CustomMemoryCache : MemoryCache
 
     public override object Get(string key, string regionName = null)
     {
-        // Do your custom caching here, in my example I'll use standard Http Caching
+        // Do your custom caching here, in my example I&#39;ll use standard Http Caching
         return HttpContext.Current.Cache.Get(key);
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>You&#8217;re going to build your custom Output Cache Provider (mentioned at the beginning of this post) similarly, inheriting from the abstract class OutputCacheProvider. Here&#8217;s an example one:</p>
-
-<pre><code>/// &lt;summary&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/// &lt;summary&gt;
 /// A Custom OutputCacheProvider Class.
 /// &lt;/summary&gt;
 public class CustomOutputCacheProvider : OutputCacheProvider
@@ -258,73 +294,78 @@ public class CustomOutputCacheProvider : OutputCacheProvider
             System.Web.Caching.Cache.NoSlidingExpiration, 
             System.Web.Caching.CacheItemPriority.Normal, null);
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>You&#8217;ll notice that Add and Set are similar, but that Add checks for and returns the object from Cache if it exists, before attempting any Caching. This is the expected behaviour of the Add method according to MSDN and thus you should code it as above.</p>
 
 <p>Now your Web.config needs a few simple lines added in order to be configured to use your CustomOutputCacheProvider:</p>
-
-<pre><code>&lt;system.web&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;system.web&gt;
   &lt;caching&gt;
-    &lt;outputCache defaultProvider=&quot;CustomProvider&quot;&gt;
+    &lt;outputCache defaultProvider=&#34;CustomProvider&#34;&gt;
       &lt;providers&gt;
         &lt;clear/&gt;
-        &lt;add name=&quot;CustomProvider&quot; type=&quot;MyMvcApp.Caching.CustomOutputCacheProvider, MyMvcApp&quot;/&gt;
+        &lt;add name=&#34;CustomProvider&#34; type=&#34;MyMvcApp.Caching.CustomOutputCacheProvider, MyMvcApp&#34;/&gt;
       &lt;/providers&gt;
     &lt;/outputCache&gt;
   &lt;/caching&gt;
-&lt;/system.web&gt;
-</code></pre>
-
+&lt;/system.web&gt;</pre></td></tr></table>
+</div>
+</div>
 <p>The defaultProvider segment above allows you to set the Named Output Cache Provider that should be used by default for all Output Caching.</p>
 
 <p>With the classes and configuration in place, you&#8217;ve now configured all Parent Action Methods which are decorated with <code>[OutputCache]</code> to use your new Custom Output Cache Provider! But we still need to configure Child Action Methods to do the same Caching as Parent Action Methods. This is where your custom MemoryCache object comes into play. Modify your Global.asax to wire your CustomMemoryCache into the OutputCacheAttribute:</p>
-
-<pre><code>protected void Application_Start()
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">protected void Application_Start()
 {
     // Register Custom Memory Cache for Child Action Method Caching
-    OutputCacheAttribute.ChildActionCache = new CustomMemoryCache(&quot;My Cache&quot;);
-}
-</code></pre>
-
+    OutputCacheAttribute.ChildActionCache = new CustomMemoryCache(&#34;My Cache&#34;);
+}</pre></td></tr></table>
+</div>
+</div>
 <p>As an FYI, for your CustomMemoryCache object, and MemoryCache objects in general, <a href="http://msdn.microsoft.com/en-us/library/dd941872.aspx">here&#8217;s some information how to configure them by Name using your Web.config or App.config &#8211; very useful.</a> You&#8217;ll note that I named my MemoryCache &#8220;My Cache&#8221; above &#8211; the name isn&#8217;t optional, but it has no effect unless it matches a Named Cache entry in your Web.config or App.config file; if it does match, it will adhere to the rules of your Named Cache. If, on the other hand, your MemoryCache object doesn&#8217;t use Runtime Caching and instead writes to a database or other external source such as AppFabric, the Named Cache will have no effect since it applies only to in-process Runtime Caching.</p>
 
 <p>And that&#8217;s it! You&#8217;ve got a fully custom Output Caching solution in .NET 4.0 for your MVC3 application that correctly leverages standard Microsoft hooks and components! Thanks for reading this long post &#8211; comments and criticisms welcomed as always.</p>
 
     </div>
 
-    
-    
-
-    
-    
-
     <footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/dotnet/">dotnet</a>
-          
           <a href="/tags/csharp/">csharp</a>
-          
           <a href="/tags/caching/">caching</a>
-          
           <a href="/tags/mvc/">mvc</a>
-          
           <a href="/tags/programming/">programming</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/compiler-tricks-inferred-types/">
+        <a class="prev" href="/compiler-tricks-inferred-types/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Compiler Tricks - Inferred Types</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
-          <a class="next" href="/linq-and-deferred-execution/">
+        <a class="next" href="/linq-and-deferred-execution/">
             <span class="next-text nav-default">LINQ and Deferred Execution</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -333,8 +374,7 @@ public class CustomOutputCacheProvider : OutputCacheProvider
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -348,8 +388,6 @@ public class CustomOutputCacheProvider : OutputCacheProvider
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
 
       </div>
     </main>
@@ -377,8 +415,7 @@ public class CustomOutputCacheProvider : OutputCacheProvider
 
   <span class="copyright-year">
     &copy; 
-    
-      2012 - 
+    2012 - 
     2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -393,40 +430,29 @@ public class CustomOutputCacheProvider : OutputCacheProvider
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001" defer></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1" defer></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
 
 
+<script src="/js/custom.js"></script>
 
-<script src="/js/custom.js" defer></script>
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-<link href="/css/custom.css" rel="stylesheet">
 
 </body>
 </html>

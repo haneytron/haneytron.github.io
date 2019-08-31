@@ -16,22 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="David Haney" />
-  <meta name="description" content="In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense." />
-
-  <meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+<meta name="author" content="David Haney" /><meta name="description" content="In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!
+Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://www.davidhaney.io/net-core-azure-functions-tutorial/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,17 +35,9 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="preload" as="style">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="preload" as="style">
-
-
-
-<link href="/css/custom.css" rel="preload" as="style">
+<link href="/dist/even.93844dae.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content=".NET Core Azure Functions Tutorial" />
@@ -57,23 +45,8 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
 Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.davidhaney.io/net-core-azure-functions-tutorial/" />
-
-
-
-<meta property="article:published_time" content="2018-11-19T00:00:00-05:00"/>
-
-<meta property="article:modified_time" content="2018-11-19T00:00:00-05:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-11-19T00:00:00-05:00" />
+<meta property="article:modified_time" content="2018-11-19T00:00:00-05:00" />
 <meta itemprop="name" content=".NET Core Azure Functions Tutorial">
 <meta itemprop="description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
 Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.">
@@ -81,7 +54,7 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
 
 <meta itemprop="datePublished" content="2018-11-19T00:00:00-05:00" />
 <meta itemprop="dateModified" content="2018-11-19T00:00:00-05:00" />
-<meta itemprop="wordCount" content="2324">
+<meta itemprop="wordCount" content="2425">
 
 
 
@@ -153,21 +126,16 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
       <div class="post-meta">
         <span class="post-time"> 2018-11-19 </span>
         <div class="post-category">
-            
-              <a href="/categories/blog/"> blog </a>
-            
-          </div>
-        <span class="more-meta"> 2324 words </span>
-        <span class="more-meta"> 11 mins read </span>
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 2425 words </span>
+          <span class="more-meta"> 12 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
@@ -192,11 +160,6 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
     <div class="post-content">
       
 
@@ -209,25 +172,56 @@ wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent 
 from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.</p>
 
 <p>Here&rsquo;s what the startup code roughly looked like:</p>
-
-<pre><code>public void Start()
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">public void Start()
 {
     // Twitter API keys
-    var consumerKey = &quot;*********&quot;;
-    var consumerSecret = &quot;*********&quot;;
-    var userAccessToken = &quot;*********&quot;;
-    var userAccessSecret = &quot;*********&quot;;
+    var consumerKey = &#34;*********&#34;;
+    var consumerSecret = &#34;*********&#34;;
+    var userAccessToken = &#34;*********&#34;;
+    var userAccessSecret = &#34;*********&#34;;
 
     // Set credentials
     Auth.SetUserCredentials(consumerKey, consumerSecret, userAccessToken, userAccessSecret);
 
     // Build the Markhov chain
-    Console.WriteLine(&quot;Building Markhov Chain...&quot;);
+    Console.WriteLine(&#34;Building Markhov Chain...&#34;);
     BuildMarkhovChain();
-    Console.WriteLine(&quot;Built! {0} root nodes&quot;, _markhovTreeRoot.Children.Count);
+    Console.WriteLine(&#34;Built! {0} root nodes&#34;, _markhovTreeRoot.Children.Count);
 
     // Start generating tweets
-    Console.WriteLine(&quot;Starting Tweets...&quot;);
+    Console.WriteLine(&#34;Starting Tweets...&#34;);
     Console.WriteLine();
 
     // Configure timers
@@ -237,20 +231,20 @@ from the Tweets, and then schedules a .NET Timer to generate and publish a new T
     // Rebuild the Markov chain once per day from the newest Tweets
     _buildMarkhovChainTimer 
         = new Timer(BuildMarkhovChain, null, 24 * 60 * 60 * 1000, 24 * 60 * 60 * 1000);
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>I find this bot quite amusing. It sometimes creates hilarious statements:</p>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">EXTREME bias of me is negative (Fake). Dow RISES 5000 POINTS ON THE subject, it is amazing how a manager takes out a pitcher who is like a choirboy.</p>&mdash; Donald J. Tron (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1061423338613080064?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">EXTREME bias of me is negative (Fake). Dow RISES 5000 POINTS ON THE subject, it is amazing how a manager takes out a pitcher who is like a choirboy.</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1061423338613080064?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Lunatic who should definitely be given $700,000 for campaign by the purposely false and Dishonest reporting that they would start buying soybeans from our military Vets.</p>&mdash; Donald J. Tron (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1060758970321788929?ref_src=twsrc%5Etfw">November 9, 2018</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Lunatic who should definitely be given $700,000 for campaign by the purposely false and Dishonest reporting that they would start buying soybeans from our military Vets.</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1060758970321788929?ref_src=twsrc%5Etfw">November 9, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thugs spent over hours with the Crown Prince of Saudi Arabia who totally denied any knowledge of what took place during the terrible boat accident which just took a year low!</p>&mdash; Donald J. Tron (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1056153540668866561?ref_src=twsrc%5Etfw">October 27, 2018</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thugs spent over hours with the Crown Prince of Saudi Arabia who totally denied any knowledge of what took place during the terrible boat accident which just took a year low!</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1056153540668866561?ref_src=twsrc%5Etfw">October 27, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
@@ -262,29 +256,52 @@ from the Tweets, and then schedules a .NET Timer to generate and publish a new T
 solution (many will have a netstandard specific version for .NET Core), and then attempt to compile and correct errors, Googling (or Stack Overflowing) for new APIs where old calls no longer existed. I needed to make very few changes to realDonaldTron in order to get him working.</p>
 
 <p>I was also pleasantly surprised at how simple the new .csproj file structure is. By default, <em>everything in the folder is included in the project</em> except where you specify exceptions. This makes for a pretty clean file. Here&rsquo;s the .NET Core realDonaldTron .csproj file:</p>
-
-<pre><code>&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;Project Sdk=&#34;Microsoft.NET.Sdk&#34;&gt;
   &lt;PropertyGroup&gt;
     &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt;
     &lt;LangVersion&gt;latest&lt;/LangVersion&gt;
     &lt;AzureFunctionsVersion&gt;v2&lt;/AzureFunctionsVersion&gt;
   &lt;/PropertyGroup&gt;
   &lt;ItemGroup&gt;
-    &lt;PackageReference Include=&quot;Microsoft.NET.Sdk.Functions&quot; Version=&quot;1.0.*&quot; /&gt;
-    &lt;PackageReference Include=&quot;TweetinviAPI&quot; Version=&quot;4.0.0&quot; /&gt;
+    &lt;PackageReference Include=&#34;Microsoft.NET.Sdk.Functions&#34; Version=&#34;1.0.*&#34; /&gt;
+    &lt;PackageReference Include=&#34;TweetinviAPI&#34; Version=&#34;4.0.0&#34; /&gt;
   &lt;/ItemGroup&gt;
   &lt;ItemGroup&gt;
-    &lt;None Update=&quot;host.json&quot;&gt;
+    &lt;None Update=&#34;host.json&#34;&gt;
       &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
     &lt;/None&gt;
-    &lt;None Update=&quot;local.settings.json&quot;&gt;
+    &lt;None Update=&#34;local.settings.json&#34;&gt;
       &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
       &lt;CopyToPublishDirectory&gt;Never&lt;/CopyToPublishDirectory&gt;
     &lt;/None&gt;
   &lt;/ItemGroup&gt;
-&lt;/Project&gt;
-</code></pre>
-
+&lt;/Project&gt;</pre></td></tr></table>
+</div>
+</div>
 <p>A welcomed change from the million line csproj files of past&hellip; and the Git conflicts when checking in code! So frustrating.</p>
 
 <h1 id="hosting-in-azure-don-t-use-webjobs">Hosting in Azure: Don&rsquo;t use WebJobs</h1>
@@ -305,33 +322,19 @@ beyond the first 20 minutes.</p>
 <p>I Googled my little heart out but could not find much useful documentation on Azure WebJobs. It wasn&rsquo;t until I started exploring the App Service settings in the Azure Portal that I realized I needed to have the <strong>Always On</strong> feature configured (which disables the IIS timeout). But guess
 what - you can&rsquo;t turn that on for the lowest two tiers of App Services (free and shared) - you must pay for at least a Basic plan.</p>
 
-
 <figure>
-    
-        <img src="/img/app-service-plans.png" />
-    
-    
-    <figcaption>
-        <h4>No Always On for you!</h4>
-        
-    </figcaption>
-    
+    <img src="/img/app-service-plans.png"/> <figcaption>
+            <h4>No Always On for you!</h4>
+        </figcaption>
 </figure>
 
 
 <p>And did I mention that Basic plans start at $55 USD per month (assuming Always On and therefore running 24 / 7)?</p>
 
-
 <figure>
-    
-        <img src="/img/app-service-basic-plan.png" />
-    
-    
-    <figcaption>
-        <h4>I&#39;m not paying that!</h4>
-        
-    </figcaption>
-    
+    <img src="/img/app-service-basic-plan.png"/> <figcaption>
+            <h4>I&#39;m not paying that!</h4>
+        </figcaption>
 </figure>
 
 
@@ -381,17 +384,10 @@ single function execution is 100 ms and 128 mb respectively.</p>
 
 <p>But these crazy cost calculations are not even a concern for most of your and my use cases! Azure Functions pricing includes super generous free grants per month: 1 million executions and 400,000 GB-s!</p>
 
-
 <figure>
-    
-        <img src="/img/azure-functions-pricing.png" />
-    
-    
-    <figcaption>
-        <h4>Azure Functions pricing</h4>
-        
-    </figcaption>
-    
+    <img src="/img/azure-functions-pricing.png"/> <figcaption>
+            <h4>Azure Functions pricing</h4>
+        </figcaption>
 </figure>
 
 
@@ -419,33 +415,19 @@ single function execution is 100 ms and 128 mb respectively.</p>
 
 <p>Start by creating a new Azure Function project in Visual Studio (be sure to update to the latest Visual Studio version). My screenshots below are from VS Community 2017 (the free edition) which I use on my home (non-work) computer for pet projects:</p>
 
-
 <figure>
-    
-        <img src="/img/vs-new-proj-azure-functions.png" />
-    
-    
-    <figcaption>
-        <h4>Create an Azure Functions project</h4>
-        
-    </figcaption>
-    
+    <img src="/img/vs-new-proj-azure-functions.png"/> <figcaption>
+            <h4>Create an Azure Functions project</h4>
+        </figcaption>
 </figure>
 
 
 <p>On the next screen, <strong>make sure you pick Azure Functions v2 (.NET Core)</strong> at the top! Azure Functions v1 is for .NET Framework and non-Core apps. I also picked <strong>Timer trigger</strong> because I want realDonaldTron to run every hour, on the hour:</p>
 
-
 <figure>
-    
-        <img src="/img/vs-new-proj-azure-functions-2.png" />
-    
-    
-    <figcaption>
-        <h4>Create an Azure Functions project</h4>
-        
-    </figcaption>
-    
+    <img src="/img/vs-new-proj-azure-functions-2.png"/> <figcaption>
+            <h4>Create an Azure Functions project</h4>
+        </figcaption>
 </figure>
 
 
@@ -453,8 +435,27 @@ single function execution is 100 ms and 128 mb respectively.</p>
 cheat sheet that you should definitely use! Also, don&rsquo;t worry about the schedule in this dialog - you can change it programmatically super easily in a minute or two.</p>
 
 <p>Finish up by pressing OK and next you&rsquo;ll see this boilerplate code:</p>
-
-<pre><code>using System;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">using System;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
@@ -463,57 +464,93 @@ namespace FunctionApp1
 {
     public static class Function1
     {
-        [FunctionName(&quot;Function1&quot;)]
-        public static void Run([TimerTrigger(&quot;0 */5 * * * *&quot;)]TimerInfo myTimer, ILogger log)
+        [FunctionName(&#34;Function1&#34;)]
+        public static void Run([TimerTrigger(&#34;0 */5 * * * *&#34;)]TimerInfo myTimer, ILogger log)
         {
-            log.LogInformation($&quot;C# Timer trigger function executed at: {DateTime.Now}&quot;);
+            log.LogInformation($&#34;C# Timer trigger function executed at: {DateTime.Now}&#34;);
         }
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>Feel free to change the class name and namespace here - the only important thing to name is the <code>[FunctionName]</code> attribute as this is what will appear in the Azure Portal UI. You can also see that your CRON syntax from the creation dialog is within the <code>[TimerTrigger]</code> attribute here,
 and can be readily modified. The <code>ILogger</code> you see there is the logger that goes to Azure Storage and will cost you a few pennies per month. If you&rsquo;re trying to run truly for free, be sure not to log anything at all.</p>
 
 <p>It&rsquo;s also worth noting that Azure Functions support async entry method signatures, so <code>async</code> your heart out!</p>
 
 <p>Here&rsquo;s what my .NET Core Azure Function Run method for realDonaldTron looks like:</p>
-
-<pre><code>namespace RealDonaldTronFunc
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">namespace RealDonaldTronFunc
 {
     public static class Function
     {
-        [FunctionName(&quot;RealDonaldTronFunction&quot;)]
-        public async static Task Run([TimerTrigger(&quot;0 0 * * * *&quot;)]TimerInfo myTimer, ILogger log)
+        [FunctionName(&#34;RealDonaldTronFunction&#34;)]
+        public async static Task Run([TimerTrigger(&#34;0 0 * * * *&#34;)]TimerInfo myTimer, ILogger log)
         {
-            log.LogInformation($&quot;C# Timer trigger function executed at: {DateTime.UtcNow}&quot;);
+            log.LogInformation($&#34;C# Timer trigger function executed at: {DateTime.UtcNow}&#34;);
 
             // Set Twitter credentials
-            var consumerKey = &quot;********&quot;;
-            var consumerSecret = &quot;********&quot;;
-            var userAccessToken = &quot;********&quot;;
-            var userAccessSecret = &quot;********&quot;;
+            var consumerKey = &#34;********&#34;;
+            var consumerSecret = &#34;********&#34;;
+            var userAccessToken = &#34;********&#34;;
+            var userAccessSecret = &#34;********&#34;;
             Auth.SetUserCredentials(consumerKey, consumerSecret, 
                 userAccessToken, userAccessSecret);
 
             // Build the Markhov chain
-            Console.WriteLine(&quot;Building Markhov Chain...&quot;);
+            Console.WriteLine(&#34;Building Markhov Chain...&#34;);
             BuildMarkhovChain();
-            Console.WriteLine(&quot;Built! {0} root nodes&quot;, _markhovTreeRoot.Children.Count);
+            Console.WriteLine(&#34;Built! {0} root nodes&#34;, _markhovTreeRoot.Children.Count);
 
             // Start generating tweets
-            Console.WriteLine(&quot;Starting Tweets...&quot;);
+            Console.WriteLine(&#34;Starting Tweets...&#34;);
             Console.WriteLine();
 
             await GenerateTweet();
 
-            log.LogInformation($&quot;C# Timer trigger function completed at: {DateTime.UtcNow}&quot;);
+            log.LogInformation($&#34;C# Timer trigger function completed at: {DateTime.UtcNow}&#34;);
         }
     ...
     }
-}
-</code></pre>
-
+}</pre></td></tr></table>
+</div>
+</div>
 <p>You might notice that all of my <code>Timer</code> stuff is gone. That&rsquo;s because Azure Functions natively support timed triggers, and the CRON syntax <code>0 0 * * * *</code> says &ldquo;run this every hour, on the hour&rdquo; which completely replaces my need for C# Timers!</p>
 
 <p>Note that unless your function <em>needs</em> to run continuously, you should have it terminate by exiting the <code>Run</code> method as soon as possible. realDonaldTron does not need to remain active - he grabs the latest Tweets and builds a new Markov chain every hour instead. He terminates as
@@ -521,63 +558,35 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
 
 <p>After you&rsquo;ve written your function, it&rsquo;s time to publish it to Azure. Simply right click &ndash;&gt; Publish your project, to be met with this screen:</p>
 
-
 <figure>
-    
-        <img src="/img/azure-function-publish.png" />
-    
-    
-    <figcaption>
-        <h4>Publish your Azure Function</h4>
-        
-    </figcaption>
-    
+    <img src="/img/azure-function-publish.png"/> <figcaption>
+            <h4>Publish your Azure Function</h4>
+        </figcaption>
 </figure>
 
 
 <p>Press Publish, and on the next screen you&rsquo;ll need to name your function and set up the various resources it&rsquo;ll use. The part to pay attention to here is the <strong>Hosting Plan</strong> which you&rsquo;ll need to be sure is set to <strong>Consumption</strong>:</p>
 
-
 <figure>
-    
-        <img src="/img/azure-function-publish-2.png" />
-    
-    
-    <figcaption>
-        <h4>Publish your Azure Function</h4>
-        
-    </figcaption>
-    
+    <img src="/img/azure-function-publish-2.png"/> <figcaption>
+            <h4>Publish your Azure Function</h4>
+        </figcaption>
 </figure>
 
 
-
 <figure>
-    
-        <img src="/img/azure-function-publish-3.png" />
-    
-    
-    <figcaption>
-        <h4>Publish your Azure Function</h4>
-        
-    </figcaption>
-    
+    <img src="/img/azure-function-publish-3.png"/> <figcaption>
+            <h4>Publish your Azure Function</h4>
+        </figcaption>
 </figure>
 
 
 <p>Follow the steps past this screen and you&rsquo;ll have your Function published to Azure in mere moments! If you want to test it, but don&rsquo;t want to wait for the timed trigger, you can visit the Azure Portal and run it manually:</p>
 
-
 <figure>
-    
-        <img src="/img/azure-portal-functions-run.png" />
-    
-    
-    <figcaption>
-        <h4>Test your Azure Function</h4>
-        
-    </figcaption>
-    
+    <img src="/img/azure-portal-functions-run.png"/> <figcaption>
+            <h4>Test your Azure Function</h4>
+        </figcaption>
 </figure>
 
 
@@ -587,21 +596,14 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
 
 <p>Thanks to Azure Functions and .NET Core, I now have realDonaldTron running every hour on the hour via CRON scheduling, as an Azure function, well within the monthly free grants provided on Consumption plans. Can you guess on this graph when I converted over to Azure Functions?</p>
 
-
 <figure>
-    
-        <img src="/img/azure-billing-example.png" />
-    
-    
-    <figcaption>
-        <h4>Azure Functions are free, Classic Cloud Services are not</h4>
-        
-    </figcaption>
-    
+    <img src="/img/azure-billing-example.png"/> <figcaption>
+            <h4>Azure Functions are free, Classic Cloud Services are not</h4>
+        </figcaption>
 </figure>
 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thoughts, condolences and prayers go out to Rallies in order to <a href="https://twitter.com/hashtag/MAGA?src=hash&amp;ref_src=twsrc%5Etfw">#MAGA</a>!</p>&mdash; Donald J. Tron (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1050883816745787393?ref_src=twsrc%5Etfw">October 12, 2018</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thoughts, condolences and prayers go out to Rallies in order to <a href="https://twitter.com/hashtag/MAGA?src=hash&amp;ref_src=twsrc%5Etfw">#MAGA</a>!</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1050883816745787393?ref_src=twsrc%5Etfw">October 12, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
@@ -609,32 +611,21 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
 
     </div>
 
-    
-    
-
-    
-    
-
     <footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/dotnet/">dotnet</a>
-          
           <a href="/tags/core/">core</a>
-          
           <a href="/tags/csharp/">csharp</a>
-          
           <a href="/tags/azure/">azure</a>
-          
           <a href="/tags/functions/">functions</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-        
-          <a class="next" href="/new-blog-name-and-domain/">
+        <a class="prev" href="/sabbatical-begins/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Sabbatical Begins</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/new-blog-name-and-domain/">
             <span class="next-text nav-default">New Blog Name and Domain</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -643,8 +634,7 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -658,8 +648,6 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  
 
       </div>
     </main>
@@ -687,8 +675,7 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
 
   <span class="copyright-year">
     &copy; 
-    
-      2012 - 
+    2012 - 
     2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -703,40 +690,29 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001" defer></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js" defer></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.1.1" defer></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
 
 
+<script src="/js/custom.js"></script>
 
-<script src="/js/custom.js" defer></script>
-
-
-
-<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-<link href="/css/custom.css" rel="stylesheet">
 
 </body>
 </html>

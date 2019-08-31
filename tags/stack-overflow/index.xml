@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stack overflow on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>stack overflow on David Haney - Blogging my experiences as a developer and engineering manager.</title>
     <link>https://www.davidhaney.io/tags/stack-overflow/</link>
-    <description>Recent content in Stack overflow on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in stack overflow on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Fri, 26 Feb 2016 14:05:41 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://www.davidhaney.io/tags/stack-overflow/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sabbatical Begins</title>
+      <link>https://www.davidhaney.io/sabbatical-begins/</link>
+      <pubDate>Sat, 31 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/sabbatical-begins/</guid>
+      <description>One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) with which you can do as you please. My sabbatical begins on Tuesday (as Monday is a holiday). Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.</description>
+    </item>
     
     <item>
       <title>Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</title>

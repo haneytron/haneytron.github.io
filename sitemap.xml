@@ -1,6 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="https://www.davidhaney.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://www.davidhaney.io/categories/blog/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/career/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/categories/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/culture/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/post/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/sabbatical-begins/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/stack-overflow/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/workplace/</loc>
+    <lastmod>2019-08-31T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
   <url>
     <loc>https://www.davidhaney.io/net-core-azure-functions-tutorial/</loc>
@@ -10,8 +79,78 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/azure/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/core/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/csharp/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/dotnet/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/functions/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/blog/</loc>
+    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/changes/</loc>
+    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/new-blog-name-and-domain/</loc>
     <lastmod>2018-08-03T00:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/hiring/</loc>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/interviews/</loc>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/management/</loc>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,6 +170,13 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/open-source/</loc>
+    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</loc>
     <lastmod>2017-02-10T11:11:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,8 +184,50 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/salary/</loc>
+    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/attitude/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</loc>
     <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/methodology/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/mistakes/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/process/</loc>
+    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/behavior/</loc>
+    <lastmod>2017-01-27T10:03:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -59,7 +247,35 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/caching/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/mvc/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/performance/</loc>
+    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/programming/</loc>
     <lastmod>2017-01-10T09:07:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -73,8 +289,29 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/ego/</loc>
+    <lastmod>2016-06-17T17:02:13+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</loc>
     <lastmod>2016-06-17T17:02:13+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/left-pad/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/npm/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -87,8 +324,43 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/packages/</loc>
+    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/compensation/</loc>
+    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank/</loc>
     <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/transparency/</loc>
+    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/conflict/</loc>
+    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/diversity/</loc>
+    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -108,8 +380,43 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/lessons/</loc>
+    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/promotion/</loc>
+    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</loc>
     <lastmod>2015-04-15T16:25:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/iteration/</loc>
+    <lastmod>2015-04-15T16:25:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/analysis/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/commentary/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -122,8 +429,29 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/rebuttal/</loc>
+    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/recruiters/</loc>
+    <lastmod>2015-01-23T12:04:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/the-recruiting-competitive-advantage/</loc>
     <lastmod>2015-01-23T12:04:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/credentialism/</loc>
+    <lastmod>2014-12-29T16:00:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -138,6 +466,20 @@
   <url>
     <loc>https://www.davidhaney.io/the-trouble-with-job-titles/</loc>
     <lastmod>2014-10-17T18:41:14+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/android/</loc>
+    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/iphone/</loc>
+    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -159,6 +501,13 @@
   <url>
     <loc>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</loc>
     <lastmod>2014-05-07T13:27:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/node.js/</loc>
+    <lastmod>2014-03-24T16:41:25+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -199,7 +548,35 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/razor/</loc>
+    <lastmod>2013-11-27T00:34:25+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/sql/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/t4/</loc>
+    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/visual-studio/</loc>
     <lastmod>2013-10-16T21:35:51+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -213,8 +590,29 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/webapi/</loc>
+    <lastmod>2013-07-24T17:55:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/generic-comparer/</loc>
     <lastmod>2013-04-22T14:53:17+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/generics/</loc>
+    <lastmod>2013-04-22T14:53:17+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/memory/</loc>
+    <lastmod>2013-03-30T15:36:24+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -241,8 +639,22 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/reflection/</loc>
+    <lastmod>2013-02-12T12:07:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/determine-mime-type-from-file-name/</loc>
     <lastmod>2013-02-11T15:15:46+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/published/</loc>
+    <lastmod>2013-01-18T15:10:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -257,6 +669,34 @@
   <url>
     <loc>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</loc>
     <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/debugging/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/profiling/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/windbg/</loc>
+    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/intellisense/</loc>
+    <lastmod>2012-11-20T21:12:41+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -297,6 +737,27 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/async/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/tasks/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/tpl/</loc>
+    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/tpl-and-error-handling-continuations/</loc>
     <lastmod>2012-08-12T23:21:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -311,6 +772,13 @@
   </url>
   
   <url>
+    <loc>https://www.davidhaney.io/tags/compiler/</loc>
+    <lastmod>2012-07-16T00:33:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.davidhaney.io/compiler-tricks-inferred-types/</loc>
     <lastmod>2012-07-16T00:33:54+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -320,6 +788,13 @@
   <url>
     <loc>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</loc>
     <lastmod>2012-06-20T00:47:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/linq/</loc>
+    <lastmod>2012-06-11T00:57:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -364,475 +839,6 @@
     <lastmod>2012-04-24T21:46:41+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/analysis/</loc>
-    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/android/</loc>
-    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/async/</loc>
-    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/attitude/</loc>
-    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/azure/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/behavior/</loc>
-    <lastmod>2017-01-27T10:03:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/blog/</loc>
-    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/categories/blog/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/caching/</loc>
-    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/career/</loc>
-    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/categories/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/changes/</loc>
-    <lastmod>2018-08-03T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/commentary/</loc>
-    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/compensation/</loc>
-    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/compiler/</loc>
-    <lastmod>2012-07-16T00:33:54+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/conflict/</loc>
-    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/core/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/credentialism/</loc>
-    <lastmod>2014-12-29T16:00:27+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/csharp/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/culture/</loc>
-    <lastmod>2017-01-27T10:03:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/debugging/</loc>
-    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/diversity/</loc>
-    <lastmod>2015-09-24T11:23:38+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/dotnet/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/ego/</loc>
-    <lastmod>2016-06-17T17:02:13+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/functions/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/generics/</loc>
-    <lastmod>2013-04-22T14:53:17+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/hiring/</loc>
-    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/intellisense/</loc>
-    <lastmod>2012-11-20T21:12:41+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/interviews/</loc>
-    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/iphone/</loc>
-    <lastmod>2014-09-09T19:22:53+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/iteration/</loc>
-    <lastmod>2015-04-15T16:25:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/left-pad/</loc>
-    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/lessons/</loc>
-    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/linq/</loc>
-    <lastmod>2012-06-11T00:57:15+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/management/</loc>
-    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/memory/</loc>
-    <lastmod>2013-03-30T15:36:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/methodology/</loc>
-    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/mistakes/</loc>
-    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/mvc/</loc>
-    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/node.js/</loc>
-    <lastmod>2014-03-24T16:41:25+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/npm/</loc>
-    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/open-source/</loc>
-    <lastmod>2018-06-09T13:56:24-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/packages/</loc>
-    <lastmod>2016-03-23T18:01:52+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/performance/</loc>
-    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/post/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/process/</loc>
-    <lastmod>2017-02-02T11:33:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/profiling/</loc>
-    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/programming/</loc>
-    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/promotion/</loc>
-    <lastmod>2015-08-03T14:18:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/published/</loc>
-    <lastmod>2013-01-18T15:10:04+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/razor/</loc>
-    <lastmod>2013-11-27T00:34:25+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/rebuttal/</loc>
-    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/recruiters/</loc>
-    <lastmod>2015-01-23T12:04:37+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/reflection/</loc>
-    <lastmod>2013-02-12T12:07:12+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/salary/</loc>
-    <lastmod>2017-02-10T11:11:30+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/sql/</loc>
-    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/stack-overflow/</loc>
-    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/t4/</loc>
-    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/</loc>
-    <lastmod>2015-03-09T18:32:37+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/tasks/</loc>
-    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/tpl/</loc>
-    <lastmod>2012-08-12T23:21:30+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/transparency/</loc>
-    <lastmod>2016-02-26T14:05:41+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/visual-studio/</loc>
-    <lastmod>2013-10-16T21:35:51+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/webapi/</loc>
-    <lastmod>2013-07-24T17:55:12+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/windbg/</loc>
-    <lastmod>2012-12-02T17:22:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/workplace/</loc>
-    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
   </url>
   
 </urlset>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reflection on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>reflection on David Haney - Blogging my experiences as a developer and engineering manager.</title>
     <link>https://www.davidhaney.io/tags/reflection/</link>
-    <description>Recent content in Reflection on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in reflection on David Haney - Blogging my experiences as a developer and engineering manager.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
@@ -19,7 +19,7 @@
       
       <guid>https://www.davidhaney.io/a-better-mime-mapping-stealer/</guid>
       <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Funcinstead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):
-/// &amp;lt;summary&amp;gt; /// Exposes the Mime Mapping method that Microsoft hid from us.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  /// &amp;lt;summary&amp;gt; /// Exposes the Mime Mapping method that Microsoft hid from us.</description>
     </item>
     
     <item>
