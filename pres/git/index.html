@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Git Fundamentals</title>
+
+		<meta name="description" content="A presentation on the fundamentals of Git.">
+		<meta name="author" content="David Haney">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Git Fundamentals</h2>
+					<p><small>David Haney | <a href="http://www.twitter.com/haneytron">@haneytron</a></small></p>
+				</section>
+				
+                <section data-background="img/me.jpg">
+					<div class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; border-radius: 25px;">
+						<h2 style="margin: 0;">About Me</h2>
+						<p class="fragment">Engineering Manager at <a href="http://www.stackoverflow.com">Stack Overflow</a></p>
+						<p class="fragment">Programming since 1991-ish, for $$$ since 2008</p>
+						<p class="fragment">Graduated 2008 @ 15th best school in Canada<span class="fragment"> ...out of 16</span></p>
+					</div>
+				</section>
+                
+				<section data-background="img/stack-overflow.png">
+					<div class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; border-radius: 25px;">
+						<h2 style="margin: 0;">Perhaps You've Heard Of Us!</h2>
+						<p class="fragment">We help developers all over the world solve problems</p>
+						<p class="fragment">Learn, Share, Build Your Career</p>
+						<p class="fragment"><a href="https://www.stackoverflow.com/jobs">Developer Jobs</a>, <a href="https://www.stackoverflowbusiness.com">Business</a></p>
+					</div>
+				</section>
+				
+				<section>
+					<section>
+						<h2 style="text-align: left;">Git (noun):</h2>
+						<p class="fragment" style="text-align: left;">A version control system for tracking changes in computer files and coordinating work on those files among multiple people.</p>
+						<p class="fragment" style="text-align: left;"><b>Also a totally confusing and intimidating pain in the ___.</b></p>
+					</section>
+					<section>
+						<img src="img/git-bash.png" />
+					</section>
+				</section>
+				
+				<section>
+					<h2>Who Cares?</h2>
+					<p class="fragment">YOU DO!</p>
+					<ul>
+						<li class="fragment">Backups of your code</li>
+						<li class="fragment">Able to recover from disaster</li>
+						<li class="fragment">Easily(ish) collaborate on same code</li>
+						<li class="fragment">Everyone in the industry uses it</li>
+						<li class="fragment">Makes you more valuable to employers</li>
+					</ul>
+				</section>
+				</section>
+				
+				<section>
+					<h2>Git Is a Time Travel Machine</h2>
+					<ul>
+						<li class="fragment">Mark the current state of time (<u>commit</u>) of the code now</li>
+						<li class="fragment">Mark future times with <u>commit</u> every time you do something new</li>
+						<li class="fragment">Can travel back in time to any <u>commit</u> marker at any time</li>
+						<li class="fragment">Can travel forward in time to current <u>commit</u> marker too</li>
+					</ul>
+				</section>
+				
+				<section data-background="img/rick-and-morty.png">
+					<div class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; border-radius: 25px;">
+						<h2>Also a Multiverse Device</h2>
+						<ul>
+							<li class="fragment">The <u>master branch</u> is our "universe"</li>
+							<li class="fragment">Can create "parallel universe" <u>branch</u> from any <u>commit</u></li>
+							<li class="fragment">Do work in parallel <u>branch</u> (to avoid disrupting <u>master</u>)</li>
+							<li class="fragment">Update <u>branch</u> from <u>master</u> (keep universes in sync)</li>
+							<li class="fragment">Fold <u>branch</u> into <u>master</u> (called a <u>merge</u>) when done</li>
+						</ul>
+						<p class="fragment"><b>NOTE:</b> can also branch from branches if you like pain</p>
+					</div>
+				</section>
+				
+				<section>
+					<h2>Get Git Installed</h2>
+					<p class="fragment"><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> (actual Git app)</p>
+					<ul>
+						<li class="fragment">The <u>real app</u>, a command-line interface (CLI)</li>
+						<li class="fragment">Runs in a bash terminal (even on Windows)</li>
+						<li class="fragment">Not user-friendly but you'll learn <u>tons</u> vs GUI</li>
+					</ul>
+					<p class="fragment"><a href="https://git-scm.com/downloads/guis">https://git-scm.com/downloads/guis</a> (3rd party GUIs)</p>
+					<ul>
+						<li class="fragment">Abstraction over CLI, core concepts hidden</li>
+						<li class="fragment">User-friendly visual interface</li>
+						<li class="fragment">Recommend <a href="https://desktop.github.com">GitHub Desktop</a> (Mac &amp; Win)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Core Git Concepts</h2>
+					<ol>
+						<li class="fragment">Init</li>
+						<li class="fragment">Status</li>
+						<li class="fragment">Stage</li>
+						<li class="fragment">Commit</li>
+						<li class="fragment">Log</li>
+						<li class="fragment">Revert</li>
+						<li class="fragment">Remote</li>
+						<li class="fragment">Pull</li>
+						<li class="fragment">Push</li>
+						<li class="fragment">Checkout / Branch</li>
+						<li class="fragment">Merge</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>Init</h2>
+					<p class="fragment">Used to initialize a folder as a Git repository</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git init</code></small>
+					</p>
+					<img class="fragment" src="img/git-init.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Status</h2>
+					<p class="fragment">Get the current status of your repository</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git status</code></small>
+					</p>
+					<img class="fragment" src="img/git-status.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Stage</h2>
+					<p class="fragment">The "staging platform" for changes before you commit them</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git add|rm &lt;filename&gt;|.|--all</code></small>
+					</p>
+					<img class="fragment" src="img/git-stage.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Commit</h2>
+					<p class="fragment">Creates a "snapshot" in time of the code</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git commit -m "&lt;message&gt;"</code></small>
+					</p>
+					<img class="fragment" src="img/git-commit.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Log</h2>
+					<p class="fragment">Browse the history of commits</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git log</code></small>
+					</p>
+					<img class="fragment" src="img/git-log.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Revert</h2>
+					<p class="fragment">Undoes a commit (when you screw up)</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git revert --no-edit &lt;commit hash&gt;</code></small>
+					</p>
+					<img class="fragment" src="img/git-revert.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Remote</h2>
+					<p class="fragment">Defines <u>remote</u> repo for <u>local</u> repo to sync with</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git remote add origin git@github.com:&lt;username&gt;/&lt;project&gt;.git</code></small>
+					</p>
+					<ul>
+						<li class="fragment">Remote <u>required</u> to share work with others</li>
+						<li class="fragment">GitHub == your remote!</li>
+					</ul>
+					<img class="fragment" src="img/git-remote.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Pull</h2>
+					<p class="fragment">Pulls new <u>remote</u> commits &amp; merges into <u>local</u> branch</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git pull</code></small>
+					</p>
+					<ul>
+						<li class="fragment">Sometimes requires password / key, but not on public GitHub</li>
+						<li class="fragment">Sometimes you'll have <u>merge conflicts</u> to solve</li>
+					</ul>
+					<img class="fragment" src="img/git-pull.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Push</h2>
+					<p class="fragment">Pushes new <u>local</u> commits into <u>remote</u> branch</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git push</code></small>
+					</p>
+					<ul>
+						<li class="fragment">Always requires password / key (<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">tutorial</a>)</li>
+						<li class="fragment">Sometimes you'll have <u>merge conflicts</u> to solve</li>
+					</ul>
+					<img class="fragment" src="img/git-push.png" style="width: 50%" />
+				</section>
+
+				<section>
+					<h2>Checkout / Branch</h2>
+					<p class="fragment">Switch between local branches</p>
+					<p class="fragment">Also create new <u>local</u> branch from <u>current</u> branch</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git checkout [-b] &lt;branch name&gt;</code></small>
+					</p>
+					<img class="fragment" src="img/git-checkout.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<h2>Merge</h2>
+					<p class="fragment">Merge a named branch into the <u>current</u> branch</p>
+					<p class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 30px 10px 10px 10px; border-radius: 25px;">
+						<small><code>git merge [--squash] &lt;branch name&gt;</code></small>
+					</p>
+					<ul>
+						<li class="fragment">Will try to fast-forward time (replay commits w/o conflicts)</li>
+						<li class="fragment">When cannot fast-forward, creates a merge commit</li>
+					</ul>
+					<img class="fragment" src="img/git-merge.png" style="width: 50%" />
+				</section>
+				
+				<section>
+					<section>
+						<h2>Create Your 1st GitHub Repo</h2>
+						<p class="fragment">Sign up for <a href="http://www.github.com">GitHub</a></p>
+						<p class="fragment">Gen &amp; add SSH key (<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">tutorial</a>)</p>
+						<p class="fragment">Create your first <u>empty</u> remote repo (<a href="https://help.github.com/articles/create-a-repo">tutorial</a>)</p>
+					</section>
+					<section>
+						<h2>Push Your First Commit!</h2>
+						<img class="fragment" src="img/git-first-repo.png" style="width: 40%" />
+					</section>
+				</section>
+				
+				<section>
+					<h2>Recommended Workflow</h2>
+					<p class="fragment"><a href="https://guides.github.com/introduction/flow">GitHub Flow</a></p>
+					<img class="fragment" src="img/git-workflow.png" style="width: 40%" />
+				</section>
+			
+				<section data-background="img/rick-and-morty-2.png">
+					<div class="fragment" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; border-radius: 25px;">
+						<h2 style="margin: 0;">Hope You Learned Something!</h2>
+					</div>
+				</section>
+
+				<section>
+					<h2>The End</h2>
+					<p><a href="https://www.davidhaney.io/pres/git">https://www.davidhaney.io/pres/git</a>
+					<p><small>David Haney | <a href="https://www.twitter.com/haneytron">@haneytron</a></small></p>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
