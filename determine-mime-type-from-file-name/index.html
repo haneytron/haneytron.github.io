@@ -1,236 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Determine MIME Type from File Name - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | Determine MIME Type from File Name </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/determine-mime-type-from-file-name/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&amp;#8230; A sort of &amp;#8220;pass-through&amp;#8221; if you will. Normally I&amp;#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &amp;#8220;directory&amp;#8221; to switch behind the scenes based on Session settings&amp;#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/determine-mime-type-from-file-name/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="Determine MIME Type from File Name" />
-<meta property="og:description" content="I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&#8230; A sort of &#8220;pass-through&#8221; if you will. Normally I&#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &#8220;directory&#8221; to switch behind the scenes based on Session settings&#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/determine-mime-type-from-file-name/" />
-<meta property="article:published_time" content="2013-02-11T15:15:46+00:00" />
-<meta property="article:modified_time" content="2013-02-11T15:15:46+00:00" />
-<meta itemprop="name" content="Determine MIME Type from File Name">
-<meta itemprop="description" content="I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&#8230; A sort of &#8220;pass-through&#8221; if you will. Normally I&#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &#8220;directory&#8221; to switch behind the scenes based on Session settings&#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.">
-
-
-<meta itemprop="datePublished" content="2013-02-11T15:15:46&#43;00:00" />
-<meta itemprop="dateModified" content="2013-02-11T15:15:46&#43;00:00" />
-<meta itemprop="wordCount" content="715">
-
-
-
-<meta itemprop="keywords" content="dotnet,csharp,performance,programming,reflection," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Determine MIME Type from File Name"/>
-<meta name="twitter:description" content="I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&#8230; A sort of &#8220;pass-through&#8221; if you will. Normally I&#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &#8220;directory&#8221; to switch behind the scenes based on Session settings&#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will."/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Determine MIME Type from File Name</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2013-02-11 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 715 words </span>
-          <span class="more-meta"> 4 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      <p>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user&#8230; A sort of &#8220;pass-through&#8221; if you will. Normally I&#8217;d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped &#8220;directory&#8221; to switch behind the scenes based on Session settings&#8230; So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</p>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<p>One problem that came up was being able to determine the MIME type of the content that I&#8217;m reading from disk. This is done for you by the HTTP handlers provided in the .NET framework, but when you&#8217;re serving files through MVC Controllers, the default HTTP handlers are not used and thus you&#8217;re left to figure out the MIME types for yourself.</p>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
-<p>So, I began to investigate, using <a href="http://ilspy.net">ILSpy</a>, how the native/default ASP.NET HTTP handlers determine the MIME types. I came upon a class in the <a href="http://msdn.microsoft.com/en-us/library/system.web.aspx">System.Web</a> namespace called <a href="http://msdn.microsoft.com/en-us/library/system.web.mimemapping.aspx">System.Web.MimeMapping</a> &#8211; this class keeps a private, sealed dictionary of type MimeMappingDictionaryClassic (which extends a private abstract class called MimeMappingDictionaryBase) which holds all knows extensions and their associated MIME types&#8230; A sample of the decompiled code which populates it is below:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">protected override void PopulateMappings()
+            <div class="post-title">
+                <h3>Determine MIME Type from File Name</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Mon, Feb 11, 2013</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">4-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</p>
+<p>One problem that came up was being able to determine the MIME type of the content that I’m reading from disk. This is done for you by the HTTP handlers provided in the .NET framework, but when you’re serving files through MVC Controllers, the default HTTP handlers are not used and thus you’re left to figure out the MIME types for yourself.</p>
+<p>So, I began to investigate, using <!-- raw HTML omitted -->ILSpy<!-- raw HTML omitted -->, how the native/default ASP.NET HTTP handlers determine the MIME types. I came upon a class in the <!-- raw HTML omitted -->System.Web<!-- raw HTML omitted --> namespace called <!-- raw HTML omitted -->System.Web.MimeMapping<!-- raw HTML omitted --> – this class keeps a private, sealed dictionary of type MimeMappingDictionaryClassic (which extends a private abstract class called MimeMappingDictionaryBase) which holds all knows extensions and their associated MIME types… A sample of the decompiled code which populates it is below:</p>
+<pre><code>protected override void PopulateMappings()
 {
-    base.AddMapping(&#34;.323&#34;, &#34;text/h323&#34;);
-    base.AddMapping(&#34;.aaf&#34;, &#34;application/octet-stream&#34;);
-    base.AddMapping(&#34;.aca&#34;, &#34;application/octet-stream&#34;);
-    base.AddMapping(&#34;.accdb&#34;, &#34;application/msaccess&#34;);
-    base.AddMapping(&#34;.accde&#34;, &#34;application/msaccess&#34;);
-    base.AddMapping(&#34;.accdt&#34;, &#34;application/msaccess&#34;);
-    base.AddMapping(&#34;.acx&#34;, &#34;application/internet-property-stream&#34;);
-    base.AddMapping(&#34;.afm&#34;, &#34;application/octet-stream&#34;);
-    base.AddMapping(&#34;.ai&#34;, &#34;application/postscript&#34;);
-    base.AddMapping(&#34;.aif&#34;, &#34;audio/x-aiff&#34;);
-    base.AddMapping(&#34;.aifc&#34;, &#34;audio/aiff&#34;);
-    base.AddMapping(&#34;.aiff&#34;, &#34;audio/aiff&#34;);
-    ... // It goes on for a long time</pre></td></tr></table>
-</div>
-</div>
-<p>And so on&#8230; In total, there are 342 lines of known mappings!</p>
-
+    base.AddMapping(&quot;.323&quot;, &quot;text/h323&quot;);
+    base.AddMapping(&quot;.aaf&quot;, &quot;application/octet-stream&quot;);
+    base.AddMapping(&quot;.aca&quot;, &quot;application/octet-stream&quot;);
+    base.AddMapping(&quot;.accdb&quot;, &quot;application/msaccess&quot;);
+    base.AddMapping(&quot;.accde&quot;, &quot;application/msaccess&quot;);
+    base.AddMapping(&quot;.accdt&quot;, &quot;application/msaccess&quot;);
+    base.AddMapping(&quot;.acx&quot;, &quot;application/internet-property-stream&quot;);
+    base.AddMapping(&quot;.afm&quot;, &quot;application/octet-stream&quot;);
+    base.AddMapping(&quot;.ai&quot;, &quot;application/postscript&quot;);
+    base.AddMapping(&quot;.aif&quot;, &quot;audio/x-aiff&quot;);
+    base.AddMapping(&quot;.aifc&quot;, &quot;audio/aiff&quot;);
+    base.AddMapping(&quot;.aiff&quot;, &quot;audio/aiff&quot;);
+    ... // It goes on for a long time
+</code></pre>
+<p>And so on… In total, there are 342 lines of known mappings!</p>
 <p>Ultimately, my goal was to get a hold of this functionality in the easiest, most flexible way possible.</p>
-
-<p>In .NET 4.5, MimeMapping exposes a public static method called <a href="http://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping.aspx">GetMimeMapping</a> which takes in a file name (or extension) and returns the appropriate MIME type from the aforementioned dictionary. Unfortunately my project is on .NET 4.0 and in that version of the framework this method is internal, not public (why, Microsoft, why?!) and thus was not available to me. So, I felt that I was left with 3 options:</p>
-
+<p>In .NET 4.5, MimeMapping exposes a public static method called <!-- raw HTML omitted -->GetMimeMapping<!-- raw HTML omitted --> which takes in a file name (or extension) and returns the appropriate MIME type from the aforementioned dictionary. Unfortunately my project is on .NET 4.0 and in that version of the framework this method is internal, not public (why, Microsoft, why?!) and thus was not available to me. So, I felt that I was left with 3 options:</p>
 <ol>
-<li><p>Upgrade to .NET 4.5 (not possible at this time due to corporate politics and so on)</p></li>
-
-<li><p>Copy and paste the entire list of mappings into a dictionary of my own and reference it (yuck!)</p></li>
-
-<li><p>REFLECTION TO THE RESCUE!</p></li>
+<li>
+<p>Upgrade to .NET 4.5 (not possible at this time due to corporate politics and so on)</p>
+</li>
+<li>
+<p>Copy and paste the entire list of mappings into a dictionary of my own and reference it (yuck!)</p>
+</li>
+<li>
+<p>REFLECTION TO THE RESCUE!</p>
+</li>
 </ol>
-
-<p>So, with a short bit of code, you too can steal the functionality of the GetMimeMapping method, even if it isn&#8217;t public!</p>
-
-<p>First, set up the reflection and cache the MethodInfo in an assembly that references the <a href="http://msdn.microsoft.com/en-us/library/system.web.aspx">System.Web</a> namespace. Below is a custom static class I built which wraps the reflective method:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/// &lt;summary&gt;
+<p>So, with a short bit of code, you too can steal the functionality of the GetMimeMapping method, even if it isn’t public!</p>
+<p>First, set up the reflection and cache the MethodInfo in an assembly that references the <!-- raw HTML omitted -->System.Web<!-- raw HTML omitted --> namespace. Below is a custom static class I built which wraps the reflective method:</p>
+<pre><code>/// &lt;summary&gt;
 /// Exposes the Mime Mapping method that Microsoft hid from us.
 /// &lt;/summary&gt;
 public static class MimeMappingStealer
@@ -245,8 +182,8 @@ public static class MimeMappingStealer
     {
         // Load hidden mime mapping class and method from System.Web
         var assembly = Assembly.GetAssembly(typeof(HttpApplication));
-        Type mimeMappingType = assembly.GetType(&#34;System.Web.MimeMapping&#34;);
-        _getMimeMappingMethod = mimeMappingType.GetMethod(&#34;GetMimeMapping&#34;, 
+        Type mimeMappingType = assembly.GetType(&quot;System.Web.MimeMapping&quot;);
+        _getMimeMappingMethod = mimeMappingType.GetMethod(&quot;GetMimeMapping&quot;, 
             BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public |
             BindingFlags.NonPublic | BindingFlags.FlattenHierarchy);
     }
@@ -254,54 +191,32 @@ public static class MimeMappingStealer
     /// &lt;summary&gt;
     /// Exposes the hidden Mime mapping method.
     /// &lt;/summary&gt;
-    /// &lt;param name=&#34;fileName&#34;&gt;The file name.&lt;/param&gt;
+    /// &lt;param name=&quot;fileName&quot;&gt;The file name.&lt;/param&gt;
     /// &lt;returns&gt;The mime mapping.&lt;/returns&gt;
     public static string GetMimeMapping(string fileName)
     {
         return (string)_getMimeMappingMethod.Invoke(null /*static method*/, new[] { fileName });
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Now, a quick test via a console application to ensure that it works:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">static void Main(string[] args)
+<pre><code>static void Main(string[] args)
 {
-    var fileName1 = &#34;whatever.js&#34;;
-    var fileName2 = &#34;somefile.css&#34;;
-    var fileName3 = &#34;myfile.html&#34;;
+    var fileName1 = &quot;whatever.js&quot;;
+    var fileName2 = &quot;somefile.css&quot;;
+    var fileName3 = &quot;myfile.html&quot;;
 
-    Console.WriteLine(&#34;Output for &#34; + fileName1 + &#34; = &#34; 
+    Console.WriteLine(&quot;Output for &quot; + fileName1 + &quot; = &quot; 
         + MimeMappingStealer.GetMimeMapping(fileName1));
-    Console.WriteLine(&#34;Output for &#34; + fileName2 + &#34; = &#34; 
+    Console.WriteLine(&quot;Output for &quot; + fileName2 + &quot; = &quot; 
         + MimeMappingStealer.GetMimeMapping(fileName2));
-    Console.WriteLine(&#34;Output for &#34; + fileName3 + &#34; = &#34; 
+    Console.WriteLine(&quot;Output for &quot; + fileName3 + &quot; = &quot; 
         + MimeMappingStealer.GetMimeMapping(fileName3));
 
     Console.ReadKey();
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>And running the console application results in success!</p>
-
 <figure>
     <img src="/img/get-mime-mapping.png"/> <figcaption>
             <h4>GetMimeMapping Works!</h4>
@@ -309,110 +224,76 @@ public static class MimeMappingStealer
 </figure>
 
 
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/dotnet/">dotnet</a>
-          <a href="/tags/csharp/">csharp</a>
-          <a href="/tags/performance/">performance</a>
-          <a href="/tags/programming/">programming</a>
-          <a href="/tags/reflection/">reflection</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/a-better-mime-mapping-stealer/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">A Better MIME Mapping Stealer!</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/published-by-red-gate/">
-            <span class="next-text nav-default">Published by Red Gate</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/csharp/">csharp</a><a class="tag" href="/tags/performance/">performance</a><a class="tag" href="/tags/programming/">programming</a><a class="tag" href="/tags/reflection/">reflection</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

@@ -1,26 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>published on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>published on </title>
     <link>https://www.davidhaney.io/tags/published/</link>
-    <description>Recent content in published on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in published on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>David Haney</copyright>
-    <lastBuildDate>Fri, 18 Jan 2013 15:10:04 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.davidhaney.io/tags/published/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 18 Jan 2013 15:10:04 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/published/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Published by Red Gate</title>
       <link>https://www.davidhaney.io/published-by-red-gate/</link>
       <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/published-by-red-gate/</guid>
-      <description>As of today I&amp;#8217;ve been published in an e-Book offered for free by Red Gate! It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
-My tip is #3 and has to do with debugging Microsoft symbols.
-Get a free copy here &amp;#8211; it has already taught me a few things I had never thought to consider!</description>
+      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .</description>
     </item>
     
     <item>
@@ -29,7 +22,7 @@ Get a free copy here &amp;#8211; it has already taught me a few things I had nev
       <pubDate>Sun, 26 Aug 2012 23:49:41 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/published-by-mdsn-uk-blog/</guid>
-      <description>This isn&amp;#8217;t a very technical post, but I was published by Microsoft recently via their MSDN UK Blog! The article is on creating and maintaining a successful User Group.
+      <description>This isn’t a very technical post, but I was published by Microsoft recently via their MSDN UK Blog! The article is on creating and maintaining a successful User Group.
 Click here to read the article!</description>
     </item>
     

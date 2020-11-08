@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mistakes on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>mistakes on </title>
     <link>https://www.davidhaney.io/tags/mistakes/</link>
-    <description>Recent content in mistakes on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in mistakes on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>David Haney</copyright>
-    <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.davidhaney.io/tags/mistakes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/mistakes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitLab Data Loss: A Discussion</title>
       <link>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</link>
       <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</guid>
-      <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems&amp;#8230; only to find that none of them actually worked.
-Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
+      <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.</description>
     </item>
     
     <item>
@@ -28,9 +22,8 @@ Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everyb
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
-      <description>Background I&amp;#8217;m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won&amp;#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&amp;#8217;m going to tell you about the things I&amp;#8217;ve experienced working on diversity &amp;#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
-It&amp;#8217;s no secret that the tech industry is not that diverse.</description>
+      <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won’t be some preachy post about how diversity is great and how you should be a better human being.</description>
     </item>
     
     <item>
@@ -39,8 +32,7 @@ It&amp;#8217;s no secret that the tech industry is not that diverse.</descriptio
       <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/developer-turned-manager/</guid>
-      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
-There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#8217;ve learned the hard way. There&amp;#8217;s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
+      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.</description>
     </item>
     
     <item>
@@ -49,7 +41,7 @@ There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#821
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
-      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
+      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling.</description>
     </item>
     
     <item>
@@ -58,7 +50,7 @@ There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#821
       <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</guid>
-      <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
+      <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career.</description>
     </item>
     
     <item>
@@ -67,7 +59,7 @@ There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#821
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</guid>
-      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on &amp;#8220;good&amp;#8221; code and more emphasis on &amp;#8220;working&amp;#8221; code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you&amp;#8217;ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
+      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code.</description>
     </item>
     
     <item>
@@ -76,8 +68,7 @@ There are tons of things I&amp;#8217;ve learned so far, some of which I&amp;#821
       <pubDate>Sun, 14 Oct 2012 22:10:54 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</guid>
-      <description>Well, it&amp;#8217;s been nearly 2 months since my last post&amp;#8230; I&amp;#8217;m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
-The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.</description>
+      <description>Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen.</description>
     </item>
     
   </channel>

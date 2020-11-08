@@ -1,172 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>But it Didn&#39;t Happen in DEV or QA! - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | But it Didn&#39;t Happen in DEV or QA! </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="Most of us have been there: you&amp;#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
-Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&amp;#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&amp;#8217;d be able to solve the problem." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="But it Didn&#39;t Happen in DEV or QA!" />
-<meta property="og:description" content="Most of us have been there: you&#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
-Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&#8217;d be able to solve the problem." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/" />
-<meta property="article:published_time" content="2012-12-02T17:22:20+00:00" />
-<meta property="article:modified_time" content="2012-12-02T17:22:20+00:00" />
-<meta itemprop="name" content="But it Didn&#39;t Happen in DEV or QA!">
-<meta itemprop="description" content="Most of us have been there: you&#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
-Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&#8217;d be able to solve the problem.">
-
-
-<meta itemprop="datePublished" content="2012-12-02T17:22:20&#43;00:00" />
-<meta itemprop="dateModified" content="2012-12-02T17:22:20&#43;00:00" />
-<meta itemprop="wordCount" content="1472">
-
-
-
-<meta itemprop="keywords" content="dotnet,debugging,performance,profiling,programming,windbg," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="But it Didn&#39;t Happen in DEV or QA!"/>
-<meta name="twitter:description" content="Most of us have been there: you&#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
-Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&#8217;d be able to solve the problem."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU."/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">But it Didn&#39;t Happen in DEV or QA!</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2012-12-02 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 1472 words </span>
-          <span class="more-meta"> 7 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      <p>Most of us have been there: you&#8217;ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?</p>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<p>Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment&#8230; and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you&#8217;d be able to solve the problem. However, you can&#8217;t (because it&#8217;s Production!), and you can&#8217;t replicate the problem in any other environment. Maybe it&#8217;s because of stale Development or QA environment data compared to live Production data. Maybe it&#8217;s something else. You have no idea where to look to find and fix the problem in your application. For lack of eloquence: you&#8217;re screwed.</p>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
-<p>Fortunately, there are both tools designed for this very scenario and ways to &#8220;reproduce&#8221; the problem to determine the cause. I&#8217;m going to show you how to debug Production problems in applications where you cannot attach to the process for live debugging, and there are either no logs or the logs tell you nothing useful.</p>
+            <div class="post-title">
+                <h3>But it Didn&#39;t Happen in DEV or QA!</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Sun, Dec 2, 2012</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">7-minute read</span>
+                    </div>
+                
+            </div>
 
-<p>Let&#8217;s create a simple application that is designed to take up 100% of our CPU:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">class Program
+            <p>Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?</p>
+<p>Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment… and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you’d be able to solve the problem. However, you can’t (because it’s Production!), and you can’t replicate the problem in any other environment. Maybe it’s because of stale Development or QA environment data compared to live Production data. Maybe it’s something else. You have no idea where to look to find and fix the problem in your application. For lack of eloquence: you’re screwed.</p>
+<p>Fortunately, there are both tools designed for this very scenario and ways to “reproduce” the problem to determine the cause. I’m going to show you how to debug Production problems in applications where you cannot attach to the process for live debugging, and there are either no logs or the logs tell you nothing useful.</p>
+<p>Let’s create a simple application that is designed to take up 100% of our CPU:</p>
+<pre><code>class Program
 {
     static void Main(string[] args)
     {
@@ -179,315 +149,204 @@ Logic tells you that you have a problem in the code somewhere that is only encou
             }
         });
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>This code basically spawns 100 concurrent threads that loop for all of eternity. The reason that we do this using the TPL / Parallel library is that a single threaded application would only max out 1/N of our CPU, where N is the number of cores in the processor. Verifying our simple application, we can see that it does its job and maxes out our CPU:</p>
-
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-1.png"/> <figcaption>
             <h4>100% CPU Used</h4>
         </figcaption>
 </figure>
 
-
-<p>Now, imagine that this application is a lot more complex and that this simple method is just one part of the entire solution. Perhaps you&#8217;ve built a really huge website or service and this method exists in just one little part of it. Pretend also that this method is not hit in your Development or QA environments during testing, and so your application appears to operate normally to you.</p>
-
-<p>In fact, pretend that you&#8217;ve never seen this source code at all. All that you know is that you have an application in Production that spins out of control, and you don&#8217;t know where the problem is &#8211; or even where to begin looking.</p>
-
+<p>Now, imagine that this application is a lot more complex and that this simple method is just one part of the entire solution. Perhaps you’ve built a really huge website or service and this method exists in just one little part of it. Pretend also that this method is not hit in your Development or QA environments during testing, and so your application appears to operate normally to you.</p>
+<p>In fact, pretend that you’ve never seen this source code at all. All that you know is that you have an application in Production that spins out of control, and you don’t know where the problem is – or even where to begin looking.</p>
 <p><strong>So, what do you do?</strong></p>
-
-<p>The first thing we need to do is ensure that we have the tools we&#8217;ll need to debug and fix the issue. Things you&#8217;re going to need:</p>
-
+<p>The first thing we need to do is ensure that we have the tools we’ll need to debug and fix the issue. Things you’re going to need:</p>
 <ul>
-<li>A tool that can create Mini-Dumps. I highly recommend <a href="http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx">Process Explorer</a> which is available via TechNet.</li>
-<li><a href="http://msdn.microsoft.com/en-us/windows/hardware/gg463009.aspx">WinDBG, via Debugging Tools for Windows</a>, an unintuitive yet key tool from Microsoft for debugging Mini-Dump files. When you install this, you&#8217;ll have to do it through the Windows Software Development Kit installer. You can unselect everything except Debugging Tools for Windows, since you&#8217;ll need nothing else for our purposes. </ul>
-<br /></li>
+<li>A tool that can create Mini-Dumps. I highly recommend <!-- raw HTML omitted -->Process Explorer<!-- raw HTML omitted --> which is available via TechNet.</li>
+<li><!-- raw HTML omitted -->WinDBG, via Debugging Tools for Windows<!-- raw HTML omitted -->, an unintuitive yet key tool from Microsoft for debugging Mini-Dump files. When you install this, you’ll have to do it through the Windows Software Development Kit installer. You can unselect everything except Debugging Tools for Windows, since you’ll need nothing else for our purposes. <!-- raw HTML omitted --></li>
 </ul>
-
-<p>Install WinDBG on the PC which you&#8217;ll use to analyze the Mini-Dump (typically your Development machine). Install Process Explorer on the Production box that hosts the application which is misbehaving.</p>
-
-<p><strong>Now that you&#8217;ve got those installed, we&#8217;ll proceed and figure out the problem.</strong></p>
-
-<p>So our scenario is this: we have an application running in Production which is spinning out of control, we have the source code on a different PC, and we can&#8217;t attach a debugger to the Production environment. We can&#8217;t reproduce this behaviour in Development or QA environments at all. So, time to get down to the details of the problem.</p>
-
-<p>Step 1 is easy. You need to take a Mini-Dump of the misbehaving application on the Production machine. There&#8217;s a bit of a catch 22 here in that the rogue application is using 100% of your CPU, so this Mini-Dump could take forever. To solve that problem on a multi-core machine, simply use Task Manager to set the affinity of the misbehaving application to 1 or 2 cores to lower the total CPU used by the application, thus freeing up CPU for our Mini-Dump:</p>
-
+<p>Install WinDBG on the PC which you’ll use to analyze the Mini-Dump (typically your Development machine). Install Process Explorer on the Production box that hosts the application which is misbehaving.</p>
+<p><strong>Now that you’ve got those installed, we’ll proceed and figure out the problem.</strong></p>
+<p>So our scenario is this: we have an application running in Production which is spinning out of control, we have the source code on a different PC, and we can’t attach a debugger to the Production environment. We can’t reproduce this behaviour in Development or QA environments at all. So, time to get down to the details of the problem.</p>
+<p>Step 1 is easy. You need to take a Mini-Dump of the misbehaving application on the Production machine. There’s a bit of a catch 22 here in that the rogue application is using 100% of your CPU, so this Mini-Dump could take forever. To solve that problem on a multi-core machine, simply use Task Manager to set the affinity of the misbehaving application to 1 or 2 cores to lower the total CPU used by the application, thus freeing up CPU for our Mini-Dump:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-2.png"/> <figcaption>
             <h4>Set the Affinity to 1 or 2 CPUs</h4>
         </figcaption>
 </figure>
 
-
-<p>Unselect &#8220;All Processors&#8221; and pick 1 or 2:</p>
-
+<p>Unselect “All Processors” and pick 1 or 2:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-3.png"/> <figcaption>
             <h4>Pick 1 or 2 CPUs</h4>
         </figcaption>
 </figure>
 
-
-<p>There, now it&#8217;s a lot easier to do things on the affected PC since it isn&#8217;t spending 100% of its CPU spinning on your application:</p>
-
+<p>There, now it’s a lot easier to do things on the affected PC since it isn’t spending 100% of its CPU spinning on your application:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-4.png"/> <figcaption>
             <h4>Processor Now Freed Up</h4>
         </figcaption>
 </figure>
 
-
 <p>Note that the affinity setting does not persist, meaning the next time you launch the application, it will go back to using all CPUs per usual.</p>
-
-<p>So, now we&#8217;re on to Step 2. Take a Mini-Dump (haha). To do this, launch Process Explorer, find your rogue application, right click, Create Dump &#8211;&gt; Minidump:</p>
-
+<p>So, now we’re on to Step 2. Take a Mini-Dump (haha). To do this, launch Process Explorer, find your rogue application, right click, Create Dump –&gt; Minidump:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-5.png"/> <figcaption>
             <h4>Create a Minidump</h4>
         </figcaption>
 </figure>
 
-
 <p>Now save the .dmp file somewhere that your Development PC can get to it in order to debug the issue.</p>
-
-<p>Step 3. Great, so now we have our .dmp Mini-Dump file&#8230; so let&#8217;s get cracking on debugging it. Get the .dmp file to your Development PC and fire up WinDBG. <strong>NOTE: run the 64 bit version for 64 bit applications and the 32 bit version for 32 bit applications. If you experience weird behaviour, try switching the WinDBG version that you launch.</strong> You&#8217;ll be greeted with a pretty bland grey window. Go to File &#8211;&gt; Open Crash Dump (or CTRL + D for the shortcut fans out there). Select your .dmp file and you&#8217;ll end up with a screen similar to this:</p>
-
+<p>Step 3. Great, so now we have our .dmp Mini-Dump file… so let’s get cracking on debugging it. Get the .dmp file to your Development PC and fire up WinDBG. <strong>NOTE: run the 64 bit version for 64 bit applications and the 32 bit version for 32 bit applications. If you experience weird behaviour, try switching the WinDBG version that you launch.</strong> You’ll be greeted with a pretty bland grey window. Go to File –&gt; Open Crash Dump (or CTRL + D for the shortcut fans out there). Select your .dmp file and you’ll end up with a screen similar to this:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-6.png"/> <figcaption>
             <h4>Minidump File Loaded</h4>
         </figcaption>
 </figure>
 
-
-<p>So now the &#8220;hard&#8221; part begins. We need to manually diagnose the issue. The first step in WinDBG is usually to load up the CLR runtime so that we can examine our stack. To do this, run either:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">.loadby SOS clr            // for .NET 4+</pre></td></tr></table>
-</div>
-</div>
+<p>So now the “hard” part begins. We need to manually diagnose the issue. The first step in WinDBG is usually to load up the CLR runtime so that we can examine our stack. To do this, run either:</p>
+<pre><code>.loadby SOS clr            // for .NET 4+
+</code></pre>
 <p><strong>OR</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">.loadby SOS mscorwks       // for .NET 3.5 or lower</pre></td></tr></table>
-</div>
-</div>
+<pre><code>.loadby SOS mscorwks       // for .NET 3.5 or lower
+</code></pre>
 <p>My app is .NET 4, so I ran .loadby sos clr to load the CLR. This is what it should look like if it succeeds:</p>
-
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-10.png"/> <figcaption>
             <h4>Load the CLR</h4>
         </figcaption>
 </figure>
 
-
-<p>Next we need to load the symbols for the application that we&#8217;re debugging. To do this, run the following commands:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">.symfix
-.sympath+ **&lt;absolute path to your application&#39;s compiled code and symbols&gt;**</pre></td></tr></table>
-</div>
-</div>
-<p>Here&#8217;s what I did for my Symbol Path for reference:</p>
-
+<p>Next we need to load the symbols for the application that we’re debugging. To do this, run the following commands:</p>
+<pre><code>.symfix
+.sympath+ **&lt;absolute path to your application's compiled code and symbols&gt;**
+</code></pre>
+<p>Here’s what I did for my Symbol Path for reference:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-7.png"/> <figcaption>
             <h4>Run .symfix and .sympath</h4>
         </figcaption>
 </figure>
 
-
-<p>Next, run .symopt+0x40 to enable symbols to be used which are not perfectly matched. This setting is extremely useful in cases where the code is compiled locally and doesn&#8217;t perfectly match the production code that the Mini-Dump was taken from. If this setting is omitted, you will have a very bad time determining the issue, so make sure that you run it. This is what it looks like:</p>
-
+<p>Next, run .symopt+0x40 to enable symbols to be used which are not perfectly matched. This setting is extremely useful in cases where the code is compiled locally and doesn’t perfectly match the production code that the Mini-Dump was taken from. If this setting is omitted, you will have a very bad time determining the issue, so make sure that you run it. This is what it looks like:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-8.png"/> <figcaption>
             <h4>Run symopt&#43;0x40</h4>
         </figcaption>
 </figure>
 
-
-<p>Now that you&#8217;ve specified the path at which to look for symbols for your application, run the reload command to reload your symbols:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">.reload /v /f</pre></td></tr></table>
-</div>
-</div>
-<p>You might get some warnings and errors here but that&#8217;s usually fine as long as they don&#8217;t relate to your application&#8217;s DLLs. Verify that it found your application&#8217;s symbols by reading the output of the .reload command:</p>
-
+<p>Now that you’ve specified the path at which to look for symbols for your application, run the reload command to reload your symbols:</p>
+<pre><code>.reload /v /f
+</code></pre>
+<p>You might get some warnings and errors here but that’s usually fine as long as they don’t relate to your application’s DLLs. Verify that it found your application’s symbols by reading the output of the .reload command:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-9.png"/> <figcaption>
             <h4>Ensure your symbols loaded</h4>
         </figcaption>
 </figure>
 
-
-<p>Alright, almost there! Now we have our symbols and CLR loaded, so let&#8217;s find out what our application is spending all of its time doing. Run the command:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">!runaway</pre></td></tr></table>
-</div>
-</div>
-<p>And you&#8217;ll find out which threads have been using the most CPU time. Mine looks like this:</p>
-
+<p>Alright, almost there! Now we have our symbols and CLR loaded, so let’s find out what our application is spending all of its time doing. Run the command:</p>
+<pre><code>!runaway
+</code></pre>
+<p>And you’ll find out which threads have been using the most CPU time. Mine looks like this:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-11.png"/> <figcaption>
             <h4>Many Threads are Long Running</h4>
         </figcaption>
 </figure>
 
-
-<p>So here we can see that we have 6 threads which are taking up more time than all of the others&#8230; We need to print their stack traces and see just what is going on. Execute this (super intuitive) command to see the stack trace of the first thread:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">~~[9:18a8]e!clrstack</pre></td></tr></table>
-</div>
-</div>
-<p>Super intuitive right? Basically it says &#8220;gimme the CLR stack trace for the thread whose ID is in the square brackets&#8221;. Here&#8217;s what mine spits out:</p>
-
+<p>So here we can see that we have 6 threads which are taking up more time than all of the others… We need to print their stack traces and see just what is going on. Execute this (super intuitive) command to see the stack trace of the first thread:</p>
+<pre><code>~~[9:18a8]e!clrstack
+</code></pre>
+<p>Super intuitive right? Basically it says “gimme the CLR stack trace for the thread whose ID is in the square brackets”. Here’s what mine spits out:</p>
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-12.png"/> <figcaption>
             <h4>AHA! The culprit!</h4>
         </figcaption>
 </figure>
 
-
 <p>And now we know the culprit! So, we proceed to our source code and sure enough, line 16 is our problem:</p>
-
 <figure>
     <img src="/img/but-it-didnt-happen-in-dev-or-qa-13.png"/> <figcaption>
             <h4>The Problem Line</h4>
         </figcaption>
 </figure>
 
-
 <p>And there you have it. How to debug production issues from your development environment.</p>
+<p>Note that you can also determine what caused a crash using WinDBG… Have your system administrator enable Mini-Dumps for crashes, and then perform the same commands as we did in this post EXCEPT that at the part where we ran !runaway, instead run !analyze -v and !clrstack – these will get you on your way!</p>
 
-<p>Note that you can also determine what caused a crash using WinDBG&#8230; Have your system administrator enable Mini-Dumps for crashes, and then perform the same commands as we did in this post EXCEPT that at the part where we ran !runaway, instead run !analyze -v and !clrstack &#8211; these will get you on your way!</p>
-
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/dotnet/">dotnet</a>
-          <a href="/tags/debugging/">debugging</a>
-          <a href="/tags/performance/">performance</a>
-          <a href="/tags/profiling/">profiling</a>
-          <a href="/tags/programming/">programming</a>
-          <a href="/tags/windbg/">windbg</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/published-by-red-gate/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Published by Red Gate</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/visual-studio-2012-intellisense-not-working-solved/">
-            <span class="next-text nav-default">Visual Studio 2012 Intellisense Not Working - SOLVED</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/debugging/">debugging</a><a class="tag" href="/tags/performance/">performance</a><a class="tag" href="/tags/profiling/">profiling</a><a class="tag" href="/tags/programming/">programming</a><a class="tag" href="/tags/windbg/">windbg</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

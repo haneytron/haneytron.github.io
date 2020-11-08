@@ -1,270 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Developers Shouldn&#39;t Measure Twice, Cut Once - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | Developers Shouldn&#39;t Measure Twice, Cut Once </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="Developers Shouldn&#39;t Measure Twice, Cut Once" />
-<meta property="og:description" content="I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/" />
-<meta property="article:published_time" content="2015-04-15T16:25:02+00:00" />
-<meta property="article:modified_time" content="2015-04-15T16:25:02+00:00" />
-<meta itemprop="name" content="Developers Shouldn&#39;t Measure Twice, Cut Once">
-<meta itemprop="description" content="I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.">
-
-
-<meta itemprop="datePublished" content="2015-04-15T16:25:02&#43;00:00" />
-<meta itemprop="dateModified" content="2015-04-15T16:25:02&#43;00:00" />
-<meta itemprop="wordCount" content="795">
-
-
-
-<meta itemprop="keywords" content="culture,iteration,methodology,mistakes,process," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Developers Shouldn&#39;t Measure Twice, Cut Once"/>
-<meta name="twitter:description" content="I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling."/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Developers Shouldn&#39;t Measure Twice, Cut Once</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2015-04-15 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 795 words </span>
-          <span class="more-meta"> 4 mins read </span>
-        
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    
-  </div>
-</div>
-    <div class="post-content">
-      <p>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</p>
-
-<p>While I was doing this work, which is just mindless enough that your mind wanders but requires just enough attention that it doesn&#8217;t wander <em>freely</em>, I began to recite a common trades mantra. <em><strong>Measure twice, cut once</strong></em>.</p>
-
-<p>This quip &#8211; a practical saying &#8211; saturates the construction industry. Whether you&#8217;re a DIYer like me, or a professional tradesperson, it&#8217;s important to measure everything twice and do the work once. This saves you a lot of pain and time down the road, since you can double check your angles and distances and get everything right the first time.</p>
-
-<p>The reason that this practice is important is as simple as considering a tile. Let&#8217;s say that I need a <sup>3</sup>&frasl;<sub>4</sub>&#8243; width tile, but I measure incorrectly and cut it to <sup>1</sup>&frasl;<sub>2</sub>&#8243;. There&#8217;s no way for me to turn that <sup>1</sup>&frasl;<sub>2</sub>&#8243; piece back into a <sup>3</sup>&frasl;<sub>4</sub>&#8243; piece, so I just wasted that tile. I need to toss it out (if it can&#8217;t be used elsewhere) and cut a new tile to the correct measurement. In short, measuring twice saves you time and money.</p>
-
-<p>As I stood above my trusty wet saw, cutting tile, after tile, after tile, my mind began to wander into the realm of programming. I began to realize something interesting. In my opinion, <strong>many IT departments have a policy of measuring twice and cutting once, with the supposed benefit of cost and time savings</strong>. One might even call this sort of approach waterfall or agile, where estimates are gathered in detail (measured) long before the work is done (cut).</p>
-
-<p>I believe that this is a fallacy that ironically leads to even more work. Every single developer that I&#8217;ve ever met in my career, including myself, cannot accurately estimate anything. We sometimes get close, because we can relate the task at hand to a similar task we accomplished previously, but in general I find that a new task is very much an unknown and the time spent to gather an estimate is pointless since it&#8217;s wrong anyway. By measuring twice and cutting once, we waste a ton of time.</p>
-
-<p><strong>I believe that developers should measure once, quickly, for a rough estimate, and then cut.</strong> The reason that I believe this is due to a fundamental difference between programming and other kinds of work that is managed with processes and estimates.</p>
-
-<p>Code is not a tile or piece of wood. It is a highly flexible, malleable, mutable, digital thing. If a developer cuts a feature short, they can add on to it later, expanding it seamlessly to the required size. If they overestimate a feature&#8217;s length, they can easily chop off the excess and move on to the next feature. <strong><em>There is no significant cost in quick, roughly estimated measurements for programming work.</em></strong></p>
-
-<p>Immediately your team will regain a ton of time in which they can do their development work. They won&#8217;t have to attend hours of planning meetings or requirements gathering sessions. They will just work to get things done as fast and accurately as they can.</p>
-
-<p>The only tradeoff is a lack of estimates that management-types can cite and depend on. I would challenge that any estimates derived are very commonly wrong and useless regardless. More-so, if you do not trust your developers to do the right thing and use their time effectively, <em>why do you keep them employed?</em></p>
-
-<p>To me, a lot of the process models around development that are popular (waterfall, agile) are derived from the measure twice, cut once methodology. This approach is super practical to physical goods since inaccurate measurements are expensive, but this does not apply to development work. These meetings to gather estimates in the hopes of controlling costs ironically bloat budgets and help to deliver less code and extend goal dates and deadlines. You take people that are hired to code, and tie them up in meetings where they have to try and justify what they&#8217;re going to code by the hour. They don&#8217;t know how long it will take, but they will have a better idea after a few hours of coding &#8211; <em>if you&#8217;d just give them a few hours of no meetings to code</em>.</p>
-
-<p>If you&#8217;re working on tiling your fireplace, measure twice and cut once. If you&#8217;re working on code, take a rough guess at the measurement and get to work!</p>
-
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/culture/">culture</a>
-          <a href="/tags/iteration/">iteration</a>
-          <a href="/tags/methodology/">methodology</a>
-          <a href="/tags/mistakes/">mistakes</a>
-          <a href="/tags/process/">process</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/developer-turned-manager/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Developer Turned Manager</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/on-secretly-terrible-engineers-a-rebuttal/">
-            <span class="next-text nav-default">On Secretly Terrible Engineers - A Rebuttal</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>Developers Shouldn&#39;t Measure Twice, Cut Once</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Wed, Apr 15, 2015</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">4-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</p>
+<p>While I was doing this work, which is just mindless enough that your mind wanders but requires just enough attention that it doesn’t wander <em>freely</em>, I began to recite a common trades mantra. <em><strong>Measure twice, cut once</strong></em>.</p>
+<p>This quip – a practical saying – saturates the construction industry. Whether you’re a DIYer like me, or a professional tradesperson, it’s important to measure everything twice and do the work once. This saves you a lot of pain and time down the road, since you can double check your angles and distances and get everything right the first time.</p>
+<p>The reason that this practice is important is as simple as considering a tile. Let’s say that I need a 3/4″ width tile, but I measure incorrectly and cut it to 1/2″. There’s no way for me to turn that 1/2″ piece back into a 3/4″ piece, so I just wasted that tile. I need to toss it out (if it can’t be used elsewhere) and cut a new tile to the correct measurement. In short, measuring twice saves you time and money.</p>
+<p>As I stood above my trusty wet saw, cutting tile, after tile, after tile, my mind began to wander into the realm of programming. I began to realize something interesting. In my opinion, <strong>many IT departments have a policy of measuring twice and cutting once, with the supposed benefit of cost and time savings</strong>. One might even call this sort of approach waterfall or agile, where estimates are gathered in detail (measured) long before the work is done (cut).</p>
+<p>I believe that this is a fallacy that ironically leads to even more work. Every single developer that I’ve ever met in my career, including myself, cannot accurately estimate anything. We sometimes get close, because we can relate the task at hand to a similar task we accomplished previously, but in general I find that a new task is very much an unknown and the time spent to gather an estimate is pointless since it’s wrong anyway. By measuring twice and cutting once, we waste a ton of time.</p>
+<p><strong>I believe that developers should measure once, quickly, for a rough estimate, and then cut.</strong> The reason that I believe this is due to a fundamental difference between programming and other kinds of work that is managed with processes and estimates.</p>
+<p>Code is not a tile or piece of wood. It is a highly flexible, malleable, mutable, digital thing. If a developer cuts a feature short, they can add on to it later, expanding it seamlessly to the required size. If they overestimate a feature’s length, they can easily chop off the excess and move on to the next feature. <strong><em>There is no significant cost in quick, roughly estimated measurements for programming work.</em></strong></p>
+<p>Immediately your team will regain a ton of time in which they can do their development work. They won’t have to attend hours of planning meetings or requirements gathering sessions. They will just work to get things done as fast and accurately as they can.</p>
+<p>The only tradeoff is a lack of estimates that management-types can cite and depend on. I would challenge that any estimates derived are very commonly wrong and useless regardless. More-so, if you do not trust your developers to do the right thing and use their time effectively, <em>why do you keep them employed?</em></p>
+<p>To me, a lot of the process models around development that are popular (waterfall, agile) are derived from the measure twice, cut once methodology. This approach is super practical to physical goods since inaccurate measurements are expensive, but this does not apply to development work. These meetings to gather estimates in the hopes of controlling costs ironically bloat budgets and help to deliver less code and extend goal dates and deadlines. You take people that are hired to code, and tie them up in meetings where they have to try and justify what they’re going to code by the hour. They don’t know how long it will take, but they will have a better idea after a few hours of coding – <em>if you’d just give them a few hours of no meetings to code</em>.</p>
+<p>If you’re working on tiling your fireplace, measure twice and cut once. If you’re working on code, take a rough guess at the measurement and get to work!</p>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/culture/">culture</a><a class="tag" href="/tags/iteration/">iteration</a><a class="tag" href="/tags/methodology/">methodology</a><a class="tag" href="/tags/mistakes/">mistakes</a><a class="tag" href="/tags/process/">process</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

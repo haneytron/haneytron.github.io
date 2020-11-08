@@ -1,359 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>.NET Core Azure Functions Tutorial - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | .NET Core Azure Functions Tutorial </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/net-core-azure-functions-tutorial/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/net-core-azure-functions-tutorial/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content=".NET Core Azure Functions Tutorial" />
-<meta property="og:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/net-core-azure-functions-tutorial/" />
-<meta property="article:published_time" content="2018-11-19T00:00:00-05:00" />
-<meta property="article:modified_time" content="2018-11-19T00:00:00-05:00" />
-<meta itemprop="name" content=".NET Core Azure Functions Tutorial">
-<meta itemprop="description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.">
-
-
-<meta itemprop="datePublished" content="2018-11-19T00:00:00-05:00" />
-<meta itemprop="dateModified" content="2018-11-19T00:00:00-05:00" />
-<meta itemprop="wordCount" content="2425">
-
-
-
-<meta itemprop="keywords" content="dotnet,core,csharp,azure,functions," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=".NET Core Azure Functions Tutorial"/>
-<meta name="twitter:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month!"/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">.NET Core Azure Functions Tutorial</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2018-11-19 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 2425 words </span>
-          <span class="more-meta"> 12 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#introducing-realdonaldtron">Introducing realDonaldTron</a></li>
-<li><a href="#porting-net-to-net-core">Porting .NET to .NET Core</a></li>
-<li><a href="#hosting-in-azure-don-t-use-webjobs">Hosting in Azure: Don&rsquo;t use WebJobs</a>
-<ul>
-<li><a href="#webjobs-time-out">WebJobs time out</a></li>
-<li><a href="#always-on-isn-t-cheap">Always On isn&rsquo;t cheap</a></li>
-<li><a href="#webjobs-for-web-sites">WebJobs for web sites</a></li>
-</ul></li>
-<li><a href="#hosting-in-azure-use-azure-functions">Hosting in Azure: Use Azure Functions</a>
-<ul>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#monthly-free-grants">Monthly free grants!</a></li>
-<li><a href="#what-does-realdonaldtron-cost">What does realDonaldTron cost?</a></li>
-<li><a href="#a-caveat-about-azure-function-logging">A caveat about Azure Function logging</a></li>
-</ul></li>
-<li><a href="#creating-an-azure-function-in-vs">Creating an Azure Function in VS</a></li>
-<li><a href="#the-end-result">The end result</a></li>
-</ul>
-</nav>
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<p>In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!</p>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
+            <div class="post-title">
+                <h3>.NET Core Azure Functions Tutorial</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Mon, Nov 19, 2018</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">11-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!</p>
 <h1 id="introducing-realdonaldtron">Introducing realDonaldTron</h1>
-
 <p>So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a <a href="https://www.twitter.com/realDonaldTron">Twitter account</a> and generated API keys. I then created an Azure Classic Cloud Service and
 wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&rsquo;t write words good), generates a <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chain</a>
 from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.</p>
-
 <p>Here&rsquo;s what the startup code roughly looked like:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">public void Start()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Start()
 {
-    // Twitter API keys
-    var consumerKey = &#34;*********&#34;;
-    var consumerSecret = &#34;*********&#34;;
-    var userAccessToken = &#34;*********&#34;;
-    var userAccessSecret = &#34;*********&#34;;
+	<span style="color:#75715e">// Twitter API keys
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> consumerKey = <span style="color:#e6db74">&#34;*********&#34;</span>;
+	<span style="color:#66d9ef">var</span> consumerSecret = <span style="color:#e6db74">&#34;*********&#34;</span>;
+	<span style="color:#66d9ef">var</span> userAccessToken = <span style="color:#e6db74">&#34;*********&#34;</span>;
+	<span style="color:#66d9ef">var</span> userAccessSecret = <span style="color:#e6db74">&#34;*********&#34;</span>;
 
-    // Set credentials
-    Auth.SetUserCredentials(consumerKey, consumerSecret, userAccessToken, userAccessSecret);
+	<span style="color:#75715e">// Set credentials
+</span><span style="color:#75715e"></span>	Auth.SetUserCredentials(consumerKey, consumerSecret, userAccessToken, userAccessSecret);
 
-    // Build the Markhov chain
-    Console.WriteLine(&#34;Building Markhov Chain...&#34;);
-    BuildMarkhovChain();
-    Console.WriteLine(&#34;Built! {0} root nodes&#34;, _markhovTreeRoot.Children.Count);
+	<span style="color:#75715e">// Build the Markhov chain
+</span><span style="color:#75715e"></span>	Console.WriteLine(<span style="color:#e6db74">&#34;Building Markhov Chain...&#34;</span>);
+	BuildMarkhovChain();
+	Console.WriteLine(<span style="color:#e6db74">&#34;Built! {0} root nodes&#34;</span>, _markhovTreeRoot.Children.Count);
 
-    // Start generating tweets
-    Console.WriteLine(&#34;Starting Tweets...&#34;);
-    Console.WriteLine();
+	<span style="color:#75715e">// Start generating tweets
+</span><span style="color:#75715e"></span>	Console.WriteLine(<span style="color:#e6db74">&#34;Starting Tweets...&#34;</span>);
+	Console.WriteLine();
 
-    // Configure timers
-    var timeUntilNextHour = GetTimeUntilNextHour();
-    // GenerateTweet ends by adjusting timer again for next hour, to avoid clock drift
-    _tweetTimer = new Timer(GenerateTweet, null, timeUntilNextHour, Timeout.Infinite);
-    // Rebuild the Markov chain once per day from the newest Tweets
-    _buildMarkhovChainTimer 
-        = new Timer(BuildMarkhovChain, null, 24 * 60 * 60 * 1000, 24 * 60 * 60 * 1000);
-}</pre></td></tr></table>
-</div>
-</div>
+	<span style="color:#75715e">// Configure timers
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> timeUntilNextHour = GetTimeUntilNextHour();
+	<span style="color:#75715e">// GenerateTweet ends by adjusting timer again for next hour, to avoid clock drift
+</span><span style="color:#75715e"></span>	_tweetTimer = <span style="color:#66d9ef">new</span> Timer(GenerateTweet, <span style="color:#66d9ef">null</span>, timeUntilNextHour, Timeout.Infinite);
+	<span style="color:#75715e">// Rebuild the Markov chain once per day from the newest Tweets
+</span><span style="color:#75715e"></span>	_buildMarkhovChainTimer 
+		= <span style="color:#66d9ef">new</span> Timer(BuildMarkhovChain, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">24</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">24</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">1000</span>);
+}
+</code></pre></div>
 <p>I find this bot quite amusing. It sometimes creates hilarious statements:</p>
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">EXTREME bias of me is negative (Fake). Dow RISES 5000 POINTS ON THE subject, it is amazing how a manager takes out a pitcher who is like a choirboy.</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1061423338613080064?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Lunatic who should definitely be given $700,000 for campaign by the purposely false and Dishonest reporting that they would start buying soybeans from our military Vets.</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1060758970321788929?ref_src=twsrc%5Etfw">November 9, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thugs spent over hours with the Crown Prince of Saudi Arabia who totally denied any knowledge of what took place during the terrible boat accident which just took a year low!</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1056153540668866561?ref_src=twsrc%5Etfw">October 27, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 <p>However, I was getting a little tired of paying $16 a month to host it as an Azure Classic Cloud Service. Given my thrifty nature combined with my interest in building my first .NET Core application, I thought a great first step would be to port realDonaldTron over. And so I did!</p>
-
 <h1 id="porting-net-to-net-core">Porting .NET to .NET Core</h1>
-
 <p>Porting a .NET application over to .NET Core is usually not too terrible. I found the easiest way was to create a new .NET Core solution using Visual Studio, drag and drop my directory structure over to my new directory, install all of the NuGet packages that I needed in my old
 solution (many will have a netstandard specific version for .NET Core), and then attempt to compile and correct errors, Googling (or Stack Overflowing) for new APIs where old calls no longer existed. I needed to make very few changes to realDonaldTron in order to get him working.</p>
-
 <p>I was also pleasantly surprised at how simple the new .csproj file structure is. By default, <em>everything in the folder is included in the project</em> except where you specify exceptions. This makes for a pretty clean file. Here&rsquo;s the .NET Core realDonaldTron .csproj file:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">&lt;Project Sdk=&#34;Microsoft.NET.Sdk&#34;&gt;
-  &lt;PropertyGroup&gt;
-    &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt;
-    &lt;LangVersion&gt;latest&lt;/LangVersion&gt;
-    &lt;AzureFunctionsVersion&gt;v2&lt;/AzureFunctionsVersion&gt;
-  &lt;/PropertyGroup&gt;
-  &lt;ItemGroup&gt;
-    &lt;PackageReference Include=&#34;Microsoft.NET.Sdk.Functions&#34; Version=&#34;1.0.*&#34; /&gt;
-    &lt;PackageReference Include=&#34;TweetinviAPI&#34; Version=&#34;4.0.0&#34; /&gt;
-  &lt;/ItemGroup&gt;
-  &lt;ItemGroup&gt;
-    &lt;None Update=&#34;host.json&#34;&gt;
-      &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
-    &lt;/None&gt;
-    &lt;None Update=&#34;local.settings.json&#34;&gt;
-      &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
-      &lt;CopyToPublishDirectory&gt;Never&lt;/CopyToPublishDirectory&gt;
-    &lt;/None&gt;
-  &lt;/ItemGroup&gt;
-&lt;/Project&gt;</pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Project</span> <span style="color:#a6e22e">Sdk=</span><span style="color:#e6db74">&#34;Microsoft.NET.Sdk&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;PropertyGroup&gt;</span>
+	<span style="color:#f92672">&lt;TargetFramework&gt;</span>netcoreapp2.1<span style="color:#f92672">&lt;/TargetFramework&gt;</span>
+	<span style="color:#f92672">&lt;LangVersion&gt;</span>latest<span style="color:#f92672">&lt;/LangVersion&gt;</span>
+	<span style="color:#f92672">&lt;AzureFunctionsVersion&gt;</span>v2<span style="color:#f92672">&lt;/AzureFunctionsVersion&gt;</span>
+  <span style="color:#f92672">&lt;/PropertyGroup&gt;</span>
+  <span style="color:#f92672">&lt;ItemGroup&gt;</span>
+	<span style="color:#f92672">&lt;PackageReference</span> <span style="color:#a6e22e">Include=</span><span style="color:#e6db74">&#34;Microsoft.NET.Sdk.Functions&#34;</span> <span style="color:#a6e22e">Version=</span><span style="color:#e6db74">&#34;1.0.*&#34;</span> <span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;PackageReference</span> <span style="color:#a6e22e">Include=</span><span style="color:#e6db74">&#34;TweetinviAPI&#34;</span> <span style="color:#a6e22e">Version=</span><span style="color:#e6db74">&#34;4.0.0&#34;</span> <span style="color:#f92672">/&gt;</span>
+  <span style="color:#f92672">&lt;/ItemGroup&gt;</span>
+  <span style="color:#f92672">&lt;ItemGroup&gt;</span>
+	<span style="color:#f92672">&lt;None</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;host.json&#34;</span><span style="color:#f92672">&gt;</span>
+	  <span style="color:#f92672">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span style="color:#f92672">&lt;/CopyToOutputDirectory&gt;</span>
+	<span style="color:#f92672">&lt;/None&gt;</span>
+	<span style="color:#f92672">&lt;None</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;local.settings.json&#34;</span><span style="color:#f92672">&gt;</span>
+	  <span style="color:#f92672">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span style="color:#f92672">&lt;/CopyToOutputDirectory&gt;</span>
+	  <span style="color:#f92672">&lt;CopyToPublishDirectory&gt;</span>Never<span style="color:#f92672">&lt;/CopyToPublishDirectory&gt;</span>
+	<span style="color:#f92672">&lt;/None&gt;</span>
+  <span style="color:#f92672">&lt;/ItemGroup&gt;</span>
+<span style="color:#f92672">&lt;/Project&gt;</span></code></pre></div>
 <p>A welcomed change from the million line csproj files of past&hellip; and the Git conflicts when checking in code! So frustrating.</p>
-
-<h1 id="hosting-in-azure-don-t-use-webjobs">Hosting in Azure: Don&rsquo;t use WebJobs</h1>
-
+<h1 id="hosting-in-azure-dont-use-webjobs">Hosting in Azure: Don&rsquo;t use WebJobs</h1>
 <p>Since I had ported realDonaldTron over as a console application, the right click &ndash;&gt; publish dialog in Visual Studio immediately told me to publish it to Azure as a WebJob in an AppService context. Heck, there&rsquo;s even a free tier - no cost to me! This seemed as if it solved all of my problems, but
 I soon learned why this was a bad plan.</p>
-
 <h2 id="webjobs-time-out">WebJobs time out</h2>
-
 <p>Azure WebJobs are a way to run a service, such as a command line application, <em>within the context of a web application</em>. This web application comes with the built-in IIS 20 minute time-out. This means that if you have a service running as a WebJob, and nobody is hitting the URL at which it has
 been published (don&rsquo;t worry, Azure generates a cute little web page for you if your WebJob has no web page of its own), then the application pool spins down, taking your service down with it.</p>
-
 <p>For me, this manifested as my application <em>sometimes</em> working soon after I published it (if I had published it with 20 minutes or less before the next hour), other times not working at all (if I had published it in minutes 1 - 40 of an hour), and regardless it would <em>never</em> publish another Tweet
 beyond the first 20 minutes.</p>
-
-<h2 id="always-on-isn-t-cheap">Always On isn&rsquo;t cheap</h2>
-
+<h2 id="always-on-isnt-cheap">Always On isn&rsquo;t cheap</h2>
 <p>I Googled my little heart out but could not find much useful documentation on Azure WebJobs. It wasn&rsquo;t until I started exploring the App Service settings in the Azure Portal that I realized I needed to have the <strong>Always On</strong> feature configured (which disables the IIS timeout). But guess
 what - you can&rsquo;t turn that on for the lowest two tiers of App Services (free and shared) - you must pay for at least a Basic plan.</p>
-
 <figure>
     <img src="/img/app-service-plans.png"/> <figcaption>
             <h4>No Always On for you!</h4>
         </figcaption>
 </figure>
 
-
 <p>And did I mention that Basic plans start at $55 USD per month (assuming Always On and therefore running 24 / 7)?</p>
-
 <figure>
     <img src="/img/app-service-basic-plan.png"/> <figcaption>
             <h4>I&#39;m not paying that!</h4>
         </figcaption>
 </figure>
 
-
 <h2 id="webjobs-for-web-sites">WebJobs for web sites</h2>
-
 <p>So while WebJobs are a great option for websites, and App Services can be free or cheap for website hosting (since they will lazy-load whenever someone makes the first request after the 20 minute idle), I realized one important fact:</p>
-
 <p><strong>WebJobs should NEVER be used for services that need to run continuously and/or always be on.</strong></p>
-
 <p>And with that I began Googling Azure alternatives for command line services&hellip; Enter Azure Functions.</p>
-
 <h1 id="hosting-in-azure-use-azure-functions">Hosting in Azure: Use Azure Functions</h1>
-
 <p>Disclaimer: nobody is paying me to talk about Azure or Azure Functions here (though they should). With that said, Azure Functions are <em>awesome</em>.</p>
-
 <h2 id="pricing">Pricing</h2>
-
 <p>Here&rsquo;s the thing about Azure Functions: you pay based on consumption in two ways: total executions, and gigabyte seconds (GB-s). These are defined confusingly:</p>
-
 <blockquote>
 <p>Functions are billed based on observed resource consumption measured in gigabyte
 seconds (GB-s). Observed resource consumption is calculated by multiplying
@@ -363,216 +244,124 @@ the function. Memory used by a function is measured by rounding up to the neares
 by rounding up to the nearest 1 ms. The minimum execution time and memory for a
 single function execution is 100 ms and 128 mb respectively.</p>
 </blockquote>
-
 <p>While these pricing calculations are confusing, it&rsquo;s not that hard to decipher them. Basically, a really quick execution of an Azure Function (like a &ldquo;Hello World&rdquo;) will cost:</p>
-
 <blockquote>
 <p>(100 ms / 1000 ms) * (128 MB RAM / 1024 MB)  = 0.0125 GB-s</p>
 </blockquote>
-
 <p>Multiplying that by the cost per GB-s gets you your cost per execution:</p>
-
 <blockquote>
 <p>0.0125 GB-s * $0.000016/GB-s = $0.0000002</p>
 </blockquote>
-
 <p>Which is <em>far less</em> than a single penny.</p>
-
 <p><strong>In fact, you could execute your &ldquo;Hello, World&rdquo; function 50,000 times before it would cost you $0.01!</strong></p>
-
 <h2 id="monthly-free-grants">Monthly free grants!</h2>
-
 <p>But these crazy cost calculations are not even a concern for most of your and my use cases! Azure Functions pricing includes super generous free grants per month: 1 million executions and 400,000 GB-s!</p>
-
 <figure>
     <img src="/img/azure-functions-pricing.png"/> <figcaption>
             <h4>Azure Functions pricing</h4>
         </figcaption>
 </figure>
 
-
 <p>Basically, you&rsquo;d have to run your application 1,000,001 times or for 400,001 GB-s in a month to even begin to see charges to your Azure account.</p>
-
 <h2 id="what-does-realdonaldtron-cost">What does realDonaldTron cost?</h2>
-
 <p>realDonaldTron runs at about 30 seconds per execution, once per hour, so my calculation is:</p>
-
 <blockquote>
 <p>30 seconds * 24 runs per day * 31 days in a month * 0.125 GB RAM used = 2,790 GB-s per month.</p>
 </blockquote>
-
 <p>This is of course WAY less than the 400,000 GB-s I get for free every month, so realDonaldTron runs for free!</p>
-
 <p>Pretty awesome, right? Basically: you&rsquo;re gonna be hosting all of your Azure Functions for free - JACKPOT. And even if you somehow go over the limits, Azure Functions are stupid cheap.</p>
-
 <h2 id="a-caveat-about-azure-function-logging">A caveat about Azure Function logging</h2>
-
 <p>Note that if you use any of the Logging features of Azure Functions, you WILL pay a small fee as they are written to Azure Storage. realDonaldTron costs about $0.12 per month in Azure Storage logging - and I happily pay it when compared to the $16 a month of Classic Cloud Service I was running.</p>
-
 <p>But enough about costs, let&rsquo;s get to the fun stuff - creating the actual Azure Function!</p>
-
 <h1 id="creating-an-azure-function-in-vs">Creating an Azure Function in VS</h1>
-
 <p>Start by creating a new Azure Function project in Visual Studio (be sure to update to the latest Visual Studio version). My screenshots below are from VS Community 2017 (the free edition) which I use on my home (non-work) computer for pet projects:</p>
-
 <figure>
     <img src="/img/vs-new-proj-azure-functions.png"/> <figcaption>
             <h4>Create an Azure Functions project</h4>
         </figcaption>
 </figure>
 
-
 <p>On the next screen, <strong>make sure you pick Azure Functions v2 (.NET Core)</strong> at the top! Azure Functions v1 is for .NET Framework and non-Core apps. I also picked <strong>Timer trigger</strong> because I want realDonaldTron to run every hour, on the hour:</p>
-
 <figure>
     <img src="/img/vs-new-proj-azure-functions-2.png"/> <figcaption>
             <h4>Create an Azure Functions project</h4>
         </figcaption>
 </figure>
 
-
 <p>Note that the &ldquo;Schedule&rdquo; here is a modified CRON syntax. I had a hard time finding good resources for CRON scheduling that actually worked in Azure, but <a href="https://codehollow.com/2017/02/azure-functions-time-trigger-cron-cheat-sheet/">this blog post by Armin Reiter</a> is an awesome
 cheat sheet that you should definitely use! Also, don&rsquo;t worry about the schedule in this dialog - you can change it programmatically super easily in a minute or two.</p>
-
 <p>Finish up by pressing OK and next you&rsquo;ll see this boilerplate code:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">using System;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Host;
-using Microsoft.Extensions.Logging;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> Microsoft.Azure.WebJobs;
+<span style="color:#66d9ef">using</span> Microsoft.Azure.WebJobs.Host;
+<span style="color:#66d9ef">using</span> Microsoft.Extensions.Logging;
 
-namespace FunctionApp1
+<span style="color:#66d9ef">namespace</span> FunctionApp1
 {
-    public static class Function1
-    {
-        [FunctionName(&#34;Function1&#34;)]
-        public static void Run([TimerTrigger(&#34;0 */5 * * * *&#34;)]TimerInfo myTimer, ILogger log)
-        {
-            log.LogInformation($&#34;C# Timer trigger function executed at: {DateTime.Now}&#34;);
-        }
-    }
-}</pre></td></tr></table>
-</div>
-</div>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Function1</span>
+	{
+<span style="color:#a6e22e">		[FunctionName(&#34;Function1&#34;)]</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Run([TimerTrigger(<span style="color:#e6db74">&#34;0 */5 * * * *&#34;</span>)]TimerInfo myTimer, ILogger log)
+		{
+			log.LogInformation(<span style="color:#e6db74">$&#34;C# Timer trigger function executed at: {DateTime.Now}&#34;</span>);
+		}
+	}
+}
+</code></pre></div>
 <p>Feel free to change the class name and namespace here - the only important thing to name is the <code>[FunctionName]</code> attribute as this is what will appear in the Azure Portal UI. You can also see that your CRON syntax from the creation dialog is within the <code>[TimerTrigger]</code> attribute here,
 and can be readily modified. The <code>ILogger</code> you see there is the logger that goes to Azure Storage and will cost you a few pennies per month. If you&rsquo;re trying to run truly for free, be sure not to log anything at all.</p>
-
 <p>It&rsquo;s also worth noting that Azure Functions support async entry method signatures, so <code>async</code> your heart out!</p>
-
 <p>Here&rsquo;s what my .NET Core Azure Function Run method for realDonaldTron looks like:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">namespace RealDonaldTronFunc
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">namespace</span> RealDonaldTronFunc
 {
-    public static class Function
-    {
-        [FunctionName(&#34;RealDonaldTronFunction&#34;)]
-        public async static Task Run([TimerTrigger(&#34;0 0 * * * *&#34;)]TimerInfo myTimer, ILogger log)
-        {
-            log.LogInformation($&#34;C# Timer trigger function executed at: {DateTime.UtcNow}&#34;);
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Function</span>
+	{
+<span style="color:#a6e22e">		[FunctionName(&#34;RealDonaldTronFunction&#34;)]</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">static</span> Task Run([TimerTrigger(<span style="color:#e6db74">&#34;0 0 * * * *&#34;</span>)]TimerInfo myTimer, ILogger log)
+		{
+			log.LogInformation(<span style="color:#e6db74">$&#34;C# Timer trigger function executed at: {DateTime.UtcNow}&#34;</span>);
 
-            // Set Twitter credentials
-            var consumerKey = &#34;********&#34;;
-            var consumerSecret = &#34;********&#34;;
-            var userAccessToken = &#34;********&#34;;
-            var userAccessSecret = &#34;********&#34;;
-            Auth.SetUserCredentials(consumerKey, consumerSecret, 
-                userAccessToken, userAccessSecret);
+			<span style="color:#75715e">// Set Twitter credentials
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">var</span> consumerKey = <span style="color:#e6db74">&#34;********&#34;</span>;
+			<span style="color:#66d9ef">var</span> consumerSecret = <span style="color:#e6db74">&#34;********&#34;</span>;
+			<span style="color:#66d9ef">var</span> userAccessToken = <span style="color:#e6db74">&#34;********&#34;</span>;
+			<span style="color:#66d9ef">var</span> userAccessSecret = <span style="color:#e6db74">&#34;********&#34;</span>;
+			Auth.SetUserCredentials(consumerKey, consumerSecret, 
+				userAccessToken, userAccessSecret);
 
-            // Build the Markhov chain
-            Console.WriteLine(&#34;Building Markhov Chain...&#34;);
-            BuildMarkhovChain();
-            Console.WriteLine(&#34;Built! {0} root nodes&#34;, _markhovTreeRoot.Children.Count);
+			<span style="color:#75715e">// Build the Markhov chain
+</span><span style="color:#75715e"></span>			Console.WriteLine(<span style="color:#e6db74">&#34;Building Markhov Chain...&#34;</span>);
+			BuildMarkhovChain();
+			Console.WriteLine(<span style="color:#e6db74">&#34;Built! {0} root nodes&#34;</span>, _markhovTreeRoot.Children.Count);
 
-            // Start generating tweets
-            Console.WriteLine(&#34;Starting Tweets...&#34;);
-            Console.WriteLine();
+			<span style="color:#75715e">// Start generating tweets
+</span><span style="color:#75715e"></span>			Console.WriteLine(<span style="color:#e6db74">&#34;Starting Tweets...&#34;</span>);
+			Console.WriteLine();
 
-            await GenerateTweet();
+			<span style="color:#66d9ef">await</span> GenerateTweet();
 
-            log.LogInformation($&#34;C# Timer trigger function completed at: {DateTime.UtcNow}&#34;);
-        }
-    ...
-    }
-}</pre></td></tr></table>
-</div>
-</div>
+			log.LogInformation(<span style="color:#e6db74">$&#34;C# Timer trigger function completed at: {DateTime.UtcNow}&#34;</span>);
+		}
+	<span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>	}
+}
+</code></pre></div>
 <p>You might notice that all of my <code>Timer</code> stuff is gone. That&rsquo;s because Azure Functions natively support timed triggers, and the CRON syntax <code>0 0 * * * *</code> says &ldquo;run this every hour, on the hour&rdquo; which completely replaces my need for C# Timers!</p>
-
 <p>Note that unless your function <em>needs</em> to run continuously, you should have it terminate by exiting the <code>Run</code> method as soon as possible. realDonaldTron does not need to remain active - he grabs the latest Tweets and builds a new Markov chain every hour instead. He terminates as
 soon as the <code>GenerateTweet()</code> function call returns.</p>
-
 <p>After you&rsquo;ve written your function, it&rsquo;s time to publish it to Azure. Simply right click &ndash;&gt; Publish your project, to be met with this screen:</p>
-
 <figure>
     <img src="/img/azure-function-publish.png"/> <figcaption>
             <h4>Publish your Azure Function</h4>
         </figcaption>
 </figure>
 
-
 <p>Press Publish, and on the next screen you&rsquo;ll need to name your function and set up the various resources it&rsquo;ll use. The part to pay attention to here is the <strong>Hosting Plan</strong> which you&rsquo;ll need to be sure is set to <strong>Consumption</strong>:</p>
-
 <figure>
     <img src="/img/azure-function-publish-2.png"/> <figcaption>
             <h4>Publish your Azure Function</h4>
         </figcaption>
 </figure>
-
 
 <figure>
     <img src="/img/azure-function-publish-3.png"/> <figcaption>
@@ -580,139 +369,97 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
         </figcaption>
 </figure>
 
-
 <p>Follow the steps past this screen and you&rsquo;ll have your Function published to Azure in mere moments! If you want to test it, but don&rsquo;t want to wait for the timed trigger, you can visit the Azure Portal and run it manually:</p>
-
 <figure>
     <img src="/img/azure-portal-functions-run.png"/> <figcaption>
             <h4>Test your Azure Function</h4>
         </figcaption>
 </figure>
 
-
 <p>Here your logging will appear in the debug window below for manual runs - it&rsquo;s quite a nice little tool. If you&rsquo;ve published a function.json (which you will by default), it will not allow you to edit it here which is fine. Just make local changes and re-publish if needed.</p>
-
 <h1 id="the-end-result">The end result</h1>
-
 <p>Thanks to Azure Functions and .NET Core, I now have realDonaldTron running every hour on the hour via CRON scheduling, as an Azure function, well within the monthly free grants provided on Consumption plans. Can you guess on this graph when I converted over to Azure Functions?</p>
-
 <figure>
     <img src="/img/azure-billing-example.png"/> <figcaption>
             <h4>Azure Functions are free, Classic Cloud Services are not</h4>
         </figcaption>
 </figure>
 
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thoughts, condolences and prayers go out to Rallies in order to <a href="https://twitter.com/hashtag/MAGA?src=hash&amp;ref_src=twsrc%5Etfw">#MAGA</a>!</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1050883816745787393?ref_src=twsrc%5Etfw">October 12, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 <p>Thanks for reading, and enjoy creating your own easy, cheap, and often free Azure Functions!</p>
 
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/dotnet/">dotnet</a>
-          <a href="/tags/core/">core</a>
-          <a href="/tags/csharp/">csharp</a>
-          <a href="/tags/azure/">azure</a>
-          <a href="/tags/functions/">functions</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/sabbatical-begins/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Sabbatical Begins</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/new-blog-name-and-domain/">
-            <span class="next-text nav-default">New Blog Name and Domain</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/core/">core</a><a class="tag" href="/tags/csharp/">csharp</a><a class="tag" href="/tags/azure/">azure</a><a class="tag" href="/tags/functions/">functions</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

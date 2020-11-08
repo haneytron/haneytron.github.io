@@ -1,434 +1,418 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="A blog by David Haney, Engineering Manager at Stack Overflow." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.davidhaney.io/index.xml" title="" />
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/" />
-  <link href="https://www.davidhaney.io/index.xml" rel="alternate" type="application/rss+xml" title="David Haney - Blogging my experiences as a developer and engineering manager." />
-  <link href="https://www.davidhaney.io/index.xml" rel="feed" type="application/rss+xml" title="David Haney - Blogging my experiences as a developer and engineering manager." />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="David Haney - Blogging my experiences as a developer and engineering manager." />
-<meta property="og:description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.davidhaney.io/" />
-
-<meta property="og:updated_time" content="2019-09-08T00:00:00-05:00" />
-<meta itemprop="name" content="David Haney - Blogging my experiences as a developer and engineering manager.">
-<meta itemprop="description" content="A blog by David Haney, Engineering Manager at Stack Overflow.">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="David Haney - Blogging my experiences as a developer and engineering manager."/>
-<meta name="twitter:description" content="A blog by David Haney, Engineering Manager at Stack Overflow."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Programmer / Engineering Manager"/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/custom-asp-net-mvc-action-result-cache-attribute/">Custom ASP.NET MVC Action Result Cache Attribute</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-01-10 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 1214 words </span>
-        <span class="more-meta"> 6 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      If you&#8217;re working on an application built using ASP.NET MVC, you&#8217;re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.
-    </div>
-    <div class="read-more">
-      <a href="/custom-asp-net-mvc-action-result-cache-attribute/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/our-industry-needs-compassion/">Our Industry Needs Compassion</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-01-03 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 822 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Well, I&#8217;ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I&#8217;ve really let my readers &#8211; and myself &#8211; down.
-So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.
-    </div>
-    <div class="read-more">
-      <a href="/our-industry-needs-compassion/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/lets-talk-about-rock-stars-egos/">Let&#39;s Talk About Rock Stars &amp; Egos</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-06-17 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 809 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      On Plumbers Picture this situation: you woke up this morning to find that there&#8217;s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
-Plumber #1 Plumber #1, let&#8217;s call him Mario, tells you he can&#8217;t be bothered to come check out your issue because it&#8217;s minor and he&#8217;s very important and too busy for it.
-    </div>
-    <div class="read-more">
-      <a href="/lets-talk-about-rock-stars-egos/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/npm-left-pad-have-we-forgotten-how-to-program/">NPM &amp; left-pad: Have We Forgotten How To Program?</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-23 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 941 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
-A simple NPM package called left-pad that was a dependency of their code.
-left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.
-    </div>
-    <div class="read-more">
-      <a href="/npm-left-pad-have-we-forgotten-how-to-program/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/developer-compensation-stack-overflow-doesnt-stack-rank/">Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-02-26 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 2269 words </span>
-        <span class="more-meta"> 11 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.
-How Does Your Company Determine Compensation? When you hire developers, how do you decide on their salary?
-    </div>
-    <div class="read-more">
-      <a href="/developer-compensation-stack-overflow-doesnt-stack-rank/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/diversity-is-really-freaking-hard/">Diversity Is Really Freaking Hard</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-09-24 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 2182 words </span>
-        <span class="more-meta"> 11 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Background I&#8217;m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won&#8217;t be some preachy post about how diversity is great and how you should be a better human being. Rather, I&#8217;m going to tell you about the things I&#8217;ve experienced working on diversity &#8211; particularly the interesting events of the last few days that happened internally at Stack Overflow.
-It&#8217;s no secret that the tech industry is not that diverse.
-    </div>
-    <div class="read-more">
-      <a href="/diversity-is-really-freaking-hard/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/developer-turned-manager/">Developer Turned Manager</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-08-03 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 1768 words </span>
-        <span class="more-meta"> 9 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
-There are tons of things I&#8217;ve learned so far, some of which I&#8217;ve learned the hard way. There&#8217;s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.
-    </div>
-    <div class="read-more">
-      <a href="/developer-turned-manager/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/developers-shouldnt-measure-twice-cut-once/">Developers Shouldn&#39;t Measure Twice, Cut Once</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-04-15 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 795 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.
-    </div>
-    <div class="read-more">
-      <a href="/developers-shouldnt-measure-twice-cut-once/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/on-secretly-terrible-engineers-a-rebuttal/">On Secretly Terrible Engineers - A Rebuttal</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-03-09 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 2622 words </span>
-        <span class="more-meta"> 13 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article.
-    </div>
-    <div class="read-more">
-      <a href="/on-secretly-terrible-engineers-a-rebuttal/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/the-recruiting-competitive-advantage/">The Recruiting Competitive Advantage</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-01-23 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 652 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      A Job Listing Let&#8217;s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:
- HELP WANTED:
-Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014).
-    </div>
-    <div class="read-more">
-      <a href="/the-recruiting-competitive-advantage/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
-    <a class="next" href="/page/3/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
+            </div>
         </div>
-        
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a class="current"
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
+    <div class="autopagerize_page_element">
+        <div class="content">
+    
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/custom-asp-net-mvc-action-result-cache-attribute/">Custom ASP.NET MVC Action Result Cache Attribute</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Tue, Jan 10, 2017</span>
+                        <a class="tag"
+                                   href="/tags/dotnet/">dotnet</a><a class="tag"
+                                   href="/tags/caching/">caching</a><a class="tag"
+                                   href="/tags/mvc/">mvc</a><a class="tag"
+                                   href="/tags/performance/">performance</a><a class="tag"
+                                   href="/tags/programming/">programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/our-industry-needs-compassion/">Our Industry Needs Compassion</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Tue, Jan 3, 2017</span>
+                        <a class="tag"
+                                   href="/tags/attitude/">attitude</a><a class="tag"
+                                   href="/tags/behavior/">behavior</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/lets-talk-about-rock-stars-egos/">Let&#39;s Talk About Rock Stars &amp; Egos</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Fri, Jun 17, 2016</span>
+                        <a class="tag"
+                                   href="/tags/attitude/">attitude</a><a class="tag"
+                                   href="/tags/behavior/">behavior</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/ego/">ego</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/npm-left-pad-have-we-forgotten-how-to-program/">NPM &amp; left-pad: Have We Forgotten How To Program?</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Wed, Mar 23, 2016</span>
+                        <a class="tag"
+                                   href="/tags/left-pad/">left-pad</a><a class="tag"
+                                   href="/tags/npm/">npm</a><a class="tag"
+                                   href="/tags/packages/">packages</a><a class="tag"
+                                   href="/tags/programming/">programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/developer-compensation-stack-overflow-doesnt-stack-rank/">Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Fri, Feb 26, 2016</span>
+                        <a class="tag"
+                                   href="/tags/compensation/">compensation</a><a class="tag"
+                                   href="/tags/salary/">salary</a><a class="tag"
+                                   href="/tags/stack-overflow/">stack overflow</a><a class="tag"
+                                   href="/tags/transparency/">transparency</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/diversity-is-really-freaking-hard/">Diversity Is Really Freaking Hard</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
+No, this won’t be some preachy post about how diversity is great and how you should be a better human being.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Thu, Sep 24, 2015</span>
+                        <a class="tag"
+                                   href="/tags/conflict/">conflict</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/diversity/">diversity</a><a class="tag"
+                                   href="/tags/mistakes/">mistakes</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/developer-turned-manager/">Developer Turned Manager</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Mon, Aug 3, 2015</span>
+                        <a class="tag"
+                                   href="/tags/career/">career</a><a class="tag"
+                                   href="/tags/lessons/">lessons</a><a class="tag"
+                                   href="/tags/management/">management</a><a class="tag"
+                                   href="/tags/mistakes/">mistakes</a><a class="tag"
+                                   href="/tags/promotion/">promotion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/developers-shouldnt-measure-twice-cut-once/">Developers Shouldn&#39;t Measure Twice, Cut Once</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Wed, Apr 15, 2015</span>
+                        <a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/iteration/">iteration</a><a class="tag"
+                                   href="/tags/methodology/">methodology</a><a class="tag"
+                                   href="/tags/mistakes/">mistakes</a><a class="tag"
+                                   href="/tags/process/">process</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/on-secretly-terrible-engineers-a-rebuttal/">On Secretly Terrible Engineers - A Rebuttal</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Mon, Mar 9, 2015</span>
+                        <a class="tag"
+                                   href="/tags/analysis/">analysis</a><a class="tag"
+                                   href="/tags/commentary/">commentary</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/rebuttal/">rebuttal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/the-recruiting-competitive-advantage/">The Recruiting Competitive Advantage</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>A Job Listing Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Fri, Jan 23, 2015</span>
+                        <a class="tag"
+                                   href="/tags/attitude/">attitude</a><a class="tag"
+                                   href="/tags/career/">career</a><a class="tag"
+                                   href="/tags/recruiters/">recruiters</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="pagination">
+        
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/">1</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/page/3/">3</a>
+  </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/page/6/">6</a>
+  </li>
+  <li class="page-item">
+    <a href="/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

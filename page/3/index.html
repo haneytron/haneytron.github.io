@@ -1,431 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="A blog by David Haney, Engineering Manager at Stack Overflow." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.davidhaney.io/index.xml" title="" />
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/" />
-  <link href="https://www.davidhaney.io/index.xml" rel="alternate" type="application/rss+xml" title="David Haney - Blogging my experiences as a developer and engineering manager." />
-  <link href="https://www.davidhaney.io/index.xml" rel="feed" type="application/rss+xml" title="David Haney - Blogging my experiences as a developer and engineering manager." />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="David Haney - Blogging my experiences as a developer and engineering manager." />
-<meta property="og:description" content="A blog by David Haney, Engineering Manager at Stack Overflow." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.davidhaney.io/" />
-
-<meta property="og:updated_time" content="2019-09-08T00:00:00-05:00" />
-<meta itemprop="name" content="David Haney - Blogging my experiences as a developer and engineering manager.">
-<meta itemprop="description" content="A blog by David Haney, Engineering Manager at Stack Overflow.">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="David Haney - Blogging my experiences as a developer and engineering manager."/>
-<meta name="twitter:description" content="A blog by David Haney, Engineering Manager at Stack Overflow."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Programmer / Engineering Manager"/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/on-credentialism-in-software-development/">On Credentialism In Software Development</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-12-29 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 1583 words </span>
-        <span class="more-meta"> 8 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Intro We&#8217;re just two days from a brand new year and yet the primary measurement of a developer&#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:
-    </div>
-    <div class="read-more">
-      <a href="/on-credentialism-in-software-development/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/the-trouble-with-job-titles/">The Trouble With Job Titles</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-10-17 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 1182 words </span>
-        <span class="more-meta"> 6 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Intro I&#8217;ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
-I contacted recruiters, and one eventually found me a promotion: Systems Analyst.
-    </div>
-    <div class="read-more">
-      <a href="/the-trouble-with-job-titles/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/iphone-6-style-over-substance/">iPhone 6: Style Over Substance</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-09 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 525 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I&#8217;m not going to talk about the watch, but instead about the phone.
-For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don&#8217;t blame anyone for owning an iPhone: they&#8217;re reasonably sexy and you get to show off the Apple branding.
-    </div>
-    <div class="read-more">
-      <a href="/iphone-6-style-over-substance/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/how-i-got-a-job-at-stack-exchange/">How I Got A Job At Stack Exchange</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-06-20 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 2003 words </span>
-        <span class="more-meta"> 10 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.
-    </div>
-    <div class="read-more">
-      <a href="/how-i-got-a-job-at-stack-exchange/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/how-to-guarantee-dev-team-failure/">How To Guarantee Dev Team Failure</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-05-07 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 2551 words </span>
-        <span class="more-meta"> 12 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on &#8220;good&#8221; code and more emphasis on &#8220;working&#8221; code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you&#8217;ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.
-    </div>
-    <div class="read-more">
-      <a href="/how-to-guarantee-dev-team-failure/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/to-node-js-or-not-to-node-js/">To Node.js Or Not To Node.js</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-03-24 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 2660 words </span>
-        <span class="more-meta"> 13 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Intro Node.js &#8211; it has rapidly become the &#8220;new hotness&#8221; in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don&#8217;t worry, they&#8217;ll let you know.
-One day you&#8217;re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. &#8220;Have you guys tried Node.
-    </div>
-    <div class="read-more">
-      <a href="/to-node-js-or-not-to-node-js/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/c-probably-getting-new-safe-navigation-operator/">C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-02-28 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 472 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release. This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.
-This new operator is likely going to take the syntax of ?. and is known as the Safe Navigation Operator.
-    </div>
-    <div class="read-more">
-      <a href="/c-probably-getting-new-safe-navigation-operator/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/">Trigger IValidatableObject.Validate When ModelState.IsValid is false</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-02-05 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 584 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
-Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject.
-    </div>
-    <div class="read-more">
-      <a href="/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/interview-with-infoq-on-simplsockets/">Interview with InfoQ on SimplSockets</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-12-11 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 54 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Jonathan Allen of InfoQ conducted an interview with me about one of my open source initiatives, SimplSockets. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.
-I&#8217;d like to thank Jonathan and InfoQ for the opportunity &#8211; it was a great discussion. Check it out here: http://www.infoq.com/news/2013/12/SimplSockets
-    </div>
-    <div class="read-more">
-      <a href="/interview-with-infoq-on-simplsockets/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/mvc4-conditional-html-attributes/">MVC4 Conditional HTML Attributes</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-11-27 </span>
-      <div class="post-category">
-          <a href="/categories/blog/"> blog </a>
-          </div>
-        <span class="more-meta"> 173 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      MVC4 made one simple and yet awesome improvement to View rendering that I don&#8217;t think many people are aware of.
-Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable? The typical use case is applying a CSS class to a div. Most of the time that code looks something like this:
-1  &lt;div @(myClass == null ?
-    </div>
-    <div class="read-more">
-      <a href="/mvc4-conditional-html-attributes/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/page/2/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
-    <a class="next" href="/page/4/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
+            </div>
         </div>
-        
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a class="current"
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
+    <div class="autopagerize_page_element">
+        <div class="content">
+    
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/on-credentialism-in-software-development/">On Credentialism In Software Development</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Intro We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Mon, Dec 29, 2014</span>
+                        <a class="tag"
+                                   href="/tags/career/">career</a><a class="tag"
+                                   href="/tags/credentialism/">credentialism</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/interviews/">interviews</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/the-trouble-with-job-titles/">The Trouble With Job Titles</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Intro I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Fri, Oct 17, 2014</span>
+                        <a class="tag"
+                                   href="/tags/career/">career</a><a class="tag"
+                                   href="/tags/credentialism/">credentialism</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/interviews/">interviews</a><a class="tag"
+                                   href="/tags/stack-overflow/">stack overflow</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/iphone-6-style-over-substance/">iPhone 6: Style Over Substance</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I’m not going to talk about the watch, but instead about the phone.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Tue, Sep 9, 2014</span>
+                        <a class="tag"
+                                   href="/tags/analysis/">analysis</a><a class="tag"
+                                   href="/tags/android/">android</a><a class="tag"
+                                   href="/tags/iphone/">iphone</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/how-i-got-a-job-at-stack-exchange/">How I Got A Job At Stack Exchange</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Fri, Jun 20, 2014</span>
+                        <a class="tag"
+                                   href="/tags/career/">career</a><a class="tag"
+                                   href="/tags/ego/">ego</a><a class="tag"
+                                   href="/tags/interviews/">interviews</a><a class="tag"
+                                   href="/tags/mistakes/">mistakes</a><a class="tag"
+                                   href="/tags/stack-overflow/">stack overflow</a><a class="tag"
+                                   href="/tags/transparency/">transparency</a><a class="tag"
+                                   href="/tags/workplace/">workplace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/how-to-guarantee-dev-team-failure/">How To Guarantee Dev Team Failure</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Wed, May 7, 2014</span>
+                        <a class="tag"
+                                   href="/tags/conflict/">conflict</a><a class="tag"
+                                   href="/tags/culture/">culture</a><a class="tag"
+                                   href="/tags/ego/">ego</a><a class="tag"
+                                   href="/tags/mistakes/">mistakes</a><a class="tag"
+                                   href="/tags/process/">process</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/to-node-js-or-not-to-node-js/">To Node.js Or Not To Node.js</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Mon, Mar 24, 2014</span>
+                        <a class="tag"
+                                   href="/tags/dotnet/">dotnet</a><a class="tag"
+                                   href="/tags/analysis/">analysis</a><a class="tag"
+                                   href="/tags/node.js/">node.js</a><a class="tag"
+                                   href="/tags/performance/">performance</a><a class="tag"
+                                   href="/tags/programming/">programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/c-probably-getting-new-safe-navigation-operator/">C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release.This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Fri, Feb 28, 2014</span>
+                        <a class="tag"
+                                   href="/tags/dotnet/">dotnet</a><a class="tag"
+                                   href="/tags/csharp/">csharp</a><a class="tag"
+                                   href="/tags/programming/">programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/">Trigger IValidatableObject.Validate When ModelState.IsValid is false</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState).</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Wed, Feb 5, 2014</span>
+                        <a class="tag"
+                                   href="/tags/dotnet/">dotnet</a><a class="tag"
+                                   href="/tags/csharp/">csharp</a><a class="tag"
+                                   href="/tags/mvc/">mvc</a><a class="tag"
+                                   href="/tags/programming/">programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/interview-with-infoq-on-simplsockets/">Interview with InfoQ on SimplSockets</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>Jonathan Allen of InfoQconducted an interview with me about one of my open source initiatives, SimplSockets. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Wed, Dec 11, 2013</span>
+                        <a class="tag"
+                                   href="/tags/interviews/">interviews</a><a class="tag"
+                                   href="/tags/open-source/">open source</a><a class="tag"
+                                   href="/tags/programming/">programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="post animated fadeInDown">
+            <div class="post-title">
+                <h3><a href="/mvc4-conditional-html-attributes/">MVC4 Conditional HTML Attributes</a>
+                </h3>
+            </div>
+            <div class="post-content">
+                <div class="p_part"><p>MVC4 made one simple and yet awesome improvement to View rendering that I don’t think many people are aware of.
+Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable?</p></div>
+            </div>
+            <div class="post-footer">
+                <div class="meta">
+                    <div class="info"><em class="fa fa-sun-o"></em><span
+                                class="date">Wed, Nov 27, 2013</span>
+                        <a class="tag"
+                                   href="/tags/dotnet/">dotnet</a><a class="tag"
+                                   href="/tags/csharp/">csharp</a><a class="tag"
+                                   href="/tags/mvc/">mvc</a><a class="tag"
+                                   href="/tags/programming/">programming</a><a class="tag"
+                                   href="/tags/razor/">razor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="pagination">
+        
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/page/2/">2</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/page/3/">3</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/page/4/">4</a>
+  </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/page/6/">6</a>
+  </li>
+  <li class="page-item">
+    <a href="/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

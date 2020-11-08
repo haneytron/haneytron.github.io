@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hiring on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>hiring on </title>
     <link>https://www.davidhaney.io/tags/hiring/</link>
-    <description>Recent content in hiring on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in hiring on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>David Haney</copyright>
-    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.davidhaney.io/tags/hiring/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/hiring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Writing a Great Junior Tech Résumé</title>
       <link>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</link>
@@ -19,8 +14,7 @@
       
       <guid>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</guid>
       <description>A few weeks back I wrote this tweet:
-I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager? I might whip that up today or tomorrow if people like the idea.
-&amp;mdash; David Haney (@haneytron) July 9, 2018  43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand.</description>
+I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager?</description>
     </item>
     
     <item>
@@ -29,9 +23,7 @@ I did a presentation / speaking thing last week that got me thinking: would it b
       <pubDate>Sat, 09 Jun 2018 13:56:24 -0400</pubDate>
       
       <guid>https://www.davidhaney.io/new-blog-and-hiring-needs/</guid>
-      <description>Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.
-Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!
-New blog engine I was previously using WordPress but had many issues and concerns with it.</description>
+      <description>Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.</description>
     </item>
     
   </channel>

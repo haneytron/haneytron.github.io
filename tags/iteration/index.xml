@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>iteration on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>iteration on </title>
     <link>https://www.davidhaney.io/tags/iteration/</link>
-    <description>Recent content in iteration on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in iteration on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>David Haney</copyright>
-    <lastBuildDate>Wed, 15 Apr 2015 16:25:02 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.davidhaney.io/tags/iteration/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 Apr 2015 16:25:02 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/iteration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
       <link>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</link>
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
-      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
+      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling.</description>
     </item>
     
   </channel>

@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>intellisense on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>intellisense on </title>
     <link>https://www.davidhaney.io/tags/intellisense/</link>
-    <description>Recent content in intellisense on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in intellisense on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>David Haney</copyright>
-    <lastBuildDate>Tue, 20 Nov 2012 21:12:41 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.davidhaney.io/tags/intellisense/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 20 Nov 2012 21:12:41 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/intellisense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Visual Studio 2012 Intellisense Not Working - SOLVED</title>
       <link>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</link>
@@ -19,7 +14,7 @@
       
       <guid>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</guid>
       <description>So, this post is about our beloved IDE instead of actual code.
-I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself &amp;#8220;what the hell Visual Studio? 2010 didn&amp;#8217;t have these problems?!&amp;#8221; and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.</description>
+I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back.</description>
     </item>
     
   </channel>

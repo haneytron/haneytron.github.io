@@ -1,359 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>On Secretly Terrible Engineers - A Rebuttal - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | On Secretly Terrible Engineers - A Rebuttal </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="On Secretly Terrible Engineers - A Rebuttal" />
-<meta property="og:description" content="Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/" />
-<meta property="article:published_time" content="2015-03-09T18:32:37+00:00" />
-<meta property="article:modified_time" content="2015-03-09T18:32:37+00:00" />
-<meta itemprop="name" content="On Secretly Terrible Engineers - A Rebuttal">
-<meta itemprop="description" content="Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article.">
-
-
-<meta itemprop="datePublished" content="2015-03-09T18:32:37&#43;00:00" />
-<meta itemprop="dateModified" content="2015-03-09T18:32:37&#43;00:00" />
-<meta itemprop="wordCount" content="2622">
-
-
-
-<meta itemprop="keywords" content="analysis,commentary,culture,rebuttal," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="On Secretly Terrible Engineers - A Rebuttal"/>
-<meta name="twitter:description" content="Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times."/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">On Secretly Terrible Engineers - A Rebuttal</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2015-03-09 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 2622 words </span>
-          <span class="more-meta"> 13 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      <p>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is <a href="http://techcrunch.com/2015/03/08/on-secretly-terrible-engineers/">On Secretly Terrible Engineers</a>, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.</p>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<p><strong>Spoiler:</strong> I strongly disagree with most of this article. If you aren&#8217;t open to debates and discussion, quit reading here and return to your normal activities.</p>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
+            <div class="post-title">
+                <h3>On Secretly Terrible Engineers - A Rebuttal</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Mon, Mar 9, 2015</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">13-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is <a href="http://techcrunch.com/2015/03/08/on-secretly-terrible-engineers/">On Secretly Terrible Engineers</a>, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.</p>
+<p><strong>Spoiler:</strong> I strongly disagree with most of this article. If you aren’t open to debates and discussion, quit reading here and return to your normal activities.</p>
 <p><strong>Note:</strong> any and all bolding or emphasis will be entirely my own and not present in the original article. <strong>If you see bold, know that I bolded it.</strong></p>
-
-<p>If you&#8217;re still with me, I&#8217;d like to tackle this article inline because educated context, which is what I feel the article lacks in the first place, makes the world go &#8217;round. Let&#8217;s begin with the credentials and qualifications from which the author speaks.</p>
-
+<p>If you’re still with me, I’d like to tackle this article inline because educated context, which is what I feel the article lacks in the first place, makes the world go ’round. Let’s begin with the credentials and qualifications from which the author speaks.</p>
 <blockquote>
 <p>I am not unbiased here, having gone through this process myself. I started programming in second grade. I wrote tens of thousands of lines of code in high school, programming games and my own web server. I got a <strong>Mathematical and Computational Science degree from Stanford</strong> and continued coding. <strong>I should have been a software developer, but after a series of interviews, I realized the field was never for me.</strong> So much hostility, so little love.</p>
 </blockquote>
-
-<p>I want to make my first criticism the most important: <strong>the author has never been a professional programmer drawing a paycheck.</strong> Yet, the entire article is about how the world of professional programming works, and how it&#8217;s broken. I liken this to me getting a law degree and then, after a few interviews at firms that happened to have mediocre or bad hiring practices, writing an op-ed about how the legal industry is broken and law firms and their lawyers are all cold, heartless entities that are not welcoming to job applicants.</p>
-
-<p>The fact that the author earned a Computer Science degree from Stanford is impressive. Unfortunately, as many people who program full-time have realized, most theoretical knowledge gained in school translates very poorly to real world programming. I would venture out and say that the author probably was not a very good programmer when they were fresh out of school, looking for that first job. I say that because for the most part, none of us were. I certainly thought I knew how to program when I graduated, but in reality I was a terrible programmer &#8211; arguably even &#8220;net negative&#8221; (creating more problems than I solved) due to my ego and blind confidence.</p>
-
+<p>I want to make my first criticism the most important: <strong>the author has never been a professional programmer drawing a paycheck.</strong> Yet, the entire article is about how the world of professional programming works, and how it’s broken. I liken this to me getting a law degree and then, after a few interviews at firms that happened to have mediocre or bad hiring practices, writing an op-ed about how the legal industry is broken and law firms and their lawyers are all cold, heartless entities that are not welcoming to job applicants.</p>
+<p>The fact that the author earned a Computer Science degree from Stanford is impressive. Unfortunately, as many people who program full-time have realized, most theoretical knowledge gained in school translates very poorly to real world programming. I would venture out and say that the author probably was not a very good programmer when they were fresh out of school, looking for that first job. I say that because for the most part, none of us were. I certainly thought I knew how to program when I graduated, but in reality I was a terrible programmer – arguably even “net negative” (creating more problems than I solved) due to my ego and blind confidence.</p>
 <blockquote>
-<p>They lurk, unnoticed in the great halls of engineering that are the office strips along Highway 101. &#8220;Programmers&#8221; not programmers, people who have cheated, stolen, and lied their way through engineering careers without anyone realizing they can&#8217;t code. <strong>They are among us</strong>, incompetent Cylons secretly plotting to undermine us at a crucial time.</p>
+<p>They lurk, unnoticed in the great halls of engineering that are the office strips along Highway 101. “Programmers” not programmers, people who have cheated, stolen, and lied their way through engineering careers without anyone realizing they can’t code. <strong>They are among us</strong>, incompetent Cylons secretly plotting to undermine us at a crucial time.</p>
 </blockquote>
-
-<p>What is this &#8220;us&#8221; that the author speaks of? There&#8217;s a reason I put the author&#8217;s credentials (which are at the bottom of the original article) at the top of this one. The author does not work in this field. There is no &#8220;us&#8221; &#8211; the author should have said &#8220;you&#8221; but knew it would be accusatory instead of an empathic opener that developers and engineers could relate to.</p>
-
+<p>What is this “us” that the author speaks of? There’s a reason I put the author’s credentials (which are at the bottom of the original article) at the top of this one. The author does not work in this field. There is no “us” – the author should have said “you” but knew it would be accusatory instead of an empathic opener that developers and engineers could relate to.</p>
 <blockquote>
 <p>Secretly terrible engineers (STEs) are everywhere, and they may be on your very team as we speak.</p>
-
-<p>There is only one way to stop this scourge, one interview to defeat them all. Well, more like a dozen interviews with white boards, but that doesn&#8217;t sound nearly as cool. But I digress. One interview to rat these jackals out, to prove just once that no matter how much you did in the past, you will be discovered as the <strong>Person Who Doesn&#8217;t Know The Big-O Of Trie Insertion</strong>.</p>
-
-<p>The interviewer, preparing for this moment for years while waiting for git pushes, <strong>stands up and stabs his finger at the interviewee. &#8220;I&#8217;ve got you!&#8221;</strong></p>
+<p>There is only one way to stop this scourge, one interview to defeat them all. Well, more like a dozen interviews with white boards, but that doesn’t sound nearly as cool. But I digress. One interview to rat these jackals out, to prove just once that no matter how much you did in the past, you will be discovered as the <strong>Person Who Doesn’t Know The Big-O Of Trie Insertion</strong>.</p>
+<p>The interviewer, preparing for this moment for years while waiting for git pushes, <strong>stands up and stabs his finger at the interviewee. “I’ve got you!”</strong></p>
 </blockquote>
-
-<p>I would not hire a candidate based on a pop-quiz style test. A company that I used to work at did this, and it sucked. We ended up hiring a bunch of the &#8220;secretly terrible engineers&#8221; or STEs as the author puts it. This is because a pop-quiz test can be studied for; it tests your ability to memorize and repeat, not your ability to comprehend. People would fool us into believing that they were skilled developers by reciting the correct answers to us. Within a few weeks of working at the company, they had usually outed themselves as terrible. Needing basic instructions on for-loops, source control, or even that pesky Trie Insertion that you seem to mock as if it were not a part of the daily job for many of us (ever built a type-ahead or autocomplete system?). It&#8217;s O(n) where n is the length of the key being inserted, by the way. I didn&#8217;t have to look that up because it isn&#8217;t trivia knowledge. It was derived easily from my practical understanding of data structures and algorithms.</p>
-
-<p>The interviewer is not preparing for years to out the candidate, and certainly does not make a theatrical show of it. This is because for every 200 candidates that we (proverbial) interview, <a href="http://www.joelonsoftware.com/items/2005/01/27.html">199 can&#8217;t code</a>. It gets really depressing and morale-depriving to constantly be rejecting candidates. We find no joy in it. It may feel like you were &#8220;outed&#8221; or a scene was made because you were unable to pass the interview, and this is very emotional for and personal to you, but on our end it&#8217;s just disappointing. We really liked your personality and attitude, and we&#8217;re frustrated that we cannot hire you and work with you. The only thing that stands between you and the job is core competency, which you lack.</p>
-
+<p>I would not hire a candidate based on a pop-quiz style test. A company that I used to work at did this, and it sucked. We ended up hiring a bunch of the “secretly terrible engineers” or STEs as the author puts it. This is because a pop-quiz test can be studied for; it tests your ability to memorize and repeat, not your ability to comprehend. People would fool us into believing that they were skilled developers by reciting the correct answers to us. Within a few weeks of working at the company, they had usually outed themselves as terrible. Needing basic instructions on for-loops, source control, or even that pesky Trie Insertion that you seem to mock as if it were not a part of the daily job for many of us (ever built a type-ahead or autocomplete system?). It’s O(n) where n is the length of the key being inserted, by the way. I didn’t have to look that up because it isn’t trivia knowledge. It was derived easily from my practical understanding of data structures and algorithms.</p>
+<p>The interviewer is not preparing for years to out the candidate, and certainly does not make a theatrical show of it. This is because for every 200 candidates that we (proverbial) interview, <a href="http://www.joelonsoftware.com/items/2005/01/27.html">199 can’t code</a>. It gets really depressing and morale-depriving to constantly be rejecting candidates. We find no joy in it. It may feel like you were “outed” or a scene was made because you were unable to pass the interview, and this is very emotional for and personal to you, but on our end it’s just disappointing. We really liked your personality and attitude, and we’re frustrated that we cannot hire you and work with you. The only thing that stands between you and the job is core competency, which you lack.</p>
 <blockquote>
 <p>Or, at least, I guess that is how this moment is supposed to go, <strong>since it never seems to actually happen.</strong></p>
 </blockquote>
-
-<p>How would the author know? They don&#8217;t work in the field and they likely don&#8217;t hire developers. If they did, I think they&#8217;d have written an entirely different article. The author&#8217;s evidence so far is entirely anecdotal and surely suffers from sample bias.</p>
-
+<p>How would the author know? They don’t work in the field and they likely don’t hire developers. If they did, I think they’d have written an entirely different article. The author’s evidence so far is entirely anecdotal and surely suffers from sample bias.</p>
 <blockquote>
-<p>But there is also a darker vein running through these articles, of how to see through the posers and fakes, of how to test engineering skills so that you don&#8217;t hire that STE. <strong>In this view, the world is swimming in pure engineering mediocrity, and only extraordinarily careful interviewing will allow you to distinguish between fraud and genius.</strong></p>
-
-<p><strong>It&#8217;s a paranoid fantasy, a As don&#8217;t hire Bs bullshit lie.</strong></p>
+<p>But there is also a darker vein running through these articles, of how to see through the posers and fakes, of how to test engineering skills so that you don’t hire that STE. <strong>In this view, the world is swimming in pure engineering mediocrity, and only extraordinarily careful interviewing will allow you to distinguish between fraud and genius.</strong></p>
+<p><strong>It’s a paranoid fantasy, a As don’t hire Bs bullshit lie.</strong></p>
 </blockquote>
-
-<p>I agree with the first paragraph. It sucks, but it&#8217;s important to carefully screen candidates and hire the right developer. <a href="http://www.recruitingtrends.com/thought-leadership/299-collateral-damage-from-a-bad-hire">A bad hire costs more than you&#8217;d probably ever guess.</a> It is true in my subjective experience that careful interviewing is the key to distinguishing between a fraud and a genius. Pop-quiz style interviews don&#8217;t weed frauds out. Only an interview that tests basic coding proficiency can weed them out.</p>
-
-<p>As for the paranoid fantasy bit, I&#8217;d ask again how the author knows this, based on their lack of experience in the field. Also, what a sensational, angry comment!</p>
-
+<p>I agree with the first paragraph. It sucks, but it’s important to carefully screen candidates and hire the right developer. <a href="http://www.recruitingtrends.com/thought-leadership/299-collateral-damage-from-a-bad-hire">A bad hire costs more than you’d probably ever guess.</a> It is true in my subjective experience that careful interviewing is the key to distinguishing between a fraud and a genius. Pop-quiz style interviews don’t weed frauds out. Only an interview that tests basic coding proficiency can weed them out.</p>
+<p>As for the paranoid fantasy bit, I’d ask again how the author knows this, based on their lack of experience in the field. Also, what a sensational, angry comment!</p>
 <blockquote>
-<p><strong>The reality is, few professions seem so openly hostile to their current members as software engineering.</strong> There is always this lingering caution when interviewing a new candidate that somehow this individual has gotten through every interview process and team review without anyone realizing the incompetence before them. <strong>Founders swap stories of &#8220;that one guy&#8221; who somehow managed to work on infrastructure at Facebook, but was a complete idiot.</strong></p>
+<p><strong>The reality is, few professions seem so openly hostile to their current members as software engineering.</strong> There is always this lingering caution when interviewing a new candidate that somehow this individual has gotten through every interview process and team review without anyone realizing the incompetence before them. <strong>Founders swap stories of “that one guy” who somehow managed to work on infrastructure at Facebook, but was a complete idiot.</strong></p>
 </blockquote>
-
-<p>I agree. The industry is cold and unforgiving to most candidates. I consider myself a very talented developer, but that didn&#8217;t stop me from going through <strong>6 interviews, 4 of which involved coding</strong> in order to land a job at Stack Exchange. I did it willingly because I knew that anyone that I would work with <em>also passed those tests and is a competent developer</em>. In reality, my coworkers are all brilliant (or geniuses, as the author says). I&#8217;m lucky to be on such a talented team. This is why these practical code tests are important: they ensure that your hires are skilled and that you get the best bang for your buck (the &#8220;10x developer&#8221; as the author puts it).</p>
-
-<p>As for &#8220;that one guy,&#8221; he exists. As a start-up grows, they experience growing pains. Sometimes this is a rapid in-flux of hires to accommodate some scale issues or immediate need. Part of the growing pains is learning to weed out the fraud &#8220;developers&#8221; also, and so this person tends to get in before the interview process is solidified. Once hired, it is very hard to get rid of an employee (and it costs a lot too), so that one guy at Facebook slipped by. He got in as Facebook experienced growing pains, and slipped by the not-yet-solidified interviewing process. Most of us have worked with at least one of these people <em>recently</em> if not multiple times throughout our careers.</p>
-
+<p>I agree. The industry is cold and unforgiving to most candidates. I consider myself a very talented developer, but that didn’t stop me from going through <strong>6 interviews, 4 of which involved coding</strong> in order to land a job at Stack Exchange. I did it willingly because I knew that anyone that I would work with <em>also passed those tests and is a competent developer</em>. In reality, my coworkers are all brilliant (or geniuses, as the author says). I’m lucky to be on such a talented team. This is why these practical code tests are important: they ensure that your hires are skilled and that you get the best bang for your buck (the “10x developer” as the author puts it).</p>
+<p>As for “that one guy,” he exists. As a start-up grows, they experience growing pains. Sometimes this is a rapid in-flux of hires to accommodate some scale issues or immediate need. Part of the growing pains is learning to weed out the fraud “developers” also, and so this person tends to get in before the interview process is solidified. Once hired, it is very hard to get rid of an employee (and it costs a lot too), so that one guy at Facebook slipped by. He got in as Facebook experienced growing pains, and slipped by the not-yet-solidified interviewing process. Most of us have worked with at least one of these people <em>recently</em> if not multiple times throughout our careers.</p>
 <blockquote>
-<p>I&#8217;ve always been curious what all these people have been up to in the Valley. Where do they go all day? What do they do? <strong>If we are so surrounded by lackluster talent, how do we build all of these companies that seem to be taking over the world? Are STEs secretly burrowing owls who transform into humans during engineering interviews?</strong></p>
-
+<p>I’ve always been curious what all these people have been up to in the Valley. Where do they go all day? What do they do? <strong>If we are so surrounded by lackluster talent, how do we build all of these companies that seem to be taking over the world? Are STEs secretly burrowing owls who transform into humans during engineering interviews?</strong></p>
 <p>In all my years immersed in the tech industry, <strong>I have never once heard a firm talk about the idiots lurking in their own offices. They always seem to be elsewhere. For everyone.</strong></p>
 </blockquote>
-
-<p>If you made 7 bad hires and 3 good (or &#8220;10x&#8221; as the author stated) hires, you&#8217;ll likely get the work done. The 3 good developers probably won&#8217;t love their jobs (because they&#8217;re picking up the slack of the other 7, and in doing so hiding the 7 from the peering eyes of management). Your company culture will also suck, but the work will get done.</p>
-
-<p>No firm is going to willingly talk negatively about their employees, <strong>especially</strong> when they&#8217;re seeking or have received funding and <strong>extra especially</strong> to someone who writes for TechCrunch. That would be asking for trouble. But hey, the author&#8217;s experience can dictate their entire view of the industry if they&#8217;d like it to.</p>
-
+<p>If you made 7 bad hires and 3 good (or “10x” as the author stated) hires, you’ll likely get the work done. The 3 good developers probably won’t love their jobs (because they’re picking up the slack of the other 7, and in doing so hiding the 7 from the peering eyes of management). Your company culture will also suck, but the work will get done.</p>
+<p>No firm is going to willingly talk negatively about their employees, <strong>especially</strong> when they’re seeking or have received funding and <strong>extra especially</strong> to someone who writes for TechCrunch. That would be asking for trouble. But hey, the author’s experience can dictate their entire view of the industry if they’d like it to.</p>
 <blockquote>
-<p>Despite the worst talent crunch that Silicon Valley has ever experienced, we still regularly throw away huge groups of talent for not perfectly answering the latest hip algorithm question. &#8220;What do you think of the latest RB-tree research,&#8221; your interlocutor asks. &#8220;What?&#8221; &#8220;Buzz! Fail. Or should I say Fizz? Dammit I lost track,&#8221; you barely hear as security walks you in shame out of the office.</p>
+<p>Despite the worst talent crunch that Silicon Valley has ever experienced, we still regularly throw away huge groups of talent for not perfectly answering the latest hip algorithm question. “What do you think of the latest RB-tree research,” your interlocutor asks. “What?” “Buzz! Fail. Or should I say Fizz? Dammit I lost track,” you barely hear as security walks you in shame out of the office.</p>
 </blockquote>
-
-<p>Here we agree: this is a terrible hiring practice. Pop-quiz interviews are pointless as they don&#8217;t accomplish anything and don&#8217;t filter out bad candidates. If this is an experience that the author has had, it becomes clearer to me why they wrote this article.</p>
-
+<p>Here we agree: this is a terrible hiring practice. Pop-quiz interviews are pointless as they don’t accomplish anything and don’t filter out bad candidates. If this is an experience that the author has had, it becomes clearer to me why they wrote this article.</p>
 <blockquote>
 <p>Yet in engineering, we expect people to do live engineering on a white board under stressful interview conditions because, well, because that is what we have always done. Most programmers need StackOverflow, Google search, or Dash in order to be effective, yet <strong>you get to an interview and are expected to spontaneously remember the positional arguments for some esoteric function.</strong> And we keep doing this even with people who have years of experience in the field!</p>
 </blockquote>
-
 <p>As prior discussed, these types of interviews are terrible. They accomplish nothing other than a round of FizzBuzzword Bingo, and make the candidate feel stupid or bad. I deplore these companies. Read my prior blog posts for better ways to hire good candidates.</p>
-
 <blockquote>
-<p>Yet, we don&#8217;t make the same assumptions in Silicon Valley. You can work at Facebook or Google for years, and still start over from scratch with FizzBuzz when you start searching for another job. That is complete paranoia. <strong>Nerds are frankly very nervous about status, which Paul Graham argues comes straight from high school.</strong> I am not as convinced by such pop sociology, but there is something in the culture that is making us seek out and destroy those losers on our group projects that can’t carry their own weight.</p>
+<p>Yet, we don’t make the same assumptions in Silicon Valley. You can work at Facebook or Google for years, and still start over from scratch with FizzBuzz when you start searching for another job. That is complete paranoia. <strong>Nerds are frankly very nervous about status, which Paul Graham argues comes straight from high school.</strong> I am not as convinced by such pop sociology, but there is something in the culture that is making us seek out and destroy those losers on our group projects that can’t carry their own weight.</p>
 </blockquote>
-
-<p>There are definitely elitist engineers; most of them are misguided. The industry is certainly full of egos. I&#8217;ve met enterprise architects that couldn&#8217;t architect their way out of a cardbox board, and junior developers who think that they are experts who know everything. It&#8217;s definitely a problem, and makes the industry seem harsh to newcomers.</p>
-
+<p>There are definitely elitist engineers; most of them are misguided. The industry is certainly full of egos. I’ve met enterprise architects that couldn’t architect their way out of a cardbox board, and junior developers who think that they are experts who know everything. It’s definitely a problem, and makes the industry seem harsh to newcomers.</p>
 <blockquote>
-<p>No, but we only realize this when we consider the real context of how engineering happens today. We still act in interviews as if every engineer works independently, when in fact teams greatly affect the performance of every contributor. We act as if engineers should have the entirety of Python&#8217;s standard library memorized, when in reality we all use the API reference docs. <strong>Take an engineer and remove their team, their search engine, and StackOverflow, and yes, they might look completely incompetent. That’s a fault of the interview, not them.</strong></p>
+<p>No, but we only realize this when we consider the real context of how engineering happens today. We still act in interviews as if every engineer works independently, when in fact teams greatly affect the performance of every contributor. We act as if engineers should have the entirety of Python’s standard library memorized, when in reality we all use the API reference docs. <strong>Take an engineer and remove their team, their search engine, and StackOverflow, and yes, they might look completely incompetent. That’s a fault of the interview, not them.</strong></p>
 </blockquote>
-
-<p>Actually, that&#8217;s the fault of the candidate. If you ever interview with Stack Overflow, we will test your coding skills in a way that prevents you from looking up the answer or depending on libraries. This is not to make the challenge extra hard; it&#8217;s quite the opposite. We believe that libraries and helper functions abstract away the true complexity and importance of code. Many developers can sling code from libraries all day (think LINQ or jQuery), but the ones that understand the computational complexity of what they&#8217;re doing under the hood are the ones that I want to work with.</p>
-
+<p>Actually, that’s the fault of the candidate. If you ever interview with Stack Overflow, we will test your coding skills in a way that prevents you from looking up the answer or depending on libraries. This is not to make the challenge extra hard; it’s quite the opposite. We believe that libraries and helper functions abstract away the true complexity and importance of code. Many developers can sling code from libraries all day (think LINQ or jQuery), but the ones that understand the computational complexity of what they’re doing under the hood are the ones that I want to work with.</p>
 <p>If a candidate cannot solve a relatively simple (or even moderate) programming problem without the help of documentation and libraries, then they do not know how to code.</p>
-
 <blockquote>
 <p>We need to move beyond the algorithm bravado to engage more fundamentally with the craft. If people are wired for engineering logic and have programmed in some capacity in the past, they almost certainly can get up to speed in any other part of the field. Let them learn, or even better, help them learn.</p>
 </blockquote>
-
 <p>Agreed, fully.</p>
-
 <blockquote>
-<p><strong>No one ever offered me a book. No one even offered advice, or suggestions on what was interesting in the field or what was not. No one ever said, &#8220;Here is how we are going to bring your skills to the next level and ensure you will be quickly productive on our team.&#8221; The only answer I ever got was, &#8220;We expect every employee to be ready on day one.&#8221; What a scary proposition! Even McDonalds doesn&#8217;t expect its burger flippers to be ready from day one.</strong></p>
+<p><strong>No one ever offered me a book. No one even offered advice, or suggestions on what was interesting in the field or what was not. No one ever said, “Here is how we are going to bring your skills to the next level and ensure you will be quickly productive on our team.” The only answer I ever got was, “We expect every employee to be ready on day one.” What a scary proposition! Even McDonalds doesn’t expect its burger flippers to be ready from day one.</strong></p>
 </blockquote>
-
 <p>This is the saddest part of the article to me, as it reveals the true experiences of the author.</p>
+<p>I believe that empowering developers is how you bring out the best in them and get things done. This involves mentoring in positive ways: offering and suggesting books (countless devs have loaned me books over the years), offering advice (also countless), and suggestions and talk of what’s hot in the field. It makes me angry at the industry that the author had this experience, and I agree fully that it’s bullshit and needs fixing.</p>
+<p>As ambassadors to future developers and engineers, we should be more welcoming and willing to teach. If the candidate has the right attitude and aptitude, they can learn – quickly. I leave you with this: while I disagree with the author on many of their points, this one is at the crux of the problems in the IT industry.</p>
 
-<p>I believe that empowering developers is how you bring out the best in them and get things done. This involves mentoring in positive ways: offering and suggesting books (countless devs have loaned me books over the years), offering advice (also countless), and suggestions and talk of what&#8217;s hot in the field. It makes me angry at the industry that the author had this experience, and I agree fully that it&#8217;s bullshit and needs fixing.</p>
-
-<p>As ambassadors to future developers and engineers, we should be more welcoming and willing to teach. If the candidate has the right attitude and aptitude, they can learn &#8211; quickly. I leave you with this: while I disagree with the author on many of their points, this one is at the crux of the problems in the IT industry.</p>
-
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/analysis/">analysis</a>
-          <a href="/tags/commentary/">commentary</a>
-          <a href="/tags/culture/">culture</a>
-          <a href="/tags/rebuttal/">rebuttal</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/developers-shouldnt-measure-twice-cut-once/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Developers Shouldn&#39;t Measure Twice, Cut Once</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/the-recruiting-competitive-advantage/">
-            <span class="next-text nav-default">The Recruiting Competitive Advantage</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/analysis/">analysis</a><a class="tag" href="/tags/commentary/">commentary</a><a class="tag" href="/tags/culture/">culture</a><a class="tag" href="/tags/rebuttal/">rebuttal</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

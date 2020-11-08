@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on David Haney - Blogging my experiences as a developer and engineering manager.</title>
+    <title>android on </title>
     <link>https://www.davidhaney.io/tags/android/</link>
-    <description>Recent content in android on David Haney - Blogging my experiences as a developer and engineering manager.</description>
+    <description>Recent content in android on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>David Haney</copyright>
-    <lastBuildDate>Tue, 09 Sep 2014 19:22:53 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.davidhaney.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 09 Sep 2014 19:22:53 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>iPhone 6: Style Over Substance</title>
       <link>https://www.davidhaney.io/iphone-6-style-over-substance/</link>
       <pubDate>Tue, 09 Sep 2014 19:22:53 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/iphone-6-style-over-substance/</guid>
-      <description>Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I&amp;#8217;m not going to talk about the watch, but instead about the phone.
-For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don&amp;#8217;t blame anyone for owning an iPhone: they&amp;#8217;re reasonably sexy and you get to show off the Apple branding.</description>
+      <description>Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I’m not going to talk about the watch, but instead about the phone.</description>
     </item>
     
   </channel>

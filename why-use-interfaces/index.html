@@ -1,187 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Why Use Interfaces? - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | Why Use Interfaces? </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/why-use-interfaces/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="I&amp;#8217;m a bit tipsy at the moment, so hopefully this post goes well.
-A question that I like to ask while interviewing individuals is: &amp;#8220;why would you want to use an interface?&amp;#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&amp;#8217;d like to share some input on what I feel is the importance of interfaces." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/why-use-interfaces/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="Why Use Interfaces?" />
-<meta property="og:description" content="I&#8217;m a bit tipsy at the moment, so hopefully this post goes well.
-A question that I like to ask while interviewing individuals is: &#8220;why would you want to use an interface?&#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&#8217;d like to share some input on what I feel is the importance of interfaces." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/why-use-interfaces/" />
-<meta property="article:published_time" content="2012-04-26T23:51:18+00:00" />
-<meta property="article:modified_time" content="2012-04-26T23:51:18+00:00" />
-<meta itemprop="name" content="Why Use Interfaces?">
-<meta itemprop="description" content="I&#8217;m a bit tipsy at the moment, so hopefully this post goes well.
-A question that I like to ask while interviewing individuals is: &#8220;why would you want to use an interface?&#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&#8217;d like to share some input on what I feel is the importance of interfaces.">
-
-
-<meta itemprop="datePublished" content="2012-04-26T23:51:18&#43;00:00" />
-<meta itemprop="dateModified" content="2012-04-26T23:51:18&#43;00:00" />
-<meta itemprop="wordCount" content="1012">
-
-
-
-<meta itemprop="keywords" content="dotnet,csharp,programming," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Why Use Interfaces?"/>
-<meta name="twitter:description" content="I&#8217;m a bit tipsy at the moment, so hopefully this post goes well.
-A question that I like to ask while interviewing individuals is: &#8220;why would you want to use an interface?&#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&#8217;d like to share some input on what I feel is the importance of interfaces."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="I’m a bit tipsy at the moment, so hopefully this post goes well.
+A question that I like to ask while interviewing individuals is: “why would you want to use an interface?"/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Why Use Interfaces?</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2012-04-26 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 1012 words </span>
-          <span class="more-meta"> 5 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      <p>I&#8217;m a bit tipsy at the moment, so hopefully this post goes well.</p>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<p>A question that I like to ask while interviewing individuals is: &#8220;why would you want to use an interface?&#8221; I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I&#8217;d like to share some input on what I feel is the importance of interfaces.</p>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
+            <div class="post-title">
+                <h3>Why Use Interfaces?</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Thu, Apr 26, 2012</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">5-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>I’m a bit tipsy at the moment, so hopefully this post goes well.</p>
+<p>A question that I like to ask while interviewing individuals is: “why would you want to use an interface?” I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I’d like to share some input on what I feel is the importance of interfaces.</p>
 <p><strong>Interfaces allow for the application of polymorphism (the ability of an object to exhibit multiple behaviours). In short: more polymorphism = less refactoring in the future when you change code. Less changes to do new things = happier programmers.</strong></p>
-
-<p>Let&#8217;s say that your customer/business asks you to write an application that makes a Dog speak. So you code something similar to this:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/// &lt;summary&gt;
+<p>Let’s say that your customer/business asks you to write an application that makes a Dog speak. So you code something similar to this:</p>
+<pre><code>/// &lt;summary&gt;
 /// Represents a Dog.
 /// &lt;/summary&gt;
 public class Dog
@@ -191,14 +147,14 @@ public class Dog
     /// &lt;/summary&gt;
     public void Speak()
     {
-        Console.WriteLine(&#34;Woof!&#34;);
+        Console.WriteLine(&quot;Woof!&quot;);
     }
 }
 
 /// &lt;summary&gt;
 /// Makes a Dog Speak.
 /// &lt;/summary&gt;
-/// &lt;param name=&#34;dog&#34;&gt;The Dog to make Speak.&lt;/param&gt;
+/// &lt;param name=&quot;dog&quot;&gt;The Dog to make Speak.&lt;/param&gt;
 public static void MakeDogSpeak(Dog dog)
 {
     // Sanitize
@@ -209,63 +165,18 @@ public static void MakeDogSpeak(Dog dog)
 
     // Make the Dog Speak
     dog.Speak();
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>In this scenario, making the Dog Speak is quite easy:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">static void Main(string[] args)
+<pre><code>static void Main(string[] args)
 {
     var dog = new Dog();
 
     MakeDogSpeak(dog);
-}</pre></td></tr></table>
-</div>
-</div>
-<p>Now imagine that the customer/business changes their mind &#8211; which of course <em>never ever happens.</em> They tell you that they have a Cat which can also speak, and that you need to change your program to allow both the Dog and Cat to speak. What a pain in the butt! Now we need to create the Cat class and add another method:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/// &lt;summary&gt;
+}
+</code></pre>
+<p>Now imagine that the customer/business changes their mind – which of course <em>never ever happens.</em> They tell you that they have a Cat which can also speak, and that you need to change your program to allow both the Dog and Cat to speak. What a pain in the butt! Now we need to create the Cat class and add another method:</p>
+<pre><code>/// &lt;summary&gt;
 /// Represents a Cat.
 /// &lt;/summary&gt;
 public class Cat
@@ -275,14 +186,14 @@ public class Cat
     /// &lt;/summary&gt;
     public void Speak()
     {
-        Console.WriteLine(&#34;Meow! (while glaring at you since Cats are evil)&#34;);
+        Console.WriteLine(&quot;Meow! (while glaring at you since Cats are evil)&quot;);
     }
 }
 
 /// &lt;summary&gt;
 /// Makes a Cat Speak.
 /// &lt;/summary&gt;
-/// &lt;param name=&#34;dog&#34;&gt;The Cat to make Speak.&lt;/param&gt;
+/// &lt;param name=&quot;dog&quot;&gt;The Cat to make Speak.&lt;/param&gt;
 public static void MakeCatSpeak(Cat cat)
 {
     // Sanitize
@@ -293,25 +204,10 @@ public static void MakeCatSpeak(Cat cat)
 
     // Make the Cat Speak
     cat.Speak();
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Now, making the Dog and Cat Speak is also quite easy, if a bit cumbersome:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">static void Main(string[] args)
+<pre><code>static void Main(string[] args)
 {
     var dog = new Dog();
 
@@ -320,29 +216,12 @@ public static void MakeCatSpeak(Cat cat)
     var cat = new Cat();
 
     MakeCatSpeak(cat);
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Are you seeing the tedious trend here? What happens when the customer/business now wants a Horse to speak, and a Lamb to speak, and a Tiger to speak, and even an Elephant to speak? What about a Unicorn or Human or Computer that needs to speak? Creating a method for each of these objects <strong>totally sucks and destroys your ability to write efficient OO code.</strong> So, what are we to do? <strong>Enter interfaces.</strong></p>
-
 <p><strong>Interfaces exist to define a contract for common functionality which can be used in polymorphic ways.</strong> Let me repeat that once more to stress importance, <strong>interfaces are an important part of OO programming that allows you to capture common functionality and avoid tedious (and unnecessary) code.</strong></p>
-
-<p>Let&#8217;s look at the prior examples. We know that we have a Dog and a Cat, and that they both Speak. From this we can analyze and see some common functionality. We realize that we can define a common interface for these objects that encapsulates speaking:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/// &lt;summary&gt;
+<p>Let’s look at the prior examples. We know that we have a Dog and a Cat, and that they both Speak. From this we can analyze and see some common functionality. We realize that we can define a common interface for these objects that encapsulates speaking:</p>
+<pre><code>/// &lt;summary&gt;
 /// Represents an object that can Speak.
 /// &lt;/summary&gt;
 public interface ICanSpeak
@@ -351,42 +230,10 @@ public interface ICanSpeak
     /// Makes the object Speak.
     /// &lt;/summary&gt;
     void Speak();
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Let us now update our Dog and Cat such that they implement this interface:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/// &lt;summary&gt;
+<pre><code>/// &lt;summary&gt;
 /// Represents a Dog.
 /// &lt;/summary&gt;
 public class Dog : ICanSpeak
@@ -396,7 +243,7 @@ public class Dog : ICanSpeak
     /// &lt;/summary&gt;
     public void Speak()
     {
-        Console.WriteLine(&#34;Woof!&#34;);
+        Console.WriteLine(&quot;Woof!&quot;);
     }
 }
 
@@ -410,35 +257,15 @@ public class Cat : ICanSpeak
     /// &lt;/summary&gt;
     public void Speak()
     {
-        Console.WriteLine(&#34;Meow! (while glaring at you since Cats are evil)&#34;);
+        Console.WriteLine(&quot;Meow! (while glaring at you since Cats are evil)&quot;);
     }
-}</pre></td></tr></table>
-</div>
-</div>
-<p>Finally, let&#8217;s take advantage of the polymorphism that this interface now offers and reduce our two speaking methods into one useful method:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/// &lt;summary&gt;
+}
+</code></pre>
+<p>Finally, let’s take advantage of the polymorphism that this interface now offers and reduce our two speaking methods into one useful method:</p>
+<pre><code>/// &lt;summary&gt;
 /// Makes something Speak.
 /// &lt;/summary&gt;
-/// &lt;param name=&#34;speaker&#34;&gt;The Speaker to make Speak.&lt;/param&gt;
+/// &lt;param name=&quot;speaker&quot;&gt;The Speaker to make Speak.&lt;/param&gt;
 public static void MakeSomethingSpeak(ICanSpeak speaker)
 {
     // Sanitize
@@ -449,25 +276,10 @@ public static void MakeSomethingSpeak(ICanSpeak speaker)
 
     // Make the Speaker Speak
     speaker.Speak();
-}</pre></td></tr></table>
-</div>
-</div>
-<p>Two methods become one. In fact, <strong>N methods become one</strong> if they implement the common functionality encapsulated in the interface. This means that you can sleep peacefully at night knowing that no matter how many things the customer/business wants to have speak tomorrow, it&#8217;s not that hard to update your code to handle it. Finally, let us update our Main which runs the speak commands just to close the example:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">static void Main(string[] args)
+}
+</code></pre>
+<p>Two methods become one. In fact, <strong>N methods become one</strong> if they implement the common functionality encapsulated in the interface. This means that you can sleep peacefully at night knowing that no matter how many things the customer/business wants to have speak tomorrow, it’s not that hard to update your code to handle it. Finally, let us update our Main which runs the speak commands just to close the example:</p>
+<pre><code>static void Main(string[] args)
 {
     var dog = new Dog();
 
@@ -476,115 +288,81 @@ public static void MakeSomethingSpeak(ICanSpeak speaker)
     var cat = new Cat();
 
     MakeSomethingSpeak(cat);
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Now, no matter how many objects are defined that are to speak, we need only the single method as long as those objects implement the appropriate interface.</p>
-
 <p>There are <strong>many other benefits to interfaces</strong> which we will discuss in future posts. However, I hope that this begins to exhibit the purpose and usefulness of defining interfaces and having types which share common functionality implement them. Cheers!</p>
 
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/dotnet/">dotnet</a>
-          <a href="/tags/csharp/">csharp</a>
-          <a href="/tags/programming/">programming</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/what-is-a-virtual-method-anyway/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">What is a Virtual Method, Anyway?</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/an-overview-of-generic-constraints/">
-            <span class="next-text nav-default">An Overview of Generic Constraints</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/csharp/">csharp</a><a class="tag" href="/tags/programming/">programming</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

@@ -1,473 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>On Credentialism In Software Development - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | On Credentialism In Software Development </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/on-credentialism-in-software-development/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="Intro We&amp;#8217;re just two days from a brand new year and yet the primary measurement of a developer&amp;#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:" /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/on-credentialism-in-software-development/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="On Credentialism In Software Development" />
-<meta property="og:description" content="Intro We&#8217;re just two days from a brand new year and yet the primary measurement of a developer&#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/on-credentialism-in-software-development/" />
-<meta property="article:published_time" content="2014-12-29T16:00:27+00:00" />
-<meta property="article:modified_time" content="2014-12-29T16:00:27+00:00" />
-<meta itemprop="name" content="On Credentialism In Software Development">
-<meta itemprop="description" content="Intro We&#8217;re just two days from a brand new year and yet the primary measurement of a developer&#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:">
-
-
-<meta itemprop="datePublished" content="2014-12-29T16:00:27&#43;00:00" />
-<meta itemprop="dateModified" content="2014-12-29T16:00:27&#43;00:00" />
-<meta itemprop="wordCount" content="1583">
-
-
-
-<meta itemprop="keywords" content="career,credentialism,culture,interviews,workplace," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="On Credentialism In Software Development"/>
-<meta name="twitter:description" content="Intro We&#8217;re just two days from a brand new year and yet the primary measurement of a developer&#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<meta name="twitter:description" content="Intro We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post."/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">On Credentialism In Software Development</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2014-12-29 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 1583 words </span>
-          <span class="more-meta"> 8 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#intro">Intro</a></li>
-<li><a href="#proper-job-titles">Proper Job Titles</a></li>
-<li><a href="#make-em-write-code">Make &lsquo;Em Write Code</a></li>
-<li><a href="#an-example-fizzbuzz">An Example: FizzBuzz</a>
-<ul>
-<li><a href="#junior">Junior</a></li>
-<li><a href="#developer">Developer</a></li>
-<li><a href="#senior">Senior</a></li>
-<li><a href="#exceptional">Exceptional</a></li>
-</ul></li>
-<li><a href="#code-testing-works">Code Testing Works</a></li>
-</ul>
-</nav>
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<h1 id="intro">Intro</h1>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
-<p>We&#8217;re just two days from a brand new year and yet the primary measurement of a developer&#8217;s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in <a href="https://www.davidhaney.io/the-trouble-with-job-titles">my last post</a>. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</p>
+            <div class="post-title">
+                <h3>On Credentialism In Software Development</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Mon, Dec 29, 2014</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">8-minute read</span>
+                    </div>
+                
+            </div>
 
+            <h1 id="intro">Intro</h1>
+<p>We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in <a href="https://www.davidhaney.io/the-trouble-with-job-titles">my last post</a>. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</p>
 <ul>
-<li>You&#8217;re a <strong>Junior Developer</strong> if you have 0-2 years of professional experience</li>
-<li>You&#8217;re a <strong>Developer</strong> if you have 2-5 years of professional experience</li>
-<li>You&#8217;re a <strong>Senior Developer</strong> if you have 5+ years of professional experience</li>
-<li>You&#8217;re a <strong>Team Lead, Architect, or Manager</strong> once someone promotes you from <strong>Senior Developer</strong></li>
+<li>You’re a <strong>Junior Developer</strong> if you have 0-2 years of professional experience</li>
+<li>You’re a <strong>Developer</strong> if you have 2-5 years of professional experience</li>
+<li>You’re a <strong>Senior Developer</strong> if you have 5+ years of professional experience</li>
+<li>You’re a <strong>Team Lead, Architect, or Manager</strong> once someone promotes you from <strong>Senior Developer</strong></li>
 </ul>
-
-<p>The problem with this sort of classification is obvious. <strong>The truth is that one person has 10 years of development experience, and the person standing next to her has 1 year of development experience repeated 10 times.</strong> The people that end up in the latter category tend to be &#8220;company [wo]men&#8221; &#8211; the ones who stick with a job forever and never try something new.</p>
-
+<p>The problem with this sort of classification is obvious. <strong>The truth is that one person has 10 years of development experience, and the person standing next to her has 1 year of development experience repeated 10 times.</strong> The people that end up in the latter category tend to be “company [wo]men” – the ones who stick with a job forever and never try something new.</p>
 <h1 id="proper-job-titles">Proper Job Titles</h1>
-
-<p>I am not one to believe that rockstar developers are valuable. <a href="http://www.hanselman.com/blog/TheMythOfTheRockstarProgrammer.aspx">As Scott Hanselman writes</a>, rockstar developers do much more harm than good. I do, however, believe that the proper classification of developer skill lies in my paraphrasing of Nate Waddoups&#8217; description:</p>
-
+<p>I am not one to believe that rockstar developers are valuable. <a href="http://www.hanselman.com/blog/TheMythOfTheRockstarProgrammer.aspx">As Scott Hanselman writes</a>, rockstar developers do much more harm than good. I do, however, believe that the proper classification of developer skill lies in my paraphrasing of Nate Waddoups’ description:</p>
 <ul>
 <li>A <strong>Junior Developer</strong> creates complex solutions to simple problems. You see these people across all companies and in all kinds of positions: from Junior Developer to CIO. They take a one-off batch service that processes requests and make it into a 40 class, 2000 line monster that involves a <code>ServiceFactoryFactory</code> and a <code>ServiceDecorator</code>.</li>
-<li>A <strong>Developer</strong> creates simple solutions to simple problems. They&#8217;ve gotten past the pattern-itis and realize (for the most part) when to use design patterns, and when to just write simple code that works. These people tend to write the batch service in 100 lines and it works correctly 99% of the time (and is easy to maintain too).</li>
-<li>A <strong>Senior Developer</strong> creates simple solutions to complex problems. These people have begun to truly master the art of software development and can whip up a highly scalable e-commerce app in fewer assemblies, classes, and lines than most of us would have used to create &#8220;Hello World&#8221; as a <strong>Junior Developer</strong>. They would be incredible role models if only they&#8217;d drop the ego.</li>
-<li>A <strong>Truly Exceptional Developer</strong> is a rare thing. They don&#8217;t just make complex problems simple &#8211; they make complex problems <em>disappear entirely</em>. These people wield code like I imagine ancient Samurai wielded the blade: with great precision and skill. They dropped their ego years ago. In doing so, they empowered themselves to continue to learn from others which ultimately caused them to excel far beyond their <strong>Senior Developer</strong> peers. They are incredible role models and all around must-haves on any high performance team. They love to teach as much as they love to learn.</li>
+<li>A <strong>Developer</strong> creates simple solutions to simple problems. They’ve gotten past the pattern-itis and realize (for the most part) when to use design patterns, and when to just write simple code that works. These people tend to write the batch service in 100 lines and it works correctly 99% of the time (and is easy to maintain too).</li>
+<li>A <strong>Senior Developer</strong> creates simple solutions to complex problems. These people have begun to truly master the art of software development and can whip up a highly scalable e-commerce app in fewer assemblies, classes, and lines than most of us would have used to create “Hello World” as a <strong>Junior Developer</strong>. They would be incredible role models if only they’d drop the ego.</li>
+<li>A <strong>Truly Exceptional Developer</strong> is a rare thing. They don’t just make complex problems simple – they make complex problems <em>disappear entirely</em>. These people wield code like I imagine ancient Samurai wielded the blade: with great precision and skill. They dropped their ego years ago. In doing so, they empowered themselves to continue to learn from others which ultimately caused them to excel far beyond their <strong>Senior Developer</strong> peers. They are incredible role models and all around must-haves on any high performance team. They love to teach as much as they love to learn.</li>
 </ul>
-
-<p>Notice that I never gave a time frame to any of these levels of skill. I don&#8217;t believe that 1 <strong>Truly Exceptional Developer</strong> can be faster than 10 <strong>Senior Developers</strong>. I do believe that in the long run they save you 10x your time and money. They write extremely maintainable code which has few bugs and even fewer scaling issues. They can quickly learn and do <em>anything</em> asked of them. They are truly versatile and efficient.</p>
-
+<p>Notice that I never gave a time frame to any of these levels of skill. I don’t believe that 1 <strong>Truly Exceptional Developer</strong> can be faster than 10 <strong>Senior Developers</strong>. I do believe that in the long run they save you 10x your time and money. They write extremely maintainable code which has few bugs and even fewer scaling issues. They can quickly learn and do <em>anything</em> asked of them. They are truly versatile and efficient.</p>
 <h1 id="make-em-write-code">Make &lsquo;Em Write Code</h1>
-
-<p>What would be required for companies to finally start hiring based on skill as opposed to credentialism? The reality is that some already do. To hire skill takes nothing more than ignoring the number of years of experience written on paper and simply administering a few code tests to a candidate that appears to have the desired personality traits. These tests should be moderately difficult and focus on a problem that has many answers &#8211; only a few of which are good.</p>
-
+<p>What would be required for companies to finally start hiring based on skill as opposed to credentialism? The reality is that some already do. To hire skill takes nothing more than ignoring the number of years of experience written on paper and simply administering a few code tests to a candidate that appears to have the desired personality traits. These tests should be moderately difficult and focus on a problem that has many answers – only a few of which are good.</p>
 <h1 id="an-example-fizzbuzz">An Example: FizzBuzz</h1>
-
 <p>A great example (though well known at this point) is the <strong>FizzBuzz</strong> test:</p>
-
 <blockquote>
-<p>Write a program that counts from 1 to 100. If the current count is evenly divisible by 3, output &#8220;Fizz&#8221;. If the current count is evenly divisible by 5, output &#8220;Buzz&#8221;. If the current count is evenly divisible by both 3 and 5, output &#8220;FizzBuzz&#8221;. Otherwise, just output the current count.</p>
+<p>Write a program that counts from 1 to 100. If the current count is evenly divisible by 3, output “Fizz”. If the current count is evenly divisible by 5, output “Buzz”. If the current count is evenly divisible by both 3 and 5, output “FizzBuzz”. Otherwise, just output the current count.</p>
 </blockquote>
-
-<p>This task is fairly simple but has many solutions &#8211; only a few of which are good. In tasking a candidate to complete FizzBuzz, their skill (or lack thereof) will show itself immediately:</p>
-
+<p>This task is fairly simple but has many solutions – only a few of which are good. In tasking a candidate to complete FizzBuzz, their skill (or lack thereof) will show itself immediately:</p>
 <h2 id="junior">Junior</h2>
-
 <p>The <strong>Junior Developer</strong> will write a whole ton of if statements, possibly even hard-coding all of the multiples. This section of code is probably in its own class, injected via the constructor and provided by the <code>DivisorCounterFactory</code>. Also, there will be as many lines of comments as there are code.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">// Count to 100
+<pre><code>// Count to 100
 for (int i = 1; i &lt;= 100; i++)
 {
     if (i == 15 || i == 30 
         || i == 45 || i == 60...)
     {
-        // Write &#34;FizzBuzz&#34; to the console
-        Console.WriteLine(&#34;FizzBuzz&#34;);
+        // Write &quot;FizzBuzz&quot; to the console
+        Console.WriteLine(&quot;FizzBuzz&quot;);
     }
     else if (i == 3 || i == 6 
         || i == 9 || i == 12...)
     {
-        // Write &#34;Fizz&#34; to the console
-        Console.WriteLine(&#34;Fizz&#34;);
+        // Write &quot;Fizz&quot; to the console
+        Console.WriteLine(&quot;Fizz&quot;);
     }
     else if (i == 5 || i == 10 
         || i == 15 || i == 20...)
     {
-        // Write &#34;Buzz&#34; to the console
-        Console.WriteLine(&#34;Buzz&#34;);
+        // Write &quot;Buzz&quot; to the console
+        Console.WriteLine(&quot;Buzz&quot;);
     }
     else
     {
         // Write current count to the console
         Console.WriteLine(i);
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>This is not a very scalable way to solve the problem.</p>
-
 <h2 id="developer">Developer</h2>
-
 <p>The <strong>Developer</strong> will whip together a few if statements using modulus to solve the problem.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">for (int i = 1; i &lt;= 100; i++)
+<pre><code>for (int i = 1; i &lt;= 100; i++)
 {
     if (i % 3 == 0 &amp;&amp; i % 5 ==0)
     {
-        Console.WriteLine(&#34;FizzBuzz&#34;);
+        Console.WriteLine(&quot;FizzBuzz&quot;);
     }
     else if (i % 3 == 0)
     {
-        Console.WriteLine(&#34;Fizz&#34;);
+        Console.WriteLine(&quot;Fizz&quot;);
     }
     else if (i % 5 == 0)
     {
-        Console.WriteLine(&#34;Buzz&#34;);
+        Console.WriteLine(&quot;Buzz&quot;);
     }
     else
     {
         Console.WriteLine(i);
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Decent solution, fairly simple and by-the-book answer.</p>
-
 <h2 id="senior">Senior</h2>
-
 <p>The <strong>Senior Developer</strong> will realize that they can combine the statements.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">for (int i = 1; i &lt;= 100; i++)
+<pre><code>for (int i = 1; i &lt;= 100; i++)
 {
-    string result = &#34;&#34;;
+    string result = &quot;&quot;;
     if (i % 3 == 0)
     {
-        result += &#34;Fizz&#34;;
+        result += &quot;Fizz&quot;;
     }
     if (i % 5 == 0)
     {
-        result += &#34;Buzz&#34;;
+        result += &quot;Buzz&quot;;
     }
 
     Console.WriteLine(result.Length &gt; 0 ? result : i.ToString());
-}</pre></td></tr></table>
-</div>
-</div>
-<p>Clean, simple code that takes up maybe 10 lines when you get rid of my <a href="http://en.wikipedia.org/wiki/Indent_style#Allman_style">Allman style code indentation</a>. Then, if the ego remains, they&#8217;ll ask you why you make developers jump through interview hoops, and possibly berate you for wasting their precious time and skills on such a remedial task.</p>
-
+}
+</code></pre>
+<p>Clean, simple code that takes up maybe 10 lines when you get rid of my <a href="http://en.wikipedia.org/wiki/Indent_style#Allman_style">Allman style code indentation</a>. Then, if the ego remains, they’ll ask you why you make developers jump through interview hoops, and possibly berate you for wasting their precious time and skills on such a remedial task.</p>
 <h2 id="exceptional">Exceptional</h2>
-
-<p>The <strong>Truly Exceptional Developer</strong>, having never before heard of the FizzBuzz problem, will write the <strong>Senior Developer</strong> solution in a matter of 2 or 3 minutes. They&#8217;ll then discuss the ways in which it could possibly be improved. Things like how a case statement might technically be faster than an if statement in some cases due to omitting an op code at the assembly level, or how to optimize appending immutable strings together in order to avoid creating additional objects which would later have to be garbage collected. They&#8217;ll thoroughly enjoy the problem and be enthusiastic in the discussion.</ul></p>
-
+<p>The <strong>Truly Exceptional Developer</strong>, having never before heard of the FizzBuzz problem, will write the <strong>Senior Developer</strong> solution in a matter of 2 or 3 minutes. They’ll then discuss the ways in which it could possibly be improved. Things like how a case statement might technically be faster than an if statement in some cases due to omitting an op code at the assembly level, or how to optimize appending immutable strings together in order to avoid creating additional objects which would later have to be garbage collected. They’ll thoroughly enjoy the problem and be enthusiastic in the discussion.<!-- raw HTML omitted --></p>
 <h1 id="code-testing-works">Code Testing Works</h1>
-
-<p>A 30 minute code test immediately gives you more insight into the candidate&#8217;s skill than a whole day of discussions ever could. You can proceed to hiring with confidence (perhaps after a few more code tests administered by different people in order to observe the candidate&#8217;s ability to work with others). You can also reject a candidate with confidence. No matter how good of a salesperson they are, they will not be able to talk their way past the code test.</p>
-
-<p>In summary, my unsolicited advice to you is this: if you want to work with good developers, just reject any interview process or job offer that doesn&#8217;t involve a code test. A lack of code testing means that all manners of developer will slip through that company&#8217;s hiring process (including those at the very low end of the bell curve) and that they will be your coworkers.</p>
-
-<p>Via this hiring approach, you&#8217;ll meet <strong>Junior Developers</strong> with 25 years of experience, and <strong>Truly Exceptional Developers</strong> fresh out of school &#8211; and everything else in between.</p>
-
-<p>Doesn&#8217;t it seem obvious that we should be tested on our coding skills, given that coding is literally the primary task that we are hired to do for 40+ hours a week? Do you think that a hospital would hire a surgeon without testing their skills? Would the NFL or NHL recruit a player without testing their skills (or at least seeing their skills in action)?</p>
-
+<p>A 30 minute code test immediately gives you more insight into the candidate’s skill than a whole day of discussions ever could. You can proceed to hiring with confidence (perhaps after a few more code tests administered by different people in order to observe the candidate’s ability to work with others). You can also reject a candidate with confidence. No matter how good of a salesperson they are, they will not be able to talk their way past the code test.</p>
+<p>In summary, my unsolicited advice to you is this: if you want to work with good developers, just reject any interview process or job offer that doesn’t involve a code test. A lack of code testing means that all manners of developer will slip through that company’s hiring process (including those at the very low end of the bell curve) and that they will be your coworkers.</p>
+<p>Via this hiring approach, you’ll meet <strong>Junior Developers</strong> with 25 years of experience, and <strong>Truly Exceptional Developers</strong> fresh out of school – and everything else in between.</p>
+<p>Doesn’t it seem obvious that we should be tested on our coding skills, given that coding is literally the primary task that we are hired to do for 40+ hours a week? Do you think that a hospital would hire a surgeon without testing their skills? Would the NFL or NHL recruit a player without testing their skills (or at least seeing their skills in action)?</p>
 <p>In all professions, the top tiers test their candidates for practical skills. This filters out the unskilled, resulting in awesome teams of incredibly skilled people. These are the teams we want to be on. These are the companies we want to work for. These are the environments in which we learn and become <strong>Truly Exceptional Developers</strong>.</p>
+<p>PS – I hope that you had a terrific Christmas and will have a Happy New Year!</p>
 
-<p>PS &#8211; I hope that you had a terrific Christmas and will have a Happy New Year!</p>
-
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/career/">career</a>
-          <a href="/tags/credentialism/">credentialism</a>
-          <a href="/tags/culture/">culture</a>
-          <a href="/tags/interviews/">interviews</a>
-          <a href="/tags/workplace/">workplace</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/the-recruiting-competitive-advantage/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">The Recruiting Competitive Advantage</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/the-trouble-with-job-titles/">
-            <span class="next-text nav-default">The Trouble With Job Titles</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/career/">career</a><a class="tag" href="/tags/credentialism/">credentialism</a><a class="tag" href="/tags/culture/">culture</a><a class="tag" href="/tags/interviews/">interviews</a><a class="tag" href="/tags/workplace/">workplace</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>

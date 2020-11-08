@@ -1,199 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Who Loves Interns? - David Haney - Blogging my experiences as a developer and engineering manager.</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" data-theme="dark"><head>
+    <title> David Haney - Programmer / Engineering Manager | Who Loves Interns? </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
 
+    <link rel="canonical" href="https://www.davidhaney.io/who-loves-interns/">
 
-<meta name="author" content="David Haney" /><meta name="description" content="The topic at hand is interning. More specifically, string interning.
-&amp;#8220;What is string interning?&amp;#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&amp;#8217;s location on the heap. Typically, a new string is created and stored within your application&amp;#8217;s memory each time that you assign a string &amp;#8211; even if the same string is defined repeatedly." /><meta name="keywords" content="blog, .net, c#, developer, manager, david, haney, david haney, davidhaney, haneytron, haneycodes, stack overflow, stackoverflow, code, stack, overflow, github, twitter, linkedin" />
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
 
-
-
-
-
-
-<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
-
-
-<link rel="canonical" href="https://www.davidhaney.io/who-loves-interns/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<meta property="og:title" content="Who Loves Interns?" />
-<meta property="og:description" content="The topic at hand is interning. More specifically, string interning.
-&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.davidhaney.io/who-loves-interns/" />
-<meta property="article:published_time" content="2012-05-02T23:50:20+00:00" />
-<meta property="article:modified_time" content="2012-05-02T23:50:20+00:00" />
-<meta itemprop="name" content="Who Loves Interns?">
-<meta itemprop="description" content="The topic at hand is interning. More specifically, string interning.
-&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly.">
-
-
-<meta itemprop="datePublished" content="2012-05-02T23:50:20&#43;00:00" />
-<meta itemprop="dateModified" content="2012-05-02T23:50:20&#43;00:00" />
-<meta itemprop="wordCount" content="1170">
-
-
-
-<meta itemprop="keywords" content="dotnet,csharp,memory,performance,programming," />
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Who Loves Interns?"/>
 <meta name="twitter:description" content="The topic at hand is interning. More specifically, string interning.
-&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; even if the same string is defined repeatedly."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap."/>
 
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">David Haney</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">David Haney</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Who Loves Interns?</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2012-05-02 </span>
-        <div class="post-category">
-            <a href="/categories/blog/"> blog </a>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
             </div>
-          <span class="more-meta"> 1170 words </span>
-          <span class="more-meta"> 6 mins read </span>
+        </div>
+    </div>
+    <ul class="social-links">
         
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    
-  </div>
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney - Programmer / Engineering Manager 2020 </div>
+    </div>
 </div>
-    <div class="post-content">
-      <p>The topic at hand is interning. More specifically, string interning.</p>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<p>&#8220;What is string interning?&#8221; you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string&#8217;s location on the heap. Typically, a new string is created and stored within your application&#8217;s memory each time that you assign a string &#8211; <em>even if the same string is defined repeatedly.</em> What this means is that you can define the same string N times and have it take up the string&#8217;s memory N times. This sucks when dealing with repeating string data.</p>
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
 
-<p>Enter string interning. <strong>String interning is the process by which you defer your string reference to the .NET runtime&#8217;s string intern pool, thereby conserving memory as N identical strings point to the same single reference</strong>. From <a href="http://msdn.microsoft.com/en-us/library/system.string.intern.aspx">MSDN</a>:</p>
+            <div class="post-title">
+                <h3>Who Loves Interns?</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Wed, May 2, 2012</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">6-minute read</span>
+                    </div>
+                
+            </div>
 
-<p>&#8220;The common language runtime conserves string storage by maintaining a table, called the intern pool, that contains a single reference to each unique literal string declared or created programmatically in your program. Consequently, an instance of a literal string with a particular value only exists once in the system. For example, if you assign the same literal string to several variables, the runtime retrieves the same reference to the literal string from the intern pool and assigns it to each variable. The Intern method uses the intern pool to search for a string equal to the value of str. If such a string exists, its reference in the intern pool is returned. If the string does not exist, a reference to str is added to the intern pool, then that reference is returned.&#8221;</p>
-
-<p>Up until this point, you may not have been aware of this pool or the string interning behaviour at all. This is understandable because the .NET compiler does a bloody good job of interning strings for you. In fact, any literal string will be automatically interned by the compiler. Almost any late-bound (at runtime) string, however, is not. A quick code example &#8211; let us define a program that simply creates 10,000,000 of the same string and assigns it to a Dictionary:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">class Program
+            <p>The topic at hand is interning. More specifically, string interning.</p>
+<p>“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – <em>even if the same string is defined repeatedly.</em> What this means is that you can define the same string N times and have it take up the string’s memory N times. This sucks when dealing with repeating string data.</p>
+<p>Enter string interning. <strong>String interning is the process by which you defer your string reference to the .NET runtime’s string intern pool, thereby conserving memory as N identical strings point to the same single reference</strong>. From <!-- raw HTML omitted -->MSDN<!-- raw HTML omitted -->:</p>
+<p>“The common language runtime conserves string storage by maintaining a table, called the intern pool, that contains a single reference to each unique literal string declared or created programmatically in your program. Consequently, an instance of a literal string with a particular value only exists once in the system. For example, if you assign the same literal string to several variables, the runtime retrieves the same reference to the literal string from the intern pool and assigns it to each variable. The Intern method uses the intern pool to search for a string equal to the value of str. If such a string exists, its reference in the intern pool is returned. If the string does not exist, a reference to str is added to the intern pool, then that reference is returned.”</p>
+<p>Up until this point, you may not have been aware of this pool or the string interning behaviour at all. This is understandable because the .NET compiler does a bloody good job of interning strings for you. In fact, any literal string will be automatically interned by the compiler. Almost any late-bound (at runtime) string, however, is not. A quick code example – let us define a program that simply creates 10,000,000 of the same string and assigns it to a Dictionary:</p>
+<pre><code>class Program
 {
     // The Dictionary that will be used to store our strings at an int 
-    // (so that they are not de-referenced and GC&#39;d)
+    // (so that they are not de-referenced and GC'd)
     private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
 
     static void Main(string[] args)
     {
-        Console.WriteLine(&#34;Storing a non-constant string 10000000 times&#34;);
+        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
 
         var stopwatch = new Stopwatch();
         stopwatch.Start();
@@ -202,82 +155,41 @@
         for (int i = 0; i &lt; 10000000; i++)
         {
             // Define the same string repeatedly
-            string blah = &#34;Hello! This Is A String!&#34;;
+            string blah = &quot;Hello! This Is A String!&quot;;
             // Add it to the Dictionary at the index of i
             _dict.Add(i, blah);
         }
 
         stopwatch.Stop();
 
-        Console.WriteLine(&#34;Memory Used: &#34; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&#34;n&#34;) + &#34; bytes&#34;);
-        Console.WriteLine(&#34;Elapsed milliseconds: &#34; + stopwatch.ElapsedMilliseconds);
+        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
+        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
 
-        Console.WriteLine(&#34;Press any key&#34;);
+        Console.WriteLine(&quot;Press any key&quot;);
         Console.ReadKey();
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Running this program results in the following output:</p>
-
 <figure>
     <img src="/img/repeated-literal-string.png"/> <figcaption>
             <h4>A Repeated Literal String</h4>
         </figcaption>
 </figure>
 
-
-<p>It uses a relatively small amount of memory (269 megs) and takes very little time, since the compiler detects that the string which we&#8217;re creating is a literal and thus interns it for us automatically. Now, let us make a slight change to the application by creating a late-bound string which won&#8217;t be interned automatically:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">class Program
+<p>It uses a relatively small amount of memory (269 megs) and takes very little time, since the compiler detects that the string which we’re creating is a literal and thus interns it for us automatically. Now, let us make a slight change to the application by creating a late-bound string which won’t be interned automatically:</p>
+<pre><code>class Program
 {
     // The Dictionary that will be used to store our strings at an int 
-    // (so that they are not de-referenced and GC&#39;d)
+    // (so that they are not de-referenced and GC'd)
     private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
 
     static void Main(string[] args)
     {
         // Define a string which will be concatenated with another string later
-        string dynamicString = &#34;Some Other Large String&#34;;
+        string dynamicString = &quot;Some Other Large String&quot;;
 
-        Console.WriteLine(&#34;Storing a non-constant string 10000000 times&#34;);
+        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
 
         var stopwatch = new Stopwatch();
         stopwatch.Start();
@@ -286,84 +198,41 @@
         for (int i = 0; i &lt; 10000000; i++)
         {
             // Define the same string repeatedly
-            string blah = &#34;Hello! This Is A String!&#34; + dynamicString;
+            string blah = &quot;Hello! This Is A String!&quot; + dynamicString;
             // Add it to the Dictionary at the index of i
             _dict.Add(i, blah);
         }
 
         stopwatch.Stop();
 
-        Console.WriteLine(&#34;Memory Used: &#34; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&#34;n&#34;) + &#34; bytes&#34;);
-        Console.WriteLine(&#34;Elapsed milliseconds: &#34; + stopwatch.ElapsedMilliseconds);
+        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess().PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
+        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
 
-        Console.WriteLine(&#34;Press any key&#34;);
+        Console.WriteLine(&quot;Press any key&quot;);
         Console.ReadKey();
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>Running THIS code yields crappier results:</p>
-
 <figure>
     <img src="/img/repeated-late-bound-string.png"/> <figcaption>
             <h4>Repeated Late Bound String</h4>
         </figcaption>
 </figure>
 
-
-<p>Note that we use nearly <strong>five times</strong> as much memory (1.379 gigs) as we did before! And that our application got considerably slower! Sadly, we can&#8217;t do much about the slower part because concatenating strings takes time and effort. However, we can intern the string to return our memory usage back to something realistic while adding minimal computational cost. We do this with the <strong>string.Intern(string)</strong> method:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">class Program
+<p>Note that we use nearly <strong>five times</strong> as much memory (1.379 gigs) as we did before! And that our application got considerably slower! Sadly, we can’t do much about the slower part because concatenating strings takes time and effort. However, we can intern the string to return our memory usage back to something realistic while adding minimal computational cost. We do this with the <strong>string.Intern(string)</strong> method:</p>
+<pre><code>class Program
 {
     // The Dictionary that will be used to store our strings at an int 
-    // (so that they are not de-referenced and GC&#39;d)
+    // (so that they are not de-referenced and GC'd)
     private static readonly IDictionary&lt;int, string&gt; _dict = new Dictionary&lt;int, string&gt;();
 
     static void Main(string[] args)
     {
         // Define a string which will be concatenated with another string later
-        string dynamicString = &#34;Some Other Large String&#34;;
+        string dynamicString = &quot;Some Other Large String&quot;;
 
-        Console.WriteLine(&#34;Storing a non-constant string 10000000 times&#34;);
+        Console.WriteLine(&quot;Storing a non-constant string 10000000 times&quot;);
 
         var stopwatch = new Stopwatch();
         stopwatch.Start();
@@ -372,152 +241,111 @@
         for (int i = 0; i &lt; 10000000; i++)
         {
             // Define the same string repeatedly
-            string blah = &#34;Hello! This Is A String!&#34; + dynamicString;
+            string blah = &quot;Hello! This Is A String!&quot; + dynamicString;
             // Add it to the Dictionary at the index of i
-            // Intern string &#34;blah&#34; to save memory!
+            // Intern string &quot;blah&quot; to save memory!
             _dict.Add(i, string.Intern(blah));
         }
 
         stopwatch.Stop();
 
-        Console.WriteLine(&#34;Memory Used: &#34; + Process.GetCurrentProcess()
-            .PagedMemorySize64.ToString(&#34;n&#34;) + &#34; bytes&#34;);
-        Console.WriteLine(&#34;Elapsed milliseconds: &#34; + stopwatch.ElapsedMilliseconds);
+        Console.WriteLine(&quot;Memory Used: &quot; + Process.GetCurrentProcess()
+            .PagedMemorySize64.ToString(&quot;n&quot;) + &quot; bytes&quot;);
+        Console.WriteLine(&quot;Elapsed milliseconds: &quot; + stopwatch.ElapsedMilliseconds);
 
-        Console.WriteLine(&#34;Press any key&#34;);
+        Console.WriteLine(&quot;Press any key&quot;);
         Console.ReadKey();
     }
-}</pre></td></tr></table>
-</div>
-</div>
+}
+</code></pre>
 <p>And the results:</p>
-
 <figure>
     <img src="/img/repeated-late-bound-string-interned.png"/> <figcaption>
             <h4>Repeated Late Bound String (Interned)</h4>
         </figcaption>
 </figure>
 
-
-<p>Note that by interning the late-bound string, we reduced memory usage considerably (272 megs, with only an additional 4 megs used for pointers) while adding only a minimal amount of additional computation (600 milliseconds)&#8230; 80% less memory used for the cost of an additional 20% computation is generally a good trade.</p>
-
+<p>Note that by interning the late-bound string, we reduced memory usage considerably (272 megs, with only an additional 4 megs used for pointers) while adding only a minimal amount of additional computation (600 milliseconds)… 80% less memory used for the cost of an additional 20% computation is generally a good trade.</p>
 <p>Now the icing on the cake. Compile and run your code in <strong>Release mode</strong> to allow for even more compiler optimizations:</p>
-
 <figure>
     <img src="/img/repeated-late-bound-string-interned-release-mode.png"/> <figcaption>
             <h4>Repeated Late Bound String (Interned) - Release Mode</h4>
         </figcaption>
 </figure>
 
+<p>Even less memory and even less interning costs! It’s win-win and just a friendly reminder to always release your code in Release mode. 🙂</p>
+<p>So, who loves interns? You do. <strong>Remember: when you must use the same string repeatedly in an application (perhaps when storing a huge collection of User objects with a FirstName property, where many of your users are “David”, “John”, “Tim”, etc.), intern the string.</strong> Why create N copies of the exact same object, all using up your precious managed memory?</p>
 
-<p>Even less memory and even less interning costs! It&#8217;s win-win and just a friendly reminder to always release your code in Release mode. 🙂</p>
-
-<p>So, who loves interns? You do. <strong>Remember: when you must use the same string repeatedly in an application (perhaps when storing a huge collection of User objects with a FirstName property, where many of your users are &#8220;David&#8221;, &#8220;John&#8221;, &#8220;Tim&#8221;, etc.), intern the string.</strong> Why create N copies of the exact same object, all using up your precious managed memory?</p>
-
-    </div>
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/dotnet/">dotnet</a>
-          <a href="/tags/csharp/">csharp</a>
-          <a href="/tags/memory/">memory</a>
-          <a href="/tags/performance/">performance</a>
-          <a href="/tags/programming/">programming</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/make-your-debugging-life-easier/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Make Your Debugging Life Easier</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/what-is-a-virtual-method-anyway/">
-            <span class="next-text nav-default">What is a Virtual Method, Anyway?</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/csharp/">csharp</a><a class="tag" href="/tags/memory/">memory</a><a class="tag" href="/tags/performance/">performance</a><a class="tag" href="/tags/programming/">programming</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'haney';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/2420979/haney" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://www.twitter.com/haneytron" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.linkedin.com/in/davidahaney" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://www.github.com/haneytron" class="iconfont icon-github" title="github"></a>
-  <a href="https://www.davidhaney.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">David Haney</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
 
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-50502107-1', 'auto');
-	ga('set', 'anonymizeIp', true);
+	
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-<script src="/js/custom.js"></script>
-
-
 </body>
+
 </html>
