@@ -6,7 +6,16 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Sep 2019 00:00:00 -0500</lastBuildDate><atom:link href="https://www.davidhaney.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://www.davidhaney.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET Core MVC - How to Access appsettings.json</title>
+      <link>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</guid>
+      <description>Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?</description>
+    </item>
+    
     <item>
       <title>Sabbatical Week One</title>
       <link>https://www.davidhaney.io/sabbatical-week-one/</link>

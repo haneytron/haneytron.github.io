@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head>
+    <title>.NET Core MVC - How to Access appsettings.json | David Haney</title>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2YNL1EJF5C"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-PR2HVYP6QG');
+	</script>
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Programmer / Engineering Manager">
+    
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
+          integrity="sha256-IcwczsBlzh4PlPempaJstYyQROZZtQEDBcgf4KHUcCk="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://www.davidhaney.io/net-core-mvc-access-appsettings-json/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
+
+<meta name="twitter:title" content=".NET Core MVC - How to Access appsettings.json"/>
+<meta name="twitter:description" content="Well, once again I&rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&rsquo;s try and make this a more regular thing than once a year or so, shall we?"/>
+
+</head>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
+            <h3 title=""><a href="/">David Haney</a></h3>
+            <div class="description">
+                <p>Programmer / Engineering Manager</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; David Haney 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/tags/"
+                        
+                   title="">Tags</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>.NET Core MVC - How to Access appsettings.json</h3>
+                
+                    <div class="info">
+                        <em class="fa fa-sun-o"></em>
+                        <span class="date">Mon, Nov 9, 2020</span>
+                        <em class="fa fa-clock-o"></em>
+                        <span class="reading-time">4-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>Well, once again I&rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&rsquo;s try and make this a more regular thing than once a year or so, shall we?</p>
+<p>I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC. As a result, I had to teach myself the new ways of doing old things.</p>
+<p>One such lesson (which took me a few hours to learn by the way, even with what I&rsquo;d call &ldquo;expert&rdquo; Google-fu skills) was how to access <code>appsettings.json</code> settings values.</p>
+<p>Let me walk you through an apples-to-apples comparison of how it&rsquo;s done in both MVC frameworks.</p>
+<h1 id="the-aspnet-mvc-way---webconfig">The ASP.NET MVC Way - Web.config</h1>
+<p>ASP.NET MVC uses a <code>Web.config</code> file to store your app settings and provides access to the values via the <code>ConfigurationManager</code> class, particularly the <code>ConfigurationManager.AppSettings</code> property.</p>
+<p>Here&rsquo;s an example of an ASP.NET MVC <code>Web.config</code> file that only contains <code>&lt;appSettings&gt;</code>. We&rsquo;ll define two settings here that we will use for both ASP.NET and .NET Core:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34;?&gt;</span>
+<span style="color:#f92672">&lt;configuration&gt;</span>
+  <span style="color:#f92672">&lt;appSettings&gt;</span>
+    <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;WebDomain&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;http://localhost&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;SomeNumber&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;10&#34;</span><span style="color:#f92672">/&gt;</span>
+  <span style="color:#f92672">&lt;/appSettings&gt;</span>
+<span style="color:#f92672">&lt;/configuration&gt;</span></code></pre></div>
+<p>Accessing these values in code looks something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Test()
+{
+    <span style="color:#66d9ef">string</span> webDomain = ConfigurationManager.AppSettings[<span style="color:#e6db74">&#34;WebDomain&#34;</span>];
+	<span style="color:#66d9ef">int</span> someNumber = <span style="color:#66d9ef">int</span>.Parse(ConfigurationManager.AppSettings[<span style="color:#e6db74">&#34;SomeNumber&#34;</span>]);
+}
+</code></pre></div>
+<p>Ugly, right? Not only do we use a static class to access things (good luck testing), but we have to explicitly cast our integer in order to use it in code. Gross!</p>
+<h1 id="the-net-core-mvc-way---appsettingsjson">The .NET Core MVC Way - appsettings.json</h1>
+<p>.NET Core MVC, unlike ASP.NET MVC, has no such <code>Web.config</code> file or <code>ConfigurationManager</code> class. Nonetheless, you can still easily read settings from the <code>appsettings.json</code> file.</p>
+<p>Access to <code>appsettings.json</code> values depends on two new concepts: the <code>IOptions&lt;T&gt;</code> interface and the built-in dependency injection of the .NET Core MVC framework.</p>
+<p>Here are those same two configuration settings from before, but this time located in the <code>appsettings.json</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;MySettings&#34;</span>: {
+    <span style="color:#f92672">&#34;WebDomain&#34;</span>: <span style="color:#e6db74">&#34;http://localhost&#34;</span>,
+	<span style="color:#f92672">&#34;SomeNumber&#34;</span>: <span style="color:#e6db74">&#34;10&#34;</span>
+  }
+}</code></pre></div>
+<p>Notice that I nested my settings in a section called <code>MySettings</code> - you can use whatever name you want here, and even define multiple settings under multiple names like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;MySettings&#34;</span>: {
+    <span style="color:#f92672">&#34;WebDomain&#34;</span>: <span style="color:#e6db74">&#34;http://localhost&#34;</span>,
+	<span style="color:#f92672">&#34;SomeNumber&#34;</span>: <span style="color:#e6db74">&#34;10&#34;</span>
+  },
+  <span style="color:#f92672">&#34;SomeOtherSettings&#34;</span>: {
+	<span style="color:#f92672">&#34;OtherSetting1&#34;</span>: <span style="color:#e6db74">&#34;blah&#34;</span>,
+	<span style="color:#f92672">&#34;OtherSetting2&#34;</span>: <span style="color:#e6db74">&#34;-1&#34;</span>
+  }
+}</code></pre></div>
+<p>Accessing these values in code is a little more intimidating at first, but still reasonably simple. First, let&rsquo;s define a class that represents our settings using strongly-typed public properties:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyOptions</span>
+{
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">string</span> SectionName = <span style="color:#e6db74">&#34;MySettings&#34;</span>;
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> WebDomain { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> SomeNumber { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+}
+</code></pre></div>
+<p>Note that I defined <code>SectionName</code> here as a public const - this is particularly crucial. The value of this string should match the name of your settings section as defined in <code>appsettings.json</code> - in this case <code>&quot;MySettings&quot;</code>.</p>
+<p>Note also that my property names <strong>exactly match</strong> the settings names in the <code>appsettings.json</code> file - they must be the same for your settings to be successfully bound to your class. If you don&rsquo;t name them the same, your
+settings class will have default property values.</p>
+<p>Next we need to wire these settings up in dependency injection. We need to tell the dependency injection system how to connect our <code>appsettings.json</code> values to our new class. We do this in the <code>ConfigureServices</code> method of the <code>Startup</code> class:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Startup</span>
+{
+	<span style="color:#66d9ef">public</span> Startup(IConfiguration configuration)
+	{
+		Configuration = configuration;
+	}
+
+	<span style="color:#66d9ef">public</span> IConfiguration Configuration { <span style="color:#66d9ef">get</span>; }
+		
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> ConfigureServices(IServiceCollection services)
+	{
+		<span style="color:#75715e">// Add functionality to inject IOptions&lt;T&gt;
+</span><span style="color:#75715e"></span>		services.AddOptions();
+		<span style="color:#75715e">// Hook our MyOptions class up to the corresponding appsettings section
+</span><span style="color:#75715e"></span>		services.Configure&lt;MyOptions&gt;(Configuration.GetSection(MyOptions.SectionName));
+	}
+}
+</code></pre></div>
+<p>Now that the DI framework knows what to do, getting our settings is as simple as injecting them into our controller:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> : Controller
+{
+	<span style="color:#75715e">// Inject the IOptions instance into our controller&#39;s constructor
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> MyController(IOptions&lt;MyOptions&gt; myOptions)
+	{
+		<span style="color:#66d9ef">string</span> webDomain = myOptions.Value.WebDomain;
+		<span style="color:#66d9ef">int</span> someNumber = myOptions.Value.SomeNumber;
+	}
+}
+</code></pre></div>
+<p>And voila - strongly typed settings accessed via code!</p>
+<p>There are lots of other interesting things that you can do with the options paradigm - for example reloading values automatically when the <code>appsettings.json</code> file is modified. Such advanced features are left for you to Google and learn about if needed for your codebase.</p>
+<p>Thanks for reading! Hopefully I&rsquo;ll put out another blog post before November of 2021. ;)</p>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/core/">core</a><a class="tag" href="/tags/csharp/">csharp</a><a class="tag" href="/tags/mvc/">mvc</a><a class="tag" href="/tags/json/">json</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

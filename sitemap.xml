@@ -4,12 +4,57 @@
   
   <url>
     <loc>https://www.davidhaney.io/</loc>
-    <lastmod>2019-09-08T00:00:00-05:00</lastmod>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.davidhaney.io/categories/blog/</loc>
-    <lastmod>2019-09-08T00:00:00-05:00</lastmod>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/categories/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/core/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/csharp/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/dotnet/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/json/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/mvc/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/post/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.davidhaney.io/tags/</loc>
+    <lastmod>2020-11-09T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -18,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://www.davidhaney.io/categories/</loc>
-    <lastmod>2019-09-08T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.davidhaney.io/tags/culture/</loc>
-    <lastmod>2019-09-08T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/post/</loc>
     <lastmod>2019-09-08T00:00:00-05:00</lastmod>
   </url>
   
@@ -39,11 +74,6 @@
   
   <url>
     <loc>https://www.davidhaney.io/tags/stack-overflow/</loc>
-    <lastmod>2019-09-08T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/</loc>
     <lastmod>2019-09-08T00:00:00-05:00</lastmod>
   </url>
   
@@ -64,21 +94,6 @@
   
   <url>
     <loc>https://www.davidhaney.io/tags/azure/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/core/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/csharp/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/dotnet/</loc>
     <lastmod>2018-11-19T00:00:00-05:00</lastmod>
   </url>
   
@@ -189,11 +204,6 @@
   
   <url>
     <loc>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</loc>
-    <lastmod>2017-01-10T09:07:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.davidhaney.io/tags/mvc/</loc>
     <lastmod>2017-01-10T09:07:15+00:00</lastmod>
   </url>
   

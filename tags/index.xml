@@ -6,7 +6,52 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Sep 2019 00:00:00 -0500</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>core</title>
+      <link>https://www.davidhaney.io/tags/core/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/tags/core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csharp</title>
+      <link>https://www.davidhaney.io/tags/csharp/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotnet</title>
+      <link>https://www.davidhaney.io/tags/dotnet/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json</title>
+      <link>https://www.davidhaney.io/tags/json/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mvc</title>
+      <link>https://www.davidhaney.io/tags/mvc/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://www.davidhaney.io/tags/mvc/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>career</title>
       <link>https://www.davidhaney.io/tags/career/</link>
@@ -49,33 +94,6 @@
       <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://www.davidhaney.io/tags/azure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>core</title>
-      <link>https://www.davidhaney.io/tags/core/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://www.davidhaney.io/tags/core/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>csharp</title>
-      <link>https://www.davidhaney.io/tags/csharp/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://www.davidhaney.io/tags/csharp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dotnet</title>
-      <link>https://www.davidhaney.io/tags/dotnet/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://www.davidhaney.io/tags/dotnet/</guid>
       <description></description>
     </item>
     
@@ -202,15 +220,6 @@
       <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/tags/caching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mvc</title>
-      <link>https://www.davidhaney.io/tags/mvc/</link>
-      <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
-      
-      <guid>https://www.davidhaney.io/tags/mvc/</guid>
       <description></description>
     </item>
     
