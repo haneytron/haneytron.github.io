@@ -1,114 +1,268 @@
 <!DOCTYPE html>
-<html lang="en" data-theme=""><head>
-    <title>.NET Core Azure Functions Tutorial | </title>	
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR2HVYP6QG"></script>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>.NET Core Azure Functions Tutorial - David Haney</title>
+  <meta name="description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
+Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.">
+  <meta name="author" content="David Haney"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "David Haney",
+    
+    "url": "https:\/\/www.davidhaney.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.davidhaney.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.davidhaney.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.davidhaney.io\/net-core-azure-functions-tutorial\/",
+          "name": ". n e t core azure functions tutorial"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "David Haney"
+  },
+  "headline": ".NET Core Azure Functions Tutorial",
+  "description" : "In this post I\u0026rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That\u0026rsquo;s right - Azure Functions are both awesome and (usually) free!\nIntroducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.",
+  "inLanguage" : "en",
+  "wordCount":  2329 ,
+  "datePublished" : "2018-11-19T00:00:00",
+  "dateModified" : "2018-11-19T00:00:00",
+  "image" : "https:\/\/www.davidhaney.io\/img\/me.jpg",
+  "keywords" : [ "dotnet, core, csharp, azure, functions" ],
+  "mainEntityOfPage" : "https:\/\/www.davidhaney.io\/net-core-azure-functions-tutorial\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.davidhaney.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.davidhaney.io\/img\/me.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content=".NET Core Azure Functions Tutorial" />
+<meta property="og:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
+Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.">
+<meta property="og:image" content="https://www.davidhaney.io/img/me.jpg" />
+<meta property="og:url" content="https://www.davidhaney.io/net-core-azure-functions-tutorial/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="David Haney" />
+
+  <meta name="twitter:title" content=".NET Core Azure Functions Tutorial" />
+  <meta name="twitter:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for …">
+  <meta name="twitter:image" content="https://www.davidhaney.io/img/me.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@haneytron" />
+  <meta name="twitter:creator" content="@haneytron" />
+  <link href='https://www.davidhaney.io/favicons/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.78.1" />
+  <link rel="alternate" href="https://www.davidhaney.io/index.xml" type="application/rss+xml" title="David Haney"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.davidhaney.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://www.davidhaney.io/css/highlight.min.css" /><link rel="stylesheet" href="https://www.davidhaney.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR2HVYP6QG"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 	  gtag('config', 'G-PR2HVYP6QG');
 	</script>
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="">
-    
-    <link rel="stylesheet"
-          href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
-          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
-          crossorigin="anonymous"
-          type="text/css"><link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.davidhaney.io">David Haney</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
 
     
-    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.icofavicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/favicon.icoapple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon.icofavicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon.icofavicon-16x16.png">
-
-    <link rel="canonical" href="https://www.davidhaney.io/net-core-azure-functions-tutorial/">
-
-    
-    
-    
-    
-    <script type="text/javascript"
-            src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
-            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
-            crossorigin="anonymous"></script>
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=".NET Core Azure Functions Tutorial"/>
-<meta name="twitter:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense."/>
-
-</head>
-<body><div class="sidebar animated fadeInDown">
-    <div class="logo-title">
-        <div class="title">
-            <img src="https://www.davidhaney.io" alt="profile picture">
-            <h3 title=""><a href="/"></a></h3>
-            <div class="description">
-                <p></p>
-            </div>
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="David Haney" href="https://www.davidhaney.io">
+            <img class="avatar-img" src="https://www.davidhaney.io/img/me.jpg" alt="David Haney" />
+          </a>
         </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
     </div>
-    <ul class="social-links">
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy;  2021 </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
     </div>
 </div>
-<div class="main">
-    <div class="page-top animated fadeInDown">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href=""
-                        
-                   title="">Blog</a></li>
-        
-            
-            <li><a 
-                   href="tags"
-                        
-                   title="">Tags</a></li>
-        
-        
-        <li class="theme-switch-item">
-            <a class="theme-switch" title="Switch Theme">
-                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-            </a>
-        </li>
-    </ul>
-</div>
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post animated fadeInDown">
-        <div class="post-content">
 
-            <div class="post-title">
-                <h3>.NET Core Azure Functions Tutorial</h3>
-                
-                    <div class="info">
-                        <em class="fa fa-sun-o"></em>
-                        <span class="date">Mon, Nov 19, 2018</span>
-                        <em class="fa fa-clock-o"></em>
-                        <span class="reading-time">11-minute read</span>
-                    </div>
-                
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>.NET Core Azure Functions Tutorial</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on Nov 19, 2018
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2329&nbsp;words
+  
+  
+  
+</span>
+
+
+              
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-            <p>In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!</p>
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!</p>
 <h1 id="introducing-realdonaldtron">Introducing realDonaldTron</h1>
 <p>So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a <a href="https://www.twitter.com/realDonaldTron">Twitter account</a> and generated API keys. I then created an Azure Classic Cloud Service and
 wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&rsquo;t write words good), generates a <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chain</a>
@@ -190,18 +344,32 @@ beyond the first 20 minutes.</p>
 <h2 id="always-on-isnt-cheap">Always On isn&rsquo;t cheap</h2>
 <p>I Googled my little heart out but could not find much useful documentation on Azure WebJobs. It wasn&rsquo;t until I started exploring the App Service settings in the Azure Portal that I realized I needed to have the <strong>Always On</strong> feature configured (which disables the IIS timeout). But guess
 what - you can&rsquo;t turn that on for the lowest two tiers of App Services (free and shared) - you must pay for at least a Basic plan.</p>
-<figure>
-    <img src="/img/app-service-plans.png"/> <figcaption>
-            <h4>No Always On for you!</h4>
-        </figcaption>
-</figure>
+
+<link rel="stylesheet" href="https://www.davidhaney.io/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/app-service-plans.png" alt="/img/app-service-plans.png"/>
+    </div>
+    <a href="/img/app-service-plans.png" itemprop="contentUrl"></a>
+      <figcaption><h4>No Always On for you!</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>And did I mention that Basic plans start at $55 USD per month (assuming Always On and therefore running 24 / 7)?</p>
-<figure>
-    <img src="/img/app-service-basic-plan.png"/> <figcaption>
-            <h4>I&#39;m not paying that!</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/app-service-basic-plan.png" alt="/img/app-service-basic-plan.png"/>
+    </div>
+    <a href="/img/app-service-basic-plan.png" itemprop="contentUrl"></a>
+      <figcaption><h4>I&#39;m not paying that!</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <h2 id="webjobs-for-web-sites">WebJobs for web sites</h2>
 <p>So while WebJobs are a great option for websites, and App Services can be free or cheap for website hosting (since they will lazy-load whenever someone makes the first request after the 20 minute idle), I realized one important fact:</p>
@@ -232,11 +400,18 @@ single function execution is 100 ms and 128 mb respectively.</p>
 <p><strong>In fact, you could execute your &ldquo;Hello, World&rdquo; function 50,000 times before it would cost you $0.01!</strong></p>
 <h2 id="monthly-free-grants">Monthly free grants!</h2>
 <p>But these crazy cost calculations are not even a concern for most of your and my use cases! Azure Functions pricing includes super generous free grants per month: 1 million executions and 400,000 GB-s!</p>
-<figure>
-    <img src="/img/azure-functions-pricing.png"/> <figcaption>
-            <h4>Azure Functions pricing</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/azure-functions-pricing.png" alt="/img/azure-functions-pricing.png"/>
+    </div>
+    <a href="/img/azure-functions-pricing.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Azure Functions pricing</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>Basically, you&rsquo;d have to run your application 1,000,001 times or for 400,001 GB-s in a month to even begin to see charges to your Azure account.</p>
 <h2 id="what-does-realdonaldtron-cost">What does realDonaldTron cost?</h2>
@@ -251,18 +426,32 @@ single function execution is 100 ms and 128 mb respectively.</p>
 <p>But enough about costs, let&rsquo;s get to the fun stuff - creating the actual Azure Function!</p>
 <h1 id="creating-an-azure-function-in-vs">Creating an Azure Function in VS</h1>
 <p>Start by creating a new Azure Function project in Visual Studio (be sure to update to the latest Visual Studio version). My screenshots below are from VS Community 2017 (the free edition) which I use on my home (non-work) computer for pet projects:</p>
-<figure>
-    <img src="/img/vs-new-proj-azure-functions.png"/> <figcaption>
-            <h4>Create an Azure Functions project</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/vs-new-proj-azure-functions.png" alt="/img/vs-new-proj-azure-functions.png"/>
+    </div>
+    <a href="/img/vs-new-proj-azure-functions.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Create an Azure Functions project</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>On the next screen, <strong>make sure you pick Azure Functions v2 (.NET Core)</strong> at the top! Azure Functions v1 is for .NET Framework and non-Core apps. I also picked <strong>Timer trigger</strong> because I want realDonaldTron to run every hour, on the hour:</p>
-<figure>
-    <img src="/img/vs-new-proj-azure-functions-2.png"/> <figcaption>
-            <h4>Create an Azure Functions project</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/vs-new-proj-azure-functions-2.png" alt="/img/vs-new-proj-azure-functions-2.png"/>
+    </div>
+    <a href="/img/vs-new-proj-azure-functions-2.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Create an Azure Functions project</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>Note that the &ldquo;Schedule&rdquo; here is a modified CRON syntax. I had a hard time finding good resources for CRON scheduling that actually worked in Azure, but <a href="https://codehollow.com/2017/02/azure-functions-time-trigger-cron-cheat-sheet/">this blog post by Armin Reiter</a> is an awesome
 cheat sheet that you should definitely use! Also, don&rsquo;t worry about the schedule in this dialog - you can change it programmatically super easily in a minute or two.</p>
@@ -326,60 +515,202 @@ and can be readily modified. The <code>ILogger</code> you see there is the logge
 <p>Note that unless your function <em>needs</em> to run continuously, you should have it terminate by exiting the <code>Run</code> method as soon as possible. realDonaldTron does not need to remain active - he grabs the latest Tweets and builds a new Markov chain every hour instead. He terminates as
 soon as the <code>GenerateTweet()</code> function call returns.</p>
 <p>After you&rsquo;ve written your function, it&rsquo;s time to publish it to Azure. Simply right click &ndash;&gt; Publish your project, to be met with this screen:</p>
-<figure>
-    <img src="/img/azure-function-publish.png"/> <figcaption>
-            <h4>Publish your Azure Function</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/azure-function-publish.png" alt="/img/azure-function-publish.png"/>
+    </div>
+    <a href="/img/azure-function-publish.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Publish your Azure Function</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>Press Publish, and on the next screen you&rsquo;ll need to name your function and set up the various resources it&rsquo;ll use. The part to pay attention to here is the <strong>Hosting Plan</strong> which you&rsquo;ll need to be sure is set to <strong>Consumption</strong>:</p>
-<figure>
-    <img src="/img/azure-function-publish-2.png"/> <figcaption>
-            <h4>Publish your Azure Function</h4>
-        </figcaption>
-</figure>
 
-<figure>
-    <img src="/img/azure-function-publish-3.png"/> <figcaption>
-            <h4>Publish your Azure Function</h4>
-        </figcaption>
-</figure>
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/azure-function-publish-2.png" alt="/img/azure-function-publish-2.png"/>
+    </div>
+    <a href="/img/azure-function-publish-2.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Publish your Azure Function</h4>
+      </figcaption>
+  </figure>
+</div>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/azure-function-publish-3.png" alt="/img/azure-function-publish-3.png"/>
+    </div>
+    <a href="/img/azure-function-publish-3.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Publish your Azure Function</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>Follow the steps past this screen and you&rsquo;ll have your Function published to Azure in mere moments! If you want to test it, but don&rsquo;t want to wait for the timed trigger, you can visit the Azure Portal and run it manually:</p>
-<figure>
-    <img src="/img/azure-portal-functions-run.png"/> <figcaption>
-            <h4>Test your Azure Function</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/azure-portal-functions-run.png" alt="/img/azure-portal-functions-run.png"/>
+    </div>
+    <a href="/img/azure-portal-functions-run.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Test your Azure Function</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <p>Here your logging will appear in the debug window below for manual runs - it&rsquo;s quite a nice little tool. If you&rsquo;ve published a function.json (which you will by default), it will not allow you to edit it here which is fine. Just make local changes and re-publish if needed.</p>
 <h1 id="the-end-result">The end result</h1>
 <p>Thanks to Azure Functions and .NET Core, I now have realDonaldTron running every hour on the hour via CRON scheduling, as an Azure function, well within the monthly free grants provided on Consumption plans. Can you guess on this graph when I converted over to Azure Functions?</p>
-<figure>
-    <img src="/img/azure-billing-example.png"/> <figcaption>
-            <h4>Azure Functions are free, Classic Cloud Services are not</h4>
-        </figcaption>
-</figure>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/azure-billing-example.png" alt="/img/azure-billing-example.png"/>
+    </div>
+    <a href="/img/azure-billing-example.png" itemprop="contentUrl"></a>
+      <figcaption><h4>Azure Functions are free, Classic Cloud Services are not</h4>
+      </figcaption>
+  </figure>
+</div>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thoughts, condolences and prayers go out to Rallies in order to <a href="https://twitter.com/hashtag/MAGA?src=hash&amp;ref_src=twsrc%5Etfw">#MAGA</a>!</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1050883816745787393?ref_src=twsrc%5Etfw">October 12, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>Thanks for reading, and enjoy creating your own easy, cheap, and often free Azure Functions!</p>
 
-        </div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
-
-                <span class="separator"><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/core/">core</a><a class="tag" href="/tags/csharp/">csharp</a><a class="tag" href="/tags/azure/">azure</a><a class="tag" href="/tags/functions/">functions</a></span>
-
-            </div>
-        </div>
 
         
-            <div id="fb_comments_container">
-                    <h2>comments</h2>
-                    <div id="disqus_thread"></div>
+          <div class="blog-tags">
+            
+              <a href="https://www.davidhaney.io/tags/dotnet/">dotnet</a>&nbsp;
+            
+              <a href="https://www.davidhaney.io/tags/core/">core</a>&nbsp;
+            
+              <a href="https://www.davidhaney.io/tags/csharp/">csharp</a>&nbsp;
+            
+              <a href="https://www.davidhaney.io/tags/azure/">azure</a>&nbsp;
+            
+              <a href="https://www.davidhaney.io/tags/functions/">functions</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fwww.davidhaney.io%2fnet-core-azure-functions-tutorial%2f&amp;text=.NET%20Core%20Azure%20Functions%20Tutorial&amp;via=haneytron" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.davidhaney.io%2fnet-core-azure-functions-tutorial%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fwww.davidhaney.io%2fnet-core-azure-functions-tutorial%2f&amp;title=.NET%20Core%20Azure%20Functions%20Tutorial" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.davidhaney.io%2fnet-core-azure-functions-tutorial%2f&amp;title=.NET%20Core%20Azure%20Functions%20Tutorial" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fwww.davidhaney.io%2fnet-core-azure-functions-tutorial%2f&amp;title=.NET%20Core%20Azure%20Functions%20Tutorial" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.davidhaney.io%2fnet-core-azure-functions-tutorial%2f&amp;description=.NET%20Core%20Azure%20Functions%20Tutorial" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/net-core-mvc-access-appsettings-json/">.NET Core MVC - How to Access appsettings.json</a></li>
+                
+                    <li><a href="/custom-asp-net-mvc-action-result-cache-attribute/">Custom ASP.NET MVC Action Result Cache Attribute</a></li>
+                
+                    <li><a href="/to-node-js-or-not-to-node-js/">To Node.js Or Not To Node.js</a></li>
+                
+                    <li><a href="/c-probably-getting-new-safe-navigation-operator/">C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</a></li>
+                
+                    <li><a href="/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/">Trigger IValidatableObject.Validate When ModelState.IsValid is false</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.davidhaney.io/new-blog-name-and-domain/" data-toggle="tooltip" data-placement="top" title="New Blog Name and Domain">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.davidhaney.io/sabbatical-begins/" data-toggle="tooltip" data-placement="top" title="Sabbatical Begins">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -399,32 +730,107 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                </div>
+          </div>
+          
         
-    </div>
+        
+      
 
-
-        </div>
     </div>
+  </div>
 </div>
 
-<script type="text/javascript"
-        src="https://www.davidhaney.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
-        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
-        crossorigin="anonymous"></script>
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/haneytron" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/haneytron" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/davidahaney" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/2420979/haney" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+		<br/>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://www.davidhaney.io">David Haney</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.78.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.davidhaney.io/js/main.js"></script>
+<script src="https://www.davidhaney.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.davidhaney.io/js/load-photoswipe.js"></script>
 
 
 
 
-<script type="text/javascript"
-        src="https://www.davidhaney.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
-        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
-        crossorigin="anonymous"></script>
 
-<script type="text/javascript"
-        src="https://www.davidhaney.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
-        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
-        crossorigin="anonymous"></script>
-</body>
 
+
+
+
+    
+  </body>
 </html>
+
