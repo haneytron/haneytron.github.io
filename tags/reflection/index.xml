@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>reflection on </title>
+    <title>reflection on David Haney</title>
     <link>https://www.davidhaney.io/tags/reflection/</link>
-    <description>Recent content in reflection on </description>
+    <description>Recent content in reflection on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 12 Feb 2013 12:07:12 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/reflection/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Tue, 12 Feb 2013 12:07:12 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/a-better-mime-mapping-stealer/</guid>
-      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense.</description>
+      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&amp;lt;string, string&amp;gt; instead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 11 Feb 2013 15:15:46 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/determine-mime-type-from-file-name/</guid>
-      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will.</description>
+      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</description>
     </item>
     
   </channel>

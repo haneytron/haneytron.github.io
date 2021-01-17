@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lessons on </title>
+    <title>lessons on David Haney</title>
     <link>https://www.davidhaney.io/tags/lessons/</link>
-    <description>Recent content in lessons on </description>
+    <description>Recent content in lessons on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 03 Aug 2015 14:18:02 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/lessons/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/developer-turned-manager/</guid>
-      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.</description>
+      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
+There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
     </item>
     
   </channel>

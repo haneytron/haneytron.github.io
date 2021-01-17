@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>performance on </title>
+    <title>performance on David Haney</title>
     <link>https://www.davidhaney.io/tags/performance/</link>
-    <description>Recent content in performance on </description>
+    <description>Recent content in performance on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 10 Jan 2017 09:07:15 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</guid>
-      <description>If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory.</description>
+      <description>If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.</description>
     </item>
     
     <item>
@@ -22,7 +22,8 @@
       <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</guid>
-      <description>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion.</description>
+      <description>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.
+One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.</description>
     </item>
     
     <item>
@@ -41,7 +42,7 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Fri, 15 Mar 2013 17:11:42 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
-      <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites.</description>
+      <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.</description>
     </item>
     
     <item>
@@ -50,7 +51,7 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Tue, 12 Feb 2013 12:07:12 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/a-better-mime-mapping-stealer/</guid>
-      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense.</description>
+      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&amp;lt;string, string&amp;gt; instead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):</description>
     </item>
     
     <item>
@@ -59,7 +60,7 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Mon, 11 Feb 2013 15:15:46 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/determine-mime-type-from-file-name/</guid>
-      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will.</description>
+      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</description>
     </item>
     
     <item>
@@ -68,7 +69,9 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/published-by-red-gate/</guid>
-      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .</description>
+      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
+My tip is #3 and has to do with debugging Microsoft symbols.
+Get a free copy here – it has already taught me a few things I had never thought to consider!</description>
     </item>
     
     <item>
@@ -77,7 +80,8 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Sun, 02 Dec 2012 17:22:20 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</guid>
-      <description>Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU.</description>
+      <description>Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
+Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment… and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you’d be able to solve the problem.</description>
     </item>
     
     <item>
@@ -86,7 +90,8 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Wed, 24 Oct 2012 16:57:14 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/static-vs-instance-string-equals-benchmark/</guid>
-      <description>A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:</description>
+      <description>A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:
+static void Main(string[] args){var stopwatch = new Stopwatch();string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;stopwatch.Start();for (int i = 0; i &amp;lt; 10000000; i++){a.Equals(b);}stopwatch.Stop();Console.WriteLine(&amp;quot;Instance string.Equals over 10,000,000 iterations: &amp;quot; + stopwatch.</description>
     </item>
     
     <item>
@@ -95,7 +100,8 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/stats-vs-reference-string-equals/</guid>
-      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals methodin .NET, but if that doesn’t do it for you, allow me to present a simple example.</description>
+      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals methodin .NET, but if that doesn’t do it for you, allow me to present a simple example.
+string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b); What is the expected result of these lines? A boolean value of false, of course.</description>
     </item>
     
     <item>
@@ -104,7 +110,8 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/tpl-and-error-handling-continuations/</guid>
-      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasksas a means of Error Handling for the TPL.</description>
+      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasksas a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
+Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
     </item>
     
     <item>
@@ -113,7 +120,8 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Sun, 05 Aug 2012 13:39:38 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/tpl-and-error-handling/</guid>
-      <description>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.</description>
+      <description>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
+Let’s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:</description>
     </item>
     
     <item>
@@ -122,7 +130,8 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Mon, 11 Jun 2012 00:57:15 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/linq-and-deferred-execution/</guid>
-      <description>As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases.</description>
+      <description>As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
+To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed.</description>
     </item>
     
     <item>
@@ -132,7 +141,7 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       
       <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
       <description>Sorry for the delay in posts, May has been a very busy month.
-In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB filesto accompany each of the DLLs.</description>
+In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB filesto accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
     </item>
     
     <item>
@@ -142,7 +151,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
       
       <guid>https://www.davidhaney.io/who-loves-interns/</guid>
       <description>The topic at hand is interning. More specifically, string interning.
-“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap.</description>
+“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – even if the same string is defined repeatedly.</description>
     </item>
     
     <item>
@@ -151,7 +160,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
       <pubDate>Sun, 29 Apr 2012 23:26:41 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/what-is-a-virtual-method-anyway/</guid>
-      <description>Something which I feel carries a lot of confusion in the .NET realm is virtual methods. During interviews, I tend to ask candidates about virtual methods: why and when they’d use one, what the purposes is, how a virtual method “works” under the hood, and how it differs from “shadowing”.</description>
+      <description>Something which I feel carries a lot of confusion in the .NET realm is virtual methods. During interviews, I tend to ask candidates about virtual methods: why and when they’d use one, what the purposes is, how a virtual method “works” under the hood, and how it differs from “shadowing”. Surprisingly, in what has probably been over one hundred interviews with senior-ish candidates, I don’t believe that more than one or two of them have answered anything about virtual methods correctly.</description>
     </item>
     
   </channel>

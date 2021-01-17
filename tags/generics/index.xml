@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>generics on </title>
+    <title>generics on David Haney</title>
     <link>https://www.davidhaney.io/tags/generics/</link>
-    <description>Recent content in generics on </description>
+    <description>Recent content in generics on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 22 Apr 2013 14:53:17 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/generics/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Mon, 22 Apr 2013 14:53:17 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/generic-comparer/</guid>
-      <description>Have you ever had to write a comparer for a specific type, only to be frustrated when you needed to write a second and third comparer for other types? Fear not, a generic comparer can take care of this for you!</description>
+      <description>Have you ever had to write a comparer for a specific type, only to be frustrated when you needed to write a second and third comparer for other types? Fear not, a generic comparer can take care of this for you!
+/// &amp;lt;summary&amp;gt;/// Compares two objects of any type./// &amp;lt;/summary&amp;gt;/// &amp;lt;typeparam name=&amp;quot;T&amp;quot;&amp;gt;The type to be compared.&amp;lt;/typeparam&amp;gt;public class GenericComparer&amp;lt;T&amp;gt; : IComparer&amp;lt;T&amp;gt;{// The compare methodprivate readonly Func&amp;lt;T, T, int&amp;gt; _compareMethod = null;/// &amp;lt;summary&amp;gt;/// The constructor.</description>
     </item>
     
     <item>
@@ -23,7 +24,7 @@
       
       <guid>https://www.davidhaney.io/an-overview-of-generic-constraints/</guid>
       <description>This is my first post. I hope that it doesn’t suck.
-As of .NET 2.0, Microsoft introduced the concept of generics. Generics is a concept that allow you to “template” methods and types such as classes and interfaces in a (generally) type-safe way.</description>
+As of .NET 2.0, Microsoft introduced the concept of generics. Generics is a concept that allow you to “template” methods and types such as classes and interfaces in a (generally) type-safe way. Upon compilation, generic type metadata is stored in IL, and JIT’d as you reference the generic method or class with an actual type at runtime. Value types each get their own “copy” of the JIT’d generic code, whereas reference types share a single instance of the code.</description>
     </item>
     
   </channel>

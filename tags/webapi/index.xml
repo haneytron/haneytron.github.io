@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>webapi on </title>
+    <title>webapi on David Haney</title>
     <link>https://www.davidhaney.io/tags/webapi/</link>
-    <description>Recent content in webapi on </description>
+    <description>Recent content in webapi on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 24 Jul 2013 17:55:12 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/webapi/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Wed, 24 Jul 2013 17:55:12 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/web-api-mapping-querystringform-input/</guid>
-      <description>If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal.</description>
+      <description>If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:
+ Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
     </item>
     
   </channel>

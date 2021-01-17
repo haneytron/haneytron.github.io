@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>conflict on </title>
+    <title>conflict on David Haney</title>
     <link>https://www.davidhaney.io/tags/conflict/</link>
-    <description>Recent content in conflict on </description>
+    <description>Recent content in conflict on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 24 Sep 2015 11:23:38 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,8 @@
       
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
       <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won’t be some preachy post about how diversity is great and how you should be a better human being.</description>
+No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It’s no secret that the tech industry is not that diverse.</description>
     </item>
     
     <item>
@@ -23,7 +24,7 @@ No, this won’t be some preachy post about how diversity is great and how you s
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</guid>
-      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code.</description>
+      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
     </item>
     
   </channel>

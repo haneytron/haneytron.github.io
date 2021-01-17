@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark"><head>
-    <title>.NET Core Azure Functions Tutorial | David Haney</title>	
+<html lang="en" data-theme=""><head>
+    <title>.NET Core Azure Functions Tutorial | </title>	
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR2HVYP6QG"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -10,19 +10,11 @@
 	</script>
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.78.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="Programmer / Engineering Manager">
+    <meta name="description" content="">
     
     <link rel="stylesheet"
           href="https://www.davidhaney.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
           integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
-          crossorigin="anonymous"
-          type="text/css">
-    <link rel="stylesheet"
-          href="https://www.davidhaney.io/css/syntax.21cc1ccec065ce1e0f94f7a6a5a26cb58c9044e659b5010305c81fe0a1d47029.css"
-          crossorigin="anonymous"
-          type="text/css">
-    <link rel="stylesheet"
-          href="https://www.davidhaney.io/css/custom.30e72ebe0e7e4350eb590c47ae0ad3e05ee341f90088cb81a51b7340b7900b53.css"
           crossorigin="anonymous"
           type="text/css"><link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
@@ -30,10 +22,10 @@
     crossorigin="anonymous" />
 
     
-    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="https://www.davidhaney.io/favicons/favicon.icofavicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.davidhaney.io/favicons/favicon.icoapple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.davidhaney.io/favicons/favicon.icofavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.davidhaney.io/favicons/favicon.icofavicon-16x16.png">
 
     <link rel="canonical" href="https://www.davidhaney.io/net-core-azure-functions-tutorial/">
 
@@ -45,46 +37,27 @@
             src="https://www.davidhaney.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
             integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
             crossorigin="anonymous"></script>
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.davidhaney.io/img/opengraph.png"/>
-
+    <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=".NET Core Azure Functions Tutorial"/>
-<meta name="twitter:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month!"/>
+<meta name="twitter:description" content="In this post I&rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&rsquo;s right - Azure Functions are both awesome and (usually) free!
+Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense."/>
 
 </head>
 <body><div class="sidebar animated fadeInDown">
     <div class="logo-title">
         <div class="title">
-            <img src="https://www.davidhaney.io/img/me.jpg" alt="profile picture">
-            <h3 title=""><a href="/">David Haney</a></h3>
+            <img src="https://www.davidhaney.io" alt="profile picture">
+            <h3 title=""><a href="/"></a></h3>
             <div class="description">
-                <p>Programmer / Engineering Manager</p>
+                <p></p>
             </div>
         </div>
     </div>
     <ul class="social-links">
         
-            <li>
-                <a href="https://www.github.com/haneytron" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.twitter.com/haneytron" rel="me" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.linkedin.com/in/davidahaney" rel="me" aria-label="Linkedin">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; David Haney 2020 </div>
+        <div class="by_farbox">&copy;  2021 </div>
     </div>
 </div>
 <div class="main">
@@ -99,19 +72,13 @@
         
             
             <li><a 
-                   href="/"
+                   href=""
                         
-                   title="">Home</a></li>
+                   title="">Blog</a></li>
         
             
             <li><a 
-                   href="/post/"
-                        
-                   title="">Posts</a></li>
-        
-            
-            <li><a 
-                   href="/tags/"
+                   href="tags"
                         
                    title="">Tags</a></li>
         
@@ -147,34 +114,34 @@
 wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&rsquo;t write words good), generates a <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chain</a>
 from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.</p>
 <p>Here&rsquo;s what the startup code roughly looked like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Start()
-{
-	<span style="color:#75715e">// Twitter API keys
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> consumerKey = <span style="color:#e6db74">&#34;*********&#34;</span>;
-	<span style="color:#66d9ef">var</span> consumerSecret = <span style="color:#e6db74">&#34;*********&#34;</span>;
-	<span style="color:#66d9ef">var</span> userAccessToken = <span style="color:#e6db74">&#34;*********&#34;</span>;
-	<span style="color:#66d9ef">var</span> userAccessSecret = <span style="color:#e6db74">&#34;*********&#34;</span>;
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">void</span> <span class="n">Start</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="c1">// Twitter API keys
+</span><span class="c1"></span>	<span class="kt">var</span> <span class="n">consumerKey</span> <span class="p">=</span> <span class="s">&#34;*********&#34;</span><span class="p">;</span>
+	<span class="kt">var</span> <span class="n">consumerSecret</span> <span class="p">=</span> <span class="s">&#34;*********&#34;</span><span class="p">;</span>
+	<span class="kt">var</span> <span class="n">userAccessToken</span> <span class="p">=</span> <span class="s">&#34;*********&#34;</span><span class="p">;</span>
+	<span class="kt">var</span> <span class="n">userAccessSecret</span> <span class="p">=</span> <span class="s">&#34;*********&#34;</span><span class="p">;</span>
 
-	<span style="color:#75715e">// Set credentials
-</span><span style="color:#75715e"></span>	Auth.SetUserCredentials(consumerKey, consumerSecret, userAccessToken, userAccessSecret);
+	<span class="c1">// Set credentials
+</span><span class="c1"></span>	<span class="n">Auth</span><span class="p">.</span><span class="n">SetUserCredentials</span><span class="p">(</span><span class="n">consumerKey</span><span class="p">,</span> <span class="n">consumerSecret</span><span class="p">,</span> <span class="n">userAccessToken</span><span class="p">,</span> <span class="n">userAccessSecret</span><span class="p">);</span>
 
-	<span style="color:#75715e">// Build the Markhov chain
-</span><span style="color:#75715e"></span>	Console.WriteLine(<span style="color:#e6db74">&#34;Building Markhov Chain...&#34;</span>);
-	BuildMarkhovChain();
-	Console.WriteLine(<span style="color:#e6db74">&#34;Built! {0} root nodes&#34;</span>, _markhovTreeRoot.Children.Count);
+	<span class="c1">// Build the Markhov chain
+</span><span class="c1"></span>	<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Building Markhov Chain...&#34;</span><span class="p">);</span>
+	<span class="n">BuildMarkhovChain</span><span class="p">();</span>
+	<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Built! {0} root nodes&#34;</span><span class="p">,</span> <span class="n">_markhovTreeRoot</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
 
-	<span style="color:#75715e">// Start generating tweets
-</span><span style="color:#75715e"></span>	Console.WriteLine(<span style="color:#e6db74">&#34;Starting Tweets...&#34;</span>);
-	Console.WriteLine();
+	<span class="c1">// Start generating tweets
+</span><span class="c1"></span>	<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Starting Tweets...&#34;</span><span class="p">);</span>
+	<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
 
-	<span style="color:#75715e">// Configure timers
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> timeUntilNextHour = GetTimeUntilNextHour();
-	<span style="color:#75715e">// GenerateTweet ends by adjusting timer again for next hour, to avoid clock drift
-</span><span style="color:#75715e"></span>	_tweetTimer = <span style="color:#66d9ef">new</span> Timer(GenerateTweet, <span style="color:#66d9ef">null</span>, timeUntilNextHour, Timeout.Infinite);
-	<span style="color:#75715e">// Rebuild the Markov chain once per day from the newest Tweets
-</span><span style="color:#75715e"></span>	_buildMarkhovChainTimer 
-		= <span style="color:#66d9ef">new</span> Timer(BuildMarkhovChain, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">24</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">24</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">60</span> * <span style="color:#ae81ff">1000</span>);
-}
+	<span class="c1">// Configure timers
+</span><span class="c1"></span>	<span class="kt">var</span> <span class="n">timeUntilNextHour</span> <span class="p">=</span> <span class="n">GetTimeUntilNextHour</span><span class="p">();</span>
+	<span class="c1">// GenerateTweet ends by adjusting timer again for next hour, to avoid clock drift
+</span><span class="c1"></span>	<span class="n">_tweetTimer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Timer</span><span class="p">(</span><span class="n">GenerateTweet</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="n">timeUntilNextHour</span><span class="p">,</span> <span class="n">Timeout</span><span class="p">.</span><span class="n">Infinite</span><span class="p">);</span>
+	<span class="c1">// Rebuild the Markov chain once per day from the newest Tweets
+</span><span class="c1"></span>	<span class="n">_buildMarkhovChainTimer</span> 
+		<span class="p">=</span> <span class="k">new</span> <span class="n">Timer</span><span class="p">(</span><span class="n">BuildMarkhovChain</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="m">24</span> <span class="p">*</span> <span class="m">60</span> <span class="p">*</span> <span class="m">60</span> <span class="p">*</span> <span class="m">1000</span><span class="p">,</span> <span class="m">24</span> <span class="p">*</span> <span class="m">60</span> <span class="p">*</span> <span class="m">60</span> <span class="p">*</span> <span class="m">1000</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>I find this bot quite amusing. It sometimes creates hilarious statements:</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">EXTREME bias of me is negative (Fake). Dow RISES 5000 POINTS ON THE subject, it is amazing how a manager takes out a pitcher who is like a choirboy.</p>&mdash; Donald J. Tron (Parody) (@realDonaldTron) <a href="https://twitter.com/realDonaldTron/status/1061423338613080064?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote>
@@ -191,26 +158,26 @@ from the Tweets, and then schedules a .NET Timer to generate and publish a new T
 <p>Porting a .NET application over to .NET Core is usually not too terrible. I found the easiest way was to create a new .NET Core solution using Visual Studio, drag and drop my directory structure over to my new directory, install all of the NuGet packages that I needed in my old
 solution (many will have a netstandard specific version for .NET Core), and then attempt to compile and correct errors, Googling (or Stack Overflowing) for new APIs where old calls no longer existed. I needed to make very few changes to realDonaldTron in order to get him working.</p>
 <p>I was also pleasantly surprised at how simple the new .csproj file structure is. By default, <em>everything in the folder is included in the project</em> except where you specify exceptions. This makes for a pretty clean file. Here&rsquo;s the .NET Core realDonaldTron .csproj file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Project</span> <span style="color:#a6e22e">Sdk=</span><span style="color:#e6db74">&#34;Microsoft.NET.Sdk&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;PropertyGroup&gt;</span>
-	<span style="color:#f92672">&lt;TargetFramework&gt;</span>netcoreapp2.1<span style="color:#f92672">&lt;/TargetFramework&gt;</span>
-	<span style="color:#f92672">&lt;LangVersion&gt;</span>latest<span style="color:#f92672">&lt;/LangVersion&gt;</span>
-	<span style="color:#f92672">&lt;AzureFunctionsVersion&gt;</span>v2<span style="color:#f92672">&lt;/AzureFunctionsVersion&gt;</span>
-  <span style="color:#f92672">&lt;/PropertyGroup&gt;</span>
-  <span style="color:#f92672">&lt;ItemGroup&gt;</span>
-	<span style="color:#f92672">&lt;PackageReference</span> <span style="color:#a6e22e">Include=</span><span style="color:#e6db74">&#34;Microsoft.NET.Sdk.Functions&#34;</span> <span style="color:#a6e22e">Version=</span><span style="color:#e6db74">&#34;1.0.*&#34;</span> <span style="color:#f92672">/&gt;</span>
-	<span style="color:#f92672">&lt;PackageReference</span> <span style="color:#a6e22e">Include=</span><span style="color:#e6db74">&#34;TweetinviAPI&#34;</span> <span style="color:#a6e22e">Version=</span><span style="color:#e6db74">&#34;4.0.0&#34;</span> <span style="color:#f92672">/&gt;</span>
-  <span style="color:#f92672">&lt;/ItemGroup&gt;</span>
-  <span style="color:#f92672">&lt;ItemGroup&gt;</span>
-	<span style="color:#f92672">&lt;None</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;host.json&#34;</span><span style="color:#f92672">&gt;</span>
-	  <span style="color:#f92672">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span style="color:#f92672">&lt;/CopyToOutputDirectory&gt;</span>
-	<span style="color:#f92672">&lt;/None&gt;</span>
-	<span style="color:#f92672">&lt;None</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;local.settings.json&#34;</span><span style="color:#f92672">&gt;</span>
-	  <span style="color:#f92672">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span style="color:#f92672">&lt;/CopyToOutputDirectory&gt;</span>
-	  <span style="color:#f92672">&lt;CopyToPublishDirectory&gt;</span>Never<span style="color:#f92672">&lt;/CopyToPublishDirectory&gt;</span>
-	<span style="color:#f92672">&lt;/None&gt;</span>
-  <span style="color:#f92672">&lt;/ItemGroup&gt;</span>
-<span style="color:#f92672">&lt;/Project&gt;</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;Project</span> <span class="na">Sdk=</span><span class="s">&#34;Microsoft.NET.Sdk&#34;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;PropertyGroup&gt;</span>
+	<span class="nt">&lt;TargetFramework&gt;</span>netcoreapp2.1<span class="nt">&lt;/TargetFramework&gt;</span>
+	<span class="nt">&lt;LangVersion&gt;</span>latest<span class="nt">&lt;/LangVersion&gt;</span>
+	<span class="nt">&lt;AzureFunctionsVersion&gt;</span>v2<span class="nt">&lt;/AzureFunctionsVersion&gt;</span>
+  <span class="nt">&lt;/PropertyGroup&gt;</span>
+  <span class="nt">&lt;ItemGroup&gt;</span>
+	<span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">&#34;Microsoft.NET.Sdk.Functions&#34;</span> <span class="na">Version=</span><span class="s">&#34;1.0.*&#34;</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">&#34;TweetinviAPI&#34;</span> <span class="na">Version=</span><span class="s">&#34;4.0.0&#34;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/ItemGroup&gt;</span>
+  <span class="nt">&lt;ItemGroup&gt;</span>
+	<span class="nt">&lt;None</span> <span class="na">Update=</span><span class="s">&#34;host.json&#34;</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span class="nt">&lt;/CopyToOutputDirectory&gt;</span>
+	<span class="nt">&lt;/None&gt;</span>
+	<span class="nt">&lt;None</span> <span class="na">Update=</span><span class="s">&#34;local.settings.json&#34;</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span class="nt">&lt;/CopyToOutputDirectory&gt;</span>
+	  <span class="nt">&lt;CopyToPublishDirectory&gt;</span>Never<span class="nt">&lt;/CopyToPublishDirectory&gt;</span>
+	<span class="nt">&lt;/None&gt;</span>
+  <span class="nt">&lt;/ItemGroup&gt;</span>
+<span class="nt">&lt;/Project&gt;</span></code></pre></div>
 <p>A welcomed change from the million line csproj files of past&hellip; and the Git conflicts when checking in code! So frustrating.</p>
 <h1 id="hosting-in-azure-dont-use-webjobs">Hosting in Azure: Don&rsquo;t use WebJobs</h1>
 <p>Since I had ported realDonaldTron over as a console application, the right click &ndash;&gt; publish dialog in Visual Studio immediately told me to publish it to Azure as a WebJob in an AppService context. Heck, there&rsquo;s even a free tier - no cost to me! This seemed as if it solved all of my problems, but
@@ -300,60 +267,60 @@ single function execution is 100 ms and 128 mb respectively.</p>
 <p>Note that the &ldquo;Schedule&rdquo; here is a modified CRON syntax. I had a hard time finding good resources for CRON scheduling that actually worked in Azure, but <a href="https://codehollow.com/2017/02/azure-functions-time-trigger-cron-cheat-sheet/">this blog post by Armin Reiter</a> is an awesome
 cheat sheet that you should definitely use! Also, don&rsquo;t worry about the schedule in this dialog - you can change it programmatically super easily in a minute or two.</p>
 <p>Finish up by pressing OK and next you&rsquo;ll see this boilerplate code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> Microsoft.Azure.WebJobs;
-<span style="color:#66d9ef">using</span> Microsoft.Azure.WebJobs.Host;
-<span style="color:#66d9ef">using</span> Microsoft.Extensions.Logging;
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Azure.WebJobs</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Azure.WebJobs.Host</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.Logging</span><span class="p">;</span>
 
-<span style="color:#66d9ef">namespace</span> FunctionApp1
-{
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Function1</span>
-	{
-<span style="color:#a6e22e">		[FunctionName(&#34;Function1&#34;)]</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Run([TimerTrigger(<span style="color:#e6db74">&#34;0 */5 * * * *&#34;</span>)]TimerInfo myTimer, ILogger log)
-		{
-			log.LogInformation(<span style="color:#e6db74">$&#34;C# Timer trigger function executed at: {DateTime.Now}&#34;</span>);
-		}
-	}
-}
+<span class="k">namespace</span> <span class="nn">FunctionApp1</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">Function1</span>
+	<span class="p">{</span>
+<span class="na">		[FunctionName(&#34;Function1&#34;)]</span>
+		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Run</span><span class="p">([</span><span class="n">TimerTrigger</span><span class="p">(</span><span class="s">&#34;0 */5 * * * *&#34;</span><span class="p">)]</span><span class="n">TimerInfo</span> <span class="n">myTimer</span><span class="p">,</span> <span class="n">ILogger</span> <span class="n">log</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">log</span><span class="p">.</span><span class="n">LogInformation</span><span class="p">(</span><span class="s">$&#34;C# Timer trigger function executed at: {DateTime.Now}&#34;</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>Feel free to change the class name and namespace here - the only important thing to name is the <code>[FunctionName]</code> attribute as this is what will appear in the Azure Portal UI. You can also see that your CRON syntax from the creation dialog is within the <code>[TimerTrigger]</code> attribute here,
 and can be readily modified. The <code>ILogger</code> you see there is the logger that goes to Azure Storage and will cost you a few pennies per month. If you&rsquo;re trying to run truly for free, be sure not to log anything at all.</p>
 <p>It&rsquo;s also worth noting that Azure Functions support async entry method signatures, so <code>async</code> your heart out!</p>
 <p>Here&rsquo;s what my .NET Core Azure Function Run method for realDonaldTron looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">namespace</span> RealDonaldTronFunc
-{
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Function</span>
-	{
-<span style="color:#a6e22e">		[FunctionName(&#34;RealDonaldTronFunction&#34;)]</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">static</span> Task Run([TimerTrigger(<span style="color:#e6db74">&#34;0 0 * * * *&#34;</span>)]TimerInfo myTimer, ILogger log)
-		{
-			log.LogInformation(<span style="color:#e6db74">$&#34;C# Timer trigger function executed at: {DateTime.UtcNow}&#34;</span>);
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">namespace</span> <span class="nn">RealDonaldTronFunc</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">Function</span>
+	<span class="p">{</span>
+<span class="na">		[FunctionName(&#34;RealDonaldTronFunction&#34;)]</span>
+		<span class="k">public</span> <span class="k">async</span> <span class="k">static</span> <span class="n">Task</span> <span class="n">Run</span><span class="p">([</span><span class="n">TimerTrigger</span><span class="p">(</span><span class="s">&#34;0 0 * * * *&#34;</span><span class="p">)]</span><span class="n">TimerInfo</span> <span class="n">myTimer</span><span class="p">,</span> <span class="n">ILogger</span> <span class="n">log</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">log</span><span class="p">.</span><span class="n">LogInformation</span><span class="p">(</span><span class="s">$&#34;C# Timer trigger function executed at: {DateTime.UtcNow}&#34;</span><span class="p">);</span>
 
-			<span style="color:#75715e">// Set Twitter credentials
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">var</span> consumerKey = <span style="color:#e6db74">&#34;********&#34;</span>;
-			<span style="color:#66d9ef">var</span> consumerSecret = <span style="color:#e6db74">&#34;********&#34;</span>;
-			<span style="color:#66d9ef">var</span> userAccessToken = <span style="color:#e6db74">&#34;********&#34;</span>;
-			<span style="color:#66d9ef">var</span> userAccessSecret = <span style="color:#e6db74">&#34;********&#34;</span>;
-			Auth.SetUserCredentials(consumerKey, consumerSecret, 
-				userAccessToken, userAccessSecret);
+			<span class="c1">// Set Twitter credentials
+</span><span class="c1"></span>			<span class="kt">var</span> <span class="n">consumerKey</span> <span class="p">=</span> <span class="s">&#34;********&#34;</span><span class="p">;</span>
+			<span class="kt">var</span> <span class="n">consumerSecret</span> <span class="p">=</span> <span class="s">&#34;********&#34;</span><span class="p">;</span>
+			<span class="kt">var</span> <span class="n">userAccessToken</span> <span class="p">=</span> <span class="s">&#34;********&#34;</span><span class="p">;</span>
+			<span class="kt">var</span> <span class="n">userAccessSecret</span> <span class="p">=</span> <span class="s">&#34;********&#34;</span><span class="p">;</span>
+			<span class="n">Auth</span><span class="p">.</span><span class="n">SetUserCredentials</span><span class="p">(</span><span class="n">consumerKey</span><span class="p">,</span> <span class="n">consumerSecret</span><span class="p">,</span> 
+				<span class="n">userAccessToken</span><span class="p">,</span> <span class="n">userAccessSecret</span><span class="p">);</span>
 
-			<span style="color:#75715e">// Build the Markhov chain
-</span><span style="color:#75715e"></span>			Console.WriteLine(<span style="color:#e6db74">&#34;Building Markhov Chain...&#34;</span>);
-			BuildMarkhovChain();
-			Console.WriteLine(<span style="color:#e6db74">&#34;Built! {0} root nodes&#34;</span>, _markhovTreeRoot.Children.Count);
+			<span class="c1">// Build the Markhov chain
+</span><span class="c1"></span>			<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Building Markhov Chain...&#34;</span><span class="p">);</span>
+			<span class="n">BuildMarkhovChain</span><span class="p">();</span>
+			<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Built! {0} root nodes&#34;</span><span class="p">,</span> <span class="n">_markhovTreeRoot</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
 
-			<span style="color:#75715e">// Start generating tweets
-</span><span style="color:#75715e"></span>			Console.WriteLine(<span style="color:#e6db74">&#34;Starting Tweets...&#34;</span>);
-			Console.WriteLine();
+			<span class="c1">// Start generating tweets
+</span><span class="c1"></span>			<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Starting Tweets...&#34;</span><span class="p">);</span>
+			<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
 
-			<span style="color:#66d9ef">await</span> GenerateTweet();
+			<span class="k">await</span> <span class="n">GenerateTweet</span><span class="p">();</span>
 
-			log.LogInformation(<span style="color:#e6db74">$&#34;C# Timer trigger function completed at: {DateTime.UtcNow}&#34;</span>);
-		}
-	<span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>	}
-}
+			<span class="n">log</span><span class="p">.</span><span class="n">LogInformation</span><span class="p">(</span><span class="s">$&#34;C# Timer trigger function completed at: {DateTime.UtcNow}&#34;</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="c1">// ...
+</span><span class="c1"></span>	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>You might notice that all of my <code>Timer</code> stuff is gone. That&rsquo;s because Azure Functions natively support timed triggers, and the CRON syntax <code>0 0 * * * *</code> says &ldquo;run this every hour, on the hour&rdquo; which completely replaces my need for C# Timers!</p>
 <p>Note that unless your function <em>needs</em> to run continuously, you should have it terminate by exiting the <code>Run</code> method as soon as possible. realDonaldTron does not need to remain active - he grabs the latest Tweets and builds a new Markov chain every hour instead. He terminates as

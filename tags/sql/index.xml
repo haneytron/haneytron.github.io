@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sql on </title>
+    <title>sql on David Haney</title>
     <link>https://www.davidhaney.io/tags/sql/</link>
-    <description>Recent content in sql on </description>
+    <description>Recent content in sql on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 16 Oct 2013 21:35:51 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Wed, 16 Oct 2013 21:35:51 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</guid>
-      <description>The T4 template engine is insanely powerful. I didn’t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database.</description>
+      <description>The T4 template engine is insanely powerful. I didn’t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn’t want to code all of this by hand – it would take literally days.</description>
     </item>
     
   </channel>

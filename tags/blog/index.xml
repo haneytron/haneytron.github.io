@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on </title>
+    <title>blog on David Haney</title>
     <link>https://www.davidhaney.io/tags/blog/</link>
-    <description>Recent content in blog on </description>
+    <description>Recent content in blog on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 03 Aug 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,8 @@
       
       <guid>https://www.davidhaney.io/new-blog-name-and-domain/</guid>
       <description>It&amp;rsquo;s been a while since I changed things up, so I decided on a new Twitter handle and blog domain.
-This site is now hosted at davidhaney.io and called &amp;ldquo;David Haney&amp;rdquo; which in my opinion is a much better (and more descriptive and maybe even more egotistical) domain than haneycodes.</description>
+This site is now hosted at davidhaney.io and called &amp;ldquo;David Haney&amp;rdquo; which in my opinion is a much better (and more descriptive and maybe even more egotistical) domain than haneycodes.net and the old name of &amp;ldquo;Haney Codes .NET&amp;rdquo;
+Don&amp;rsquo;t worry - haneycodes.net deep links will redirect properly for years to come, so you won&amp;rsquo;t miss anything at all.</description>
     </item>
     
   </channel>

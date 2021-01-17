@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>published on </title>
+    <title>published on David Haney</title>
     <link>https://www.davidhaney.io/tags/published/</link>
-    <description>Recent content in published on </description>
+    <description>Recent content in published on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 18 Jan 2013 15:10:04 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/published/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,9 @@
       <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/published-by-red-gate/</guid>
-      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .</description>
+      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
+My tip is #3 and has to do with debugging Microsoft symbols.
+Get a free copy here – it has already taught me a few things I had never thought to consider!</description>
     </item>
     
     <item>

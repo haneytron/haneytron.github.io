@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>diversity on </title>
+    <title>diversity on David Haney</title>
     <link>https://www.davidhaney.io/tags/diversity/</link>
-    <description>Recent content in diversity on </description>
+    <description>Recent content in diversity on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 24 Sep 2015 11:23:38 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/diversity/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,8 @@
       
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
       <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won’t be some preachy post about how diversity is great and how you should be a better human being.</description>
+No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.
+It’s no secret that the tech industry is not that diverse.</description>
     </item>
     
   </channel>

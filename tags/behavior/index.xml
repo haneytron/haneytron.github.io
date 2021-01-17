@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>behavior on </title>
+    <title>behavior on David Haney</title>
     <link>https://www.davidhaney.io/tags/behavior/</link>
-    <description>Recent content in behavior on </description>
+    <description>Recent content in behavior on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Jan 2017 10:03:20 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/behavior/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</guid>
-      <description>In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly.</description>
+      <description>In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
     </item>
     
     <item>
@@ -22,7 +22,8 @@
       <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/our-industry-needs-compassion/</guid>
-      <description>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.</description>
+      <description>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.
+So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</guid>
-      <description>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.</description>
+      <description>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
+Plumber #1 Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.</description>
     </item>
     
   </channel>
