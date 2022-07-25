@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Stack Overflow: 100 Million Uniques / Month on 9 Web Servers</title>
+
+		<meta name="description" content="Join me for a technical deep dive into how we've scaled Stack Overflow - a .NET Core, SQL, and jQuery app - to 100,000,000 unique monthly visitors using only 9 web servers. We'll dive into patterns and practices, technical tips and tricks, and the overall fundamentals of scaling web applications. Topics will largely be tech stack agnostic and include caching, load balancing, technical trade-offs, SQL best practices, and everything else that goes into successfully scaling your app.">
+		<meta name="author" content="David Haney">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Stack Overflow:</h2>
+					<h4>100 Million Uniques / Month on 9 Web Servers</h4>
+					<p><small>David Haney | <a href="http://www.twitter.com/haneytron">@haneytron</a></small></p>
+					<img src="img/stack-logo.png" alt="Stack Overflow Logo" style="max-height: 300px;" />
+				</section>
+				
+				<section>
+					<h2>David Haney</h2>
+					<ul>
+						<li class="fragment">Sr. Director of Eng at Stack Overflow by day</li>
+						<li class="fragment">Craft beer, movie, and gaming nerd by night</li>
+						<li class="fragment">Recent project: <a href="https://covidrisk.is">CovidRisk.Is</a></li>
+						<li class="fragment">@ Stack Overflow for 8+ years</li>
+					</ul>
+					<img class="fragment" src="img/dinosaur.png" alt="Barney the Dinosaur" style="max-height: 250px;" />
+				</section>
+				
+				<section>
+					<h3>LET'S GO BACK IN TIME!</h3>
+					<h4>First stop: 2008</h4>
+					<img src="img/tardis.png" alt="Tardis from Dr. Who" style="max-height: 250px;" />
+				</section>
+				
+				<section>
+					<section>
+						<h2>2008 Is Cool</h2>
+					</section>
+					<section data-background="img/2008-movies.jpg">
+					</section>
+					<section data-background="img/2008-market-crash.png">
+					</section>
+					<section>
+						<img src="img/original-stack-overflow.webp" alt="2008 stackoverflow.com" style="height: 500px;" />
+					</section>
+				</section>
+				
+				<section>
+					<h3>StackOverflow.com Launches</h3>
+					<ul>
+						<li class="fragment">C#, .NET, MSSQL, jQuery, Subversion</li>
+						<li class="fragment">That's what founders knew</li>
+						<li class="fragment">Started with off-the-shelf tools:
+							<ul>
+								<li class="fragment">ASP.NET MVC</li>
+								<li class="fragment">LINQ to SQL</li>
+								<li class="fragment">MSSQL + SQL fulltext search</li>
+								<li class="fragment">Built-in output caching</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li class="fragment fade-up">Start with what you know</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>SO Gets Popular!</h3>
+					<ul>
+						<li class="fragment">And starts chugging w/ more traffic</li>
+						<li class="fragment">How do you fix performance problems?</li>
+						<li class="fragment">MEASURE THEM!</li>
+						<li class="fragment">...But if no profiling tools exist yet...</li>
+						<li class="fragment">CREATE ONE FIRST!</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>MiniProfiler (c. 2011)</h3>
+					<img src="img/miniprofiler.png" alt="Stack Exchange Mini Profiler" style="max-height: 400px;" />
+					<p>MiniProfiler: <a href="https://github.com/miniprofiler/dotnet">https://github.com/miniprofiler/dotnet</a></p>
+				</section>
+				
+				<section>
+					<img src="img/miniprofiler2.png" alt="Stack Exchange Mini Profiler" style="max-height: 500px;" />
+				</section>
+				
+				<section>
+					<h3>Profiling Perf</h3>
+					<ul>
+						<li class="fragment">Shows you where it's slow</li>
+						<li class="fragment">Lets you make it fast</li>
+						<li class="fragment">Verifies your perf fixes</li>
+						<li class="fragment">If you're not profiling, you're guessing</li>
+					</ul>
+					<img class="fragment" src="img/clue.png" alt="Clue board game" style="max-height: 300px;" />
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li>Start with what you know</li>
+						<li class="fragment fade-up">Measure performance (w/ existing tools)</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>What Did MiniProfiler Reveal?</h3>
+					<ul>
+						<li class="fragment">We wrote some slow methods</li>
+						<li class="fragment">.NET Framework had flaws
+							<ul>
+								<li class="fragment" style="font-style: italic;">(&lt;3 you Microsoft)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Fixing Our Slow</h3>
+						<ul>
+							<li class="fragment">All created objects cost memory; memory is finite</li>
+							<li class="fragment">Calculations cost CPU; CPU is finite</li>
+							<li class="fragment">Managed GCs are tricky</li>
+							<li class="fragment">Enter Caching, Optimization, and Pooling</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Caching / Memoization</h3>
+						<ul>
+							<li class="fragment">Storing method output for future callers (thus skipping the expensive method after ~1st time)</li>
+							<li class="fragment">Trades CPU for memory</li>
+							<li class="fragment">Local or remote (start local)</li>
+							<li class="fragment">LIFO, FIFO, etc. algs used for eviction</li>
+							<li class="fragment">TERRIFIC for read-often write-rarely loads</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Optimization</h3>
+						<ul>
+							<li class="fragment">GC: what is created must be later destroyed</li>
+							<li class="fragment">A common pitfall: string concatenation</li>
+							<li class="fragment">In .NET, strings are immutable (read-only) reference objects.</li>
+							<li class="fragment">So each <code>"string1" + "string2"</code> creates a new object</li>
+							<li class="fragment">Solution: <code>StringBuilder</code></li>
+							<li class="fragment">Uses byte buffer under hood, strings are written as raw bytes</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Pooling</h3>
+						<ul>
+							<li class="fragment">Creating the same object a lot? Pool it!</li>
+							<li class="fragment">Store <code>n</code> copies of the object in a queue, <code>push</code> when done and <code>pop</code> when needed</li>
+							<li class="fragment">Reset / reinitialize object on <code>push</code></li>
+							<li class="fragment">Reusing objects ~= constant memory</li>
+							<li class="fragment"><a href="https://github.com/haneytron/simplsockets/blob/master/SimplSockets/Pool.cs">Object pool example (a bit dated)</a></li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<h3>Fixing Framework Slow</h3>
+					<ul>
+						<li class="fragment">LINQ to SQL very slow (in 2011)</li>
+						<li class="fragment">EF4 was slow too</li>
+						<li class="fragment">Too much manual SQL DTO mapping code</li>
+						<li class="fragment">USE A BETTER .NET ORM!</li>
+						<li class="fragment">...But if no better ORM exists yet...</li>
+						<li class="fragment">CREATE ONE FIRST!</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Prototype Dapper (Sam's ORM)</h3>
+					<p class="fragment r-fit-text"><code>var cars = con.Query&lt;Car&gt;("SELECT * FROM cars").ToList();</code></p>
+					<img class="fragment" src="img/orm-benchmarks.png" alt="ORM Benchmarks" style="max-height: 500px;" />
+				</section>
+				
+				<section>
+					<h3>Dapper (c. 2011)</h3>
+					<img src="img/dapper.jpg" alt="Dapper Dot Net" style="max-height: 400px;" />
+					<p>Dapper: <a href="https://github.com/DapperLib/Dapper">https://github.com/DapperLib/Dapper</a></p>
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li>Start with what you know</li>
+						<li>Measure performance (w/ existing tools)</li>
+						<li class="fragment fade-up">Fix / replace the slow (w/ existing tools)</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>More Traffic = More Logs</h3>
+					<ul>
+						<li class="fragment">Logging in SQL table, but hard to grok</li>
+						<li class="fragment">Tough to see trends, groups, counts</li>
+						<li class="fragment">Queries are hard: avg errors / min? hour? day?</li>
+						<li class="fragment">USE A LOG AGGREGATOR!</li>
+						<li class="fragment">...But if no good log aggregator exists yet...</li>
+						<li class="fragment">CREATE ONE FIRST!</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Opserver (c. 2011)</h3>
+					<div class="r-stack">
+				        <img class="fragment fade-out" data-fragment-index="0" src="img/opserver.png" alt="Opserver" style="max-height: 400px;" />
+					    <img class="fragment current-visible" data-fragment-index="0" src="img/opserver2.png" alt="Opserver" style="max-height: 400px;" />
+					    <img class="fragment" src="img/opserver3.png" alt="Opserver" style="max-height: 400px;" />
+					</div>
+					<p>Opserver: <a href="https://opserver.github.io/Opserver/">https://opserver.github.io/Opserver/</a></p>
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li>Start with what you know</li>
+						<li>Measure performance (w/ existing tools)</li>
+						<li>Fix / replace the slow (w/ existing tools)</li>
+						<li class="fragment fade-up">Logs are a gold mine (if mined)</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>DBs Are Slow (But Needed)</h3>
+					<ul>
+						<li class="fragment">Tune database perpetually</li>
+						<li class="fragment">Use indexes and covered queries</li>
+						<li class="fragment">Avoid smells like everything <code>WITH (NOLOCK)</code></li>
+						<li class="fragment">Readonly replica reduces locks</li>
+						<li class="fragment">Measure your queries (Opserver can help)</li>
+					</ul>
+					<img class="fragment" src="img/opserver3.png" alt="Opserver SQL Queries" style="max-height: 250px;" />
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li>Start with what you know</li>
+						<li>Measure performance (w/ existing tools)</li>
+						<li>Fix / replace the slow (w/ existing tools)</li>
+						<li>Logs are a gold mine (if mined)</li>
+						<li class="fragment fade-up">Measure &amp; tune your database</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>Defer Complexity</h3>
+					<ul>
+						<li class="fragment">Our initial tools worked well for YEARS!</li>
+						<li class="fragment">As load caused tools to fail:
+							<ul>
+								<li class="fragment">ASP.NET MVC → .NET Core MVC</li>
+								<li class="fragment">LINQ to SQL → Dapper</li>
+								<li class="fragment">SQL fulltext search → Elasticsearch</li>
+								<li class="fragment">Built-in output caching → Redis</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li>Start with what you know</li>
+						<li>Measure performance (w/ existing tools)</li>
+						<li>Fix / replace the slow (w/ existing tools)</li>
+						<li>Logs are a gold mine (if mined)</li>
+						<li>Measure &amp; tune your database</li>
+						<li class="fragment fade-up">Solve actual problems, not future ones</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>Fast Forward to 2014</h3>
+					<ul>
+						<li class="fragment">54th most visited website in the world</li>
+						<li class="fragment">110 Stack Exchange network sites</li>
+						<li class="fragment">4 million users</li>
+						<li class="fragment">8 million questions</li>
+						<li class="fragment">40 million answers</li>
+						<li class="fragment">560 million pageviews / month</li>
+						<li class="fragment">Just 25 servers</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Lessons Learned</h3>
+					<ol>
+						<li>Start with what you know</li>
+						<li>Measure performance (w/ existing tools)</li>
+						<li>Fix / replace the slow (w/ existing tools)</li>
+						<li>Logs are a gold mine (if mined)</li>
+						<li>Measure &amp; tune your database</li>
+						<li>Solve actual problems, not future ones</li>
+						<li class="fragment fade-up">Performance is a (cost-saving) feature</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>Stack Overflow Today (2022)</h3>
+					<ul>
+						<li class="fragment">179 Stack Exchange network sites</li>
+						<li class="fragment">1.3 billion monthly page views (network)</li>
+						<li class="fragment">51.2 million unique SO visitors / month</li>
+						<li class="fragment">22.8 / 33.7 million SO questions / answers</li>
+						<li class="fragment">...AND STILL JUST 25 SERVERS</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>9 (+2) Web Servers</h3>
+					<img src="img/webservers.png" alt="Web Servers" style="max-height: 400px; border-radius: 20px;" />
+				</section>
+				
+				<section>
+					<h3>4 SQL Servers</h3>
+					<img src="img/sqlservers.png" alt="SQL Servers" style="max-height: 400px; border-radius: 20px;" />
+				</section>
+				
+				<section>
+					<h3>2 Redis Servers</h3>
+					<img src="img/redisservers.png" alt="Redis Servers" style="max-height: 400px; border-radius: 20px;" />
+				</section>
+				
+				<section>
+					<h3>3 TagEngine Servers</h3>
+					<img src="img/tagengineservers.png" alt="TagEngine Servers" style="max-height: 400px; border-radius: 20px;" />
+				</section>
+				
+				<section>
+					<h3>3 Elasticsearch Servers</h3>
+					<img src="img/elasticsearchservers.png" alt="Elasticsearch Servers" style="max-height: 400px; border-radius: 20px;" />
+				</section>
+				
+				<section>
+					<h3>2 HAProxy Servers</h3>
+					<img src="img/haproxyservers.png" alt="HAProxy Servers" style="max-height: 400px; border-radius: 20px;" />
+				</section>
+				
+				<section>
+					<h3>LESSONS LEARNED RECAP</h3>
+					<ol>
+						<li class="fragment fade-up">Start with what you know</li>
+						<li class="fragment fade-up">Measure performance (w/ existing tools)</li>
+						<li class="fragment fade-up">Fix / replace the slow (w/ existing tools)</li>
+						<li class="fragment fade-up">Logs are a gold mine (if mined)</li>
+						<li class="fragment fade-up">Measure &amp; tune your database</li>
+						<li class="fragment fade-up">Solve actual problems, not future ones</li>
+						<li class="fragment fade-up">Performance is a (cost-saving) feature</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h3>Sound Fun? Work With Us!</h2>
+					<h4><a href="https://s.tk/jobs">https://s.tk/jobs</a></h4>
+				</section>
+				
+				<section>
+					<h2>THANK YOU</h2>
+					<p><small>David Haney | <a href="http://www.twitter.com/haneytron">@haneytron</a></small></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: "c/t",
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+		<style>
+			code {
+				background-color: #272822;
+				color: #ddd;
+			}
+		</style>
+	</body>
+</html>
