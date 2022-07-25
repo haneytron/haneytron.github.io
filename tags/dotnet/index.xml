@@ -52,7 +52,7 @@ One day you’re at a regular user group meeting, sipping soda and talking with 
       <pubDate>Fri, 28 Feb 2014 11:47:08 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/c-probably-getting-new-safe-navigation-operator/</guid>
-      <description>It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release.This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.
+      <description>It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release. This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.
 This new operator is likely going to take the syntax of ?. and is known as the Safe Navigation Operator.</description>
     </item>
     
@@ -93,7 +93,7 @@ Have you ever had to conditionally add an attribute to an HTML element in your M
       
       <guid>https://www.davidhaney.io/web-api-mapping-querystringform-input/</guid>
       <description>If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:
- Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
+Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
     </item>
     
     <item>
@@ -113,7 +113,8 @@ Have you ever had to conditionally add an attribute to an HTML element in your M
       
       <guid>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</guid>
       <description>I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
+http://www.dotnetperls.com/binarysearch
+They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
     </item>
     
     <item>
@@ -149,7 +150,7 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/published-by-red-gate/</guid>
-      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
+      <description>As of today I’ve been published in an e-Book offered for free by Red Gate! It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
 My tip is #3 and has to do with debugging Microsoft symbols.
 Get a free copy here – it has already taught me a few things I had never thought to consider!</description>
     </item>
@@ -180,8 +181,8 @@ static void Main(string[] args){var stopwatch = new Stopwatch();string a = &a
       <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/stats-vs-reference-string-equals/</guid>
-      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals methodin .NET, but if that doesn’t do it for you, allow me to present a simple example.
-string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b); What is the expected result of these lines? A boolean value of false, of course.</description>
+      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals method in .NET, but if that doesn’t do it for you, allow me to present a simple example.
+string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b);What is the expected result of these lines? A boolean value of false, of course.</description>
     </item>
     
     <item>
@@ -190,7 +191,7 @@ string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool re
       <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/tpl-and-error-handling-continuations/</guid>
-      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasksas a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
+      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
 Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
     </item>
     
@@ -213,7 +214,7 @@ Let’s partake in a simple example. This code will create and run a task that t
       <description>The .NET compiler is a terrific thing… After all, it turns your C# into an executable program!
 One nice feature of the .NET compiler, which is becoming better each release, is inferred typing. I’d like to lay out a few short examples that might help you develop your programming standards and practices.
 Inferring a type when creating an array.
-// Create and initialize an arrayvar myArray = new int[] { 1, 2, 3 }; Becomes:</description>
+// Create and initialize an arrayvar myArray = new int[] { 1, 2, 3 };Becomes:</description>
     </item>
     
     <item>
@@ -222,7 +223,7 @@ Inferring a type when creating an array.
       <pubDate>Wed, 20 Jun 2012 00:47:52 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
-      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttributeclass, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
+      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
     </item>
     
     <item>
@@ -242,7 +243,7 @@ To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that
       
       <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
       <description>Sorry for the delay in posts, May has been a very busy month.
-In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB filesto accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
+In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
     </item>
     
     <item>

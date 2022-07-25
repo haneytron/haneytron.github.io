@@ -33,7 +33,7 @@ I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Stu
       
       <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
       <description>Sorry for the delay in posts, May has been a very busy month.
-In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB filesto accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
+In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
     </item>
     
   </channel>

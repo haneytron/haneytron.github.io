@@ -14,7 +14,7 @@
       
       <guid>https://www.davidhaney.io/web-api-mapping-querystringform-input/</guid>
       <description>If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:
- Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
+Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
     </item>
     
   </channel>

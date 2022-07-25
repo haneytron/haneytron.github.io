@@ -22,7 +22,7 @@
       <pubDate>Wed, 20 Jun 2012 00:47:52 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
-      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttributeclass, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
+      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
     </item>
     
   </channel>

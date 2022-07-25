@@ -33,7 +33,8 @@ One day you’re at a regular user group meeting, sipping soda and talking with 
       
       <guid>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</guid>
       <description>I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
+http://www.dotnetperls.com/binarysearch
+They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
     </item>
     
     <item>
@@ -69,7 +70,7 @@ http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration
       <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/published-by-red-gate/</guid>
-      <description>As of today I’ve been published in an e-Book offered for free by Red Gate!It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
+      <description>As of today I’ve been published in an e-Book offered for free by Red Gate! It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
 My tip is #3 and has to do with debugging Microsoft symbols.
 Get a free copy here – it has already taught me a few things I had never thought to consider!</description>
     </item>
@@ -100,8 +101,8 @@ static void Main(string[] args){var stopwatch = new Stopwatch();string a = &a
       <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/stats-vs-reference-string-equals/</guid>
-      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals methodin .NET, but if that doesn’t do it for you, allow me to present a simple example.
-string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b); What is the expected result of these lines? A boolean value of false, of course.</description>
+      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals method in .NET, but if that doesn’t do it for you, allow me to present a simple example.
+string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b);What is the expected result of these lines? A boolean value of false, of course.</description>
     </item>
     
     <item>
@@ -110,7 +111,7 @@ string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool re
       <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
       
       <guid>https://www.davidhaney.io/tpl-and-error-handling-continuations/</guid>
-      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasksas a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
+      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
 Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
     </item>
     
@@ -141,7 +142,7 @@ To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that
       
       <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
       <description>Sorry for the delay in posts, May has been a very busy month.
-In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB filesto accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
+In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
     </item>
     
     <item>

@@ -45,7 +45,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/www.davidhaney.io\/determine-mime-type-from-file-name\/",
-          "name": "Determine m i m e type from file name"
+          "name": "Determine mime type from file name"
         }
     }]
 }
@@ -59,7 +59,7 @@
   "headline": "Determine MIME Type from File Name",
   "description" : "I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.",
   "inLanguage" : "en",
-  "wordCount":  650 ,
+  "wordCount":  654 ,
   "datePublished" : "2013-02-11T15:15:46",
   "dateModified" : "2013-02-11T15:15:46",
   "image" : "https:\/\/www.davidhaney.io\/img\/me.jpg",
@@ -92,7 +92,7 @@
   <meta name="twitter:site" content="@haneytron" />
   <meta name="twitter:creator" content="@haneytron" />
   <link href='https://www.davidhaney.io/favicons/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.78.1" />
+  <meta name="generator" content="Hugo 0.101.0" />
   <link rel="alternate" href="https://www.davidhaney.io/index.xml" type="application/rss+xml" title="David Haney"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.davidhaney.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -239,7 +239,7 @@
   
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;650&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;654&nbsp;words
   
   
   
@@ -335,11 +335,11 @@ public static class MimeMappingStealer
     var fileName3 = &quot;myfile.html&quot;;
 
     Console.WriteLine(&quot;Output for &quot; + fileName1 + &quot; = &quot; 
-        + MimeMappingStealer.GetMimeMapping(fileName1));
+	    + MimeMappingStealer.GetMimeMapping(fileName1));
     Console.WriteLine(&quot;Output for &quot; + fileName2 + &quot; = &quot; 
-        + MimeMappingStealer.GetMimeMapping(fileName2));
+	    + MimeMappingStealer.GetMimeMapping(fileName2));
     Console.WriteLine(&quot;Output for &quot; + fileName3 + &quot; = &quot; 
-        + MimeMappingStealer.GetMimeMapping(fileName3));
+	    + MimeMappingStealer.GetMimeMapping(fileName3));
 
     Console.ReadKey();
 }
@@ -481,7 +481,7 @@ public static class MimeMappingStealer
           <div class="disqus-comments">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -574,7 +574,7 @@ public static class MimeMappingStealer
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.78.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

@@ -14,7 +14,8 @@
       
       <guid>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</guid>
       <description>I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearchThey do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
+http://www.dotnetperls.com/binarysearch
+They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
     </item>
     
     <item>

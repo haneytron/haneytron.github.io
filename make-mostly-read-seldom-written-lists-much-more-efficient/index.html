@@ -59,7 +59,7 @@
   "headline": "Make Mostly Read, Seldom-Written Lists Much More Efficient",
   "description" : "One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted\/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.",
   "inLanguage" : "en",
-  "wordCount":  1699 ,
+  "wordCount":  1703 ,
   "datePublished" : "2013-03-15T17:11:42",
   "dateModified" : "2013-03-15T17:11:42",
   "image" : "https:\/\/www.davidhaney.io\/img\/me.jpg",
@@ -92,7 +92,7 @@
   <meta name="twitter:site" content="@haneytron" />
   <meta name="twitter:creator" content="@haneytron" />
   <link href='https://www.davidhaney.io/favicons/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.78.1" />
+  <meta name="generator" content="Hugo 0.101.0" />
   <link rel="alternate" href="https://www.davidhaney.io/index.xml" type="application/rss+xml" title="David Haney"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.davidhaney.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -239,7 +239,7 @@
   
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1699&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1703&nbsp;words
   
   
   
@@ -328,7 +328,7 @@
     {
         // Leave the loop when the property name no longer matches
         if (!string.Equals(propertyName, _entityProperties[i].Key, 
-            StringComparison.OrdinalIgnoreCase))
+		    StringComparison.OrdinalIgnoreCase))
         {
             // Leave the loop
             break;
@@ -365,7 +365,7 @@ public bool HasProperties(string propertyName)
 
     // Check that the next element matches the property name
     return string.Equals(propertyName, _entityProperties[startIndex].Key, 
-        StringComparison.OrdinalIgnoreCase);
+	    StringComparison.OrdinalIgnoreCase);
 }
 </code></pre>
 <p>Suddenly, I have the same “direct lookup” methods available as I did with my Dictionary and HashSet/List structure, but in a flat List with O(log n) complexity.</p>
@@ -494,7 +494,7 @@ public bool HasProperties(string propertyName)
           <div class="disqus-comments">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -587,7 +587,7 @@ public bool HasProperties(string propertyName)
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.78.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
