@@ -5,7 +5,6 @@
     <link>https://www.davidhaney.io/tags/visual-studio/</link>
     <description>Recent content in visual studio on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
     <lastBuildDate>Wed, 16 Oct 2013 21:35:51 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatically Generate POCOs From DB With T4</title>

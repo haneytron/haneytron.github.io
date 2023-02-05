@@ -5,7 +5,6 @@
     <link>https://www.davidhaney.io/</link>
     <description>Recent content on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
     <lastBuildDate>Mon, 09 Nov 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://www.davidhaney.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>.NET Core MVC - How to Access appsettings.json</title>
@@ -66,7 +65,7 @@ Don&amp;rsquo;t worry - haneycodes.net deep links will redirect properly for yea
       <guid>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</guid>
       <description>A few weeks back I wrote this tweet:
 I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager? I might whip that up today or tomorrow if people like the idea.
-&amp;mdash; David Haney (Account On Hiatus) (@haneytron) July 9, 2018 43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand.</description>
+&amp;mdash; David Haney hachyderm.io/@haney (@haneytron) July 9, 2018 43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand.</description>
     </item>
     
     <item>
