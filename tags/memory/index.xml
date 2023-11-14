@@ -5,36 +5,32 @@
     <link>https://www.davidhaney.io/tags/memory/</link>
     <description>Recent content in memory on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Mar 2013 15:36:24 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Mar 2013 15:36:24 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>One More Thing About List Binary Search</title>
       <link>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</link>
       <pubDate>Sat, 30 Mar 2013 15:36:24 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</guid>
       <description>I wanted to point people to this link at DotNetPearls:
 http://www.dotnetperls.com/binarysearch
 They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
     </item>
-    
     <item>
       <title>Make Mostly Read, Seldom-Written Lists Much More Efficient</title>
       <link>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</link>
       <pubDate>Fri, 15 Mar 2013 17:11:42 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
       <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.</description>
     </item>
-    
     <item>
       <title>Who Loves Interns?</title>
       <link>https://www.davidhaney.io/who-loves-interns/</link>
       <pubDate>Wed, 02 May 2012 23:50:20 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/who-loves-interns/</guid>
       <description>The topic at hand is interning. More specifically, string interning.
 “What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – even if the same string is defined repeatedly.</description>
     </item>
-    
   </channel>
 </rss>

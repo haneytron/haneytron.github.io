@@ -5,25 +5,23 @@
     <link>https://www.davidhaney.io/tags/methodology/</link>
     <description>Recent content in methodology on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/methodology/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/methodology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitLab Data Loss: A Discussion</title>
       <link>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</link>
       <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</guid>
       <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.
 Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
     </item>
-    
     <item>
       <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
       <link>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</link>
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
       <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
     </item>
-    
   </channel>
 </rss>

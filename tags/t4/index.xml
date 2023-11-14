@@ -5,15 +5,15 @@
     <link>https://www.davidhaney.io/tags/t4/</link>
     <description>Recent content in t4 on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Oct 2013 21:35:51 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/t4/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Oct 2013 21:35:51 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/t4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatically Generate POCOs From DB With T4</title>
       <link>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</link>
       <pubDate>Wed, 16 Oct 2013 21:35:51 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</guid>
       <description>The T4 template engine is insanely powerful. I didn’t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn’t want to code all of this by hand – it would take literally days.</description>
     </item>
-    
   </channel>
 </rss>

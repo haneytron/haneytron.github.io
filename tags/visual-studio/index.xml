@@ -5,35 +5,31 @@
     <link>https://www.davidhaney.io/tags/visual-studio/</link>
     <description>Recent content in visual studio on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Oct 2013 21:35:51 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Oct 2013 21:35:51 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatically Generate POCOs From DB With T4</title>
       <link>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</link>
       <pubDate>Wed, 16 Oct 2013 21:35:51 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</guid>
       <description>The T4 template engine is insanely powerful. I didn’t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn’t want to code all of this by hand – it would take literally days.</description>
     </item>
-    
     <item>
       <title>Visual Studio 2012 Intellisense Not Working - SOLVED</title>
       <link>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</link>
       <pubDate>Tue, 20 Nov 2012 21:12:41 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</guid>
       <description>So, this post is about our beloved IDE instead of actual code.
 I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself “what the hell Visual Studio? 2010 didn’t have these problems?!” and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.</description>
     </item>
-    
     <item>
       <title>Make Your Debugging Life Easier</title>
       <link>https://www.davidhaney.io/make-your-debugging-life-easier/</link>
       <pubDate>Fri, 25 May 2012 20:25:36 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
       <description>Sorry for the delay in posts, May has been a very busy month.
 In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,17 +5,17 @@
     <link>https://www.davidhaney.io/tags/left-pad/</link>
     <description>Recent content in left-pad on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Mar 2016 18:01:52 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/left-pad/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Mar 2016 18:01:52 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/left-pad/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NPM &amp; left-pad: Have We Forgotten How To Program?</title>
       <link>https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/</link>
       <pubDate>Wed, 23 Mar 2016 18:01:52 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/</guid>
       <description>Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
 A simple NPM package called left-pad that was a dependency of their code.
 left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.</description>
     </item>
-    
   </channel>
 </rss>

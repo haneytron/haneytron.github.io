@@ -5,16 +5,16 @@
     <link>https://www.davidhaney.io/tags/windbg/</link>
     <description>Recent content in windbg on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Dec 2012 17:22:20 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/windbg/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Dec 2012 17:22:20 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/windbg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>But it Didn&#39;t Happen in DEV or QA!</title>
       <link>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</link>
       <pubDate>Sun, 02 Dec 2012 17:22:20 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</guid>
       <description>Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
 Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment… and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you’d be able to solve the problem.</description>
     </item>
-    
   </channel>
 </rss>

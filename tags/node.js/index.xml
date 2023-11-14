@@ -5,16 +5,16 @@
     <link>https://www.davidhaney.io/tags/node.js/</link>
     <description>Recent content in node.js on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 24 Mar 2014 16:41:25 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Mar 2014 16:41:25 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>To Node.js Or Not To Node.js</title>
       <link>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</link>
       <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</guid>
       <description>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.
 One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.</description>
     </item>
-    
   </channel>
 </rss>

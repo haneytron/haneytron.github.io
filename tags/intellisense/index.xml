@@ -5,16 +5,16 @@
     <link>https://www.davidhaney.io/tags/intellisense/</link>
     <description>Recent content in intellisense on David Haney</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Nov 2012 21:12:41 +0000</lastBuildDate><atom:link href="https://www.davidhaney.io/tags/intellisense/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Nov 2012 21:12:41 +0000</lastBuildDate>
+    <atom:link href="https://www.davidhaney.io/tags/intellisense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Visual Studio 2012 Intellisense Not Working - SOLVED</title>
       <link>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</link>
       <pubDate>Tue, 20 Nov 2012 21:12:41 +0000</pubDate>
-      
       <guid>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</guid>
       <description>So, this post is about our beloved IDE instead of actual code.
 I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself “what the hell Visual Studio? 2010 didn’t have these problems?!” and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.</description>
     </item>
-    
   </channel>
 </rss>
