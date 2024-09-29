@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>node.js on David Haney</title>
+    <title>Node.js on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/node.js/</link>
-    <description>Recent content in node.js on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Node.js on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 24 Mar 2014 16:41:25 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,8 +14,7 @@
       <link>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</link>
       <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
       <guid>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</guid>
-      <description>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.
-One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Node.js – it has rapidly become the “new hotness” in the tech start-up realm.&lt;/strong&gt; With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.&lt;/p&gt;&#xA;&lt;p&gt;One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.js?” asks one of the people in your group. “It’s all the rage. All of the cool kids in Silicon Valley are using it!” “What does it do?” you ask, only to be bombarded with a sales pitch worthy of the best of used car lots. “Oh, it’s amazing!” they reply, sipping their diet coke and shuffling their hipster fedora and backpack with MacBook Pro in it (or something like that), “It’s server side JavaScript. It runs on a single thread and it can do 100,000 web requests a second!” They glance at the group for the oohs and ahhs, but most people just stare back with amazement in their eyes. Then, your hipster Node-loving friend drops the words that start wars: &lt;strong&gt;“It’s way better than .NET”&lt;/strong&gt; – and just like that, your group is hooked. They go home, download the Node.js tools, write “Hello World”, and suddenly they’re on their way to the next user group meeting to talk about how great Node is.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

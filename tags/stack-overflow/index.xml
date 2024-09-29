@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stack overflow on David Haney</title>
+    <title>Stack Overflow on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/stack-overflow/</link>
-    <description>Recent content in stack overflow on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Stack Overflow on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Sun, 08 Sep 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/stack-overflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,39 +14,35 @@
       <link>https://www.davidhaney.io/sabbatical-week-one/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-week-one/</guid>
-      <description>Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!
-I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.
-The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: https://www.</description>
+      <description>&lt;p&gt;Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!&lt;/p&gt;&#xA;&lt;p&gt;I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.&lt;/p&gt;&#xA;&lt;p&gt;The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: &lt;a href=&#34;https://www.bahamas.com/relief&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.bahamas.com/relief&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sabbatical Begins</title>
       <link>https://www.davidhaney.io/sabbatical-begins/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-begins/</guid>
-      <description>One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday). Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.</description>
+      <description>&lt;p&gt;One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday).&#xA;Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</title>
       <link>https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
       <pubDate>Fri, 26 Feb 2016 14:05:41 +0000</pubDate>
       <guid>https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
-      <description>Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.
-How Does Your Company Determine Compensation? When you hire developers, how do you decide on their salary?</description>
+      <description>&lt;h1 id=&#34;are-developers-good-negotiators&#34;&gt;Are Developers Good Negotiators?&lt;/h1&gt;&#xA;&lt;p&gt;Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.&lt;/p&gt;&#xA;&lt;h1 id=&#34;how-does-your-company-determine-compensation&#34;&gt;How Does Your Company Determine Compensation?&lt;/h1&gt;&#xA;&lt;p&gt;When you hire developers, how do you decide on their salary? Do you allow for negotiations to take place? Is there a strategy in place where you offer a low value, expecting the candidate to counter with a higher number? Are you pleased when they don’t counter, and you get good talent for cheap?&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Trouble With Job Titles</title>
       <link>https://www.davidhaney.io/the-trouble-with-job-titles/</link>
       <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-trouble-with-job-titles/</guid>
-      <description>Intro I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
-I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was &lt;strong&gt;Junior Developer&lt;/strong&gt;. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.&lt;/p&gt;&#xA;&lt;p&gt;I contacted recruiters, and one eventually found me a promotion: &lt;strong&gt;Systems Analyst&lt;/strong&gt;. It came with a decent pay bump and so forth, as well as the luxury of dropping “&lt;strong&gt;Junior&lt;/strong&gt;” from my job title. As this was a good deal all around, I took the offer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I Got A Job At Stack Exchange</title>
       <link>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</link>
       <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
       <guid>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</guid>
-      <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face. It was awesome.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

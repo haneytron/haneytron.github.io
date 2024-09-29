@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>recruiters on David Haney</title>
+    <title>Recruiters on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/recruiters/</link>
-    <description>Recent content in recruiters on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Recruiters on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Fri, 23 Jan 2015 12:04:37 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/recruiters/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,9 +14,7 @@
       <link>https://www.davidhaney.io/the-recruiting-competitive-advantage/</link>
       <pubDate>Fri, 23 Jan 2015 12:04:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-recruiting-competitive-advantage/</guid>
-      <description>A Job Listing Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:
-HELP WANTED:
-Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.</description>
+      <description>&lt;h1 id=&#34;a-job-listing&#34;&gt;A Job Listing&lt;/h1&gt;&#xA;&lt;p&gt;Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;HELP WANTED:&lt;br&gt;&#xA;Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

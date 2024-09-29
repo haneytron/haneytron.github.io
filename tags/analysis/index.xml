@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>analysis on David Haney</title>
+    <title>Analysis on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/analysis/</link>
-    <description>Recent content in analysis on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Analysis on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 09 Mar 2015 18:32:37 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/analysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,48 +14,42 @@
       <link>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</link>
       <pubDate>Mon, 09 Mar 2015 18:32:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</guid>
-      <description>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article.</description>
+      <description>&lt;p&gt;Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is &lt;a href=&#34;http://techcrunch.com/2015/03/08/on-secretly-terrible-engineers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;On Secretly Terrible Engineers&lt;/a&gt;&#xD;&#xA;, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spoiler:&lt;/strong&gt; I strongly disagree with most of this article. If you aren’t open to debates and discussion, quit reading here and return to your normal activities.&lt;/p&gt;</description>
     </item>
     <item>
       <title>iPhone 6: Style Over Substance</title>
       <link>https://www.davidhaney.io/iphone-6-style-over-substance/</link>
       <pubDate>Tue, 09 Sep 2014 19:22:53 +0000</pubDate>
       <guid>https://www.davidhaney.io/iphone-6-style-over-substance/</guid>
-      <description>Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I’m not going to talk about the watch, but instead about the phone.
-For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don’t blame anyone for owning an iPhone: they’re reasonably sexy and you get to show off the Apple branding.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I’m not going to talk about the watch, but instead about the phone.&lt;/p&gt;&#xA;&lt;p&gt;For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don’t blame anyone for owning an iPhone: they’re reasonably sexy and you get to show off the Apple branding. Good on you.&lt;/p&gt;</description>
     </item>
     <item>
       <title>To Node.js Or Not To Node.js</title>
       <link>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</link>
       <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
       <guid>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</guid>
-      <description>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.
-One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Node.js – it has rapidly become the “new hotness” in the tech start-up realm.&lt;/strong&gt; With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.&lt;/p&gt;&#xA;&lt;p&gt;One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.js?” asks one of the people in your group. “It’s all the rage. All of the cool kids in Silicon Valley are using it!” “What does it do?” you ask, only to be bombarded with a sales pitch worthy of the best of used car lots. “Oh, it’s amazing!” they reply, sipping their diet coke and shuffling their hipster fedora and backpack with MacBook Pro in it (or something like that), “It’s server side JavaScript. It runs on a single thread and it can do 100,000 web requests a second!” They glance at the group for the oohs and ahhs, but most people just stare back with amazement in their eyes. Then, your hipster Node-loving friend drops the words that start wars: &lt;strong&gt;“It’s way better than .NET”&lt;/strong&gt; – and just like that, your group is hooked. They go home, download the Node.js tools, write “Hello World”, and suddenly they’re on their way to the next user group meeting to talk about how great Node is.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Static vs Instance string.Equals Benchmark</title>
       <link>https://www.davidhaney.io/static-vs-instance-string-equals-benchmark/</link>
       <pubDate>Wed, 24 Oct 2012 16:57:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/static-vs-instance-string-equals-benchmark/</guid>
-      <description>A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:
-static void Main(string[] args){var stopwatch = new Stopwatch();string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;stopwatch.Start();for (int i = 0; i &amp;lt; 10000000; i++){a.Equals(b);}stopwatch.Stop();Console.WriteLine(&amp;quot;Instance string.Equals over 10,000,000 iterations: &amp;quot; + stopwatch.</description>
+      <description>&lt;p&gt;A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;static void Main(string[] args)&#xD;&#xA;{&#xD;&#xA;    var stopwatch = new Stopwatch();&#xD;&#xA;&#xD;&#xA;    string a = &amp;quot;hello&amp;quot;;&#xD;&#xA;    string b = &amp;quot;hi&amp;quot;;&#xD;&#xA;&#xD;&#xA;    stopwatch.Start();&#xD;&#xA;    for (int i = 0; i &amp;lt; 10000000; i++)&#xD;&#xA;    {&#xD;&#xA;        a.Equals(b);&#xD;&#xA;    }&#xD;&#xA;    stopwatch.Stop();&#xD;&#xA;&#xD;&#xA;    Console.WriteLine(&amp;quot;Instance string.Equals over 10,000,000 iterations: &amp;quot; &#xD;&#xA;&#x9;    + stopwatch.ElapsedMilliseconds + &amp;quot; ms&amp;quot;);&#xD;&#xA;&#xD;&#xA;    stopwatch.Reset();&#xD;&#xA;&#xD;&#xA;    stopwatch.Start();&#xD;&#xA;    for (int i = 0; i &amp;lt; 10000000; i++)&#xD;&#xA;    {&#xD;&#xA;        string.Equals(a, b);&#xD;&#xA;    }&#xD;&#xA;    stopwatch.Stop();&#xD;&#xA;&#xD;&#xA;    Console.WriteLine(&amp;quot;Static string.Equals over 10,000,000 iterations: &amp;quot;&#xD;&#xA;&#x9;    + stopwatch.ElapsedMilliseconds + &amp;quot; ms&amp;quot;);&#xD;&#xA;&#xD;&#xA;    Console.ReadKey();&#xD;&#xA;}&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;The results of 5 runs, where “I” is the instance method and “S” is the static method, and the times are in milliseconds:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Static vs Instance string.Equals</title>
       <link>https://www.davidhaney.io/stats-vs-reference-string-equals/</link>
       <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/stats-vs-reference-string-equals/</guid>
-      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals method in .NET, but if that doesn’t do it for you, allow me to present a simple example.
-string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b);What is the expected result of these lines? A boolean value of false, of course.</description>
+      <description>&lt;p&gt;As you may or may not know, &lt;a href=&#34;http://stackoverflow.com/a/2142088&#34;&gt;static methods are usually faster than instance methods&lt;/a&gt;. This alone should be a good enough reason to use the &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/1hkt4325.aspx&#34;&gt;static string.Equals method&lt;/a&gt; in .NET, but if that doesn’t do it for you, allow me to present a simple example.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;string a = &amp;quot;hello&amp;quot;;&#xD;&#xA;string b = &amp;quot;hi&amp;quot;;&#xD;&#xA;bool result = a.Equals(b);&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;What is the expected result of these lines? A boolean value of false, of course. And it’d be true if the strings were identical. It’s also false if b is null. But what if a is null?&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Joel Test Really is Meaningful</title>
       <link>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</link>
       <pubDate>Sun, 14 Oct 2012 22:10:54 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</guid>
-      <description>Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
-The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.</description>
+      <description>&lt;p&gt;Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.joelonsoftware.com/articles/fog0000000043.html&#34;&gt;The Joel Test&lt;/a&gt; is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply. In short, it’s a very brief questionnaire that evaluates the quality of your software development team, and implicitly their happiness as well.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

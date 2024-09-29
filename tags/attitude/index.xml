@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>attitude on David Haney</title>
+    <title>Attitude on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/attitude/</link>
-    <description>Recent content in attitude on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Attitude on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/attitude/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,47 +14,42 @@
       <link>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</link>
       <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</guid>
-      <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.
-Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
+      <description>&lt;p&gt;In case you missed the big news in the industry this week, &lt;a href=&#34;https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a GitLab employee accidentally deleted a ton of production data&lt;/a&gt;&#xD;&#xA; and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.&lt;/p&gt;&#xA;&lt;h1 id=&#34;backup-prod-data-regularly&#34;&gt;Backup Prod Data Regularly&lt;/h1&gt;&#xA;&lt;p&gt;Not exactly a groundbreaking statement, right? Everybody &lt;em&gt;knows&lt;/em&gt; this. If there was a “working in corporate IT 101” manual it would have a chapter on this concept. It’s common sense.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Conducting Good Code Reviews</title>
       <link>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</link>
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</guid>
-      <description>In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
+      <description>&lt;p&gt;In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Accountability &amp; Blame</title>
       <link>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</link>
       <pubDate>Fri, 20 Jan 2017 13:20:59 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</guid>
-      <description>As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.</description>
+      <description>&lt;p&gt;As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Industry Needs Compassion</title>
       <link>https://www.davidhaney.io/our-industry-needs-compassion/</link>
       <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
       <guid>https://www.davidhaney.io/our-industry-needs-compassion/</guid>
-      <description>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.
-So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
+      <description>&lt;p&gt;Well, I’ve utterly failed to blog at regular intervals, writing &lt;a href=&#34;https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;only&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;three&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/lets-talk-about-rock-stars-egos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posts&lt;/a&gt;&#xD;&#xA; in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.&lt;/p&gt;&#xA;&lt;p&gt;So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts. My traditional style has been “come upon something that is really bothering me or is really tricky, and proceed to blog about it in great detail writing thousands of words for all to benefit from” which doesn’t really scale well. Instead I plan to take the approach of “write about a new or interesting topic each week, and see what people like and what they don’t like” which will hopefully be better.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
       <link>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</link>
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       <guid>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</guid>
-      <description>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
-Plumber #1 Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.</description>
+      <description>&lt;h1 id=&#34;on-plumbers&#34;&gt;On Plumbers&lt;/h1&gt;&#xA;&lt;p&gt;Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.&lt;/p&gt;&#xA;&lt;h2 id=&#34;plumber-1&#34;&gt;Plumber #1&lt;/h2&gt;&#xA;&lt;p&gt;Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.5x what everybody else costs, and only if you have lunch and coffee ready for him when he arrives. You have no water, keep in mind, so making coffee is an extra special effort.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Recruiting Competitive Advantage</title>
       <link>https://www.davidhaney.io/the-recruiting-competitive-advantage/</link>
       <pubDate>Fri, 23 Jan 2015 12:04:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-recruiting-competitive-advantage/</guid>
-      <description>A Job Listing Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:
-HELP WANTED:
-Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.</description>
+      <description>&lt;h1 id=&#34;a-job-listing&#34;&gt;A Job Listing&lt;/h1&gt;&#xA;&lt;p&gt;Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;HELP WANTED:&lt;br&gt;&#xA;Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

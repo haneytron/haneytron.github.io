@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tpl on David Haney</title>
+    <title>Tpl on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/tpl/</link>
-    <description>Recent content in tpl on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tpl on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Sun, 12 Aug 2012 23:21:30 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/tpl/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,16 +14,14 @@
       <link>https://www.davidhaney.io/tpl-and-error-handling-continuations/</link>
       <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
       <guid>https://www.davidhaney.io/tpl-and-error-handling-continuations/</guid>
-      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
-Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
+      <description>&lt;p&gt;Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ee372288.aspx&#34;&gt;Continuation Tasks&lt;/a&gt; as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.&lt;/p&gt;&#xA;&lt;p&gt;Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TPL and Error Handling</title>
       <link>https://www.davidhaney.io/tpl-and-error-handling/</link>
       <pubDate>Sun, 05 Aug 2012 13:39:38 +0000</pubDate>
       <guid>https://www.davidhaney.io/tpl-and-error-handling/</guid>
-      <description>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
-Let’s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:</description>
+      <description>&lt;p&gt;As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.&lt;/p&gt;&#xA;&lt;p&gt;Let’s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

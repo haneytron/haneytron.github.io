@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>core on David Haney</title>
+    <title>Core on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/core/</link>
-    <description>Recent content in core on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Core on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 09 Nov 2020 00:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/core/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,16 +14,14 @@
       <link>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</link>
       <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</guid>
-      <description>Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?
-I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC.</description>
+      <description>&lt;p&gt;Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?&lt;/p&gt;&#xA;&lt;p&gt;I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC. As a result, I had to teach myself the new ways of doing old things.&lt;/p&gt;</description>
     </item>
     <item>
       <title>.NET Core Azure Functions Tutorial</title>
       <link>https://www.davidhaney.io/net-core-azure-functions-tutorial/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/net-core-azure-functions-tutorial/</guid>
-      <description>In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.</description>
+      <description>&lt;p&gt;In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!&lt;/p&gt;&#xA;&lt;h1 id=&#34;introducing-realdonaldtron&#34;&gt;Introducing realDonaldTron&lt;/h1&gt;&#xA;&lt;p&gt;So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a &lt;a href=&#34;https://www.twitter.com/realDonaldTron&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter account&lt;/a&gt;&#xD;&#xA; and generated API keys. I then created an Azure Classic Cloud Service and&#xA;wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&amp;rsquo;t write words good), generates a &lt;a href=&#34;https://en.wikipedia.org/wiki/Markov_chain&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markov Chain&lt;/a&gt;&#xD;&#xA;&#xA;from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

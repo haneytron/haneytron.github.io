@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>reflection on David Haney</title>
+    <title>Reflection on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/reflection/</link>
-    <description>Recent content in reflection on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Reflection on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Tue, 12 Feb 2013 12:07:12 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/reflection/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,14 +14,14 @@
       <link>https://www.davidhaney.io/a-better-mime-mapping-stealer/</link>
       <pubDate>Tue, 12 Feb 2013 12:07:12 +0000</pubDate>
       <guid>https://www.davidhaney.io/a-better-mime-mapping-stealer/</guid>
-      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&amp;lt;string, string&amp;gt; instead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):</description>
+      <description>&lt;p&gt;In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&amp;lt;string, string&amp;gt; instead of MethodInfo. Code below, note the use of &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/53cz7sc6.aspx&#34;&gt;Delegate.CreateDelegate(Type, MethodInfo)&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/// &amp;lt;summary&amp;gt;&#xD;&#xA;/// Exposes the Mime Mapping method that Microsoft hid from us.&#xD;&#xA;/// &amp;lt;/summary&amp;gt;&#xD;&#xA;public static class MimeMappingStealer&#xD;&#xA;{&#xD;&#xA;    // The get mime mapping method&#xD;&#xA;    private static readonly Func&amp;lt;string, string&amp;gt; _getMimeMappingMethod = null;&#xD;&#xA;&#xD;&#xA;    /// &amp;lt;summary&amp;gt;&#xD;&#xA;    /// Static constructor sets up reflection.&#xD;&#xA;    /// &amp;lt;/summary&amp;gt;&#xD;&#xA;    static MimeMappingStealer()&#xD;&#xA;    {&#xD;&#xA;        // Load hidden mime mapping class and method from System.Web&#xD;&#xA;        var assembly = Assembly.GetAssembly(typeof(HttpApplication));&#xD;&#xA;        Type mimeMappingType = assembly.GetType(&amp;quot;System.Web.MimeMapping&amp;quot;);&#xD;&#xA;        _getMimeMappingMethod = &#xD;&#xA;&#x9;&#x9;    (Func&amp;lt;string, string&amp;gt;)Delegate.CreateDelegate(typeof(Func&amp;lt;string, string&amp;gt;), &#xD;&#xA;&#x9;&#x9;&#x9;    mimeMappingType.GetMethod(&amp;quot;GetMimeMapping&amp;quot;, &#xD;&#xA;                BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public |&#xD;&#xA;                BindingFlags.NonPublic | BindingFlags.FlattenHierarchy));&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    /// &amp;lt;summary&amp;gt;&#xD;&#xA;    /// Exposes the hidden Mime mapping method.&#xD;&#xA;    /// &amp;lt;/summary&amp;gt;&#xD;&#xA;    /// &amp;lt;param name=&amp;quot;fileName&amp;quot;&amp;gt;The file name.&amp;lt;/param&amp;gt;&#xD;&#xA;    /// &amp;lt;returns&amp;gt;The mime mapping.&amp;lt;/returns&amp;gt;&#xD;&#xA;    public static string GetMimeMapping(string fileName)&#xD;&#xA;    {&#xD;&#xA;        return _getMimeMappingMethod(fileName);&#xD;&#xA;    }&#xD;&#xA;}&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Determine MIME Type from File Name</title>
       <link>https://www.davidhaney.io/determine-mime-type-from-file-name/</link>
       <pubDate>Mon, 11 Feb 2013 15:15:46 +0000</pubDate>
       <guid>https://www.davidhaney.io/determine-mime-type-from-file-name/</guid>
-      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</description>
+      <description>&lt;p&gt;I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

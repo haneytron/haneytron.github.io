@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>credentialism on David Haney</title>
+    <title>Credentialism on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/credentialism/</link>
-    <description>Recent content in credentialism on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Credentialism on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 29 Dec 2014 16:00:27 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/credentialism/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,15 +14,14 @@
       <link>https://www.davidhaney.io/on-credentialism-in-software-development/</link>
       <pubDate>Mon, 29 Dec 2014 16:00:27 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-credentialism-in-software-development/</guid>
-      <description>Intro We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in &lt;a href=&#34;https://www.davidhaney.io/the-trouble-with-job-titles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last post&lt;/a&gt;&#xD;&#xA;. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Trouble With Job Titles</title>
       <link>https://www.davidhaney.io/the-trouble-with-job-titles/</link>
       <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-trouble-with-job-titles/</guid>
-      <description>Intro I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
-I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was &lt;strong&gt;Junior Developer&lt;/strong&gt;. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.&lt;/p&gt;&#xA;&lt;p&gt;I contacted recruiters, and one eventually found me a promotion: &lt;strong&gt;Systems Analyst&lt;/strong&gt;. It came with a decent pay bump and so forth, as well as the luxury of dropping “&lt;strong&gt;Junior&lt;/strong&gt;” from my job title. As this was a good deal all around, I took the offer.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

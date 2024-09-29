@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>open source on David Haney</title>
+    <title>Open Source on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/open-source/</link>
-    <description>Recent content in open source on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Open Source on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Sat, 09 Jun 2018 13:56:24 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,25 +14,21 @@
       <link>https://www.davidhaney.io/new-blog-and-hiring-needs/</link>
       <pubDate>Sat, 09 Jun 2018 13:56:24 -0400</pubDate>
       <guid>https://www.davidhaney.io/new-blog-and-hiring-needs/</guid>
-      <description>Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.
-Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!
-New blog engine I was previously using WordPress but had many issues and concerns with it.</description>
+      <description>&lt;p&gt;Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.&lt;/p&gt;&#xA;&lt;p&gt;Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!&lt;/p&gt;&#xA;&lt;h1 id=&#34;new-blog-engine&#34;&gt;New blog engine&lt;/h1&gt;&#xA;&lt;p&gt;I was previously using WordPress but had many issues and concerns with it. One of the biggest concerns was that the site was not mobile friendly, and making it responsive was next to impossible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Hiring: Developers Are Like Stocks</title>
       <link>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</link>
       <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</guid>
-      <description>This post is for those of you who hire developers, and also junior developers who want to be hired. Let’s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you’re now a stock market investor.
-As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It’s made very clear that the future of the company depends on the return on investment (herein called ROI) – “gains” – that your investments bring to the company.</description>
+      <description>&lt;p&gt;This post is for those of you who hire developers, and also junior developers who want to be hired. Let’s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you’re now a stock market investor.&lt;/p&gt;&#xA;&lt;p&gt;As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It’s made very clear that the future of the company depends on the return on investment (herein called ROI) – “gains” – that your investments bring to the company. Your decisions will have a major impact on the company’s future. Given that kind of pressure, what’s your investment strategy for success? Begin by reviewing the kinds of stocks available to invest in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Interview with InfoQ on SimplSockets</title>
       <link>https://www.davidhaney.io/interview-with-infoq-on-simplsockets/</link>
       <pubDate>Wed, 11 Dec 2013 10:54:43 +0000</pubDate>
       <guid>https://www.davidhaney.io/interview-with-infoq-on-simplsockets/</guid>
-      <description>Jonathan Allen of InfoQ conducted an interview with me about one of my open source initiatives, SimplSockets. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.
-I’d like to thank Jonathan and InfoQ for the opportunity – it was a great discussion. Check it out here: http://www.infoq.com/news/2013/12/SimplSockets</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.infoq.com/author/Jonathan-Allen&#34;&gt;Jonathan Allen of InfoQ&lt;/a&gt; conducted an interview with me about one of my open source initiatives, &lt;a href=&#34;https://github.com/haneytron/simplsockets&#34;&gt;SimplSockets&lt;/a&gt;. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.&lt;/p&gt;&#xA;&lt;p&gt;I’d like to thank Jonathan and InfoQ for the opportunity – it was a great discussion. Check it out here: &lt;a href=&#34;http://www.infoq.com/news/2013/12/SimplSockets&#34;&gt;&lt;a href=&#34;http://www.infoq.com/news/2013/12/SimplSockets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.infoq.com/news/2013/12/SimplSockets&lt;/a&gt;&#xD;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

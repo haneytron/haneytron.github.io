@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>diversity on David Haney</title>
+    <title>Diversity on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/diversity/</link>
-    <description>Recent content in diversity on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Diversity on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Thu, 24 Sep 2015 11:23:38 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/diversity/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,9 +14,7 @@
       <link>https://www.davidhaney.io/diversity-is-really-freaking-hard/</link>
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
-      <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.
-It’s no secret that the tech industry is not that diverse.</description>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;I’m going to discuss an important topic that affects everybody in tech: diversity.&lt;/p&gt;&#xA;&lt;p&gt;No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.&lt;/p&gt;&#xA;&lt;p&gt;It’s no secret that the tech industry is not that diverse. It’s mostly dominated by white males, with a few women and minorities making appearances. Those who do enter the industry as a minority often feel marginalized and excluded.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

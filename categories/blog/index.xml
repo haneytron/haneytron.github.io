@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on David Haney</title>
+    <title>Blog on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/categories/blog/</link>
-    <description>Recent content in blog on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Blog on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 09 Nov 2020 00:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,438 +14,385 @@
       <link>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</link>
       <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</guid>
-      <description>Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?
-I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC.</description>
+      <description>&lt;p&gt;Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?&lt;/p&gt;&#xA;&lt;p&gt;I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC. As a result, I had to teach myself the new ways of doing old things.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sabbatical Week One</title>
       <link>https://www.davidhaney.io/sabbatical-week-one/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-week-one/</guid>
-      <description>Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!
-I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.
-The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: https://www.</description>
+      <description>&lt;p&gt;Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!&lt;/p&gt;&#xA;&lt;p&gt;I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.&lt;/p&gt;&#xA;&lt;p&gt;The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: &lt;a href=&#34;https://www.bahamas.com/relief&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.bahamas.com/relief&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sabbatical Begins</title>
       <link>https://www.davidhaney.io/sabbatical-begins/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-begins/</guid>
-      <description>One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday). Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.</description>
+      <description>&lt;p&gt;One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday).&#xA;Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>.NET Core Azure Functions Tutorial</title>
       <link>https://www.davidhaney.io/net-core-azure-functions-tutorial/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/net-core-azure-functions-tutorial/</guid>
-      <description>In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!
-Introducing realDonaldTron So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense.</description>
+      <description>&lt;p&gt;In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!&lt;/p&gt;&#xA;&lt;h1 id=&#34;introducing-realdonaldtron&#34;&gt;Introducing realDonaldTron&lt;/h1&gt;&#xA;&lt;p&gt;So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a &lt;a href=&#34;https://www.twitter.com/realDonaldTron&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter account&lt;/a&gt;&#xD;&#xA; and generated API keys. I then created an Azure Classic Cloud Service and&#xA;wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&amp;rsquo;t write words good), generates a &lt;a href=&#34;https://en.wikipedia.org/wiki/Markov_chain&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markov Chain&lt;/a&gt;&#xD;&#xA;&#xA;from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Blog Name and Domain</title>
       <link>https://www.davidhaney.io/new-blog-name-and-domain/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 -0400</pubDate>
       <guid>https://www.davidhaney.io/new-blog-name-and-domain/</guid>
-      <description>It&amp;rsquo;s been a while since I changed things up, so I decided on a new Twitter handle and blog domain.
-This site is now hosted at davidhaney.io and called &amp;ldquo;David Haney&amp;rdquo; which in my opinion is a much better (and more descriptive and maybe even more egotistical) domain than haneycodes.net and the old name of &amp;ldquo;Haney Codes .NET&amp;rdquo;
-Don&amp;rsquo;t worry - haneycodes.net deep links will redirect properly for years to come, so you won&amp;rsquo;t miss anything at all.</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I changed things up, so I decided on a new Twitter handle and blog domain.&lt;/p&gt;&#xA;&lt;p&gt;This site is now hosted at &lt;a href=&#34;https://www.davidhaney.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;davidhaney.io&lt;/a&gt;&#xD;&#xA; and called &amp;ldquo;David Haney&amp;rdquo; which in my opinion is a much better (and more descriptive and maybe even more egotistical) domain than &lt;a href=&#34;http://www.haneycodes.net&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;haneycodes.net&lt;/a&gt;&#xD;&#xA; and the old name of &amp;ldquo;Haney Codes .NET&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t worry - haneycodes.net deep links will redirect properly for years to come, so you won&amp;rsquo;t miss anything at all. I&amp;rsquo;ve told Google&amp;rsquo;s search engine all about the change too, so links should work properly in results there as well.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Writing a Great Junior Tech Résumé</title>
       <link>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
       <guid>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</guid>
-      <description>A few weeks back I wrote this tweet:
-I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager? I might whip that up today or tomorrow if people like the idea.
-&amp;mdash; David Haney hachyderm.io/@haney (@haneytron) July 9, 2018 43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand.</description>
+      <description>&lt;p&gt;A few weeks back I wrote this tweet:&lt;/p&gt;&#xA;&lt;blockquote class=&#34;twitter-tweet&#34; data-dnt=&#34;true&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager? I might whip that up today or tomorrow if people like the idea.&lt;/p&gt;&amp;mdash; David Haney hachyderm.io/@haney (@haneytron) &lt;a href=&#34;https://twitter.com/haneytron/status/1016417664766443520?ref_src=twsrc%5Etfw&#34;&gt;July 9, 2018&lt;/a&gt;&lt;/blockquote&gt;&#xA;&#xA;&#xA;&lt;p&gt;43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand. So, let&amp;rsquo;s skip over the pleasantries and talk about how you can create a great technical résumé as a junior developer, from the perspective of me (a hiring manager).&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Blog &amp; Hiring Needs</title>
       <link>https://www.davidhaney.io/new-blog-and-hiring-needs/</link>
       <pubDate>Sat, 09 Jun 2018 13:56:24 -0400</pubDate>
       <guid>https://www.davidhaney.io/new-blog-and-hiring-needs/</guid>
-      <description>Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.
-Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!
-New blog engine I was previously using WordPress but had many issues and concerns with it.</description>
+      <description>&lt;p&gt;Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.&lt;/p&gt;&#xA;&lt;p&gt;Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!&lt;/p&gt;&#xA;&lt;h1 id=&#34;new-blog-engine&#34;&gt;New blog engine&lt;/h1&gt;&#xA;&lt;p&gt;I was previously using WordPress but had many issues and concerns with it. One of the biggest concerns was that the site was not mobile friendly, and making it responsive was next to impossible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Hiring: Developers Are Like Stocks</title>
       <link>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</link>
       <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</guid>
-      <description>This post is for those of you who hire developers, and also junior developers who want to be hired. Let’s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you’re now a stock market investor.
-As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It’s made very clear that the future of the company depends on the return on investment (herein called ROI) – “gains” – that your investments bring to the company.</description>
+      <description>&lt;p&gt;This post is for those of you who hire developers, and also junior developers who want to be hired. Let’s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you’re now a stock market investor.&lt;/p&gt;&#xA;&lt;p&gt;As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It’s made very clear that the future of the company depends on the return on investment (herein called ROI) – “gains” – that your investments bring to the company. Your decisions will have a major impact on the company’s future. Given that kind of pressure, what’s your investment strategy for success? Begin by reviewing the kinds of stocks available to invest in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitLab Data Loss: A Discussion</title>
       <link>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</link>
       <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</guid>
-      <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.
-Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
+      <description>&lt;p&gt;In case you missed the big news in the industry this week, &lt;a href=&#34;https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a GitLab employee accidentally deleted a ton of production data&lt;/a&gt;&#xD;&#xA; and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.&lt;/p&gt;&#xA;&lt;h1 id=&#34;backup-prod-data-regularly&#34;&gt;Backup Prod Data Regularly&lt;/h1&gt;&#xA;&lt;p&gt;Not exactly a groundbreaking statement, right? Everybody &lt;em&gt;knows&lt;/em&gt; this. If there was a “working in corporate IT 101” manual it would have a chapter on this concept. It’s common sense.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Conducting Good Code Reviews</title>
       <link>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</link>
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</guid>
-      <description>In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
+      <description>&lt;p&gt;In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Accountability &amp; Blame</title>
       <link>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</link>
       <pubDate>Fri, 20 Jan 2017 13:20:59 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</guid>
-      <description>As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.</description>
+      <description>&lt;p&gt;As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Custom ASP.NET MVC Action Result Cache Attribute</title>
       <link>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</link>
       <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
       <guid>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</guid>
-      <description>If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.</description>
+      <description>&lt;p&gt;If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute%28v=vs.118%29.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OutputCacheAttribute&lt;/a&gt;&#xD;&#xA; attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again. This is the essence of caching: trading memory for performance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Industry Needs Compassion</title>
       <link>https://www.davidhaney.io/our-industry-needs-compassion/</link>
       <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
       <guid>https://www.davidhaney.io/our-industry-needs-compassion/</guid>
-      <description>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.
-So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
+      <description>&lt;p&gt;Well, I’ve utterly failed to blog at regular intervals, writing &lt;a href=&#34;https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;only&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;three&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/lets-talk-about-rock-stars-egos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posts&lt;/a&gt;&#xD;&#xA; in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.&lt;/p&gt;&#xA;&lt;p&gt;So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts. My traditional style has been “come upon something that is really bothering me or is really tricky, and proceed to blog about it in great detail writing thousands of words for all to benefit from” which doesn’t really scale well. Instead I plan to take the approach of “write about a new or interesting topic each week, and see what people like and what they don’t like” which will hopefully be better.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
       <link>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</link>
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       <guid>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</guid>
-      <description>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
-Plumber #1 Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.</description>
+      <description>&lt;h1 id=&#34;on-plumbers&#34;&gt;On Plumbers&lt;/h1&gt;&#xA;&lt;p&gt;Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.&lt;/p&gt;&#xA;&lt;h2 id=&#34;plumber-1&#34;&gt;Plumber #1&lt;/h2&gt;&#xA;&lt;p&gt;Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.5x what everybody else costs, and only if you have lunch and coffee ready for him when he arrives. You have no water, keep in mind, so making coffee is an extra special effort.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NPM &amp; left-pad: Have We Forgotten How To Program?</title>
       <link>https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/</link>
       <pubDate>Wed, 23 Mar 2016 18:01:52 +0000</pubDate>
       <guid>https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/</guid>
-      <description>Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
-A simple NPM package called left-pad that was a dependency of their code.
-left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:&lt;/p&gt;&#xA;&lt;p&gt;A simple NPM package called &lt;a href=&#34;https://www.npmjs.com/package/left-pad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;left-pad&lt;/a&gt;&#xD;&#xA; that was a dependency of their code.&lt;/p&gt;&#xA;&lt;p&gt;left-pad, at the time of writing this, &lt;a href=&#34;https://github.com/azer/left-pad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;has 11 stars on GitHub&lt;/a&gt;&#xD;&#xA;. The entire package is &lt;a href=&#34;https://github.com/azer/left-pad/blob/master/index.js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;11 simple lines that implement a basic left-pad string function&lt;/a&gt;&#xD;&#xA;. In case those links ever die, here is the entire code of the left-pad package:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developer Compensation: Stack Overflow Doesn&#39;t Stack Rank</title>
       <link>https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank/</link>
       <pubDate>Fri, 26 Feb 2016 14:05:41 +0000</pubDate>
       <guid>https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank/</guid>
-      <description>Are Developers Good Negotiators? Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.
-How Does Your Company Determine Compensation? When you hire developers, how do you decide on their salary?</description>
+      <description>&lt;h1 id=&#34;are-developers-good-negotiators&#34;&gt;Are Developers Good Negotiators?&lt;/h1&gt;&#xA;&lt;p&gt;Developers come from all walks of life, and have many unique interests, passions, and hobbies. Often the only thing that developers have in common is their love for programming. It follows that some are good negotiators; others get the double digit percentage finance rate at the dealership when they go in to buy that new car.&lt;/p&gt;&#xA;&lt;h1 id=&#34;how-does-your-company-determine-compensation&#34;&gt;How Does Your Company Determine Compensation?&lt;/h1&gt;&#xA;&lt;p&gt;When you hire developers, how do you decide on their salary? Do you allow for negotiations to take place? Is there a strategy in place where you offer a low value, expecting the candidate to counter with a higher number? Are you pleased when they don’t counter, and you get good talent for cheap?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Diversity Is Really Freaking Hard</title>
       <link>https://www.davidhaney.io/diversity-is-really-freaking-hard/</link>
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
-      <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.
-It’s no secret that the tech industry is not that diverse.</description>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;I’m going to discuss an important topic that affects everybody in tech: diversity.&lt;/p&gt;&#xA;&lt;p&gt;No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.&lt;/p&gt;&#xA;&lt;p&gt;It’s no secret that the tech industry is not that diverse. It’s mostly dominated by white males, with a few women and minorities making appearances. Those who do enter the industry as a minority often feel marginalized and excluded.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developer Turned Manager</title>
       <link>https://www.davidhaney.io/developer-turned-manager/</link>
       <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/developer-turned-manager/</guid>
-      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
-There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
+      <description>&lt;p&gt;In February of 2015, I was promoted to Engineering Manager at Stack Overflow. &lt;a href=&#34;https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Chapter_1_2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;This has made a lot of people very angry and been widely regarded as a bad move&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;&#xA;&lt;p&gt;There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently. You feel a little bit like you just rebooted your career and are starting over at the bottom of the skills ladder. It’s intimidating.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
       <link>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</link>
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
-      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
+      <description>&lt;p&gt;I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Secretly Terrible Engineers - A Rebuttal</title>
       <link>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</link>
       <pubDate>Mon, 09 Mar 2015 18:32:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</guid>
-      <description>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article.</description>
+      <description>&lt;p&gt;Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is &lt;a href=&#34;http://techcrunch.com/2015/03/08/on-secretly-terrible-engineers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;On Secretly Terrible Engineers&lt;/a&gt;&#xD;&#xA;, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spoiler:&lt;/strong&gt; I strongly disagree with most of this article. If you aren’t open to debates and discussion, quit reading here and return to your normal activities.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Recruiting Competitive Advantage</title>
       <link>https://www.davidhaney.io/the-recruiting-competitive-advantage/</link>
       <pubDate>Fri, 23 Jan 2015 12:04:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-recruiting-competitive-advantage/</guid>
-      <description>A Job Listing Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:
-HELP WANTED:
-Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.</description>
+      <description>&lt;h1 id=&#34;a-job-listing&#34;&gt;A Job Listing&lt;/h1&gt;&#xA;&lt;p&gt;Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;HELP WANTED:&lt;br&gt;&#xA;Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Credentialism In Software Development</title>
       <link>https://www.davidhaney.io/on-credentialism-in-software-development/</link>
       <pubDate>Mon, 29 Dec 2014 16:00:27 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-credentialism-in-software-development/</guid>
-      <description>Intro We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in &lt;a href=&#34;https://www.davidhaney.io/the-trouble-with-job-titles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last post&lt;/a&gt;&#xD;&#xA;. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Trouble With Job Titles</title>
       <link>https://www.davidhaney.io/the-trouble-with-job-titles/</link>
       <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-trouble-with-job-titles/</guid>
-      <description>Intro I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
-I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was &lt;strong&gt;Junior Developer&lt;/strong&gt;. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.&lt;/p&gt;&#xA;&lt;p&gt;I contacted recruiters, and one eventually found me a promotion: &lt;strong&gt;Systems Analyst&lt;/strong&gt;. It came with a decent pay bump and so forth, as well as the luxury of dropping “&lt;strong&gt;Junior&lt;/strong&gt;” from my job title. As this was a good deal all around, I took the offer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>iPhone 6: Style Over Substance</title>
       <link>https://www.davidhaney.io/iphone-6-style-over-substance/</link>
       <pubDate>Tue, 09 Sep 2014 19:22:53 +0000</pubDate>
       <guid>https://www.davidhaney.io/iphone-6-style-over-substance/</guid>
-      <description>Intro Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I’m not going to talk about the watch, but instead about the phone.
-For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don’t blame anyone for owning an iPhone: they’re reasonably sexy and you get to show off the Apple branding.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Like many of you, today I watched the Apple media event in which they announced both the iPhone 6 and Apple Watch. I’m not going to talk about the watch, but instead about the phone.&lt;/p&gt;&#xA;&lt;p&gt;For years Apple has been a true cachet brand. They are a luxury item that is sought after for status and image. I don’t blame anyone for owning an iPhone: they’re reasonably sexy and you get to show off the Apple branding. Good on you.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I Got A Job At Stack Exchange</title>
       <link>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</link>
       <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
       <guid>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</guid>
-      <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face. It was awesome.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How To Guarantee Dev Team Failure</title>
       <link>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</link>
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       <guid>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</guid>
-      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
+      <description>&lt;h1 id=&#34;the-problem&#34;&gt;The Problem&lt;/h1&gt;&#xA;&lt;p&gt;I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code. As a business, however, you’ve succeeded when you hit the deadline. My experience tells me that the typical metric upon which development teams are measured is often not quality of code or unit tests or even performance, but instead ability to meet deadlines and deliver solutions to clients. You’ve failed when you do not meet the deadlines and thus piss off the clients/customers. Your job has become a veritable boolean result with the outcomes of true and false. Deadline met? True. Deadline missed? False.&lt;/p&gt;</description>
     </item>
     <item>
       <title>To Node.js Or Not To Node.js</title>
       <link>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</link>
       <pubDate>Mon, 24 Mar 2014 16:41:25 +0000</pubDate>
       <guid>https://www.davidhaney.io/to-node-js-or-not-to-node-js/</guid>
-      <description>Intro Node.js – it has rapidly become the “new hotness” in the tech start-up realm. With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.
-One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Node.js – it has rapidly become the “new hotness” in the tech start-up realm.&lt;/strong&gt; With each passing day, the fan base of Node lovers grows larger, spreading their rhetoric like a religion. How do you spot a Node.js user? Don’t worry, they’ll let you know.&lt;/p&gt;&#xA;&lt;p&gt;One day you’re at a regular user group meeting, sipping soda and talking with some colleagues, when the subject turns to Node. “Have you guys tried Node.js?” asks one of the people in your group. “It’s all the rage. All of the cool kids in Silicon Valley are using it!” “What does it do?” you ask, only to be bombarded with a sales pitch worthy of the best of used car lots. “Oh, it’s amazing!” they reply, sipping their diet coke and shuffling their hipster fedora and backpack with MacBook Pro in it (or something like that), “It’s server side JavaScript. It runs on a single thread and it can do 100,000 web requests a second!” They glance at the group for the oohs and ahhs, but most people just stare back with amazement in their eyes. Then, your hipster Node-loving friend drops the words that start wars: &lt;strong&gt;“It’s way better than .NET”&lt;/strong&gt; – and just like that, your group is hooked. They go home, download the Node.js tools, write “Hello World”, and suddenly they’re on their way to the next user group meeting to talk about how great Node is.&lt;/p&gt;</description>
     </item>
     <item>
       <title>C# Probably Getting New &#34;Safe Navigation&#34; Operator &#34;?.&#34;</title>
       <link>https://www.davidhaney.io/c-probably-getting-new-safe-navigation-operator/</link>
       <pubDate>Fri, 28 Feb 2014 11:47:08 +0000</pubDate>
       <guid>https://www.davidhaney.io/c-probably-getting-new-safe-navigation-operator/</guid>
-      <description>It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release. This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.
-This new operator is likely going to take the syntax of ?. and is known as the Safe Navigation Operator.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/3990187-add-operator-to-c-?tracking_code=594c10a522f8e9bc987ee4a5e2c0b38d&#34;&gt;It looks as if the Visual Studio dev team may be implementing a new operator in a future .NET release.&lt;/a&gt; This is due in large part to community demand, which is pretty cool because it shows that the VS team is listening to their customer base; a key part of a successful product.&lt;/p&gt;&#xA;&lt;p&gt;This new operator is likely going to take the syntax of &lt;code&gt;?.&lt;/code&gt; and is known as the &lt;strong&gt;Safe Navigation Operator&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Trigger IValidatableObject.Validate When ModelState.IsValid is false</title>
       <link>https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</link>
       <pubDate>Wed, 05 Feb 2014 15:55:40 +0000</pubDate>
       <guid>https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</guid>
-      <description>I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
-Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject.</description>
+      <description>&lt;p&gt;I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the &lt;code&gt;IValidatableObject&lt;/code&gt; interface and thus the &lt;code&gt;Validate&lt;/code&gt; method which did some specific logic to ensure the state of the Model (the &lt;code&gt;ModelState&lt;/code&gt;). This Model also had some &lt;code&gt;DataAnnotation&lt;/code&gt; attributes on it to validate basic input.&lt;/p&gt;&#xA;&lt;p&gt;Long story short, the issue I encountered was that when &lt;code&gt;ModelState.IsValid == false&lt;/code&gt; due to failure of the &lt;code&gt;DataAnnotation&lt;/code&gt; validation, the &lt;code&gt;IValidatableObject.Validate&lt;/code&gt; method is not fired, even though I needed it to be. This problem arose due to a rare situation in which &lt;code&gt;ModeState.IsValid&lt;/code&gt; was initially false but was later set to true in the Controller’s Action Method by some logic that removed errors from the &lt;code&gt;ModelState&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Interview with InfoQ on SimplSockets</title>
       <link>https://www.davidhaney.io/interview-with-infoq-on-simplsockets/</link>
       <pubDate>Wed, 11 Dec 2013 10:54:43 +0000</pubDate>
       <guid>https://www.davidhaney.io/interview-with-infoq-on-simplsockets/</guid>
-      <description>Jonathan Allen of InfoQ conducted an interview with me about one of my open source initiatives, SimplSockets. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.
-I’d like to thank Jonathan and InfoQ for the opportunity – it was a great discussion. Check it out here: http://www.infoq.com/news/2013/12/SimplSockets</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.infoq.com/author/Jonathan-Allen&#34;&gt;Jonathan Allen of InfoQ&lt;/a&gt; conducted an interview with me about one of my open source initiatives, &lt;a href=&#34;https://github.com/haneytron/simplsockets&#34;&gt;SimplSockets&lt;/a&gt;. We discussed the value of TCP over HTTP and why Sockets are still relevant to programming.&lt;/p&gt;&#xA;&lt;p&gt;I’d like to thank Jonathan and InfoQ for the opportunity – it was a great discussion. Check it out here: &lt;a href=&#34;http://www.infoq.com/news/2013/12/SimplSockets&#34;&gt;&lt;a href=&#34;http://www.infoq.com/news/2013/12/SimplSockets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.infoq.com/news/2013/12/SimplSockets&lt;/a&gt;&#xD;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>MVC4 Conditional HTML Attributes</title>
       <link>https://www.davidhaney.io/mvc4-conditional-html-attributes/</link>
       <pubDate>Wed, 27 Nov 2013 00:34:25 +0000</pubDate>
       <guid>https://www.davidhaney.io/mvc4-conditional-html-attributes/</guid>
-      <description>MVC4 made one simple and yet awesome improvement to View rendering that I don’t think many people are aware of.
-Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable? The typical use case is applying a CSS class to a div. Most of the time that code looks something like this:
-&amp;lt;div @(myClass == null ?</description>
+      <description>&lt;p&gt;MVC4 made one simple and yet awesome improvement to View rendering that I don’t think many people are aware of.&lt;/p&gt;&#xA;&lt;p&gt;Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable? The typical use case is applying a CSS class to a div. Most of the time that code looks something like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;div @(myClass == null ? &amp;quot;&amp;quot; : &amp;quot;class=\&amp;quot;&amp;quot; + myClass + &amp;quot;\&amp;quot;&amp;quot;)&amp;gt;&amp;lt;/div&amp;gt;&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;What a pain – not only to write but to read… This destroys the View’s readability and clutters the HTML up big time!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automatically Generate POCOs From DB With T4</title>
       <link>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</link>
       <pubDate>Wed, 16 Oct 2013 21:35:51 +0000</pubDate>
       <guid>https://www.davidhaney.io/automatically-generate-pocos-from-db-with-t4/</guid>
-      <description>The T4 template engine is insanely powerful. I didn’t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn’t want to code all of this by hand – it would take literally days.</description>
+      <description>&lt;p&gt;The T4 template engine is insanely powerful. I didn’t really realize just how powerful it was until I had a use case for it today. I stood up a database with about 40 tables in it, and planned to use an ORM to access the database. To use the ORM, I needed POCOs (Plain Old C# Objects) that represented my database. Some of these tables had 30-50 or so columns and I didn’t want to code all of this by hand – it would take literally days.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Web API Mapping QueryString/Form Input</title>
       <link>https://www.davidhaney.io/web-api-mapping-querystringform-input/</link>
       <pubDate>Wed, 24 Jul 2013 17:55:12 +0000</pubDate>
       <guid>https://www.davidhaney.io/web-api-mapping-querystringform-input/</guid>
-      <description>If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:
-Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
+      <description>&lt;p&gt;If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription. A query string will be appended to your callback URL with the following parameters:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Generic Comparer</title>
       <link>https://www.davidhaney.io/generic-comparer/</link>
       <pubDate>Mon, 22 Apr 2013 14:53:17 +0000</pubDate>
       <guid>https://www.davidhaney.io/generic-comparer/</guid>
-      <description>Have you ever had to write a comparer for a specific type, only to be frustrated when you needed to write a second and third comparer for other types? Fear not, a generic comparer can take care of this for you!
-/// &amp;lt;summary&amp;gt;/// Compares two objects of any type./// &amp;lt;/summary&amp;gt;/// &amp;lt;typeparam name=&amp;quot;T&amp;quot;&amp;gt;The type to be compared.&amp;lt;/typeparam&amp;gt;public class GenericComparer&amp;lt;T&amp;gt; : IComparer&amp;lt;T&amp;gt;{// The compare methodprivate readonly Func&amp;lt;T, T, int&amp;gt; _compareMethod = null;/// &amp;lt;summary&amp;gt;/// The constructor.</description>
+      <description>&lt;p&gt;Have you ever had to write a comparer for a specific type, only to be frustrated when you needed to write a second and third comparer for other types? Fear not, a generic comparer can take care of this for you!&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/// &amp;lt;summary&amp;gt;&#xD;&#xA;/// Compares two objects of any type.&#xD;&#xA;/// &amp;lt;/summary&amp;gt;&#xD;&#xA;/// &amp;lt;typeparam name=&amp;quot;T&amp;quot;&amp;gt;The type to be compared.&amp;lt;/typeparam&amp;gt;&#xD;&#xA;public class GenericComparer&amp;lt;T&amp;gt; : IComparer&amp;lt;T&amp;gt;&#xD;&#xA;{&#xD;&#xA;    // The compare method&#xD;&#xA;    private readonly Func&amp;lt;T, T, int&amp;gt; _compareMethod = null;&#xD;&#xA;&#xD;&#xA;    /// &amp;lt;summary&amp;gt;&#xD;&#xA;    /// The constructor.&#xD;&#xA;    /// &amp;lt;/summary&amp;gt;&#xD;&#xA;    /// &amp;lt;param name=&amp;quot;compareMethod&amp;quot;&amp;gt;The compare method.&amp;lt;/param&amp;gt;&#xD;&#xA;    public GenericComparer(Func&amp;lt;T, T, int&amp;gt; compareMethod)&#xD;&#xA;    {&#xD;&#xA;        // Sanitize&#xD;&#xA;        if (compareMethod == null)&#xD;&#xA;        {&#xD;&#xA;            throw new ArgumentNullException(&amp;quot;compareMethod&amp;quot;);&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        _compareMethod = compareMethod;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    /// &amp;lt;summary&amp;gt;&#xD;&#xA;    /// Compares two objects.&#xD;&#xA;    /// &amp;lt;/summary&amp;gt;&#xD;&#xA;    /// &amp;lt;param name=&amp;quot;x&amp;quot;&amp;gt;The first object.&amp;lt;/param&amp;gt;&#xD;&#xA;    /// &amp;lt;param name=&amp;quot;y&amp;quot;&amp;gt;The second object.&amp;lt;/param&amp;gt;&#xD;&#xA;    /// &amp;lt;returns&amp;gt;Less than 0 if x is less than y, greater than &#xD;&#xA;    /// 0 if x is greater than y, 0 if they are equal.&amp;lt;/returns&amp;gt;&#xD;&#xA;    public int Compare(T x, T y)&#xD;&#xA;    {&#xD;&#xA;        return _compareMethod(x, y);&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Just pass a method to the constructor that takes 2 objects of type T and returns an int, and you’re all set!&lt;/p&gt;</description>
     </item>
     <item>
       <title>One More Thing About List Binary Search</title>
       <link>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</link>
       <pubDate>Sat, 30 Mar 2013 15:36:24 +0000</pubDate>
       <guid>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</guid>
-      <description>I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearch
-They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
+      <description>&lt;p&gt;I wanted to point people to this link at DotNetPearls:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.dotnetperls.com/binarysearch&#34;&gt;&lt;a href=&#34;http://www.dotnetperls.com/binarysearch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.dotnetperls.com/binarysearch&lt;/a&gt;&#xD;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;They do an excellent, quick demonstration of &lt;code&gt;List&amp;lt;T&amp;gt;.BinarySearch&lt;/code&gt; and show a graph that really drives home how much faster it is for large lists than a regular traversal!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Make Mostly Read, Seldom-Written Lists Much More Efficient</title>
       <link>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</link>
       <pubDate>Fri, 15 Mar 2013 17:11:42 +0000</pubDate>
       <guid>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
-      <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.</description>
+      <description>&lt;p&gt;One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory. This was becoming too large as we added new products every single day.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Better MIME Mapping Stealer!</title>
       <link>https://www.davidhaney.io/a-better-mime-mapping-stealer/</link>
       <pubDate>Tue, 12 Feb 2013 12:07:12 +0000</pubDate>
       <guid>https://www.davidhaney.io/a-better-mime-mapping-stealer/</guid>
-      <description>In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&amp;lt;string, string&amp;gt; instead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):</description>
+      <description>&lt;p&gt;In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&amp;lt;string, string&amp;gt; instead of MethodInfo. Code below, note the use of &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/53cz7sc6.aspx&#34;&gt;Delegate.CreateDelegate(Type, MethodInfo)&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/// &amp;lt;summary&amp;gt;&#xD;&#xA;/// Exposes the Mime Mapping method that Microsoft hid from us.&#xD;&#xA;/// &amp;lt;/summary&amp;gt;&#xD;&#xA;public static class MimeMappingStealer&#xD;&#xA;{&#xD;&#xA;    // The get mime mapping method&#xD;&#xA;    private static readonly Func&amp;lt;string, string&amp;gt; _getMimeMappingMethod = null;&#xD;&#xA;&#xD;&#xA;    /// &amp;lt;summary&amp;gt;&#xD;&#xA;    /// Static constructor sets up reflection.&#xD;&#xA;    /// &amp;lt;/summary&amp;gt;&#xD;&#xA;    static MimeMappingStealer()&#xD;&#xA;    {&#xD;&#xA;        // Load hidden mime mapping class and method from System.Web&#xD;&#xA;        var assembly = Assembly.GetAssembly(typeof(HttpApplication));&#xD;&#xA;        Type mimeMappingType = assembly.GetType(&amp;quot;System.Web.MimeMapping&amp;quot;);&#xD;&#xA;        _getMimeMappingMethod = &#xD;&#xA;&#x9;&#x9;    (Func&amp;lt;string, string&amp;gt;)Delegate.CreateDelegate(typeof(Func&amp;lt;string, string&amp;gt;), &#xD;&#xA;&#x9;&#x9;&#x9;    mimeMappingType.GetMethod(&amp;quot;GetMimeMapping&amp;quot;, &#xD;&#xA;                BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public |&#xD;&#xA;                BindingFlags.NonPublic | BindingFlags.FlattenHierarchy));&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    /// &amp;lt;summary&amp;gt;&#xD;&#xA;    /// Exposes the hidden Mime mapping method.&#xD;&#xA;    /// &amp;lt;/summary&amp;gt;&#xD;&#xA;    /// &amp;lt;param name=&amp;quot;fileName&amp;quot;&amp;gt;The file name.&amp;lt;/param&amp;gt;&#xD;&#xA;    /// &amp;lt;returns&amp;gt;The mime mapping.&amp;lt;/returns&amp;gt;&#xD;&#xA;    public static string GetMimeMapping(string fileName)&#xD;&#xA;    {&#xD;&#xA;        return _getMimeMappingMethod(fileName);&#xD;&#xA;    }&#xD;&#xA;}&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Determine MIME Type from File Name</title>
       <link>https://www.davidhaney.io/determine-mime-type-from-file-name/</link>
       <pubDate>Mon, 11 Feb 2013 15:15:46 +0000</pubDate>
       <guid>https://www.davidhaney.io/determine-mime-type-from-file-name/</guid>
-      <description>I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.</description>
+      <description>&lt;p&gt;I recently had a need, in an ASP.NET MVC3 application, to read raw HTML, CSS, JS, and image files from disk and return them to the user… A sort of “pass-through” if you will. Normally I’d have simply routed to a custom HTTP handler per file type or just allowed MVC3 to map existing files to supply its own .NET HTTP handlers and do all of this work for me, but in this case I needed the mapped “directory” to switch behind the scenes based on Session settings… So I ultimately had to feed these files through a Controller and Action Method to gain access to the Session.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Published by Red Gate</title>
       <link>https://www.davidhaney.io/published-by-red-gate/</link>
       <pubDate>Fri, 18 Jan 2013 15:10:04 +0000</pubDate>
       <guid>https://www.davidhaney.io/published-by-red-gate/</guid>
-      <description>As of today I’ve been published in an e-Book offered for free by Red Gate! It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.
-My tip is #3 and has to do with debugging Microsoft symbols.
-Get a free copy here – it has already taught me a few things I had never thought to consider!</description>
+      <description>&lt;p&gt;As of today I’ve been published in an e-Book offered for free by &lt;a href=&#34;http://www.red-gate.com&#34;&gt;Red Gate!&lt;/a&gt; It is called 50 Ways to Avoid, Find and Fix ASP.NET Performance Issues and contains many useful performance tips which have been contributed by various members of the .NET community. Many tips are ASP.NET MVC specific which is also a plus.&lt;/p&gt;&#xA;&lt;p&gt;My tip is #3 and has to do with debugging Microsoft symbols.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.red-gate.com/products/dotnet-development/ants-performance-profiler/entrypage/avoid-find-fix-asp-problems&#34;&gt;Get a free copy here – it has already taught me a few things I had never thought to consider!&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>But it Didn&#39;t Happen in DEV or QA!</title>
       <link>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</link>
       <pubDate>Sun, 02 Dec 2012 17:22:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/but-it-didnt-happen-in-dev-or-qa/</guid>
-      <description>Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?
-Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment… and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you’d be able to solve the problem.</description>
+      <description>&lt;p&gt;Most of us have been there: you’ve written a fantastic application that performs perfectly in your Development and/or QA environments, but in Production something goes wrong. Your application spins out of control, utilizing 100% of your CPU. Maybe it simply stops responding as if it were deadlocked. Or maybe it simply crashes randomly. What now?&lt;/p&gt;&#xA;&lt;p&gt;Logic tells you that you have a problem in the code somewhere that is only encountered in a Production-like environment… and if you could JUST get into the Production box, install Visual Studio (or at least the Remote Debugger), and debug the application, you’d be able to solve the problem. However, you can’t (because it’s Production!), and you can’t replicate the problem in any other environment. Maybe it’s because of stale Development or QA environment data compared to live Production data. Maybe it’s something else. You have no idea where to look to find and fix the problem in your application. For lack of eloquence: you’re screwed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Visual Studio 2012 Intellisense Not Working - SOLVED</title>
       <link>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</link>
       <pubDate>Tue, 20 Nov 2012 21:12:41 +0000</pubDate>
       <guid>https://www.davidhaney.io/visual-studio-2012-intellisense-not-working-solved/</guid>
-      <description>So, this post is about our beloved IDE instead of actual code.
-I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself “what the hell Visual Studio? 2010 didn’t have these problems?!” and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.</description>
+      <description>&lt;p&gt;So, this post is about our beloved IDE instead of actual code.&lt;/p&gt;&#xA;&lt;p&gt;I recently upgraded my home PC from Visual Studio 2010 and 11 Beta to Visual Studio 2012. The very first thing I noticed was that after about 10 minutes of programming my Intellisense quit working and never came back. I thought to myself “what the hell Visual Studio? 2010 didn’t have these problems?!” and then, after a swig of beer, proceeded to exercise my Google-Fu to solve this issue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Static vs Instance string.Equals Benchmark</title>
       <link>https://www.davidhaney.io/static-vs-instance-string-equals-benchmark/</link>
       <pubDate>Wed, 24 Oct 2012 16:57:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/static-vs-instance-string-equals-benchmark/</guid>
-      <description>A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:
-static void Main(string[] args){var stopwatch = new Stopwatch();string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;stopwatch.Start();for (int i = 0; i &amp;lt; 10000000; i++){a.Equals(b);}stopwatch.Stop();Console.WriteLine(&amp;quot;Instance string.Equals over 10,000,000 iterations: &amp;quot; + stopwatch.</description>
+      <description>&lt;p&gt;A friend of mine commented on my last post asking about how much faster the static string.Equals method is than the instance string.Equals method. To satiate both of our curiosities, I have created this benchmarking application:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;static void Main(string[] args)&#xD;&#xA;{&#xD;&#xA;    var stopwatch = new Stopwatch();&#xD;&#xA;&#xD;&#xA;    string a = &amp;quot;hello&amp;quot;;&#xD;&#xA;    string b = &amp;quot;hi&amp;quot;;&#xD;&#xA;&#xD;&#xA;    stopwatch.Start();&#xD;&#xA;    for (int i = 0; i &amp;lt; 10000000; i++)&#xD;&#xA;    {&#xD;&#xA;        a.Equals(b);&#xD;&#xA;    }&#xD;&#xA;    stopwatch.Stop();&#xD;&#xA;&#xD;&#xA;    Console.WriteLine(&amp;quot;Instance string.Equals over 10,000,000 iterations: &amp;quot; &#xD;&#xA;&#x9;    + stopwatch.ElapsedMilliseconds + &amp;quot; ms&amp;quot;);&#xD;&#xA;&#xD;&#xA;    stopwatch.Reset();&#xD;&#xA;&#xD;&#xA;    stopwatch.Start();&#xD;&#xA;    for (int i = 0; i &amp;lt; 10000000; i++)&#xD;&#xA;    {&#xD;&#xA;        string.Equals(a, b);&#xD;&#xA;    }&#xD;&#xA;    stopwatch.Stop();&#xD;&#xA;&#xD;&#xA;    Console.WriteLine(&amp;quot;Static string.Equals over 10,000,000 iterations: &amp;quot;&#xD;&#xA;&#x9;    + stopwatch.ElapsedMilliseconds + &amp;quot; ms&amp;quot;);&#xD;&#xA;&#xD;&#xA;    Console.ReadKey();&#xD;&#xA;}&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;The results of 5 runs, where “I” is the instance method and “S” is the static method, and the times are in milliseconds:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Static vs Instance string.Equals</title>
       <link>https://www.davidhaney.io/stats-vs-reference-string-equals/</link>
       <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/stats-vs-reference-string-equals/</guid>
-      <description>As you may or may not know, static methods are usually faster than instance methods. This alone should be a good enough reason to use the static string.Equals method in .NET, but if that doesn’t do it for you, allow me to present a simple example.
-string a = &amp;quot;hello&amp;quot;;string b = &amp;quot;hi&amp;quot;;bool result = a.Equals(b);What is the expected result of these lines? A boolean value of false, of course.</description>
+      <description>&lt;p&gt;As you may or may not know, &lt;a href=&#34;http://stackoverflow.com/a/2142088&#34;&gt;static methods are usually faster than instance methods&lt;/a&gt;. This alone should be a good enough reason to use the &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/1hkt4325.aspx&#34;&gt;static string.Equals method&lt;/a&gt; in .NET, but if that doesn’t do it for you, allow me to present a simple example.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;string a = &amp;quot;hello&amp;quot;;&#xD;&#xA;string b = &amp;quot;hi&amp;quot;;&#xD;&#xA;bool result = a.Equals(b);&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;What is the expected result of these lines? A boolean value of false, of course. And it’d be true if the strings were identical. It’s also false if b is null. But what if a is null?&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Joel Test Really is Meaningful</title>
       <link>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</link>
       <pubDate>Sun, 14 Oct 2012 22:10:54 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</guid>
-      <description>Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
-The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.</description>
+      <description>&lt;p&gt;Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.joelonsoftware.com/articles/fog0000000043.html&#34;&gt;The Joel Test&lt;/a&gt; is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply. In short, it’s a very brief questionnaire that evaluates the quality of your software development team, and implicitly their happiness as well.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Published by MDSN UK Blog</title>
       <link>https://www.davidhaney.io/published-by-mdsn-uk-blog/</link>
       <pubDate>Sun, 26 Aug 2012 23:49:41 +0000</pubDate>
       <guid>https://www.davidhaney.io/published-by-mdsn-uk-blog/</guid>
-      <description>This isn’t a very technical post, but I was published by Microsoft recently via their MSDN UK Blog! The article is on creating and maintaining a successful User Group.
-Click here to read the article!</description>
+      <description>&lt;p&gt;This isn’t a very technical post, but I was published by Microsoft recently via their MSDN UK Blog! The article is on creating and maintaining a successful User Group.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://blogs.msdn.com/b/ukmsdn/archive/2012/08/23/user-groups-lidnug-49-000-strong-and-growing.aspx&#34;&gt;Click here to read the article!&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>TPL and Error Handling &amp; Continuation Tasks</title>
       <link>https://www.davidhaney.io/tpl-and-error-handling-continuations/</link>
       <pubDate>Sun, 12 Aug 2012 23:21:30 +0000</pubDate>
       <guid>https://www.davidhaney.io/tpl-and-error-handling-continuations/</guid>
-      <description>Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted Continuation Tasks as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.
-Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.</description>
+      <description>&lt;p&gt;Two of my colleagues (one from work and one from a user group) kindly pointed out to me that in my last post I omitted &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/ee372288.aspx&#34;&gt;Continuation Tasks&lt;/a&gt; as a means of Error Handling for the TPL. As such, I will expand upon my last post with an example of handling errors via a Continuation Task.&lt;/p&gt;&#xA;&lt;p&gt;Continuing where we left off last, the following code will utilize a Task Continuation to handle errors within Tasks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TPL and Error Handling</title>
       <link>https://www.davidhaney.io/tpl-and-error-handling/</link>
       <pubDate>Sun, 05 Aug 2012 13:39:38 +0000</pubDate>
       <guid>https://www.davidhaney.io/tpl-and-error-handling/</guid>
-      <description>As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.
-Let’s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:</description>
+      <description>&lt;p&gt;As of .NET 4.0, the TPL or Task Parallel Library is king when it comes to parallelization. It allows for smooth, easy multi-threading for any application. There is a slight learning curve, however, and a major part of this is understanding how Exceptions bubble-up while using the TPL.&lt;/p&gt;&#xA;&lt;p&gt;Let’s partake in a simple example. This code will create and run a task that throws an Exception, and then attempt to catch it:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Compiler Tricks - Inferred Types</title>
       <link>https://www.davidhaney.io/compiler-tricks-inferred-types/</link>
       <pubDate>Mon, 16 Jul 2012 00:33:54 +0000</pubDate>
       <guid>https://www.davidhaney.io/compiler-tricks-inferred-types/</guid>
-      <description>The .NET compiler is a terrific thing… After all, it turns your C# into an executable program!
-One nice feature of the .NET compiler, which is becoming better each release, is inferred typing. I’d like to lay out a few short examples that might help you develop your programming standards and practices.
-Inferring a type when creating an array.
-// Create and initialize an arrayvar myArray = new int[] { 1, 2, 3 };Becomes:</description>
+      <description>&lt;p&gt;The .NET compiler is a terrific thing… After all, it turns your C# into an executable program!&lt;/p&gt;&#xA;&lt;p&gt;One nice feature of the .NET compiler, which is becoming better each release, is inferred typing. I’d like to lay out a few short examples that might help you develop your programming standards and practices.&lt;/p&gt;&#xA;&lt;p&gt;Inferring a type when creating an array.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;// Create and initialize an array&#xD;&#xA;var myArray = new int[] { 1, 2, 3 };&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Becomes:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!</title>
       <link>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</link>
       <pubDate>Wed, 20 Jun 2012 00:47:52 +0000</pubDate>
       <guid>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
-      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
+      <description>&lt;p&gt;I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute(v=vs.98).aspx&#34;&gt;OutputCacheAttribute&lt;/a&gt; class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, &lt;a href=&#34;http://weblogs.asp.net/scottgu/archive/2010/01/27/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series.aspx&#34;&gt;I was delighted to learn of the Output Cache Provider functionality introduced in ASP.NET 4.&lt;/a&gt; I implemented a custom &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.web.caching.outputcacheprovider.aspx&#34;&gt;OutputCacheProvider&lt;/a&gt;, registered it in my Web.config file as the Default Cache Provider, and I was well on my way.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LINQ and Deferred Execution</title>
       <link>https://www.davidhaney.io/linq-and-deferred-execution/</link>
       <pubDate>Mon, 11 Jun 2012 00:57:15 +0000</pubDate>
       <guid>https://www.davidhaney.io/linq-and-deferred-execution/</guid>
-      <description>As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.
-To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed.</description>
+      <description>&lt;p&gt;As of .NET 3.0, LINQ (and the often related Lambda Expressions) have been available for our use and abuse. LINQ stands for Language INtegrated Query, and is a method of modelling OO data in a more or less relational sense that is not unlike databases. And just like databases, it comes with a cost.&lt;/p&gt;&#xA;&lt;p&gt;To offset this cost, LINQ uses Deferred Execution. Deferred Execution means that the code is not executed until it is needed. This means that the LINQ code that you write is not actually executed until you NEED to execute it – typically during an enumeration of the results.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Make Your Debugging Life Easier</title>
       <link>https://www.davidhaney.io/make-your-debugging-life-easier/</link>
       <pubDate>Fri, 25 May 2012 20:25:36 +0000</pubDate>
       <guid>https://www.davidhaney.io/make-your-debugging-life-easier/</guid>
-      <description>Sorry for the delay in posts, May has been a very busy month.
-In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated PDB files to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.</description>
+      <description>&lt;p&gt;Sorry for the delay in posts, May has been a very busy month.&lt;/p&gt;&#xA;&lt;p&gt;In order to accurately debug or profile an external assembly or library (AKA one you’re not directly compiling), you need the associated &lt;b&gt;PDB files&lt;/b&gt; to accompany each of the DLLs. These files give the debugger some information about the compiled assembly so that your debugger or profiler can become aware of function names, line numbers, and other related meta data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Who Loves Interns?</title>
       <link>https://www.davidhaney.io/who-loves-interns/</link>
       <pubDate>Wed, 02 May 2012 23:50:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/who-loves-interns/</guid>
-      <description>The topic at hand is interning. More specifically, string interning.
-“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – even if the same string is defined repeatedly.</description>
+      <description>&lt;p&gt;The topic at hand is interning. More specifically, string interning.&lt;/p&gt;&#xA;&lt;p&gt;“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – &lt;em&gt;even if the same string is defined repeatedly.&lt;/em&gt; What this means is that you can define the same string N times and have it take up the string’s memory N times. This sucks when dealing with repeating string data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is a Virtual Method, Anyway?</title>
       <link>https://www.davidhaney.io/what-is-a-virtual-method-anyway/</link>
       <pubDate>Sun, 29 Apr 2012 23:26:41 +0000</pubDate>
       <guid>https://www.davidhaney.io/what-is-a-virtual-method-anyway/</guid>
-      <description>Something which I feel carries a lot of confusion in the .NET realm is virtual methods. During interviews, I tend to ask candidates about virtual methods: why and when they’d use one, what the purposes is, how a virtual method “works” under the hood, and how it differs from “shadowing”. Surprisingly, in what has probably been over one hundred interviews with senior-ish candidates, I don’t believe that more than one or two of them have answered anything about virtual methods correctly.</description>
+      <description>&lt;p&gt;Something which I feel carries a lot of confusion in the .NET realm is virtual methods. During interviews, I tend to ask candidates about virtual methods: why and when they’d use one, what the purposes is, how a virtual method “works” under the hood, and how it differs from “shadowing”. Surprisingly, in what has probably been over one hundred interviews with senior-ish candidates, I don’t believe that more than one or two of them have answered anything about virtual methods correctly. From this I conclude that the understanding of virtual methods is not strong among the typical developer… And so, let us dive in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why Use Interfaces?</title>
       <link>https://www.davidhaney.io/why-use-interfaces/</link>
       <pubDate>Thu, 26 Apr 2012 23:51:18 +0000</pubDate>
       <guid>https://www.davidhaney.io/why-use-interfaces/</guid>
-      <description>I’m a bit tipsy at the moment, so hopefully this post goes well.
-A question that I like to ask while interviewing individuals is: “why would you want to use an interface?” I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I’d like to share some input on what I feel is the importance of interfaces.</description>
+      <description>&lt;p&gt;I’m a bit tipsy at the moment, so hopefully this post goes well.&lt;/p&gt;&#xA;&lt;p&gt;A question that I like to ask while interviewing individuals is: “why would you want to use an interface?” I get a ton of answers that span the supposed gamut of programming; some are good and some are of course terrible, however I’d like to share some input on what I feel is the importance of interfaces.&lt;/p&gt;</description>
     </item>
     <item>
       <title>An Overview of Generic Constraints</title>
       <link>https://www.davidhaney.io/an-overview-of-generic-constraints/</link>
       <pubDate>Tue, 24 Apr 2012 21:46:41 +0000</pubDate>
       <guid>https://www.davidhaney.io/an-overview-of-generic-constraints/</guid>
-      <description>This is my first post. I hope that it doesn’t suck.
-As of .NET 2.0, Microsoft introduced the concept of generics. Generics is a concept that allow you to “template” methods and types such as classes and interfaces in a (generally) type-safe way. Upon compilation, generic type metadata is stored in IL, and JIT’d as you reference the generic method or class with an actual type at runtime. Value types each get their own “copy” of the JIT’d generic code, whereas reference types share a single instance of the code.</description>
+      <description>&lt;p&gt;This is my first post. I hope that it doesn’t suck.&lt;/p&gt;&#xA;&lt;p&gt;As of .NET 2.0, Microsoft introduced the concept of generics. Generics is a concept that allow you to “template” methods and types such as classes and interfaces in a (generally) type-safe way. Upon compilation, generic type metadata is stored in IL, and JIT’d as you reference the generic method or class with an actual type at runtime. Value types each get their own “copy” of the JIT’d generic code, whereas reference types share a single instance of the code. This is because the generic implementation is identical for reference types – they’re all just pointers.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

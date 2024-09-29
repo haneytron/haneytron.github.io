@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>conflict on David Haney</title>
+    <title>Conflict on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/conflict/</link>
-    <description>Recent content in conflict on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Conflict on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Thu, 24 Sep 2015 11:23:38 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,16 +14,14 @@
       <link>https://www.davidhaney.io/diversity-is-really-freaking-hard/</link>
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
-      <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.
-It’s no secret that the tech industry is not that diverse.</description>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;I’m going to discuss an important topic that affects everybody in tech: diversity.&lt;/p&gt;&#xA;&lt;p&gt;No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.&lt;/p&gt;&#xA;&lt;p&gt;It’s no secret that the tech industry is not that diverse. It’s mostly dominated by white males, with a few women and minorities making appearances. Those who do enter the industry as a minority often feel marginalized and excluded.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How To Guarantee Dev Team Failure</title>
       <link>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</link>
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       <guid>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</guid>
-      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
+      <description>&lt;h1 id=&#34;the-problem&#34;&gt;The Problem&lt;/h1&gt;&#xA;&lt;p&gt;I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code. As a business, however, you’ve succeeded when you hit the deadline. My experience tells me that the typical metric upon which development teams are measured is often not quality of code or unit tests or even performance, but instead ability to meet deadlines and deliver solutions to clients. You’ve failed when you do not meet the deadlines and thus piss off the clients/customers. Your job has become a veritable boolean result with the outcomes of true and false. Deadline met? True. Deadline missed? False.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

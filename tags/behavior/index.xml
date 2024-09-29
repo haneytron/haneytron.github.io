@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>behavior on David Haney</title>
+    <title>Behavior on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/behavior/</link>
-    <description>Recent content in behavior on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Behavior on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Fri, 27 Jan 2017 10:03:20 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/behavior/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,23 +14,21 @@
       <link>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</link>
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</guid>
-      <description>In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
+      <description>&lt;p&gt;In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Industry Needs Compassion</title>
       <link>https://www.davidhaney.io/our-industry-needs-compassion/</link>
       <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
       <guid>https://www.davidhaney.io/our-industry-needs-compassion/</guid>
-      <description>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.
-So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
+      <description>&lt;p&gt;Well, I’ve utterly failed to blog at regular intervals, writing &lt;a href=&#34;https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;only&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;three&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/lets-talk-about-rock-stars-egos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posts&lt;/a&gt;&#xD;&#xA; in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.&lt;/p&gt;&#xA;&lt;p&gt;So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts. My traditional style has been “come upon something that is really bothering me or is really tricky, and proceed to blog about it in great detail writing thousands of words for all to benefit from” which doesn’t really scale well. Instead I plan to take the approach of “write about a new or interesting topic each week, and see what people like and what they don’t like” which will hopefully be better.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
       <link>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</link>
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       <guid>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</guid>
-      <description>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
-Plumber #1 Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.</description>
+      <description>&lt;h1 id=&#34;on-plumbers&#34;&gt;On Plumbers&lt;/h1&gt;&#xA;&lt;p&gt;Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.&lt;/p&gt;&#xA;&lt;h2 id=&#34;plumber-1&#34;&gt;Plumber #1&lt;/h2&gt;&#xA;&lt;p&gt;Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.5x what everybody else costs, and only if you have lunch and coffee ready for him when he arrives. You have no water, keep in mind, so making coffee is an extra special effort.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

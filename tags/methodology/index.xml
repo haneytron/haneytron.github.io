@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>methodology on David Haney</title>
+    <title>Methodology on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/methodology/</link>
-    <description>Recent content in methodology on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Methodology on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Thu, 02 Feb 2017 11:33:02 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/methodology/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,15 +14,14 @@
       <link>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</link>
       <pubDate>Thu, 02 Feb 2017 11:33:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/gitlab-data-loss-a-discussion/</guid>
-      <description>In case you missed the big news in the industry this week, a GitLab employee accidentally deleted a ton of production data and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.
-Backup Prod Data Regularly Not exactly a groundbreaking statement, right? Everybody knows this.</description>
+      <description>&lt;p&gt;In case you missed the big news in the industry this week, &lt;a href=&#34;https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a GitLab employee accidentally deleted a ton of production data&lt;/a&gt;&#xD;&#xA; and took their platform down for hours. It was only when everything was on fire and they were in deep trouble that they turned to their backup systems… only to find that none of them actually worked.&lt;/p&gt;&#xA;&lt;h1 id=&#34;backup-prod-data-regularly&#34;&gt;Backup Prod Data Regularly&lt;/h1&gt;&#xA;&lt;p&gt;Not exactly a groundbreaking statement, right? Everybody &lt;em&gt;knows&lt;/em&gt; this. If there was a “working in corporate IT 101” manual it would have a chapter on this concept. It’s common sense.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
       <link>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</link>
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
-      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
+      <description>&lt;p&gt;I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

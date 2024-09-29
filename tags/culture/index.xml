@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>culture on David Haney</title>
+    <title>Culture on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/culture/</link>
-    <description>Recent content in culture on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Culture on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Sun, 08 Sep 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/culture/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,100 +14,91 @@
       <link>https://www.davidhaney.io/sabbatical-week-one/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-week-one/</guid>
-      <description>Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!
-I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.
-The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: https://www.</description>
+      <description>&lt;p&gt;Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!&lt;/p&gt;&#xA;&lt;p&gt;I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.&lt;/p&gt;&#xA;&lt;p&gt;The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: &lt;a href=&#34;https://www.bahamas.com/relief&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.bahamas.com/relief&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sabbatical Begins</title>
       <link>https://www.davidhaney.io/sabbatical-begins/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-begins/</guid>
-      <description>One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday). Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.</description>
+      <description>&lt;p&gt;One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday).&#xA;Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Conducting Good Code Reviews</title>
       <link>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</link>
       <pubDate>Fri, 27 Jan 2017 10:03:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-conducting-good-code-reviews/</guid>
-      <description>In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.</description>
+      <description>&lt;p&gt;In part 2 of my series on dev team interactions, I’d like to talk about conducting good code reviews. Most dev teams will find themselves in a situation where code reviews are necessary, and in my experience many do them very poorly. I’ve even worked in companies that had such a negative code review culture that people left the review sessions upset, even considering quitting. With a few easy adjustments, you can quickly learn to conduct excellent and positive code reviews with your team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Accountability &amp; Blame</title>
       <link>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</link>
       <pubDate>Fri, 20 Jan 2017 13:20:59 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</guid>
-      <description>As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.</description>
+      <description>&lt;p&gt;As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Industry Needs Compassion</title>
       <link>https://www.davidhaney.io/our-industry-needs-compassion/</link>
       <pubDate>Tue, 03 Jan 2017 12:37:39 +0000</pubDate>
       <guid>https://www.davidhaney.io/our-industry-needs-compassion/</guid>
-      <description>Well, I’ve utterly failed to blog at regular intervals, writing only three posts in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.
-So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts.</description>
+      <description>&lt;p&gt;Well, I’ve utterly failed to blog at regular intervals, writing &lt;a href=&#34;https://www.davidhaney.io/developer-compensation-stack-overflow-doesnt-stack-rank&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;only&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;three&lt;/a&gt;&#xD;&#xA; &lt;a href=&#34;https://www.davidhaney.io/lets-talk-about-rock-stars-egos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posts&lt;/a&gt;&#xD;&#xA; in 2016. Ouch. To be fair, one of those posts is insanely famous (the one about NPM and left-pad.js), but still, I’ve really let my readers – and myself – down.&lt;/p&gt;&#xA;&lt;p&gt;So, I resolve to write a blog post every single week of 2017, starting today. This will probably mean that I write slightly shorter posts, and maybe even multi-part series posts. My traditional style has been “come upon something that is really bothering me or is really tricky, and proceed to blog about it in great detail writing thousands of words for all to benefit from” which doesn’t really scale well. Instead I plan to take the approach of “write about a new or interesting topic each week, and see what people like and what they don’t like” which will hopefully be better.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Let&#39;s Talk About Rock Stars &amp; Egos</title>
       <link>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</link>
       <pubDate>Fri, 17 Jun 2016 17:02:13 +0000</pubDate>
       <guid>https://www.davidhaney.io/lets-talk-about-rock-stars-egos/</guid>
-      <description>On Plumbers Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.
-Plumber #1 Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.</description>
+      <description>&lt;h1 id=&#34;on-plumbers&#34;&gt;On Plumbers&lt;/h1&gt;&#xA;&lt;p&gt;Picture this situation: you woke up this morning to find that there’s no water coming through your valves and taps. No sink water. No shower water. Having no plumbing experience, you call around for a plumber.&lt;/p&gt;&#xA;&lt;h2 id=&#34;plumber-1&#34;&gt;Plumber #1&lt;/h2&gt;&#xA;&lt;p&gt;Plumber #1, let’s call him Mario, tells you he can’t be bothered to come check out your issue because it’s minor and he’s very important and too busy for it. You explain that you really need a plumber, and he explains he’ll do it for 1.5x what everybody else costs, and only if you have lunch and coffee ready for him when he arrives. You have no water, keep in mind, so making coffee is an extra special effort.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Diversity Is Really Freaking Hard</title>
       <link>https://www.davidhaney.io/diversity-is-really-freaking-hard/</link>
       <pubDate>Thu, 24 Sep 2015 11:23:38 +0000</pubDate>
       <guid>https://www.davidhaney.io/diversity-is-really-freaking-hard/</guid>
-      <description>Background I’m going to discuss an important topic that affects everybody in tech: diversity.
-No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.
-It’s no secret that the tech industry is not that diverse.</description>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;I’m going to discuss an important topic that affects everybody in tech: diversity.&lt;/p&gt;&#xA;&lt;p&gt;No, this won’t be some preachy post about how diversity is great and how you should be a better human being. Rather, I’m going to tell you about the things I’ve experienced working on diversity – particularly the interesting events of the last few days that happened internally at Stack Overflow.&lt;/p&gt;&#xA;&lt;p&gt;It’s no secret that the tech industry is not that diverse. It’s mostly dominated by white males, with a few women and minorities making appearances. Those who do enter the industry as a minority often feel marginalized and excluded.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developers Shouldn&#39;t Measure Twice, Cut Once</title>
       <link>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</link>
       <pubDate>Wed, 15 Apr 2015 16:25:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/developers-shouldnt-measure-twice-cut-once/</guid>
-      <description>I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.</description>
+      <description>&lt;p&gt;I was working on my fireplace this past weekend. Specifically I had just finished ripping down the old surface to the red brick, and then preparing the brick surface with a layer of thinset for tiling. I spent all of Saturday cutting tiles and then placing them on the fireplace surround and hearth. Even with help it took 11 hours to do, and about 8 hours of it was measuring and cutting tiles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Secretly Terrible Engineers - A Rebuttal</title>
       <link>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</link>
       <pubDate>Mon, 09 Mar 2015 18:32:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/</guid>
-      <description>Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is On Secretly Terrible Engineers, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.
-Spoiler: I strongly disagree with most of this article.</description>
+      <description>&lt;p&gt;Today an article was brought to my attention. One that, at the time of writing this post, had hit the front page of various sites (including Hacker News) and had been shared over 2,600 times. The article is &lt;a href=&#34;http://techcrunch.com/2015/03/08/on-secretly-terrible-engineers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;On Secretly Terrible Engineers&lt;/a&gt;&#xD;&#xA;, which is a criticism of the tech industry and the mentality which it holds towards hiring both new and experienced developers/engineers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spoiler:&lt;/strong&gt; I strongly disagree with most of this article. If you aren’t open to debates and discussion, quit reading here and return to your normal activities.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Credentialism In Software Development</title>
       <link>https://www.davidhaney.io/on-credentialism-in-software-development/</link>
       <pubDate>Mon, 29 Dec 2014 16:00:27 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-credentialism-in-software-development/</guid>
-      <description>Intro We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in &lt;a href=&#34;https://www.davidhaney.io/the-trouble-with-job-titles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last post&lt;/a&gt;&#xD;&#xA;. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Trouble With Job Titles</title>
       <link>https://www.davidhaney.io/the-trouble-with-job-titles/</link>
       <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-trouble-with-job-titles/</guid>
-      <description>Intro I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
-I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was &lt;strong&gt;Junior Developer&lt;/strong&gt;. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.&lt;/p&gt;&#xA;&lt;p&gt;I contacted recruiters, and one eventually found me a promotion: &lt;strong&gt;Systems Analyst&lt;/strong&gt;. It came with a decent pay bump and so forth, as well as the luxury of dropping “&lt;strong&gt;Junior&lt;/strong&gt;” from my job title. As this was a good deal all around, I took the offer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How To Guarantee Dev Team Failure</title>
       <link>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</link>
       <pubDate>Wed, 07 May 2014 13:27:35 +0000</pubDate>
       <guid>https://www.davidhaney.io/how-to-guarantee-dev-team-failure/</guid>
-      <description>The Problem I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code.</description>
+      <description>&lt;h1 id=&#34;the-problem&#34;&gt;The Problem&lt;/h1&gt;&#xA;&lt;p&gt;I think that most devs would agree when I state that the definition of success in the corporate world of development places less emphasis on “good” code and more emphasis on “working” code. Working code is code that can be released to production on or before the deadline, regardless of performance or even bugs in most cases. As a developer, you ultimately feel as if you’ve failed when you toil for nights on end to meet steep deadlines and churn out crappy code. As a business, however, you’ve succeeded when you hit the deadline. My experience tells me that the typical metric upon which development teams are measured is often not quality of code or unit tests or even performance, but instead ability to meet deadlines and deliver solutions to clients. You’ve failed when you do not meet the deadlines and thus piss off the clients/customers. Your job has become a veritable boolean result with the outcomes of true and false. Deadline met? True. Deadline missed? False.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Joel Test Really is Meaningful</title>
       <link>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</link>
       <pubDate>Sun, 14 Oct 2012 22:10:54 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</guid>
-      <description>Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
-The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.</description>
+      <description>&lt;p&gt;Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.joelonsoftware.com/articles/fog0000000043.html&#34;&gt;The Joel Test&lt;/a&gt; is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply. In short, it’s a very brief questionnaire that evaluates the quality of your software development team, and implicitly their happiness as well.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

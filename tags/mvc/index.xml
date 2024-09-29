@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mvc on David Haney</title>
+    <title>Mvc on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/mvc/</link>
-    <description>Recent content in mvc on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Mvc on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 09 Nov 2020 00:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,47 +14,42 @@
       <link>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</link>
       <pubDate>Mon, 09 Nov 2020 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</guid>
-      <description>Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?
-I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC.</description>
+      <description>&lt;p&gt;Well, once again I&amp;rsquo;ve fallen off of the blogging wagon. And once again I am now getting back on said aforementioned wagon. Let&amp;rsquo;s try and make this a more regular thing than once a year or so, shall we?&lt;/p&gt;&#xA;&lt;p&gt;I recently built a quick little hobby site / side project with .NET Core MVC. I have a lot of experience with ASP.NET MVC but I was totally new to .NET Core MVC. As a result, I had to teach myself the new ways of doing old things.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Custom ASP.NET MVC Action Result Cache Attribute</title>
       <link>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</link>
       <pubDate>Tue, 10 Jan 2017 09:07:15 +0000</pubDate>
       <guid>https://www.davidhaney.io/custom-asp-net-mvc-action-result-cache-attribute/</guid>
-      <description>If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the OutputCacheAttribute attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again.</description>
+      <description>&lt;p&gt;If you’re working on an application built using ASP.NET MVC, you’re hopefully aware of the &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute%28v=vs.118%29.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OutputCacheAttribute&lt;/a&gt;&#xD;&#xA; attribute which can be used to statically cache your dynamic web pages. By adding this attribute to a controller or action method, the output of the method(s) will be stored in memory. For example, if your action method renders a view, then the view page will be cached in memory. This cached view page is then available to the application for all subsequent requests (or until the item expires out of the cache), which can retrieve it from the memory rather than redoing the work to re-create the result again. This is the essence of caching: trading memory for performance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Trigger IValidatableObject.Validate When ModelState.IsValid is false</title>
       <link>https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</link>
       <pubDate>Wed, 05 Feb 2014 15:55:40 +0000</pubDate>
       <guid>https://www.davidhaney.io/trigger-ivalidatableobject-validate-when-modelstate-isvalid-is-false/</guid>
-      <description>I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the IValidatableObject interface and thus the Validate method which did some specific logic to ensure the state of the Model (the ModelState). This Model also had some DataAnnotation attributes on it to validate basic input.
-Long story short, the issue I encountered was that when ModelState.IsValid == false due to failure of the DataAnnotation validation, the IValidatableObject.</description>
+      <description>&lt;p&gt;I recently came across an ASP.NET MVC issue at work where the validation for my Model was not firing correctly. The Model implemented the &lt;code&gt;IValidatableObject&lt;/code&gt; interface and thus the &lt;code&gt;Validate&lt;/code&gt; method which did some specific logic to ensure the state of the Model (the &lt;code&gt;ModelState&lt;/code&gt;). This Model also had some &lt;code&gt;DataAnnotation&lt;/code&gt; attributes on it to validate basic input.&lt;/p&gt;&#xA;&lt;p&gt;Long story short, the issue I encountered was that when &lt;code&gt;ModelState.IsValid == false&lt;/code&gt; due to failure of the &lt;code&gt;DataAnnotation&lt;/code&gt; validation, the &lt;code&gt;IValidatableObject.Validate&lt;/code&gt; method is not fired, even though I needed it to be. This problem arose due to a rare situation in which &lt;code&gt;ModeState.IsValid&lt;/code&gt; was initially false but was later set to true in the Controller’s Action Method by some logic that removed errors from the &lt;code&gt;ModelState&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MVC4 Conditional HTML Attributes</title>
       <link>https://www.davidhaney.io/mvc4-conditional-html-attributes/</link>
       <pubDate>Wed, 27 Nov 2013 00:34:25 +0000</pubDate>
       <guid>https://www.davidhaney.io/mvc4-conditional-html-attributes/</guid>
-      <description>MVC4 made one simple and yet awesome improvement to View rendering that I don’t think many people are aware of.
-Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable? The typical use case is applying a CSS class to a div. Most of the time that code looks something like this:
-&amp;lt;div @(myClass == null ?</description>
+      <description>&lt;p&gt;MVC4 made one simple and yet awesome improvement to View rendering that I don’t think many people are aware of.&lt;/p&gt;&#xA;&lt;p&gt;Have you ever had to conditionally add an attribute to an HTML element in your MVC View based on the presence of a variable? The typical use case is applying a CSS class to a div. Most of the time that code looks something like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;div @(myClass == null ? &amp;quot;&amp;quot; : &amp;quot;class=\&amp;quot;&amp;quot; + myClass + &amp;quot;\&amp;quot;&amp;quot;)&amp;gt;&amp;lt;/div&amp;gt;&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;What a pain – not only to write but to read… This destroys the View’s readability and clutters the HTML up big time!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Web API Mapping QueryString/Form Input</title>
       <link>https://www.davidhaney.io/web-api-mapping-querystringform-input/</link>
       <pubDate>Wed, 24 Jul 2013 17:55:12 +0000</pubDate>
       <guid>https://www.davidhaney.io/web-api-mapping-querystringform-input/</guid>
-      <description>If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:
-Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription.</description>
+      <description>&lt;p&gt;If you’re using the Web API as part of the MVC4 framework, you may encounter a scenario in which you must map parameters of strange names to variables for which characters of the name would be illegal. That wasn’t very clear, so let’s do this by example. Consider part of the Facebook API:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Firstly, Facebook servers will make a single HTTP GET to your callback URL when you try to add or modify a subscription. A query string will be appended to your callback URL with the following parameters:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Custom Output Caching with MVC3 and .NET 4.0 - Done Properly!</title>
       <link>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</link>
       <pubDate>Wed, 20 Jun 2012 00:47:52 +0000</pubDate>
       <guid>https://www.davidhaney.io/custom-output-caching-with-mvc3-and-net-4-0-done-right/</guid>
-      <description>I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the OutputCacheAttribute class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, I was delighted to learn of the Output Cache Provider functionality introduced in ASP.</description>
+      <description>&lt;p&gt;I came across a need at work today to re-implement some of the Output Caching for our MVC3 application which runs under .NET 4.0. I wanted to use standard Output Caching (via the &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute(v=vs.98).aspx&#34;&gt;OutputCacheAttribute&lt;/a&gt; class, why re-invent the well-working wheel?) but due to some of our requirements I needed more control over how my objects were cached. More specifically, I needed to cache them with a custom Cache Dependency. With a little bit of Google-Fu, &lt;a href=&#34;http://weblogs.asp.net/scottgu/archive/2010/01/27/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series.aspx&#34;&gt;I was delighted to learn of the Output Cache Provider functionality introduced in ASP.NET 4.&lt;/a&gt; I implemented a custom &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/system.web.caching.outputcacheprovider.aspx&#34;&gt;OutputCacheProvider&lt;/a&gt;, registered it in my Web.config file as the Default Cache Provider, and I was well on my way.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

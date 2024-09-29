@@ -1,18 +1,1 @@
-{
-    "name": "",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
-}
+{"description":"David Haney - Blogging About .NET Core \u0026 Engineering Management","display":"standalone","icons":[{"sizes":"192x192","src":"https://www.davidhaney.io/android-chrome-512x512_hu4000335291281570460.png","type":"image/png"},{"sizes":"512x512","src":"https://www.davidhaney.io/android-chrome-512x512_hu2084297542796551526.png","type":"image/png"}],"name":"David Haney - Blogging About .NET Core \u0026 Engineering Management","scope":"https://www.davidhaney.io/","start_url":"https://www.davidhaney.io/"}

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>memory on David Haney</title>
+    <title>Memory on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/memory/</link>
-    <description>Recent content in memory on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Memory on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Sat, 30 Mar 2013 15:36:24 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,24 +14,21 @@
       <link>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</link>
       <pubDate>Sat, 30 Mar 2013 15:36:24 +0000</pubDate>
       <guid>https://www.davidhaney.io/one-more-thing-about-list-binary-search/</guid>
-      <description>I wanted to point people to this link at DotNetPearls:
-http://www.dotnetperls.com/binarysearch
-They do an excellent, quick demonstration of List&amp;lt;T&amp;gt;.BinarySearch and show a graph that really drives home how much faster it is for large lists than a regular traversal!</description>
+      <description>&lt;p&gt;I wanted to point people to this link at DotNetPearls:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.dotnetperls.com/binarysearch&#34;&gt;&lt;a href=&#34;http://www.dotnetperls.com/binarysearch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.dotnetperls.com/binarysearch&lt;/a&gt;&#xD;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;They do an excellent, quick demonstration of &lt;code&gt;List&amp;lt;T&amp;gt;.BinarySearch&lt;/code&gt; and show a graph that really drives home how much faster it is for large lists than a regular traversal!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Make Mostly Read, Seldom-Written Lists Much More Efficient</title>
       <link>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</link>
       <pubDate>Fri, 15 Mar 2013 17:11:42 +0000</pubDate>
       <guid>https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/</guid>
-      <description>One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory.</description>
+      <description>&lt;p&gt;One of the many things that I do at work is run a full-blown Search Engine which I also developed from scratch. This Search Engine feeds all product related information to our websites. A search index consists of a pre-computed collection of products, their properties, a list of words that are correctly spelled, and some pre-computed faceted/guided navigation. A search index, until this week, took up approximately 10.7 gigs of memory. This was becoming too large as we added new products every single day.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Who Loves Interns?</title>
       <link>https://www.davidhaney.io/who-loves-interns/</link>
       <pubDate>Wed, 02 May 2012 23:50:20 +0000</pubDate>
       <guid>https://www.davidhaney.io/who-loves-interns/</guid>
-      <description>The topic at hand is interning. More specifically, string interning.
-“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – even if the same string is defined repeatedly.</description>
+      <description>&lt;p&gt;The topic at hand is interning. More specifically, string interning.&lt;/p&gt;&#xA;&lt;p&gt;“What is string interning?” you ask? Good question. As you may or may not know, strings are immutable reference types. This means that they are read-only and a pointer will refer to the string’s location on the heap. Typically, a new string is created and stored within your application’s memory each time that you assign a string – &lt;em&gt;even if the same string is defined repeatedly.&lt;/em&gt; What this means is that you can define the same string N times and have it take up the string’s memory N times. This sucks when dealing with repeating string data.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>npm on David Haney</title>
+    <title>Npm on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/npm/</link>
-    <description>Recent content in npm on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Npm on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Wed, 23 Mar 2016 18:01:52 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,9 +14,7 @@
       <link>https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/</link>
       <pubDate>Wed, 23 Mar 2016 18:01:52 +0000</pubDate>
       <guid>https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/</guid>
-      <description>Intro Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:
-A simple NPM package called left-pad that was a dependency of their code.
-left-pad, at the time of writing this, has 11 stars on GitHub. The entire package is 11 simple lines that implement a basic left-pad string function.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Okay developers, time to have a serious talk. As you are probably already aware, this week React, Babel, and a bunch of other high-profile packages on NPM broke. The reason they broke is rather astounding:&lt;/p&gt;&#xA;&lt;p&gt;A simple NPM package called &lt;a href=&#34;https://www.npmjs.com/package/left-pad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;left-pad&lt;/a&gt;&#xD;&#xA; that was a dependency of their code.&lt;/p&gt;&#xA;&lt;p&gt;left-pad, at the time of writing this, &lt;a href=&#34;https://github.com/azer/left-pad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;has 11 stars on GitHub&lt;/a&gt;&#xD;&#xA;. The entire package is &lt;a href=&#34;https://github.com/azer/left-pad/blob/master/index.js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;11 simple lines that implement a basic left-pad string function&lt;/a&gt;&#xD;&#xA;. In case those links ever die, here is the entire code of the left-pad package:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

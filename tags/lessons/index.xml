@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lessons on David Haney</title>
+    <title>Lessons on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/lessons/</link>
-    <description>Recent content in lessons on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Lessons on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Mon, 03 Aug 2015 14:18:02 +0000</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/lessons/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,8 +14,7 @@
       <link>https://www.davidhaney.io/developer-turned-manager/</link>
       <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/developer-turned-manager/</guid>
-      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
-There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
+      <description>&lt;p&gt;In February of 2015, I was promoted to Engineering Manager at Stack Overflow. &lt;a href=&#34;https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Chapter_1_2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;This has made a lot of people very angry and been widely regarded as a bad move&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;&#xA;&lt;p&gt;There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently. You feel a little bit like you just rebooted your career and are starting over at the bottom of the skills ladder. It’s intimidating.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

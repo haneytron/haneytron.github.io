@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>career on David Haney</title>
+    <title>Career on David Haney - Blogging About .NET Core &amp; Engineering Management</title>
     <link>https://www.davidhaney.io/tags/career/</link>
-    <description>Recent content in career on David Haney</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Career on David Haney - Blogging About .NET Core &amp; Engineering Management</description>
+    <generator>Hugo</generator>
     <language>en</language>
+    <copyright>David Haney</copyright>
     <lastBuildDate>Sun, 08 Sep 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,96 +14,84 @@
       <link>https://www.davidhaney.io/sabbatical-week-one/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-week-one/</guid>
-      <description>Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!
-I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.
-The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: https://www.</description>
+      <description>&lt;p&gt;Sabbatical week one is complete, and I&amp;rsquo;m finally finding some time to blog about it!&lt;/p&gt;&#xA;&lt;p&gt;I had a pretty active week. It started with hurricane preparations as Dorian burled toward Florida, however in the end we suffered a very light glancing blow. In short, we got off easy.&lt;/p&gt;&#xA;&lt;p&gt;The Bahamas did not get so lucky, however, and got pretty messed up. I&amp;rsquo;d love for you to take a moment to donate to their recovery here: &lt;a href=&#34;https://www.bahamas.com/relief&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.bahamas.com/relief&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sabbatical Begins</title>
       <link>https://www.davidhaney.io/sabbatical-begins/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/sabbatical-begins/</guid>
-      <description>One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday). Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.</description>
+      <description>&lt;p&gt;One of the most amazing perks of working at Stack Overflow is the sabbatical. After 5 years of FT employment, you are entitled to 20 paid days off (outside of normal vacation) that you can spend however you please. My sabbatical officially begins on Tuesday (as Monday is a holiday).&#xA;Practically speaking, I am out from Aug 31 - Sept 30, returning to work Oct 1st. This is an amazing opportunity and benefit, and I can&amp;rsquo;t thank Stack Overflow enough for how well they treat employees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Writing a Great Junior Tech Résumé</title>
       <link>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
       <guid>https://www.davidhaney.io/writing-a-great-junior-tech-resume/</guid>
-      <description>A few weeks back I wrote this tweet:
-I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager? I might whip that up today or tomorrow if people like the idea.
-&amp;mdash; David Haney hachyderm.io/@haney (@haneytron) July 9, 2018 43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand.</description>
+      <description>&lt;p&gt;A few weeks back I wrote this tweet:&lt;/p&gt;&#xA;&lt;blockquote class=&#34;twitter-tweet&#34; data-dnt=&#34;true&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I did a presentation / speaking thing last week that got me thinking: would it be useful to blog about how to build a resume as someone new to tech, from the perspective of a hiring manager? I might whip that up today or tomorrow if people like the idea.&lt;/p&gt;&amp;mdash; David Haney hachyderm.io/@haney (@haneytron) &lt;a href=&#34;https://twitter.com/haneytron/status/1016417664766443520?ref_src=twsrc%5Etfw&#34;&gt;July 9, 2018&lt;/a&gt;&lt;/blockquote&gt;&#xA;&#xA;&#xA;&lt;p&gt;43 likes later, it&amp;rsquo;s clear to me that this topic is in-demand. So, let&amp;rsquo;s skip over the pleasantries and talk about how you can create a great technical résumé as a junior developer, from the perspective of me (a hiring manager).&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Blog &amp; Hiring Needs</title>
       <link>https://www.davidhaney.io/new-blog-and-hiring-needs/</link>
       <pubDate>Sat, 09 Jun 2018 13:56:24 -0400</pubDate>
       <guid>https://www.davidhaney.io/new-blog-and-hiring-needs/</guid>
-      <description>Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.
-Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!
-New blog engine I was previously using WordPress but had many issues and concerns with it.</description>
+      <description>&lt;p&gt;Well I failed badly in my mission to blog every week of 2017. I guess life and stuff just got in the way in the end. I&amp;rsquo;ll try to be more consistent in the second half of 2018.&lt;/p&gt;&#xA;&lt;p&gt;Anyway, I bring some news: I have a new blog engine, and we are hiring at Stack Overflow!&lt;/p&gt;&#xA;&lt;h1 id=&#34;new-blog-engine&#34;&gt;New blog engine&lt;/h1&gt;&#xA;&lt;p&gt;I was previously using WordPress but had many issues and concerns with it. One of the biggest concerns was that the site was not mobile friendly, and making it responsive was next to impossible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Hiring: Developers Are Like Stocks</title>
       <link>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</link>
       <pubDate>Fri, 10 Feb 2017 11:11:30 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-hiring-developers-are-like-stocks/</guid>
-      <description>This post is for those of you who hire developers, and also junior developers who want to be hired. Let’s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you’re now a stock market investor.
-As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It’s made very clear that the future of the company depends on the return on investment (herein called ROI) – “gains” – that your investments bring to the company.</description>
+      <description>&lt;p&gt;This post is for those of you who hire developers, and also junior developers who want to be hired. Let’s talk about how developers are just like individual stocks in the stock market. Time for a little role-playing: you’re now a stock market investor.&lt;/p&gt;&#xA;&lt;p&gt;As a financial advisor, your company has given you $2,000,000 USD to invest in the stock market. It’s made very clear that the future of the company depends on the return on investment (herein called ROI) – “gains” – that your investments bring to the company. Your decisions will have a major impact on the company’s future. Given that kind of pressure, what’s your investment strategy for success? Begin by reviewing the kinds of stocks available to invest in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Team Interactions: Accountability &amp; Blame</title>
       <link>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</link>
       <pubDate>Fri, 20 Jan 2017 13:20:59 +0000</pubDate>
       <guid>https://www.davidhaney.io/dev-team-interactions-accountability-blame/</guid>
-      <description>As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.</description>
+      <description>&lt;p&gt;As a developer working for a company, you probably work on a team. The interactions on these teams are sometimes pleasant, and other times hostile. What’s interesting to me is that a lot of the time, a hostile interaction could have been a pleasant one if only approached differently. Hostile teams are created by the actions of the people on them, not by the situations they encounter. One such hostile action is blame.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developer Turned Manager</title>
       <link>https://www.davidhaney.io/developer-turned-manager/</link>
       <pubDate>Mon, 03 Aug 2015 14:18:02 +0000</pubDate>
       <guid>https://www.davidhaney.io/developer-turned-manager/</guid>
-      <description>In February of 2015, I was promoted to Engineering Manager at Stack Overflow. This has made a lot of people very angry and been widely regarded as a bad move.
-There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently.</description>
+      <description>&lt;p&gt;In February of 2015, I was promoted to Engineering Manager at Stack Overflow. &lt;a href=&#34;https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Chapter_1_2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;This has made a lot of people very angry and been widely regarded as a bad move&lt;/a&gt;&#xD;&#xA;.&lt;/p&gt;&#xA;&lt;p&gt;There are tons of things I’ve learned so far, some of which I’ve learned the hard way. There’s also a world of difference between managing code, and managing people who code. Your day to day work routine changes completely. You define success differently. You feel a little bit like you just rebooted your career and are starting over at the bottom of the skills ladder. It’s intimidating.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Recruiting Competitive Advantage</title>
       <link>https://www.davidhaney.io/the-recruiting-competitive-advantage/</link>
       <pubDate>Fri, 23 Jan 2015 12:04:37 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-recruiting-competitive-advantage/</guid>
-      <description>A Job Listing Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:
-HELP WANTED:
-Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.</description>
+      <description>&lt;h1 id=&#34;a-job-listing&#34;&gt;A Job Listing&lt;/h1&gt;&#xA;&lt;p&gt;Let’s say you were walking down a street one day and noticed an ad for help wanted. It is posted in the window of a bakery. It reads:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;HELP WANTED:&lt;br&gt;&#xA;Need a baker for FT work. Must be familiar with modern baking methods such as ovens, barbecuing, and deep fryers. 5+ years experience with the Super 6 commercial baking oven required (aside: came out in 2014). Nice to haves include experience with butcher’s blocks, chopping meat, and making candles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Credentialism In Software Development</title>
       <link>https://www.davidhaney.io/on-credentialism-in-software-development/</link>
       <pubDate>Mon, 29 Dec 2014 16:00:27 +0000</pubDate>
       <guid>https://www.davidhaney.io/on-credentialism-in-software-development/</guid>
-      <description>Intro We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in my last post. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;We’re just two days from a brand new year and yet the primary measurement of a developer’s skill seems to be the same as it was 20 years ago. The most important classification to most companies is job title, as I talked about in great detail in &lt;a href=&#34;https://www.davidhaney.io/the-trouble-with-job-titles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my last post&lt;/a&gt;&#xD;&#xA;. The job title is acquired via working for a veritable slough of credentialist companies whose HR departments break it down very simply:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Trouble With Job Titles</title>
       <link>https://www.davidhaney.io/the-trouble-with-job-titles/</link>
       <pubDate>Fri, 17 Oct 2014 18:41:14 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-trouble-with-job-titles/</guid>
-      <description>Intro I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was Junior Developer. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.
-I contacted recruiters, and one eventually found me a promotion: Systems Analyst.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve had a good career so far. I began working full-time as a programmer in 2008. At that time my title was &lt;strong&gt;Junior Developer&lt;/strong&gt;. I had a decent boss and cool co-workers, and I cut my teeth on Java and .NET. It was a good experience. After 2 years at that gig, I felt that it was time to move on.&lt;/p&gt;&#xA;&lt;p&gt;I contacted recruiters, and one eventually found me a promotion: &lt;strong&gt;Systems Analyst&lt;/strong&gt;. It came with a decent pay bump and so forth, as well as the luxury of dropping “&lt;strong&gt;Junior&lt;/strong&gt;” from my job title. As this was a good deal all around, I took the offer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I Got A Job At Stack Exchange</title>
       <link>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</link>
       <pubDate>Fri, 20 Jun 2014 16:59:10 +0000</pubDate>
       <guid>https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/</guid>
-      <description>Intro Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;Almost exactly 1 month ago today I found myself on a video call with Joel Spolsky. It feels insane to write that, even now, as it was a banner moment in my career. For me it was the equivalent of meeting a movie star who I had idolized since I was old enough to know what movies were. There had always been this Joel Spolsky guy throughout my career that I regularly read about and whose opinions on software development agreed with mine, and suddenly I was talking with him face to face. It was awesome.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Joel Test Really is Meaningful</title>
       <link>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</link>
       <pubDate>Sun, 14 Oct 2012 22:10:54 +0000</pubDate>
       <guid>https://www.davidhaney.io/the-joel-test-really-is-meaningful/</guid>
-      <description>Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.
-The Joel Test is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply.</description>
+      <description>&lt;p&gt;Well, it’s been nearly 2 months since my last post… I’m learning that if you want a blog to be successful, you have to carve time out of your busy life and make it happen. So, with renewed focus, I re-enter the fray.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.joelonsoftware.com/articles/fog0000000043.html&#34;&gt;The Joel Test&lt;/a&gt; is a curious and honest thing. It has been around since the year 2000 and was invented by a guy named Joel Spolsky, as the name might imply. In short, it’s a very brief questionnaire that evaluates the quality of your software development team, and implicitly their happiness as well.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
