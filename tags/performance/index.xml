@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Sun, 29 Sep 2024 17:27:07 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2024 11:39:41 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom ASP.NET MVC Action Result Cache Attribute</title>
@@ -74,9 +74,9 @@
     </item>
     <item>
       <title>Static vs Instance string.Equals</title>
-      <link>https://www.davidhaney.io/stats-vs-reference-string-equals/</link>
+      <link>https://www.davidhaney.io/static-vs-reference-string-equals/</link>
       <pubDate>Mon, 22 Oct 2012 14:57:14 +0000</pubDate>
-      <guid>https://www.davidhaney.io/stats-vs-reference-string-equals/</guid>
+      <guid>https://www.davidhaney.io/static-vs-reference-string-equals/</guid>
       <description>&lt;p&gt;As you may or may not know, &lt;a href=&#34;http://stackoverflow.com/a/2142088&#34;&gt;static methods are usually faster than instance methods&lt;/a&gt;. This alone should be a good enough reason to use the &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/1hkt4325.aspx&#34;&gt;static string.Equals method&lt;/a&gt; in .NET, but if that doesn’t do it for you, allow me to present a simple example.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;string a = &amp;quot;hello&amp;quot;;&#xD;&#xA;string b = &amp;quot;hi&amp;quot;;&#xD;&#xA;bool result = a.Equals(b);&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;What is the expected result of these lines? A boolean value of false, of course. And it’d be true if the strings were identical. It’s also false if b is null. But what if a is null?&lt;/p&gt;</description>
     </item>
     <item>
