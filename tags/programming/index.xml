@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Tue, 10 Jan 2017 09:07:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2024 17:27:07 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom ASP.NET MVC Action Result Cache Attribute</title>
