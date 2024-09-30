@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Sun, 29 Sep 2024 17:27:07 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2024 09:25:59 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About David Haney</title>
       <link>https://www.davidhaney.io/about/</link>
       <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://www.davidhaney.io/about/</guid>
-      <description>&lt;p&gt;Hi, I&amp;rsquo;m David Haney. I currently live in the Detroit Metropolitan Area of Michigan with my family. We moved here in late 2023. Prior to Michigan, I lived in Florida for 14 years. Prior to that, I was born and raised in Canada.&lt;/p&gt;&#xA;&lt;p&gt;I have been programming most of my life. We didn&amp;rsquo;t have a lot of disposable income, but my dad was given a home computer for his day job which was quite the luxury. It was a &lt;a href=&#34;https://en.wikipedia.org/wiki/Macintosh_SE/30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Macintosh SE/30&lt;/a&gt;&#xD;&#xA; with an 80 MB HDD. I can still remember all the unique and quirkly sounds it made.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hi, I&amp;rsquo;m David Haney. I currently live in the Detroit Metropolitan Area of Michigan with my family. We moved here in late 2023. Prior to Michigan, I lived in Florida for 14 years. Prior to that, I was born and raised in Canada.&lt;/p&gt;&#xA;&lt;p&gt;I have been programming most of my life. We didn&amp;rsquo;t have a lot of disposable income, but my dad was given a home computer for his day job which was quite the luxury. It was a &lt;a href=&#34;https://en.wikipedia.org/wiki/Macintosh_SE/30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Macintosh SE/30&lt;/a&gt;&#xD;&#xA; with an 80 MB HDD. I can still remember all the unique and quirkly sounds it made. Fun fact: to this day, turning on any Apple computer still makes the same warm-toned &amp;ldquo;Happy Mac&amp;rdquo; chime.&lt;/p&gt;</description>
     </item>
     <item>
       <title>.NET Core MVC - How to Access appsettings.json</title>
