@@ -23,7 +23,7 @@
     });
     const navbarMenuToggle = document.getElementById("navbar-menu-toggle");
     const navbarMenu = document.getElementById("navbar-menu");
-    const navbarLangToggle = document.getElementById("navbar-lang-toggle");
+    const navbarLangToggle = document.getElementById("navbar-lang-toggle") || document.createElement("div");
     const navbarLang = document.getElementById("navbar-lang");
     document.addEventListener("click", function(event) {
       const target = event.target;
