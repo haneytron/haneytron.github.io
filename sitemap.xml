@@ -2,20 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.davidhaney.io/categories/blog/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/categories/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/tags/codesession/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/leaving-stack-overflow-and-building-codesession/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/posts/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/tags/stackoverflow/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/tags/startup/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
+    <loc>https://www.davidhaney.io/tags/</loc>
+    <lastmod>2024-10-07T09:23:18-04:00</lastmod>
+  </url><url>
     <loc>https://www.davidhaney.io/about/</loc>
     <lastmod>2024-09-30T09:42:38-04:00</lastmod>
   </url><url>
-    <loc>https://www.davidhaney.io/</loc>
-    <lastmod>2024-09-30T11:39:41-04:00</lastmod>
-  </url><url>
     <loc>https://www.davidhaney.io/net-core-mvc-access-appsettings-json/</loc>
     <lastmod>2024-09-29T17:27:07-04:00</lastmod>
-  </url><url>
-    <loc>https://www.davidhaney.io/categories/blog/</loc>
-    <lastmod>2024-09-30T11:39:41-04:00</lastmod>
-  </url><url>
-    <loc>https://www.davidhaney.io/categories/</loc>
-    <lastmod>2024-09-30T11:39:41-04:00</lastmod>
   </url><url>
     <loc>https://www.davidhaney.io/tags/core/</loc>
     <lastmod>2024-09-29T17:27:07-04:00</lastmod>
@@ -31,12 +49,6 @@
   </url><url>
     <loc>https://www.davidhaney.io/tags/mvc/</loc>
     <lastmod>2024-09-29T17:27:07-04:00</lastmod>
-  </url><url>
-    <loc>https://www.davidhaney.io/posts/</loc>
-    <lastmod>2024-09-30T11:39:41-04:00</lastmod>
-  </url><url>
-    <loc>https://www.davidhaney.io/tags/</loc>
-    <lastmod>2024-09-30T11:39:41-04:00</lastmod>
   </url><url>
     <loc>https://www.davidhaney.io/tags/career/</loc>
     <lastmod>2024-09-29T17:27:07-04:00</lastmod>
