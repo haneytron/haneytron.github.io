@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Fri, 11 Oct 2024 10:27:20 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2024 10:28:13 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure</title>
+      <link>https://www.davidhaney.io/tags/azure/</link>
+      <pubDate>Fri, 11 Oct 2024 09:25:18 -0400</pubDate>
+      <guid>https://www.davidhaney.io/tags/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dataprotection</title>
+      <link>https://www.davidhaney.io/tags/dataprotection/</link>
+      <pubDate>Fri, 11 Oct 2024 09:25:18 -0400</pubDate>
+      <guid>https://www.davidhaney.io/tags/dataprotection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Netcore</title>
+      <link>https://www.davidhaney.io/tags/netcore/</link>
+      <pubDate>Fri, 11 Oct 2024 09:25:18 -0400</pubDate>
+      <guid>https://www.davidhaney.io/tags/netcore/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Codesession</title>
       <link>https://www.davidhaney.io/tags/codesession/</link>
@@ -91,13 +112,6 @@
       <link>https://www.davidhaney.io/tags/workplace/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/tags/workplace/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure</title>
-      <link>https://www.davidhaney.io/tags/azure/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
-      <guid>https://www.davidhaney.io/tags/azure/</guid>
       <description></description>
     </item>
     <item>
@@ -469,20 +483,6 @@
       <link>https://www.davidhaney.io/tags/linq/</link>
       <pubDate>Mon, 11 Jun 2012 00:57:15 +0000</pubDate>
       <guid>https://www.davidhaney.io/tags/linq/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Dataprotection</title>
-      <link>https://www.davidhaney.io/tags/dataprotection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.davidhaney.io/tags/dataprotection/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Netcore</title>
-      <link>https://www.davidhaney.io/tags/netcore/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.davidhaney.io/tags/netcore/</guid>
       <description></description>
     </item>
   </channel>
