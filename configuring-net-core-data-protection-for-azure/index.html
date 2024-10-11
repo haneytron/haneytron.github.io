@@ -9,8 +9,8 @@
   name="description"
   content="Recently in CodeSessionI encountered the following logged warning:
 No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.
-This was totally new and confusing to me, so I started Googling. There I learned all about .NET Core&rsquo;s Data ProtectionAPI.
-Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?
+This was totally new to me, so I started Googling. There I learned all about .NET Core&rsquo;s Data ProtectionAPI.
+After reading the MS docs, this was still confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?
 "
 />
 <meta
@@ -22,12 +22,12 @@ Still, this was confusing. The documentation states that this API is used for th
   <meta property="og:title" content="Configuring .NET Core Data Protection For Azure">
   <meta property="og:description" content="Recently in CodeSessionI encountered the following logged warning:
 No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.
-This was totally new and confusing to me, so I started Googling. There I learned all about .NET Core’s Data ProtectionAPI.
-Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn’t use that functionality. So why was this happening?">
+This was totally new to me, so I started Googling. There I learned all about .NET Core’s Data ProtectionAPI.
+After reading the MS docs, this was still confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn’t use that functionality. So why was this happening?">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:modified_time" content="2024-10-11T10:26:54-04:00">
+    <meta property="article:modified_time" content="2024-10-11T10:27:20-04:00">
     <meta property="article:tag" content="Netcore">
     <meta property="article:tag" content="Azure">
     <meta property="article:tag" content="Dataprotection">
@@ -37,8 +37,8 @@ Still, this was confusing. The documentation states that this API is used for th
   <meta name="twitter:title" content="Configuring .NET Core Data Protection For Azure">
   <meta name="twitter:description" content="Recently in CodeSessionI encountered the following logged warning:
 No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.
-This was totally new and confusing to me, so I started Googling. There I learned all about .NET Core’s Data ProtectionAPI.
-Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn’t use that functionality. So why was this happening?">
+This was totally new to me, so I started Googling. There I learned all about .NET Core’s Data ProtectionAPI.
+After reading the MS docs, this was still confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn’t use that functionality. So why was this happening?">
 
 
 <link rel="canonical" href="https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/" />
@@ -306,9 +306,9 @@ Still, this was confusing. The documentation states that this API is used for th
 <blockquote>
 <p>No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.</p>
 </blockquote>
-<p>This was totally new and confusing to me, so I started Googling. There I learned all about <a href="https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-8.0" target="_blank" rel="noopener">.NET Core&rsquo;s Data Protection</a>
+<p>This was totally new to me, so I started Googling. There I learned all about <a href="https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-8.0" target="_blank" rel="noopener">.NET Core&rsquo;s Data Protection</a>
  API.</p>
-<p>Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?</p>
+<p>After reading the MS docs, this was still confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?</p>
 <h1 id="net-core-mvc-xsrf-request-validation">.NET Core MVC XSRF Request Validation</h1>
 <p>I eventually figured out that <a href="https://learn.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-8.0#antiforgery-in-aspnet-core" target="_blank" rel="noopener">.NET Core MVC uses Data Protection under the hood if you&rsquo;re employing Request Validation code to protect forms</a>
 .</p>
