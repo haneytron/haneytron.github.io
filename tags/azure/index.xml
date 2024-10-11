@@ -7,21 +7,21 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Mon, 07 Oct 2024 09:23:18 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2024 10:25:05 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/azure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Configuring .NET Core Data Protection For Azure</title>
-      <link>https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/</link>
-      <pubDate>Mon, 07 Oct 2024 09:23:18 -0400</pubDate>
-      <guid>https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/</guid>
-      <description>&lt;p&gt;Recently in &lt;a href=&#34;https://www.codesession.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CodeSession&lt;/a&gt;&#xD;&#xA; I encountered the following logged warning:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This was completely confusing to me, so off to Google I went. There I learned all about &lt;a href=&#34;https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-8.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;.NET Core&amp;rsquo;s Data Protection&lt;/a&gt;&#xD;&#xA; API.&lt;/p&gt;&#xA;&lt;p&gt;Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&amp;rsquo;t use that functionality. So why was this happening?&lt;/p&gt;</description>
-    </item>
     <item>
       <title>.NET Core Azure Functions Tutorial</title>
       <link>https://www.davidhaney.io/net-core-azure-functions-tutorial/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
       <guid>https://www.davidhaney.io/net-core-azure-functions-tutorial/</guid>
       <description>&lt;p&gt;In this post I&amp;rsquo;d like to show you how I ported an Azure Classic Cloud Service application (which cost me $16 USD a month by the way) to a .NET Core Azure Function, and now host it in Azure for $0 a month! That&amp;rsquo;s right - Azure Functions are both awesome and (usually) free!&lt;/p&gt;&#xA;&lt;h1 id=&#34;introducing-realdonaldtron&#34;&gt;Introducing realDonaldTron&lt;/h1&gt;&#xA;&lt;p&gt;So back in late 2016, when our dear leader was elected president, I decided to have a little fun at his expense. I created a &lt;a href=&#34;https://www.twitter.com/realDonaldTron&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter account&lt;/a&gt;&#xD;&#xA; and generated API keys. I then created an Azure Classic Cloud Service and&#xA;wrote a quick and dirty Twitter bot. This bot consumes 1000s of the most recent tweets from Donald Trump, cleans up his grammar and punctuation a little (because he can&amp;rsquo;t write words good), generates a &lt;a href=&#34;https://en.wikipedia.org/wiki/Markov_chain&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markov Chain&lt;/a&gt;&#xD;&#xA;&#xA;from the Tweets, and then schedules a .NET Timer to generate and publish a new Tweet at the top of every hour.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configuring .NET Core Data Protection For Azure</title>
+      <link>https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/</guid>
+      <description>&lt;p&gt;Recently in &lt;a href=&#34;https://www.codesession.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CodeSession&lt;/a&gt;&#xD;&#xA; I encountered the following logged warning:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This was completely confusing to me, so off to Google I went. There I learned all about &lt;a href=&#34;https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-8.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;.NET Core&amp;rsquo;s Data Protection&lt;/a&gt;&#xD;&#xA; API.&lt;/p&gt;&#xA;&lt;p&gt;Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&amp;rsquo;t use that functionality. So why was this happening?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
