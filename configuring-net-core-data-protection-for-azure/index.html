@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Configuring .NET Core Data Protection For Azure :: David Haney - Blogging About .NET Core &amp; Engineering Management</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Recently in CodeSessionI encountered the following logged warning:
+No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.
+This was completely confusing to me, so off to Google I went. There I learned all about .NET Core&rsquo;s Data ProtectionAPI.
+Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?
+"
+/>
+<meta
+  name="keywords"
+  content="david, haney, david haney, .net, dotnet, c#, csharp, engineering management, engineering, management, blog, programming"
+/>
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/">
+  <meta property="og:site_name" content="David Haney - Blogging About .NET Core & Engineering Management">
+  <meta property="og:title" content="Configuring .NET Core Data Protection For Azure">
+  <meta property="og:description" content="Recently in CodeSessionI encountered the following logged warning:
+No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.
+This was completely confusing to me, so off to Google I went. There I learned all about .NET Core’s Data ProtectionAPI.
+Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn’t use that functionality. So why was this happening?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-07T09:23:18-04:00">
+    <meta property="article:modified_time" content="2024-10-07T09:23:18-04:00">
+    <meta property="article:tag" content="Netcore">
+    <meta property="article:tag" content="Azure">
+    <meta property="article:tag" content="Dataprotection">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Configuring .NET Core Data Protection For Azure">
+  <meta name="twitter:description" content="Recently in CodeSessionI encountered the following logged warning:
+No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.
+This was completely confusing to me, so off to Google I went. There I learned all about .NET Core’s Data ProtectionAPI.
+Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn’t use that functionality. So why was this happening?">
+
+
+<link rel="canonical" href="https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR2HVYP6QG"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PR2HVYP6QG');
+        }
+      </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<style>
+  header {
+    padding-bottom: 0.75rem;
+  }
+  
+  aside {
+    top: 3.25rem !important;
+  }
+  
+   
+  div.chroma {
+    overflow-x: auto;
+  }
+
+  div.highlight > button {
+    top: 2rem;
+  }
+</style>
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800"><header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none ml-2 md:ml-0">
+    <a href="/" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
+    </a>
+  </div>
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/" title="Blog">Blog</a>
+        </li>
+      
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/tags/" title="Tags">Tags</a>
+        </li>
+      
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/configuring-net-core-data-protection-for-azure/">
+        
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/configuring-net-core-data-protection-for-azure/">Configuring .NET Core Data Protection For Azure</a>
+      </h1>
+
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/blog/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Blog
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/netcore/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Netcore</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/azure/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Azure</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/dataprotection/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Dataprotection</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2024-10-07T09:23:18-04:00">
+      2024-10-07
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      7 minutes to read
+    </span>
+  </div>
+</div>
+
+      
+
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <p>Recently in <a href="https://www.codesession.io" target="_blank" rel="noopener">CodeSession</a>
+ I encountered the following logged warning:</p>
+<blockquote>
+<p>No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.</p>
+</blockquote>
+<p>This was completely confusing to me, so off to Google I went. There I learned all about <a href="https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-8.0" target="_blank" rel="noopener">.NET Core&rsquo;s Data Protection</a>
+ API.</p>
+<p>Still, this was confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?</p>
+<h1 id="net-core-mvc-xsrf-request-validation">.NET Core MVC XSRF Request Validation</h1>
+<p>I eventually figured out that <a href="https://learn.microsoft.com/en-us/aspnet/core/security/anti-request-forgery?view=aspnetcore-8.0#antiforgery-in-aspnet-core" target="_blank" rel="noopener">.NET Core MVC uses Data Protection under the hood if you&rsquo;re employing Request Validation code to protect forms</a>
+.</p>
+<p>Code in my Views:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;register-form&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/register&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;on&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    @Html.AntiForgeryToken()
+</span></span><span class="line"><span class="cl">	...</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Code in my Controllers:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="na">[HttpPost(&#34;register&#34;), ValidateAntiForgeryToken]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ActionResult</span><span class="p">&gt;</span> <span class="n">Register</span><span class="p">(</span><span class="n">RegisterModel</span> <span class="n">model</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>The reason for the logged warning that I got in the first place is that Data Protection must be configured to persist keys in a shared place when using 2+ instances of an app. From the MS docs:</p>
+<blockquote>
+<p>The data protection stack must be configured to work in a server farm</p>
+</blockquote>
+<blockquote>
+<p>When the Data Protection system is initialized, it applies default settings based on the operational environment. These settings are appropriate for apps running on a single machine. However, there are cases where a developer may want to change the default settings:</p>
+<ul>
+<li>The app is spread across multiple machines.</li>
+<li>For compliance reasons.</li>
+</ul>
+<p>For these scenarios, the Data Protection system offers a rich configuration API.</p>
+</blockquote>
+<p>All <code>n</code> instances of your app must all share the same cryptographic keys, in order to produce the same results.</p>
+<h1 id="what-happens-if-you-dont-configure-data-protection">What Happens If You Don&rsquo;t Configure Data Protection</h1>
+<p>When left unconfigured, Data Protection generates and stores a <strong>local</strong> encryption key based on <strong>local</strong> machine and environment settings. This is a problem for an app with more than 1 instance behind a load balancer, because <strong>each instance of the app will generate its own unique key that is different</strong>. And if requests to your app randomly bounce between instances behind a load balancer, the key generated on machine 1 will not match the key generated on machine 2, and you&rsquo;ll get all kinds of fun cryptography related exceptions + your users will get error pages.</p>
+<p>I needed to solve this for CodeSession because I need to run on more than 1 instance. I host in Azure, so once more I Googled to figure out how to configure the Data Protection API for Azure.</p>
+<p>It turns out the documentation is out of data, unintuitive, and in some cases straight up wrong. So here&rsquo;s how to configure Data Protection in Azure quickly and correctly.</p>
+<h1 id="data-protection-in-azure-for-lt005-a-month">Data Protection in Azure For &lt;$0.05 A Month</h1>
+<h2 id="get-the-nuget-packages">Get The NuGet Packages</h2>
+<p>The first step is to install a few NuGet packages to enable configuration:</p>
+<ul>
+<li><code>Azure.Extensions.AspNetCore.DataProtection.Blobs</code></li>
+<li><code>Azure.Extensions.AspNetCore.DataProtection.Keys</code></li>
+</ul>
+<h2 id="configure-azure-resources">Configure Azure Resources</h2>
+<p>Next you need to do most of the work in Azure. We&rsquo;ll need a <strong>Key Vault</strong>, a <strong>Storage Blob Container</strong>, and an <strong>Azure Managed Identity</strong> to get this done.</p>
+<h3 id="key-vault">Key Vault</h3>
+<p>Create an Azure Key Vault using the cheapest settings possible (or re-use one you already have). You won&rsquo;t need the Certificate functionality that is offered, just the ability to store Keys.</p>
+<p><strong>Important note:</strong> your app will need to be able to access your Key Vault, so if you haven&rsquo;t set up Virtual Networks, you&rsquo;ll need to enable public access. Go to <strong>Settings &gt; Networking</strong> and set <strong>&ldquo;Allow public access from all networks&rdquo;</strong> to enable. It sounds scary, but it just exposes an <em>endpoint</em> to the Internet - people still need authenticated accounts to access anything at all. Still, I&rsquo;d recommend setting up a Virtual Network as the most secure option.</p>
+<p>Once that&rsquo;s provisioned, go to <strong>Objects &gt; Keys</strong> and click the <strong>Generate/Import</strong> button. Give it a name that you&rsquo;ll remember (I called mine &ldquo;dataprotection&rdquo;) and all the other defaults are totally fine:</p>
+<figure><img src="/img/dataprotection-vault-key.png"><figcaption>
+      <h4>Data Protection Vault Key</h4>
+    </figcaption>
+</figure>
+
+<p>Press Create. All done with this step.</p>
+<h3 id="storage-container">Storage Container</h3>
+<p>Create an Azure Storage Account using the cheapest settings available (or re-use one you already have).</p>
+<p><strong>Important note:</strong> your app will need to be able to access your Storage Account Container, so if you haven&rsquo;t set up Virtual Networks, you&rsquo;ll need to enable public access. Go to <strong>Security + Networking &gt; Networking</strong> and set <strong>Public network access to &ldquo;Enabled from all networks&rdquo;</strong> to enable. It sounds scary, but it just exposes an <em>endpoint</em> to the Internet - people still need authenticated accounts to access anything at all. Still, I&rsquo;d recommend setting up a Virtual Network as the most secure option.</p>
+<p>Next go to <strong>Data Storage &gt; Containers</strong> and create a new container where you&rsquo;ll store your encrypted keys. I called mine &ldquo;dataprotection&rdquo; here also:</p>
+<figure><img src="/img/dataprotection-storage-container.png"><figcaption>
+      <h4>Data Protection Storage Container</h4>
+    </figcaption>
+</figure>
+
+<p>Once created, you&rsquo;re all done here.</p>
+<h3 id="azure-rbac-managed-identity">Azure RBAC Managed Identity</h3>
+<p>This is perhaps the trickiest part. Finally you need to set up a Managed Identity that can access these new resources from your application.</p>
+<p>From Azure, go to <strong>Managed Identities</strong>. Create a new identity with a useful name - I called mine &ldquo;dataprotection-access&rdquo;.</p>
+<figure><img src="/img/dataprotection-managed-identities.png"><figcaption>
+      <h4>Data Protection Managed Identities</h4>
+    </figcaption>
+</figure>
+
+<p>Once provisioned, we&rsquo;ll need to give this identity specific roles. Go to <strong>Azure role assignments</strong> within the identity and give it:</p>
+<ul>
+<li><strong>Key Vault Crypto User</strong> role on your Key Vault</li>
+<li><strong>Storage Blob Data Contributor</strong> role on your Storage Container.</li>
+</ul>
+<p>These are the least privileged roles needed to make Data Protection work. Once configured your role assignments will look like this:</p>
+<figure><img src="/img/dataprotection-managed-identity-roles.png"><figcaption>
+      <h4>Data Protection Managed Identity Roles</h4>
+    </figcaption>
+</figure>
+
+<p>Just one last thing to do in Azure. Your app needs to be able to assume this new Managed Identity, thus gaining the access it provides.</p>
+<p>Go to your app (mine is a Web App), then go to <strong>Settings &gt; Identity</strong>. Here, click the <strong>User assigned</strong> tab at the top, click add, then select your new Managed Identity. When configured it&rsquo;ll look like this:</p>
+<figure><img src="/img/dataprotection-app-user-assigned-identity.png"><figcaption>
+      <h4>Data Protection App User Assigned Identity</h4>
+    </figcaption>
+</figure>
+
+<p>OK! You made it! We&rsquo;re done with all the Azure stuff, so finally it&rsquo;s time to write a few lines of code.</p>
+<h2 id="configure-your-net-core-app">Configure Your .NET Core App</h2>
+<p>This is the easy part. In your <code>Program.cs</code> file, add the following code:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// Data Protection - used for XSRF form antiforgery tokens, must be hosted in a shared resource (Azure) so that n instances of this app can use it</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// See: https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/configuration/overview?view=aspnetcore-8.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// For this to work:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//   - An Azure Managed Identity must be created with RBAC &#34;Storage Blob Data Contributor&#34; access for the Storage account, and &#34;Key Vault Crypto User&#34; access for the Key Vault</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//   - The AppService hosting this app must have this Managed Identity &#34;User Assigned&#34; via the Identity --&gt; User Assigned Azure view</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Get the Client ID from the Managed Identity Overview tab in Azure</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">azureCredentials</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ManagedIdentityCredential</span><span class="p">(&lt;</span><span class="n">managed_identity_client_id_here</span><span class="p">&gt;);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">services</span><span class="p">.</span><span class="n">AddDataProtection</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Must be same name for all instances</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">SetApplicationName</span><span class="p">(</span><span class="s">&#34;CodeSession&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Requires AppService to have identity RBAC assigned to blob storage access</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">PersistKeysToAzureBlobStorage</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://&lt;your_container_name&gt;.blob.core.windows.net/dataprotection/keys.xml&#34;</span><span class="p">),</span> <span class="n">azureCredentials</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Requires AppService to have identity RBAC assigned to key vault access</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">ProtectKeysWithAzureKeyVault</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://&lt;your_vault_name&gt;.vault.azure.net/keys/dataprotection/&#34;</span><span class="p">),</span> <span class="n">azureCredentials</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Note that we pointed to a <code>keys.xml</code> blob file in the container that doesn&rsquo;t yet exist. Don&rsquo;t worry - the API will create it for you automatically.</p>
+<p>Next, run your app. If you followed all these steps correctly, everything should now work properly!</p>
+<p><strong>A final note:</strong> I recommend putting this configuration logic behind an <code>if (localDev)</code> check / branch once you&rsquo;ve verified that it&rsquo;s working. You don&rsquo;t need to run all this or talk to Azure for local dev purposes. It just needs to work when deployed.</p>
+<p>Hopefully this helps other people sort out the Data Protection configuration - it ate up a good 3 or 4 hours of my time last week. Cheers!</p>
+
+      </article>
+
+      
+
+
+  
+<script type="text/javascript">
+  (function() {
+    const themeToggle = document.querySelector('.darkmode-toggle input');
+    const light = 'light';
+    const dark = 'dark';
+    let isDark = localStorage.theme === dark || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    let theme = isDark ? dark : light;
+
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    const dataset = {
+        repo: 'haneytron\/haneytron.github.io',
+        repoId: 'MDEwOlJlcG9zaXRvcnkxMzY2Nzk5NDA=',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOCCWSBM4Ci7Jg',
+        mapping: 'pathname',
+        reactionsEnabled: '1',
+        emitMetadata: '0',
+        theme: theme,
+        lang: 'en',
+    };
+    s.src = 'https://giscus.app/client.js';
+    s.crossorigin = 'anonymous';
+    s.async = true;
+    Object.entries(dataset).forEach(function(a) {
+        return s.dataset[a[0]] = a[1];
+    });
+
+    const curScriptElement = document.currentScript;
+    curScriptElement.parentNode.insertBefore(s, curScriptElement);
+
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    themeToggle.addEventListener('change', function () {
+      if (this.checked) {
+        theme = dark;
+      } else {
+        theme = light;
+      }
+      sendMessage({
+        setConfig: {
+          theme: theme,
+        }
+      });
+    });
+  })();
+</script>
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    <a href="https://www.linkedin.com/in/davidahaney" target="_blank" title="LinkedIn" class="flex flex-row mr-2">
+      <span class="hidden">LinkedIn</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/haneytron" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2012 - 2024 David Haney
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      Powered by <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a> <span class="text-red-600">&hearts;</span> <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.min.65ca5b0808abf278fcec5d424701ebf0b4bc46a737129cd5e57fdb739f463e79.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.min.e7b2a74adef1ed474c335c8bd5e7832b2316b8842b0f9184d65286c5bd64f51a.js"></script>
+
+
+<style>
+  article {
+    padding-bottom: 1rem;
+  }
+  div.giscus {
+    border-top-width: 1px;
+	padding-top: 1rem;
+  }
+</style>
+</body>
+</html>
