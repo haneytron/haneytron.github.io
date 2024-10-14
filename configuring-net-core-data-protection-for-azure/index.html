@@ -28,7 +28,7 @@ After reading the MS docs, this was still confusing. The documentation states th
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-10-11T09:25:18-04:00">
-    <meta property="article:modified_time" content="2024-10-11T10:28:33-04:00">
+    <meta property="article:modified_time" content="2024-10-11T17:38:25-04:00">
     <meta property="article:tag" content="Netcore">
     <meta property="article:tag" content="Azure">
     <meta property="article:tag" content="Dataprotection">
@@ -376,16 +376,15 @@ After reading the MS docs, this was still confusing. The documentation states th
 <p>All <code>n</code> instances of your app must all share the same cryptographic keys, in order to produce the same results.</p>
 <h1 id="what-happens-if-you-dont-configure-data-protection">What Happens If You Don&rsquo;t Configure Data Protection</h1>
 <p>When left unconfigured, Data Protection generates and stores a <strong>local</strong> encryption key based on <strong>local</strong> machine and environment settings. This is a problem for an app with more than 1 instance behind a load balancer, because <strong>each instance of the app will generate its own unique key that is different</strong>. And if requests to your app randomly bounce between instances behind a load balancer, the key generated on machine 1 will not match the key generated on machine 2, and you&rsquo;ll get all kinds of fun cryptography related exceptions + your users will get error pages.</p>
-<p>I needed to solve this for CodeSession because I need to run on more than 1 instance. I host in Azure, so once more I Googled to figure out how to configure the Data Protection API for Azure.</p>
-<p>It turns out the documentation is out of date, unintuitive, and in some cases straight up wrong. So here&rsquo;s how to configure Data Protection in Azure quickly and correctly.</p>
+<p>I needed to solve this for CodeSession because run on more than 1 instance. I host in Azure, so once more I went to Google to figure out how to configure the Data Protection API for Azure. Unfortunately it turns out that the documentation is a little out of date, a bit unintuitive, and in some cases straight up wrong. So here&rsquo;s how to configure Data Protection in Azure quickly and correctly.</p>
 <h1 id="data-protection-in-azure-for-lt005-a-month">Data Protection in Azure For &lt;$0.05 A Month</h1>
-<h2 id="get-the-nuget-packages">Get The NuGet Packages</h2>
+<h2 id="1-get-the-nuget-packages">1. Get The NuGet Packages</h2>
 <p>The first step is to install a few NuGet packages to enable configuration:</p>
 <ul>
 <li><code>Azure.Extensions.AspNetCore.DataProtection.Blobs</code></li>
 <li><code>Azure.Extensions.AspNetCore.DataProtection.Keys</code></li>
 </ul>
-<h2 id="configure-azure-resources">Configure Azure Resources</h2>
+<h2 id="2-configure-azure-resources">2. Configure Azure Resources</h2>
 <p>Next you need to do most of the work in Azure. We&rsquo;ll need a <strong>Key Vault</strong>, a <strong>Storage Blob Container</strong>, and an <strong>Azure Managed Identity</strong> to get this done.</p>
 <h3 id="key-vault">Key Vault</h3>
 <p>Create an Azure Key Vault using the cheapest settings possible (or re-use one you already have). You won&rsquo;t need the Certificate functionality that is offered, just the ability to store Keys.</p>
@@ -434,7 +433,7 @@ After reading the MS docs, this was still confusing. The documentation states th
 </figure>
 
 <p>OK! You made it! We&rsquo;re done with all the Azure stuff, so finally it&rsquo;s time to write a few lines of code.</p>
-<h2 id="configure-your-net-core-app">Configure Your .NET Core App</h2>
+<h2 id="3-configure-your-net-core-app">3. Configure Your .NET Core App</h2>
 <p>This is the easy part. In your <code>Program.cs</code> file, add the following code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -464,20 +463,20 @@ After reading the MS docs, this was still confusing. The documentation states th
 </span></span><span class="line"><span class="cl"><span class="c1">//   - The AppService hosting this app must have this Managed Identity &#34;User Assigned&#34; via the Identity --&gt; User Assigned Azure view</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// Get the Client ID from the Managed Identity Overview tab in Azure</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">azureCredentials</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ManagedIdentityCredential</span><span class="p">(&lt;</span><span class="n">managed_identity_client_id_here</span><span class="p">&gt;);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">azureCredential</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ManagedIdentityCredential</span><span class="p">(&lt;</span><span class="n">managed_identity_client_id_here</span><span class="p">&gt;);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">services</span><span class="p">.</span><span class="n">AddDataProtection</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Must be same name for all instances</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">SetApplicationName</span><span class="p">(</span><span class="s">&#34;CodeSession&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Requires AppService to have identity RBAC assigned to blob storage access</span>
-</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">PersistKeysToAzureBlobStorage</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://&lt;your_container_name&gt;.blob.core.windows.net/dataprotection/keys.xml&#34;</span><span class="p">),</span> <span class="n">azureCredentials</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">PersistKeysToAzureBlobStorage</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://&lt;your_storage_name&gt;.blob.core.windows.net/dataprotection/keys.xml&#34;</span><span class="p">),</span> <span class="n">azureCredential</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Requires AppService to have identity RBAC assigned to key vault access</span>
-</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">ProtectKeysWithAzureKeyVault</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://&lt;your_vault_name&gt;.vault.azure.net/keys/dataprotection/&#34;</span><span class="p">),</span> <span class="n">azureCredentials</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">ProtectKeysWithAzureKeyVault</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&#34;https://&lt;your_vault_name&gt;.vault.azure.net/keys/dataprotection/&#34;</span><span class="p">),</span> <span class="n">azureCredential</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Note that we pointed to a <code>keys.xml</code> blob file in the container that doesn&rsquo;t yet exist. Don&rsquo;t worry - the API will create it for you automatically.</p>
-<p>Next, run your app. If you followed all these steps correctly, everything should now work properly!</p>
+<p>Next, run your app. If you followed all these steps correctly, everything should now work properly! You can also look for and inspect the newly created <code>keys.xml</code> file in your container within Azure Portal to verify.</p>
 <p><strong>A final note:</strong> I recommend putting this configuration logic behind an <code>if (localDev)</code> check / branch once you&rsquo;ve verified that it&rsquo;s working. You don&rsquo;t need to run all this or talk to Azure for local dev purposes. It just needs to work when deployed.</p>
 <p>Hopefully this helps other people sort out the Data Protection configuration - it ate up a good 3 or 4 hours of my time last week. Cheers!</p>
 
