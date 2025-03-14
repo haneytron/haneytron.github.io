@@ -40,7 +40,7 @@ Spoiler: I strongly disagree with most of this article. If you aren’t open to 
 <link rel="canonical" href="https://www.davidhaney.io/on-secretly-terrible-engineers-a-rebuttal/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
 
 
 
@@ -98,6 +98,7 @@ Spoiler: I strongly disagree with most of this article. If you aren’t open to 
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
     </a>
   </div>
+  
   <div class="flex-1"></div>
   <div class="flex-none">
     
@@ -196,6 +197,7 @@ Spoiler: I strongly disagree with most of this article. If you aren’t open to 
   </header>
   <main class="flex flex-auto justify-center">
     
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
     <div>
@@ -344,68 +346,55 @@ Spoiler: I strongly disagree with most of this article. If you aren’t open to 
 <p><strong>Note:</strong> any and all bolding or emphasis will be entirely my own and not present in the original article. <strong>If you see bold, know that I bolded it.</strong></p>
 <p>If you’re still with me, I’d like to tackle this article inline because educated context, which is what I feel the article lacks in the first place, makes the world go ’round. Let’s begin with the credentials and qualifications from which the author speaks.</p>
 <blockquote>
-<p>I am not unbiased here, having gone through this process myself. I started programming in second grade. I wrote tens of thousands of lines of code in high school, programming games and my own web server. I got a <strong>Mathematical and Computational Science degree from Stanford</strong> and continued coding. <strong>I should have been a software developer, but after a series of interviews, I realized the field was never for me.</strong> So much hostility, so little love.</p>
-</blockquote>
+<p>I am not unbiased here, having gone through this process myself. I started programming in second grade. I wrote tens of thousands of lines of code in high school, programming games and my own web server. I got a <strong>Mathematical and Computational Science degree from Stanford</strong> and continued coding. <strong>I should have been a software developer, but after a series of interviews, I realized the field was never for me.</strong> So much hostility, so little love.</p></blockquote>
 <p>I want to make my first criticism the most important: <strong>the author has never been a professional programmer drawing a paycheck.</strong> Yet, the entire article is about how the world of professional programming works, and how it’s broken. I liken this to me getting a law degree and then, after a few interviews at firms that happened to have mediocre or bad hiring practices, writing an op-ed about how the legal industry is broken and law firms and their lawyers are all cold, heartless entities that are not welcoming to job applicants.</p>
 <p>The fact that the author earned a Computer Science degree from Stanford is impressive. Unfortunately, as many people who program full-time have realized, most theoretical knowledge gained in school translates very poorly to real world programming. I would venture out and say that the author probably was not a very good programmer when they were fresh out of school, looking for that first job. I say that because for the most part, none of us were. I certainly thought I knew how to program when I graduated, but in reality I was a terrible programmer – arguably even “net negative” (creating more problems than I solved) due to my ego and blind confidence.</p>
 <blockquote>
-<p>They lurk, unnoticed in the great halls of engineering that are the office strips along Highway 101. “Programmers” not programmers, people who have cheated, stolen, and lied their way through engineering careers without anyone realizing they can’t code. <strong>They are among us</strong>, incompetent Cylons secretly plotting to undermine us at a crucial time.</p>
-</blockquote>
+<p>They lurk, unnoticed in the great halls of engineering that are the office strips along Highway 101. “Programmers” not programmers, people who have cheated, stolen, and lied their way through engineering careers without anyone realizing they can’t code. <strong>They are among us</strong>, incompetent Cylons secretly plotting to undermine us at a crucial time.</p></blockquote>
 <p>What is this “us” that the author speaks of? There’s a reason I put the author’s credentials (which are at the bottom of the original article) at the top of this one. The author does not work in this field. There is no “us” – the author should have said “you” but knew it would be accusatory instead of an empathic opener that developers and engineers could relate to.</p>
 <blockquote>
 <p>Secretly terrible engineers (STEs) are everywhere, and they may be on your very team as we speak.</p>
 <p>There is only one way to stop this scourge, one interview to defeat them all. Well, more like a dozen interviews with white boards, but that doesn’t sound nearly as cool. But I digress. One interview to rat these jackals out, to prove just once that no matter how much you did in the past, you will be discovered as the <strong>Person Who Doesn’t Know The Big-O Of Trie Insertion</strong>.</p>
-<p>The interviewer, preparing for this moment for years while waiting for git pushes, <strong>stands up and stabs his finger at the interviewee. “I’ve got you!”</strong></p>
-</blockquote>
+<p>The interviewer, preparing for this moment for years while waiting for git pushes, <strong>stands up and stabs his finger at the interviewee. “I’ve got you!”</strong></p></blockquote>
 <p>I would not hire a candidate based on a pop-quiz style test. A company that I used to work at did this, and it sucked. We ended up hiring a bunch of the “secretly terrible engineers” or STEs as the author puts it. This is because a pop-quiz test can be studied for; it tests your ability to memorize and repeat, not your ability to comprehend. People would fool us into believing that they were skilled developers by reciting the correct answers to us. Within a few weeks of working at the company, they had usually outed themselves as terrible. Needing basic instructions on for-loops, source control, or even that pesky Trie Insertion that you seem to mock as if it were not a part of the daily job for many of us (ever built a type-ahead or autocomplete system?). It’s O(n) where n is the length of the key being inserted, by the way. I didn’t have to look that up because it isn’t trivia knowledge. It was derived easily from my practical understanding of data structures and algorithms.</p>
 <p>The interviewer is not preparing for years to out the candidate, and certainly does not make a theatrical show of it. This is because for every 200 candidates that we (proverbial) interview, <a href="http://www.joelonsoftware.com/items/2005/01/27.html" target="_blank" rel="noopener">199 can’t code</a>
 . It gets really depressing and morale-depriving to constantly be rejecting candidates. We find no joy in it. It may feel like you were “outed” or a scene was made because you were unable to pass the interview, and this is very emotional for and personal to you, but on our end it’s just disappointing. We really liked your personality and attitude, and we’re frustrated that we cannot hire you and work with you. The only thing that stands between you and the job is core competency, which you lack.</p>
 <blockquote>
-<p>Or, at least, I guess that is how this moment is supposed to go, <strong>since it never seems to actually happen.</strong></p>
-</blockquote>
+<p>Or, at least, I guess that is how this moment is supposed to go, <strong>since it never seems to actually happen.</strong></p></blockquote>
 <p>How would the author know? They don’t work in the field and they likely don’t hire developers. If they did, I think they’d have written an entirely different article. The author’s evidence so far is entirely anecdotal and surely suffers from sample bias.</p>
 <blockquote>
 <p>But there is also a darker vein running through these articles, of how to see through the posers and fakes, of how to test engineering skills so that you don’t hire that STE. <strong>In this view, the world is swimming in pure engineering mediocrity, and only extraordinarily careful interviewing will allow you to distinguish between fraud and genius.</strong></p>
-<p><strong>It’s a paranoid fantasy, a As don’t hire Bs bullshit lie.</strong></p>
-</blockquote>
+<p><strong>It’s a paranoid fantasy, a As don’t hire Bs bullshit lie.</strong></p></blockquote>
 <p>I agree with the first paragraph. It sucks, but it’s important to carefully screen candidates and hire the right developer. <a href="http://www.recruitingtrends.com/thought-leadership/299-collateral-damage-from-a-bad-hire" target="_blank" rel="noopener">A bad hire costs more than you’d probably ever guess.</a>
  It is true in my subjective experience that careful interviewing is the key to distinguishing between a fraud and a genius. Pop-quiz style interviews don’t weed frauds out. Only an interview that tests basic coding proficiency can weed them out.</p>
 <p>As for the paranoid fantasy bit, I’d ask again how the author knows this, based on their lack of experience in the field. Also, what a sensational, angry comment!</p>
 <blockquote>
-<p><strong>The reality is, few professions seem so openly hostile to their current members as software engineering.</strong> There is always this lingering caution when interviewing a new candidate that somehow this individual has gotten through every interview process and team review without anyone realizing the incompetence before them. <strong>Founders swap stories of “that one guy” who somehow managed to work on infrastructure at Facebook, but was a complete idiot.</strong></p>
-</blockquote>
+<p><strong>The reality is, few professions seem so openly hostile to their current members as software engineering.</strong> There is always this lingering caution when interviewing a new candidate that somehow this individual has gotten through every interview process and team review without anyone realizing the incompetence before them. <strong>Founders swap stories of “that one guy” who somehow managed to work on infrastructure at Facebook, but was a complete idiot.</strong></p></blockquote>
 <p>I agree. The industry is cold and unforgiving to most candidates. I consider myself a very talented developer, but that didn’t stop me from going through <strong>6 interviews, 4 of which involved coding</strong> in order to land a job at Stack Exchange. I did it willingly because I knew that anyone that I would work with <em>also passed those tests and is a competent developer</em>. In reality, my coworkers are all brilliant (or geniuses, as the author says). I’m lucky to be on such a talented team. This is why these practical code tests are important: they ensure that your hires are skilled and that you get the best bang for your buck (the “10x developer” as the author puts it).</p>
 <p>As for “that one guy,” he exists. As a start-up grows, they experience growing pains. Sometimes this is a rapid in-flux of hires to accommodate some scale issues or immediate need. Part of the growing pains is learning to weed out the fraud “developers” also, and so this person tends to get in before the interview process is solidified. Once hired, it is very hard to get rid of an employee (and it costs a lot too), so that one guy at Facebook slipped by. He got in as Facebook experienced growing pains, and slipped by the not-yet-solidified interviewing process. Most of us have worked with at least one of these people <em>recently</em> if not multiple times throughout our careers.</p>
 <blockquote>
 <p>I’ve always been curious what all these people have been up to in the Valley. Where do they go all day? What do they do? <strong>If we are so surrounded by lackluster talent, how do we build all of these companies that seem to be taking over the world? Are STEs secretly burrowing owls who transform into humans during engineering interviews?</strong></p>
-<p>In all my years immersed in the tech industry, <strong>I have never once heard a firm talk about the idiots lurking in their own offices. They always seem to be elsewhere. For everyone.</strong></p>
-</blockquote>
+<p>In all my years immersed in the tech industry, <strong>I have never once heard a firm talk about the idiots lurking in their own offices. They always seem to be elsewhere. For everyone.</strong></p></blockquote>
 <p>If you made 7 bad hires and 3 good (or “10x” as the author stated) hires, you’ll likely get the work done. The 3 good developers probably won’t love their jobs (because they’re picking up the slack of the other 7, and in doing so hiding the 7 from the peering eyes of management). Your company culture will also suck, but the work will get done.</p>
 <p>No firm is going to willingly talk negatively about their employees, <strong>especially</strong> when they’re seeking or have received funding and <strong>extra especially</strong> to someone who writes for TechCrunch. That would be asking for trouble. But hey, the author’s experience can dictate their entire view of the industry if they’d like it to.</p>
 <blockquote>
-<p>Despite the worst talent crunch that Silicon Valley has ever experienced, we still regularly throw away huge groups of talent for not perfectly answering the latest hip algorithm question. “What do you think of the latest RB-tree research,” your interlocutor asks. “What?” “Buzz! Fail. Or should I say Fizz? Dammit I lost track,” you barely hear as security walks you in shame out of the office.</p>
-</blockquote>
+<p>Despite the worst talent crunch that Silicon Valley has ever experienced, we still regularly throw away huge groups of talent for not perfectly answering the latest hip algorithm question. “What do you think of the latest RB-tree research,” your interlocutor asks. “What?” “Buzz! Fail. Or should I say Fizz? Dammit I lost track,” you barely hear as security walks you in shame out of the office.</p></blockquote>
 <p>Here we agree: this is a terrible hiring practice. Pop-quiz interviews are pointless as they don’t accomplish anything and don’t filter out bad candidates. If this is an experience that the author has had, it becomes clearer to me why they wrote this article.</p>
 <blockquote>
-<p>Yet in engineering, we expect people to do live engineering on a white board under stressful interview conditions because, well, because that is what we have always done. Most programmers need StackOverflow, Google search, or Dash in order to be effective, yet <strong>you get to an interview and are expected to spontaneously remember the positional arguments for some esoteric function.</strong> And we keep doing this even with people who have years of experience in the field!</p>
-</blockquote>
+<p>Yet in engineering, we expect people to do live engineering on a white board under stressful interview conditions because, well, because that is what we have always done. Most programmers need StackOverflow, Google search, or Dash in order to be effective, yet <strong>you get to an interview and are expected to spontaneously remember the positional arguments for some esoteric function.</strong> And we keep doing this even with people who have years of experience in the field!</p></blockquote>
 <p>As prior discussed, these types of interviews are terrible. They accomplish nothing other than a round of FizzBuzzword Bingo, and make the candidate feel stupid or bad. I deplore these companies. Read my prior blog posts for better ways to hire good candidates.</p>
 <blockquote>
-<p>Yet, we don’t make the same assumptions in Silicon Valley. You can work at Facebook or Google for years, and still start over from scratch with FizzBuzz when you start searching for another job. That is complete paranoia. <strong>Nerds are frankly very nervous about status, which Paul Graham argues comes straight from high school.</strong> I am not as convinced by such pop sociology, but there is something in the culture that is making us seek out and destroy those losers on our group projects that can’t carry their own weight.</p>
-</blockquote>
+<p>Yet, we don’t make the same assumptions in Silicon Valley. You can work at Facebook or Google for years, and still start over from scratch with FizzBuzz when you start searching for another job. That is complete paranoia. <strong>Nerds are frankly very nervous about status, which Paul Graham argues comes straight from high school.</strong> I am not as convinced by such pop sociology, but there is something in the culture that is making us seek out and destroy those losers on our group projects that can’t carry their own weight.</p></blockquote>
 <p>There are definitely elitist engineers; most of them are misguided. The industry is certainly full of egos. I’ve met enterprise architects that couldn’t architect their way out of a cardbox board, and junior developers who think that they are experts who know everything. It’s definitely a problem, and makes the industry seem harsh to newcomers.</p>
 <blockquote>
-<p>No, but we only realize this when we consider the real context of how engineering happens today. We still act in interviews as if every engineer works independently, when in fact teams greatly affect the performance of every contributor. We act as if engineers should have the entirety of Python’s standard library memorized, when in reality we all use the API reference docs. <strong>Take an engineer and remove their team, their search engine, and StackOverflow, and yes, they might look completely incompetent. That’s a fault of the interview, not them.</strong></p>
-</blockquote>
+<p>No, but we only realize this when we consider the real context of how engineering happens today. We still act in interviews as if every engineer works independently, when in fact teams greatly affect the performance of every contributor. We act as if engineers should have the entirety of Python’s standard library memorized, when in reality we all use the API reference docs. <strong>Take an engineer and remove their team, their search engine, and StackOverflow, and yes, they might look completely incompetent. That’s a fault of the interview, not them.</strong></p></blockquote>
 <p>Actually, that’s the fault of the candidate. If you ever interview with Stack Overflow, we will test your coding skills in a way that prevents you from looking up the answer or depending on libraries. This is not to make the challenge extra hard; it’s quite the opposite. We believe that libraries and helper functions abstract away the true complexity and importance of code. Many developers can sling code from libraries all day (think LINQ or jQuery), but the ones that understand the computational complexity of what they’re doing under the hood are the ones that I want to work with.</p>
 <p>If a candidate cannot solve a relatively simple (or even moderate) programming problem without the help of documentation and libraries, then they do not know how to code.</p>
 <blockquote>
-<p>We need to move beyond the algorithm bravado to engage more fundamentally with the craft. If people are wired for engineering logic and have programmed in some capacity in the past, they almost certainly can get up to speed in any other part of the field. Let them learn, or even better, help them learn.</p>
-</blockquote>
+<p>We need to move beyond the algorithm bravado to engage more fundamentally with the craft. If people are wired for engineering logic and have programmed in some capacity in the past, they almost certainly can get up to speed in any other part of the field. Let them learn, or even better, help them learn.</p></blockquote>
 <p>Agreed, fully.</p>
 <blockquote>
-<p><strong>No one ever offered me a book. No one even offered advice, or suggestions on what was interesting in the field or what was not. No one ever said, “Here is how we are going to bring your skills to the next level and ensure you will be quickly productive on our team.” The only answer I ever got was, “We expect every employee to be ready on day one.” What a scary proposition! Even McDonalds doesn’t expect its burger flippers to be ready from day one.</strong></p>
-</blockquote>
+<p><strong>No one ever offered me a book. No one even offered advice, or suggestions on what was interesting in the field or what was not. No one ever said, “Here is how we are going to bring your skills to the next level and ensure you will be quickly productive on our team.” The only answer I ever got was, “We expect every employee to be ready on day one.” What a scary proposition! Even McDonalds doesn’t expect its burger flippers to be ready from day one.</strong></p></blockquote>
 <p>This is the saddest part of the article to me, as it reveals the true experiences of the author.</p>
 <p>I believe that empowering developers is how you bring out the best in them and get things done. This involves mentoring in positive ways: offering and suggesting books (countless devs have loaned me books over the years), offering advice (also countless), and suggestions and talk of what’s hot in the field. It makes me angry at the industry that the author had this experience, and I agree fully that it’s bullshit and needs fixing.</p>
 <p>As ambassadors to future developers and engineers, we should be more welcoming and willing to teach. If the candidate has the right attitude and aptitude, they can learn – quickly. I leave you with this: while I disagree with the author on many of their points, this one is at the crux of the problems in the IT industry.</p>
@@ -524,7 +513,7 @@ Spoiler: I strongly disagree with most of this article. If you aren’t open to 
    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
 </svg>
-</i> 2012 - 2024 David Haney
+</i> 2012 - 2025 David Haney
     
   </div>
   

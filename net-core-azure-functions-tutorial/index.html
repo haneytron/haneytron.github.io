@@ -41,7 +41,7 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
 <link rel="canonical" href="https://www.davidhaney.io/net-core-azure-functions-tutorial/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
 
 
 
@@ -99,6 +99,7 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
     </a>
   </div>
+  
   <div class="flex-1"></div>
   <div class="flex-none">
     
@@ -197,6 +198,7 @@ Introducing realDonaldTron So back in late 2016, when our dear leader was electe
   </header>
   <main class="flex flex-auto justify-center">
     
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
     <div>
@@ -515,16 +517,13 @@ average memory size in gigabytes by the time in milliseconds it takes to execute
 the function. Memory used by a function is measured by rounding up to the nearest
 128 MB, up to the maximum memory size of 1,536 MB, with execution time calculated
 by rounding up to the nearest 1 ms. The minimum execution time and memory for a
-single function execution is 100 ms and 128 mb respectively.</p>
-</blockquote>
+single function execution is 100 ms and 128 mb respectively.</p></blockquote>
 <p>While these pricing calculations are confusing, it&rsquo;s not that hard to decipher them. Basically, a really quick execution of an Azure Function (like a &ldquo;Hello World&rdquo;) will cost:</p>
 <blockquote>
-<p>(100 ms / 1000 ms) * (128 MB RAM / 1024 MB)  = 0.0125 GB-s</p>
-</blockquote>
+<p>(100 ms / 1000 ms) * (128 MB RAM / 1024 MB)  = 0.0125 GB-s</p></blockquote>
 <p>Multiplying that by the cost per GB-s gets you your cost per execution:</p>
 <blockquote>
-<p>0.0125 GB-s * $0.000016/GB-s = $0.0000002</p>
-</blockquote>
+<p>0.0125 GB-s * $0.000016/GB-s = $0.0000002</p></blockquote>
 <p>Which is <em>far less</em> than a single penny.</p>
 <p><strong>In fact, you could execute your &ldquo;Hello, World&rdquo; function 50,000 times before it would cost you $0.01!</strong></p>
 <h2 id="monthly-free-grants">Monthly free grants!</h2>
@@ -538,8 +537,7 @@ single function execution is 100 ms and 128 mb respectively.</p>
 <h2 id="what-does-realdonaldtron-cost">What does realDonaldTron cost?</h2>
 <p>realDonaldTron runs at about 30 seconds per execution, once per hour, so my calculation is:</p>
 <blockquote>
-<p>30 seconds * 24 runs per day * 31 days in a month * 0.125 GB RAM used = 2,790 GB-s per month.</p>
-</blockquote>
+<p>30 seconds * 24 runs per day * 31 days in a month * 0.125 GB RAM used = 2,790 GB-s per month.</p></blockquote>
 <p>This is of course WAY less than the 400,000 GB-s I get for free every month, so realDonaldTron runs for free!</p>
 <p>Pretty awesome, right? Basically: you&rsquo;re gonna be hosting all of your Azure Functions for free - JACKPOT. And even if you somehow go over the limits, Azure Functions are stupid cheap.</p>
 <h2 id="a-caveat-about-azure-function-logging">A caveat about Azure Function logging</h2>
@@ -826,7 +824,7 @@ soon as the <code>GenerateTweet()</code> function call returns.</p>
    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
 </svg>
-</i> 2012 - 2024 David Haney
+</i> 2012 - 2025 David Haney
     
   </div>
   

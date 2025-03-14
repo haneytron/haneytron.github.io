@@ -38,7 +38,7 @@
 <link rel="canonical" href="https://www.davidhaney.io/make-mostly-read-seldom-written-lists-much-more-efficient/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
 
 
 
@@ -96,6 +96,7 @@
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
     </a>
   </div>
+  
   <div class="flex-1"></div>
   <div class="flex-none">
     
@@ -194,6 +195,7 @@
   </header>
   <main class="flex flex-auto justify-center">
     
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
     <div>
@@ -374,8 +376,7 @@
 <p>As it stood, I went from an O(1 + 1) data structure (key and value lookup costs for Dictionary and HashSet) to an O(1 + 1/2n) data structure (Dictionary and List) and finally to an O(n) data structure (List). And to top it all off, the n in the 1/2n was 3 or 4 where the n in the flat List of KeyValuePair was between 60 and 100. Truly I was getting worse performance with each improvement – at least theoretically. Still, the allure of the memory savings was too great to ignore and I wanted to use this data structure.</p>
 <p>It then hit me: why not use <a href="http://msdn.microsoft.com/en-us/library/w4e7fxsh(v=vs.80).aspx">BinarySearch</a> on the <code>List&lt;T&gt;</code> to look up items quickly and keep the List sorted while I add AND be able to check for duplicates before adding? It was certainly worth a shot, since binary search is an O(log n) algorithm which is an improvement over the List’s O(n) traversal. So, I modified my Add(string propertyName, string propertyValue) method to keep the List sorted as things were added to it. This is surprisingly easy to do.</p>
 <blockquote>
-<p>note that from here on out I’m simplifying my code greatly to basic concepts from what actually exists in order to avoid giving away trade secrets or violating my NDA and being fired</p>
-</blockquote>
+<p>note that from here on out I’m simplifying my code greatly to basic concepts from what actually exists in order to avoid giving away trade secrets or violating my NDA and being fired</p></blockquote>
 <pre><code>public void Add(string propertyName, string propertyValue)
 {   
     // TODO: null checks, etc.
@@ -579,7 +580,7 @@ public bool HasProperties(string propertyName)
    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
 </svg>
-</i> 2012 - 2024 David Haney
+</i> 2012 - 2025 David Haney
     
   </div>
   

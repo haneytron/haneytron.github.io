@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>The Tech Interview AI Cheating Epidemic :: David Haney - Blogging About .NET Core &amp; Engineering Management</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Have you heard the news? AI is replacing all developers next week - or in 3 or 6 or 12 or 18 months! And somehow at the same time, AI is helping developers get jobs by &ldquo;cheating&rdquo; in tech interviews! Don&rsquo;t those two things directly oppose and contradict each other? But I digress.
+The thing is, AI replacing developers is straight up impossible, at least in the currently deployed LLM architectures. The idea is nonsensical. I need to write a blog post detailing both why it&rsquo;s impossible and why people continue to shout it from the rooftops, and I think I&rsquo;ll do that next.
+"
+/>
+<meta
+  name="keywords"
+  content="david, haney, david haney, .net, dotnet, c#, csharp, engineering management, engineering, management, blog, programming"
+/>
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="https://www.davidhaney.io/the-tech-interview-ai-cheating-epidemic/">
+  <meta property="og:site_name" content="David Haney - Blogging About .NET Core & Engineering Management">
+  <meta property="og:title" content="The Tech Interview AI Cheating Epidemic">
+  <meta property="og:description" content="Have you heard the news? AI is replacing all developers next week - or in 3 or 6 or 12 or 18 months! And somehow at the same time, AI is helping developers get jobs by “cheating” in tech interviews! Don’t those two things directly oppose and contradict each other? But I digress.
+The thing is, AI replacing developers is straight up impossible, at least in the currently deployed LLM architectures. The idea is nonsensical. I need to write a blog post detailing both why it’s impossible and why people continue to shout it from the rooftops, and I think I’ll do that next.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-13T20:36:25-04:00">
+    <meta property="article:modified_time" content="2025-03-13T20:36:25-04:00">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Interviews">
+    <meta property="article:tag" content="Codesession">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Tech Interview AI Cheating Epidemic">
+  <meta name="twitter:description" content="Have you heard the news? AI is replacing all developers next week - or in 3 or 6 or 12 or 18 months! And somehow at the same time, AI is helping developers get jobs by “cheating” in tech interviews! Don’t those two things directly oppose and contradict each other? But I digress.
+The thing is, AI replacing developers is straight up impossible, at least in the currently deployed LLM architectures. The idea is nonsensical. I need to write a blog post detailing both why it’s impossible and why people continue to shout it from the rooftops, and I think I’ll do that next.">
+
+
+<link rel="canonical" href="https://www.davidhaney.io/the-tech-interview-ai-cheating-epidemic/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
+
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR2HVYP6QG"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PR2HVYP6QG');
+        }
+      </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<style>
+  header {
+    padding-bottom: 0.75rem;
+  }
+  
+  aside {
+    top: 3.25rem !important;
+  }
+  
+   
+  div.chroma {
+    overflow-x: auto;
+  }
+
+  div.highlight > button {
+    top: 2rem;
+  }
+  
+  article > ul {
+    overflow-wrap: break-word;
+  }
+</style>
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800"><header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none ml-2 md:ml-0">
+    <a href="/" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
+    </a>
+  </div>
+  
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/" title="Blog">Blog</a>
+        </li>
+      
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/tags/" title="Tags">Tags</a>
+        </li>
+      
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/the-tech-interview-ai-cheating-epidemic/">
+        
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/the-tech-interview-ai-cheating-epidemic/">The Tech Interview AI Cheating Epidemic</a>
+      </h1>
+
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/blog/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Blog
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/ai/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Ai</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/interviews/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Interviews</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/codesession/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Codesession</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2025-03-13T20:36:25-04:00">
+      2025-03-13
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      10 minutes to read
+    </span>
+  </div>
+</div>
+
+      
+
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <p>Have you heard the news? <strong>AI is replacing all developers</strong> next week - or in 3 or 6 or 12 or 18 months! And somehow at the same time, <strong>AI is helping developers get jobs by &ldquo;cheating&rdquo; in tech interviews!</strong> Don&rsquo;t those two things directly oppose and contradict each other? But I digress.</p>
+<p>The thing is, AI replacing developers is straight up <em>impossible</em>, at least in the currently deployed LLM architectures. The idea is nonsensical. I need to write a blog post detailing both why it&rsquo;s impossible and why people continue to shout it from the rooftops, and I think I&rsquo;ll do that next.</p>
+<p>But right now I want to talk about the second thing - the more interesting and real thing. In case you haven&rsquo;t caught the news, <strong>there has been a massive surge of developers cheating in tech interviews by using LLMs to beat LeetCode</strong>.</p>
+<h1 id="developers-are-cheating-in-interviews">Developers Are Cheating In Interviews</h1>
+<p>Here are just a few of the many recent articles on the subject:</p>
+<blockquote>
+<p><a href="https://www.cnbc.com/2025/03/09/google-ai-interview-coder-cheat.html" target="_blank" rel="noopener">CNBC: Meet the 21-year-old helping coders use AI to cheat in Google and other tech job interviews</a>
+</p>
+<blockquote>
+<p>The problem has become so prevalent that Pichai suggested during a Google town hall in February that his hiring managers consider returning to in-person job interviews.</p></blockquote>
+<p><a href="https://www.entrepreneur.com/business-news/is-using-ai-chatgpt-in-a-job-interview-cheating/481266" target="_blank" rel="noopener">Entrepreneur: Job Seekers Are Getting Increasingly Bold By &lsquo;Cheating&rsquo; in Interviews — and AI Is Making It Worse</a>
+</p>
+<blockquote>
+<p>&ldquo;A lot of the efforts to cheat come from the fact that hiring is so broken. So you&rsquo;re just like, &lsquo;Oh, my God, how do I get through? How do I get seen? How to get assessed fairly?&rsquo;&rdquo; Lindsey Zuloaga, the chief data scientist at HireVue, told BI.</p></blockquote>
+<p><a href="https://www.msn.com/en-us/money/careers/is-it-cheating-ai-use-during-job-interviews-sparks-debate-over-whether-to-restrict-emerging-tools/ar-AA1AonKs" target="_blank" rel="noopener">MSN: Is it cheating? AI use during job interviews sparks debate over whether to restrict emerging tools</a>
+</p>
+<blockquote>
+<p>&ldquo;A tech leader recently told me they suspect that 80% of their candidates use LLMs on top-of-funnel code tests — despite being explicitly told not to,&rdquo; said Jeff Spector, co-founder and president of Karat, a Seattle startup that helps companies conduct technical interviews.</p></blockquote></blockquote>
+<p>Here&rsquo;s the thing: I don&rsquo;t blame &rsquo;em one bit. As Ice-T says: <em>don&rsquo;t hate the player, hate the game</em> - and the game of tech interviewing has been broken for years.</p>
+<p>We&rsquo;re taking smart people, giving them generic, well-known, completely solved academic algorithm questions for interviews, and then acting shocked when they use an LLM that has literally been trained on those questions to answer them expertly. What else could the outcome have been really?</p>
+<h1 id="leetcode-interviews-suck">LeetCode Interviews Suck</h1>
+<p>Ever done a coding interview or screening for a company where the question was <em>&ldquo;write an algorithm to recursively delete a node in a balanced binary search tree&rdquo;</em> but then the job description was <em>&ldquo;in this HTML-forms-over-database-tables clone-stamping job, you&rsquo;ll be stamping exciting new clones of database table represented by HTML forms!&rdquo;</em>? I sure have. I&rsquo;ve had some crazy interviewing experiences actually:</p>
+<ul>
+<li>
+<p>I had a manager tell me he needed to confiscate my phone so I didn&rsquo;t cheat - in 2011. When I refused to hand him my phone, he handed me a pad of paper and a pen (not even a pencil!) and asked me to write a recursive balanced binary search tree insert - on paper - in pen. I&rsquo;d bet you 100 dollarbucks that guy had never written a recursive method in his entire career.</p>
+</li>
+<li>
+<p>I had an interview where the &ldquo;super hard&rdquo; tech challenge question was a one-liner: &ldquo;implement Huffman Encoding&rdquo;. I had to freaking look it up (and I told them I was doing so). You know why I had to look it up? Because I&rsquo;ve never used it. No one has ever used it. Of every developer I&rsquo;ve ever met in my entire life, not one of them has ever written a Huffman Encoding algorithm in anything ever. Because it&rsquo;s a solved problem.</p>
+</li>
+<li>
+<p>I got asked if I knew what the <code>=&gt;</code> symbol meant. No specific programming language specified. Dude just stood up and drew it on a whiteboard in front of me. I said the meaning depended on the programming language. The guy rolled his eyes at me and walked out of the room. Ironically I got the job.</p>
+</li>
+</ul>
+<p>Let me ask you this: when&rsquo;s the last time you wrote a binary search tree at work? Or used recursion for a practical reason (like graph traversal)? On that note, when was the last time you wrote a graph? Or used a linked list? (Ignore that last one, crypto crew).</p>
+<p>I&rsquo;ve worked at jobs where we actually had reason to do some of these things, and even then I&rsquo;d say it accounted for less than 1% of my time. I remember writing a custom Quicksort with 3-way partition, and still not being able to beat the native <code>QuickSort</code> implementation in .NET because it cheated and invoked kernel level functions under the hood that I couldn&rsquo;t easily access or safely myself. But we didn&rsquo;t ask about this stuff in interviews, because it was a tiny part of the job.</p>
+<p>So why do we, as an industry and community, continue to ask people to do these academic algorithms in interviews, when - if we&rsquo;re really being honest with ourselves - we basically never do them on the job?</p>
+<p>How did we reach a point where every technical screener is another bloody LeetCode test asking me to solve prefix sum or sliding window or DFS or BFS or whatever other obscure and mostly unused algorithmic concept?</p>
+<p>I get that there <em>are</em> jobs out there that actually need academic algorithm expertise. For example, data scientists need  to understand top k and such. But really, 90% of tech companies and roles are using these LeetCode questions while maybe 10% (if we&rsquo;re being generous in our estimates) are actually doing this academic stuff every day. The rest are just cargo culting. Like that time in the 2000s when everyone was asking you why manhole covers are round and how many quarters you&rsquo;d need to stack to reach the moon (thanks for that Google, so great).</p>
+<p>These academic algorithms are pure compsci. Sure, they have value. Of course they solve a problem or even set of problems. But I&rsquo;m saying these problems are mostly academic - and the practical, non-academic tech start-ups don&rsquo;t deal in this stuff at all. We all just clone stamp HTML forms over database tables (see above). And sometimes we send that form data other places like queues and other kinds of databases. We do the practical stuff that makes a business go. No executive is ever kicking open the board room doors in a panic, yelling &ldquo;EVERYONE! WE NEED TO IMPLEMENT A RECURSIVE BINARY SEARCH RIGHT FREAKING NOW OR THIS COMPANY IS BANKRUPT!&rdquo;</p>
+<h1 id="llms-train-on-leetcode-algorithms">LLMs Train on LeetCode Algorithms</h1>
+<p>None of this academic stuff happens at a typical company. But you know where it does happen? Academic papers, books, and work. And getting to the juicier part of this topic, you wanna guess what LLMs are trained on? Academic papers, books, and work! Except when that stuff is copyrighted, because LLM companies <em>totally</em> don&rsquo;t plagiarize things to train their models. In the immortal words of Homer Simpson: <em>&ldquo;oh by the way, I was being sarcastic.&rdquo;</em></p>
+<p>LLMs also train on social media site data. Like that <a href="https://www.reddit.com/r/leetcode/" target="_blank" rel="noopener">LeetCode subreddit</a>
+ where all the LeetCode takers talk to each other about LeetCode problems and solutions.</p>
+<p>So in many (literal, actual) ways, LLMs have actually been directly trained to beat LeetCode interviews. And eventually people realized that LLMs were trained on these well-known algorithms, and started employing them to beat LeetCode interviews. And the thing is - it works, at least well enough that companies are now saying that they need to move their technical interview processes back on-site in order to thwart this &ldquo;cheating&rdquo;.</p>
+<h1 id="how-to-do-cheat-proof-tech-interviews">How to do Cheat-Proof Tech Interviews</h1>
+<p>Companies don&rsquo;t need to do interviews on-site, but they also can&rsquo;t keep using these well-solved academic algorithm questions either.</p>
+<p>There are a few key conditions that allow candidates to cheat on the tech interviews:</p>
+<ul>
+<li><strong>When the interview question is academic or well-known</strong>. LLMs are trained on public data sets and written works. Fun dystopian fact: at this point they&rsquo;ve pretty much consumed the collective knowledge of the entire Internet. And so if a question is well-known in the public domain, then it has been discussed a lot on the internet and / or in written works, and that means the LLM has been well-trained on it and can answer is super effectively.</li>
+<li><strong>When the technical screening is automated and involves no human interaction.</strong> Often candidates are given async &ldquo;take home&rdquo; tests to do, with companies reassured that the testing software or platform claims to have cutting-edge anti-cheat capabilities. But the thing is, the cheaters are always one step ahead of the current anti-cheat and writing new methods to thwart it, and so that &ldquo;bigger-mouse, better-mousetrap&rdquo; dance goes on eternally and you can&rsquo;t be sure the candidate didn&rsquo;t cheat.</li>
+<li><strong>When an interviewer doesn&rsquo;t ask follow-up questions</strong>. LLMs are good at producting high-level, generic answers to many questions. But if you ask a candidate to walk you through their code, or even explain it line by line, you&rsquo;ll pretty quickly be able to tell who wrote the code and who had an LLM write it for them.</li>
+</ul>
+<p>LLMs produce <strong>answers without understanding</strong>. Programmers produce <strong>well-understood answers</strong>. Just ask a programmer to explain their answer, and all cheating is completely routed. No one can fake understanding. But you also can&rsquo;t ask a candidate for their understanding in an automated coding test with no human interaction.</p>
+<h1 id="candidates-cant-cheat-on-codesession">Candidates Can&rsquo;t Cheat on CodeSession</h1>
+<p><em>Warning: sales pitch incoming.</em></p>
+<p>You don&rsquo;t need to bring technical interviews back on-site. Flying candidates out and putting them up for a day or two costs a lot of time and money per candidate. But you can&rsquo;t do the automated academic stuff anymore either, because LLMs have solved it (whether it&rsquo;s actually &ldquo;cheating&rdquo; is a philosophical exercise left to the reader).</p>
+<p>What you need is a virtual platform for collaborative code interviews. One that gives you the convenience of an IDE and on-site whiteboarding, but with the human interaction and follow-up questions that guarantee reliable candidate outcomes.</p>
+<p>I wrote <a href="https://www.codesession.io" target="_blank" rel="noopener">CodeSession</a>
+ to solve these exact problems. The platform is <em>opinionated</em> - it only works if companies conduct &ldquo;peer programming&rdquo; interviews live. And it doesn&rsquo;t come with any pre-built algorithm questions for companies to select from a list. Every company using CodeSession is doing an interactive, live interview with candidates and using a question tailored to their role with guidance from the platform and my tenure interviewing hundreds of developers at Stack Overflow.</p>
+<p>It&rsquo;s very difficult to cheat in a CodeSession interview:</p>
+<ul>
+<li><strong>The questions are tailored per company and not academic or well-known.</strong></li>
+<li><strong>The technical screening is live and collaborative, with multiple people working together in real-time (just like you would on the job).</strong></li>
+<li><strong>The interviewer can ask follow-up questions.</strong></li>
+</ul>
+<p>Anti-cheat measures in CodeSession are simple: just ask a candidate to explain their code. A candidate who wrote the code themselves will jump right in to how it works. A candidate who uses an LLM to generate code will stall and struggle in obvious and clear ways that tell you they don&rsquo;t know how the code works. I&rsquo;ve (unfortunately) seen it myself many times.</p>
+<p>So please - don&rsquo;t move your interviews back on-site. And don&rsquo;t keep asking the well-solved academic algorithmic questions that LLMs are exceptionally good at answering. Just conduct human (and humane) live coding interviews using a platform like <a href="https://www.codesession.io" target="_blank" rel="noopener">CodeSession</a>
+. Your candidates will thank you, and so will your interviewers.</p>
+
+      </article>
+
+      
+
+
+  
+<script type="text/javascript">
+  (function() {
+    const themeToggle = document.querySelector('.darkmode-toggle input');
+    const light = 'light';
+    const dark = 'dark';
+    let isDark = localStorage.theme === dark || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    let theme = isDark ? dark : light;
+
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    const dataset = {
+        repo: 'haneytron\/haneytron.github.io',
+        repoId: 'MDEwOlJlcG9zaXRvcnkxMzY2Nzk5NDA=',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOCCWSBM4Ci7Jg',
+        mapping: 'pathname',
+        reactionsEnabled: '1',
+        emitMetadata: '0',
+        theme: theme,
+        lang: 'en',
+    };
+    s.src = 'https://giscus.app/client.js';
+    s.crossorigin = 'anonymous';
+    s.async = true;
+    Object.entries(dataset).forEach(function(a) {
+        return s.dataset[a[0]] = a[1];
+    });
+
+    const curScriptElement = document.currentScript;
+    curScriptElement.parentNode.insertBefore(s, curScriptElement);
+
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    themeToggle.addEventListener('change', function () {
+      if (this.checked) {
+        theme = dark;
+      } else {
+        theme = light;
+      }
+      sendMessage({
+        setConfig: {
+          theme: theme,
+        }
+      });
+    });
+  })();
+</script>
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    <a href="https://www.linkedin.com/in/davidahaney" target="_blank" title="LinkedIn" class="flex flex-row mr-2">
+      <span class="hidden">LinkedIn</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/haneytron" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2012 - 2025 David Haney
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      Powered by <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a> <span class="text-red-600">&hearts;</span> <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.min.65ca5b0808abf278fcec5d424701ebf0b4bc46a737129cd5e57fdb739f463e79.js"></script>
+
+<style>
+  article {
+    padding-bottom: 1rem;
+  }
+  div.giscus {
+    border-top-width: 1px;
+	padding-top: 1rem;
+  }
+</style>
+</body>
+</html>

@@ -28,7 +28,7 @@ After reading the MS docs, this was still confusing. The documentation states th
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-10-11T09:25:18-04:00">
-    <meta property="article:modified_time" content="2024-10-11T17:38:25-04:00">
+    <meta property="article:modified_time" content="2024-10-11T09:25:18-04:00">
     <meta property="article:tag" content="Netcore">
     <meta property="article:tag" content="Azure">
     <meta property="article:tag" content="Dataprotection">
@@ -45,7 +45,7 @@ After reading the MS docs, this was still confusing. The documentation states th
 <link rel="canonical" href="https://www.davidhaney.io/configuring-net-core-data-protection-for-azure/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
 
 
 
@@ -103,6 +103,7 @@ After reading the MS docs, this was still confusing. The documentation states th
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
     </a>
   </div>
+  
   <div class="flex-1"></div>
   <div class="flex-none">
     
@@ -201,6 +202,7 @@ After reading the MS docs, this was still confusing. The documentation states th
   </header>
   <main class="flex flex-auto justify-center">
     
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
     <div>
@@ -329,8 +331,7 @@ After reading the MS docs, this was still confusing. The documentation states th
         <p>Recently in <a href="https://www.codesession.io" target="_blank" rel="noopener">CodeSession</a>
  I encountered the following logged warning:</p>
 <blockquote>
-<p>No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.</p>
-</blockquote>
+<p>No XML encryptor configured. Key {6848a46f-d0d6-49a6-b035-0f30f5448f9d} may be persisted to storage in unencrypted form.</p></blockquote>
 <p>This was totally new to me, so I started Googling. There I learned all about <a href="https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-8.0" target="_blank" rel="noopener">.NET Core&rsquo;s Data Protection</a>
  API.</p>
 <p>After reading the MS docs, this was still confusing. The documentation states that this API is used for things like .NET Authorization, but CodeSession doesn&rsquo;t use that functionality. So why was this happening?</p>
@@ -363,21 +364,19 @@ After reading the MS docs, this was still confusing. The documentation states th
 </div>
 <p>The reason for the logged warning that I got in the first place is that Data Protection must be configured to persist keys in a shared place when using 2+ instances of an app. From the MS docs:</p>
 <blockquote>
-<p>The data protection stack must be configured to work in a server farm</p>
-</blockquote>
+<p>The data protection stack must be configured to work in a server farm</p></blockquote>
 <blockquote>
 <p>When the Data Protection system is initialized, it applies default settings based on the operational environment. These settings are appropriate for apps running on a single machine. However, there are cases where a developer may want to change the default settings:</p>
 <ul>
 <li>The app is spread across multiple machines.</li>
 <li>For compliance reasons.</li>
 </ul>
-<p>For these scenarios, the Data Protection system offers a rich configuration API.</p>
-</blockquote>
+<p>For these scenarios, the Data Protection system offers a rich configuration API.</p></blockquote>
 <p>All <code>n</code> instances of your app must all share the same cryptographic keys, in order to produce the same results.</p>
 <h1 id="what-happens-if-you-dont-configure-data-protection">What Happens If You Don&rsquo;t Configure Data Protection</h1>
 <p>When left unconfigured, Data Protection generates and stores a <strong>local</strong> encryption key based on <strong>local</strong> machine and environment settings. This is a problem for an app with more than 1 instance behind a load balancer, because <strong>each instance of the app will generate its own unique key that is different</strong>. And if requests to your app randomly bounce between instances behind a load balancer, the key generated on machine 1 will not match the key generated on machine 2, and you&rsquo;ll get all kinds of fun cryptography related exceptions + your users will get error pages.</p>
 <p>I needed to solve this for CodeSession because run on more than 1 instance. I host in Azure, so once more I went to Google to figure out how to configure the Data Protection API for Azure. Unfortunately it turns out that the documentation is a little out of date, a bit unintuitive, and in some cases straight up wrong. So here&rsquo;s how to configure Data Protection in Azure quickly and correctly.</p>
-<h1 id="data-protection-in-azure-for-lt005-a-month">Data Protection in Azure For &lt;$0.05 A Month</h1>
+<h1 id="data-protection-in-azure-for-005-a-month">Data Protection in Azure For &lt;$0.05 A Month</h1>
 <h2 id="1-get-the-nuget-packages">1. Get The NuGet Packages</h2>
 <p>The first step is to install a few NuGet packages to enable configuration:</p>
 <ul>
@@ -594,7 +593,7 @@ After reading the MS docs, this was still confusing. The documentation states th
    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
 </svg>
-</i> 2012 - 2024 David Haney
+</i> 2012 - 2025 David Haney
     
   </div>
   

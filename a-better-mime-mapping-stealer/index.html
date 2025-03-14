@@ -8,7 +8,7 @@
 <meta
   name="description"
   content="In the interest of self-improvement and sharing knowledge, I felt that I should share an update to my last post. I discovered a slightly better way to create the GetMimeMapping delegate/method via reflection that involves less casting and overhead, and is more Object Oriented in a sense. It allows the signature of the reflected method to be Func&lt;string, string&gt; instead of MethodInfo. Code below, note the use of Delegate.CreateDelegate(Type, MethodInfo):
-/// &lt;summary&gt;/// Exposes the Mime Mapping method that Microsoft hid from us./// &lt;/summary&gt;public static class MimeMappingStealer{// The get mime mapping methodprivate static readonly Func&lt;string, string&gt; _getMimeMappingMethod = null;/// &lt;summary&gt;/// Static constructor sets up reflection./// &lt;/summary&gt;static MimeMappingStealer(){// Load hidden mime mapping class and method from System.Webvar assembly = Assembly.GetAssembly(typeof(HttpApplication));Type mimeMappingType = assembly.GetType(&quot;System.Web.MimeMapping&quot;);_getMimeMappingMethod = (Func&lt;string, string&gt;)Delegate.CreateDelegate(typeof(Func&lt;string, string&gt;), mimeMappingType.GetMethod(&quot;GetMimeMapping&quot;, BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public |BindingFlags.NonPublic | BindingFlags.FlattenHierarchy));}/// &lt;summary&gt;/// Exposes the hidden Mime mapping method./// &lt;/summary&gt;/// &lt;param name=&quot;fileName&quot;&gt;The file name.&lt;/param&gt;/// &lt;returns&gt;The mime mapping.&lt;/returns&gt;public static string GetMimeMapping(string fileName){return _getMimeMappingMethod(fileName);}}"
+/// &lt;summary&gt;/// Exposes the Mime Mapping method that Microsoft hid from us./// &lt;/summary&gt;public static class MimeMappingStealer{// The get mime mapping methodprivate static readonly Func&lt;string, string&gt; _getMimeMappingMethod = null;/// &lt;summary&gt;/// Static constructor sets up reflection./// &lt;/summary&gt;static MimeMappingStealer(){// Load hidden mime mapping class and method from System.Webvar assembly = Assembly.GetAssembly(typeof(HttpApplication));Type mimeMappingType = assembly.GetType(&quot;System.Web.MimeMapping&quot;);_getMimeMappingMethod = (Func&lt;string, string&gt;)Delegate.CreateDelegate(typeof(Func&lt;string, string&gt;), mimeMappingType.GetMethod(&quot;GetMimeMapping&quot;, BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public |BindingFlags.NonPublic | BindingFlags.FlattenHierarchy));}/// &lt;summary&gt;/// Exposes the hidden Mime mapping method./// &lt;/summary&gt;/// &lt;param name=&quot;fileName&quot;&gt;The file name.&lt;/param&gt;/// &lt;returns&gt;The mime mapping.&lt;/returns&gt;public static string GetMimeMapping(string fileName){return _getMimeMappingMethod(fileName);}} "
 />
 <meta
   name="keywords"
@@ -40,7 +40,7 @@
 <link rel="canonical" href="https://www.davidhaney.io/a-better-mime-mapping-stealer/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
 
 
 
@@ -98,6 +98,7 @@
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
     </a>
   </div>
+  
   <div class="flex-1"></div>
   <div class="flex-none">
     
@@ -196,6 +197,7 @@
   </header>
   <main class="flex flex-auto justify-center">
     
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
     <div>
@@ -388,7 +390,8 @@ public static class MimeMappingStealer
     {
         return _getMimeMappingMethod(fileName);
     }
-}</code></pre>
+}
+</code></pre>
 
       </article>
 
@@ -504,7 +507,7 @@ public static class MimeMappingStealer
    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
 </svg>
-</i> 2012 - 2024 David Haney
+</i> 2012 - 2025 David Haney
     
   </div>
   

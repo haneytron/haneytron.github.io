@@ -42,7 +42,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
 <link rel="canonical" href="https://www.davidhaney.io/make-your-debugging-life-easier/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
 
 
 
@@ -100,6 +100,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
     </a>
   </div>
+  
   <div class="flex-1"></div>
   <div class="flex-none">
     
@@ -198,6 +199,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
   </header>
   <main class="flex flex-auto justify-center">
     
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
     <div>
@@ -385,8 +387,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
 <p>This was not exactly a useful indication of what REALLY happened. What am I supposed to do with the knowledge that over 40% of my application’s time is spent in a Microsoft assembly called “clr.dll”? Not much, which is a little concerning. I needed to know what was really happening!</p>
 <p>Fortunately, there’s a solution for this very issue. A little known feature implemented in Visual Studio 2010 is the ability to connect to Microsoft’s Symbol Servers and obtain most of the debugging symbols for their assemblies and libraries!</p>
 <blockquote>
-<p>Just go to: Tools –&gt; Options –&gt; (expand) Debugging –&gt; Symbols</p>
-</blockquote>
+<p>Just go to: Tools –&gt; Options –&gt; (expand) Debugging –&gt; Symbols</p></blockquote>
 <p>Here, select/check the “Microsoft Symbol Servers” as a source for Symbols. Now, getting the symbols from Microsoft every time you debug or profile is going to be slow and painful (and it’ll even give you a pop-up saying as much once you check the Microsoft Symbol Servers), so be sure that you specify a directory for the “Cache symbols in this directory” input – it will keep a local copy of the PDBs and simply check for updates every so often. As a result, you get your regular debugging/profiling AND you can see the function names of the Microsoft assemblies!</p>
 <p>Using this feature, I was able to re-evaluate my latest performance tests and see that the supposed “clr.dll” method was actually “TransparentProxyStub_CrossContext” – a method buried deep within the WCF framework:</p>
 <figure><img src="/img/performance-profiling-symbols.jpg"><figcaption>
@@ -511,7 +512,7 @@ In order to accurately debug or profile an external assembly or library (AKA one
    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
 </svg>
-</i> 2012 - 2024 David Haney
+</i> 2012 - 2025 David Haney
     
   </div>
   

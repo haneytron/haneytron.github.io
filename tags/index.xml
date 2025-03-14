@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Fri, 11 Oct 2024 17:38:25 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 13 Mar 2025 20:36:25 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://www.davidhaney.io/tags/ai/</link>
+      <pubDate>Thu, 13 Mar 2025 20:36:25 -0400</pubDate>
+      <guid>https://www.davidhaney.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codesession</title>
+      <link>https://www.davidhaney.io/tags/codesession/</link>
+      <pubDate>Thu, 13 Mar 2025 20:36:25 -0400</pubDate>
+      <guid>https://www.davidhaney.io/tags/codesession/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interviews</title>
+      <link>https://www.davidhaney.io/tags/interviews/</link>
+      <pubDate>Thu, 13 Mar 2025 20:36:25 -0400</pubDate>
+      <guid>https://www.davidhaney.io/tags/interviews/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Azure</title>
       <link>https://www.davidhaney.io/tags/azure/</link>
@@ -28,13 +49,6 @@
       <link>https://www.davidhaney.io/tags/netcore/</link>
       <pubDate>Fri, 11 Oct 2024 09:25:18 -0400</pubDate>
       <guid>https://www.davidhaney.io/tags/netcore/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Codesession</title>
-      <link>https://www.davidhaney.io/tags/codesession/</link>
-      <pubDate>Mon, 07 Oct 2024 09:23:18 -0400</pubDate>
-      <guid>https://www.davidhaney.io/tags/codesession/</guid>
       <description></description>
     </item>
     <item>
@@ -140,13 +154,6 @@
       <link>https://www.davidhaney.io/tags/hiring/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
       <guid>https://www.davidhaney.io/tags/hiring/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Interviews</title>
-      <link>https://www.davidhaney.io/tags/interviews/</link>
-      <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
-      <guid>https://www.davidhaney.io/tags/interviews/</guid>
       <description></description>
     </item>
     <item>
