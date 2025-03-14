@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Thu, 13 Mar 2025 22:43:13 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 13 Mar 2025 22:45:53 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Tech Interview AI Cheating Epidemic</title>
       <link>https://www.davidhaney.io/the-tech-interview-ai-cheating-epidemic/</link>
       <pubDate>Thu, 13 Mar 2025 20:36:25 -0400</pubDate>
       <guid>https://www.davidhaney.io/the-tech-interview-ai-cheating-epidemic/</guid>
-      <description>&lt;p&gt;Have you heard the news? &lt;strong&gt;AI is replacing all developers&lt;/strong&gt; next week - or in 3 or 6 or 12 or 18 months! And somehow at the same time, &lt;strong&gt;AI is helping developers get jobs by &amp;ldquo;cheating&amp;rdquo; in tech interviews!&lt;/strong&gt; Don&amp;rsquo;t those two things directly oppose and contradict each other? But I digress.&lt;/p&gt;&#xA;&lt;p&gt;The thing is, AI replacing developers is straight up &lt;em&gt;impossible&lt;/em&gt;, at least in the currently deployed LLM architectures. The idea is nonsensical. I need to write a blog post detailing both why it&amp;rsquo;s impossible and why people continue to shout it from the rooftops, and I think I&amp;rsquo;ll do that next.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Have you heard the news?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;AI is replacing all developers&lt;/strong&gt; next week - or in 3 or 6 or 12 or 18 months!&lt;/li&gt;&#xA;&lt;li&gt;And somehow at the same time, &lt;strong&gt;AI is helping developers get jobs by &amp;ldquo;cheating&amp;rdquo; in tech interviews!&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t those two things directly oppose and contradict each other? But I digress.&lt;/p&gt;&#xA;&lt;p&gt;The thing is, AI replacing developers is straight up &lt;em&gt;impossible&lt;/em&gt;, at least in the currently deployed LLM architectures. The idea is nonsensical. I need to write a blog post detailing both why it&amp;rsquo;s impossible and why people continue to shout it from the rooftops, and I think I&amp;rsquo;ll do that next.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
