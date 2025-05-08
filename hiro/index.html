@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>[Stack] OverflowAI - Launching an MVP</title>
+
+        <meta name="description" content="How I took [Stack] OverflowAI from inception to initial launch at We Are Developers 2023 World Congress in Berlin">
+        <meta name="author" content="David Haney">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+            
+                <section>
+                    <img src="img/overflowai-glow.png" alt="OverflowAI logo" style="height: 180px; margin: 0 auto 4rem auto;">
+                    <h3>Launching an MVP</h3>
+                    <p>
+                        <small>David Haney<br/>May 2025</small>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Setting The Stage</h2>
+                    </section>
+                    <section>
+                        <h2>2022 Q4:</h2>
+                        <ul>
+                            <li class="fragment">LLMs begin their meteoric rise in popularity</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>2023 Q1:</h2>
+                        <ul>
+                            <li class="fragment">Stack Overflow LOBs seriously disrupted</li>
+                            <li class="fragment">&darr;&darr;&darr; Q&amp;A Traffic</li>
+                            <li class="fragment">&darr;&darr;&darr; Teams renewals &amp; revenue</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>2023 Q2:</h2>
+                        <ul>
+                            <li class="fragment">Response formulated w/ C-Suite and Product partners</li>
+                            <li class="fragment">Launch AI features in late July 2023 at WAD World Conf in Berlin</li>
+                            <li class="fragment">I am appointed by CTO &amp; C-Suite to create &amp; execute Project SAIL (Stack AI Learnings)</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>The Challenge</h2>
+                    <ul>
+                        <li class="fragment">We need to stop the bleeding - FAST</li>
+                        <li class="fragment">It's May 1, WAD is happening July 27th</li>
+                        <li class="fragment">We have <u>~3 months</u> to build something great</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>First: Scope Project SAIL</h2>
+                    </section>
+                    <section>
+                        <h2>C-Suite &amp; Board Expectations</h2>
+                        <ul>
+                            <li class="fragment">Top company priority</li>
+                            <li class="fragment">8-9 working AI prototypes to compete with <a href="https://www.openai.com">OpenAI</a>, <a href="https://www.github.com">GitHub</a>, &amp; <a href="https://www.glean.com">Glean</a></li>
+                            <li class="fragment">2x weekly C-Suite updates on progress</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Assemble SAIL Team</h2>
+                        <ul>
+                            <li class="fragment">Work with CTO (Jody) &amp; Director of Product (Ellen) to figure out "skeleton crew" for existing LOBs</li>
+                            <li class="fragment">Keep ~30 on LOBs (Dev + Ops mostly)</li>
+                            <li class="fragment">Take ~20 for SAIL (Dev + Data Science)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Selection Criteria</h2>
+                        <ul>
+                            <li class="fragment">Largely best &amp; brightest - need to hit ground running</li>
+                            <li class="fragment">Balance US and EU staffing for more coverage</li>
+                            <li class="fragment">Include our 3 strongest data scientists w/ demonstrable LLM knowledge as SMEs</li>
+                            <li class="fragment">Include our 2 strongest designers</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Establish Goals &amp; Alignment, Expectations, Plan</h2>
+                    </section>
+                    <section>
+                        <h2>Goals &amp; Alignment</h2>
+                        <ul>
+                            <li class="fragment"><u>Publish</u>: canonical and clear goals in one place</li>
+                            <li class="fragment"><u>ID key decision makers</u>: Eng (me), Product (Ellen), Data (Michael) - buck stops with us, we're accountable</li>
+                            <li class="fragment"><u>Motivate with WHY</u>: LOB disruption, need to recover revenue &amp; compete with new Q&amp;A paradigm</li>
+                            <li class="fragment"><u>Motivate with WHAT</u>: revealed on world stage July 27, 12k attendees, let's change the world!</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Expectations</h2>
+                        <ul>
+                            <li class="fragment"><u>No one gets stuck</u>: raise blockers IMMEDIATELY as they happen</li>
+                            <li class="fragment"><u>Rapid decisions</u>: key folks prioritize solving</li>
+                            <li class="fragment"><u>Default public</u>: over-communicate, solicit constant feedback, test internally often, talk to other SAIL teams</li>
+                            <li class="fragment"><u>Move fast &amp; break things</u>: minimum docs and ceremony, if meetings aren't useful kill them, honor failure, etc.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Plan</h2>
+                        <ul>
+                            <li class="fragment"><u>Now</u>: 2 weeks of rapid R&amp;D prototyping, self-organizing teams, experiment, prototype possible AI features / tools / products.</li>
+                            <li class="fragment"><u>End of week 2</u>: demo everything, cut list down to top n, form teams around them</li>
+                            <li class="fragment"><u>Weeks 3-12</u>: rapid CI/CD, daily quick stand-ups, weekly demos and feedback</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section>
+                    <h2>Weeks 1-2</h2>
+                    <ul>
+                        <li class="fragment"><u>SAIL Teams</u>: innovate, prototype, create ideas and execute</li>
+                        <li class="fragment"><u>In parallel</u>: I teach myself LLMs, deep dive, can't lead w/o understanding</li>
+                    </ul>
+                </section>
+                    
+                <section>
+                    <h2>End of Week 2</h2>
+                    <ul>
+                        <li class="fragment">Teams present ideas: ~8 total</li>
+                        <li class="fragment">I rank them by effort vs expected payoff</li>
+                        <li class="fragment">Present to C-Suite: 5 things are great, 3 are weak, recommend doing 5 things well vs 8 things poorly (narrow our focus, quality over quantity)</li>
+                        <li class="fragment">They agree, prioritize functional prototypes over PoCs and mock-ups</li>
+                    </ul>
+                </section>    
+                    
+                <section>
+                    <h2>Week 3</h2>
+                    <ul>
+                        <li class="fragment">Bring final 5 ideas to SAIL, assign a Team Lead to each (based on who came up with the ideas + strengths), ask teams to self-organize 3-5 per idea</li>
+                        <li class="fragment">Designers + Data Science cross-functional &amp; on-demand</li>
+                        <li class="fragment">Everyone knows what to do and why: all systems go!</li>
+                    </ul>
+                </section>    
+                
+                <section>
+                    <h2>Weeks 3 - 8: Build</h2>
+                    <ul>
+                        <li class="fragment">Teams normalize, largely working well, address personnel and product issues on-the-fly</li>
+                        <li class="fragment">Regular stand-ups and weekly demos to stakeholders</li>
+                        <li class="fragment">Feature pivots as we realize what will work and what won't given time constraints</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Weeks 8 - 12: Cut &amp; Polish</h2>
+                    <ul>
+                        <li class="fragment">Aggressively cut nice-to-haves to ensure core functionality gets polish given time constraints</li>
+                        <li class="fragment"><u>New threat</u>: GitHub Copilot reaches escape velocity, realize we can't compete</li>
+                        <li class="fragment"><u>Response</u>: sunset IDE plugin at minimal state, re-allocate team to other 4</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>1 Week Before WAD</h2>
+                    <ul>
+                        <li class="fragment">Review &amp; ghost-write large parts of CEO's WAD presentation</li>
+                        <li class="fragment">Feature prep &amp; dry-runs in static env for live demos (and recorded backups)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>WAD!</h2>
+                        <p>
+                            <a href="https://www.wearedevelopers.com/en/videos/600/stack-overflow-community-and-ai">Stack Overflow: Community and AI</a>
+                        </p>
+                    </section>
+                    <section data-background="img/wad-presentation.png">
+
+                    </section>
+                </section>
+                    
+                
+                <section>
+                    <h2>What I Learned</h2>
+                    <ul>
+                        <li class="fragment">Deadline driven development is difficult</li>
+                        <li class="fragment">Building trust with teams is the key to success</li>
+                        <li class="fragment">Getting products and features in front of users ASAP saves time and money</li>
+                        <li class="fragment">Empower those who are closest to the problems to solve them as SMEs</li>
+                        <li class="fragment">Recognize failure quickly, learn from it, and be blameless</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Thank You!</h2>
+                    <p>
+                        Deep Dive / Q&amp;A
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+            });
+
+        </script>
+
+    </body>
+</html>
