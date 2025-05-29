@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>LLMs Will Not Replace You :: David Haney - Blogging About .NET Core &amp; Engineering Management</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content=" &ldquo;Any sufficiently advanced technology is indistinguishable from magic&rdquo; - Arthur C. Clarke
+I&rsquo;d like to start today&rsquo;s rant off with a story from the past. One which we apparently have not collectively learned anything from.
+The Mechanical Turk The Mechanical Turk- or &ldquo;The Turk&rdquo; as people called it - was an autonomous chess-playing machine. Built in 1770, it went on tour across parts of the world for EIGHTY FOUR (84) YEARS as an automaton that could play a strong and thoughtful game against humans.
+"
+/>
+<meta
+  name="keywords"
+  content="david, haney, david haney, .net, dotnet, c#, csharp, engineering management, engineering, management, blog, programming"
+/>
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="https://www.davidhaney.io/llms-will-not-replace-you/">
+  <meta property="og:site_name" content="David Haney - Blogging About .NET Core & Engineering Management">
+  <meta property="og:title" content="LLMs Will Not Replace You">
+  <meta property="og:description" content="“Any sufficiently advanced technology is indistinguishable from magic” - Arthur C. Clarke
+I’d like to start today’s rant off with a story from the past. One which we apparently have not collectively learned anything from.
+The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it - was an autonomous chess-playing machine. Built in 1770, it went on tour across parts of the world for EIGHTY FOUR (84) YEARS as an automaton that could play a strong and thoughtful game against humans.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-29T10:32:14-04:00">
+    <meta property="article:modified_time" content="2025-05-29T14:38:20-04:00">
+    <meta property="article:tag" content="Llm">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Snake Oil">
+    <meta property="article:tag" content="Hype Cycle">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LLMs Will Not Replace You">
+  <meta name="twitter:description" content="“Any sufficiently advanced technology is indistinguishable from magic” - Arthur C. Clarke
+I’d like to start today’s rant off with a story from the past. One which we apparently have not collectively learned anything from.
+The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it - was an autonomous chess-playing machine. Built in 1770, it went on tour across parts of the world for EIGHTY FOUR (84) YEARS as an automaton that could play a strong and thoughtful game against humans.">
+
+
+<link rel="canonical" href="https://www.davidhaney.io/llms-will-not-replace-you/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.min.05db5429447bb14be6fc08b104ab90a4bcdce57f13d5627adaa5b2f901084824.css">
+
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR2HVYP6QG"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PR2HVYP6QG');
+        }
+      </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<style>
+  header {
+    padding-bottom: 0.75rem;
+  }
+  
+  aside {
+    top: 3.25rem !important;
+  }
+  
+   
+  div.chroma {
+    overflow-x: auto;
+  }
+
+  div.highlight > button {
+    top: 2rem;
+  }
+  
+  article > ul {
+    overflow-wrap: break-word;
+  }
+  
+   
+  figure {
+    text-align: center;
+  }
+  
+  figure > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800"><header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none ml-2 md:ml-0">
+    <a href="/" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/me.jpg" alt="logo">
+    </a>
+  </div>
+  
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/" title="Blog">Blog</a>
+        </li>
+      
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/tags/" title="Tags">Tags</a>
+        </li>
+      
+    
+        <li id="" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div id="progress" class="fixed top-0 left-0 w-full h-1 bg-blue-500"></div>
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/llms-will-not-replace-you/">
+        
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/llms-will-not-replace-you/">LLMs Will Not Replace You</a>
+      </h1>
+
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/blog/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Blog
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/llm/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Llm</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/ai/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Ai</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/snake-oil/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Snake Oil</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/hype-cycle/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Hype Cycle</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2025-05-29T10:32:14-04:00">
+      2025-05-29
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      23 minutes to read
+    </span>
+  </div>
+</div>
+
+      
+
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <blockquote>
+<p>&ldquo;Any sufficiently advanced technology is indistinguishable from magic&rdquo; - Arthur C. Clarke</p></blockquote>
+<p>I&rsquo;d like to start today&rsquo;s rant off with a story from the past. One which we apparently have not collectively learned anything from.</p>
+<h1 id="the-mechanical-turk">The Mechanical Turk</h1>
+<p><a href="https://en.wikipedia.org/wiki/Mechanical_Turk" target="_blank" rel="noopener">The Mechanical Turk</a>
+ - or <em>&ldquo;The Turk&rdquo;</em> as people called it - was an autonomous chess-playing machine. Built in 1770, it went on tour across parts of the world for <strong>EIGHTY FOUR (84) YEARS</strong> as an automaton that could play a strong and thoughtful game against humans.</p>
+<p>People would line up for a chance to view the exhibit, and if they were lucky, even play against it. Players were always informed that The Turk would use white pieces. In 1908, Napoleon I of France even played against the machine, and it even saluted him before it started!</p>
+<p>As the popularity grew, so too did the sophistication of the machine. In 1819, some new changes to The Turk debuted:</p>
+<ul>
+<li>It now allowed the opponent to make the first move</li>
+<li>It eliminated the king&rsquo;s bishop&rsquo;s pawn from the Turk&rsquo;s pieces
+<ul>
+<li>This &ldquo;pawn handicap&rdquo; created further discussion of and interest in the Turk. It even led to a book being written by W. J. Hunneman chronicling the matches played with this handicap</li>
+</ul>
+</li>
+</ul>
+<p>Despite the &ldquo;pawn handicap&rdquo;, when all was said and done the Turk&rsquo;s record was 45 wins, 3 losses, and 2 stalemates. Not bad!</p>
+<p>Sadly, the Turk was eventually lost to a fire. Many books and articles were written during the Turk&rsquo;s life about how it worked. Most were inaccurate, drawing incorrect inferences from external observation - <strong>because people didn&rsquo;t know or understand how it actually worked</strong>.</p>
+<h1 id="the-turk-was-a-fraud">The Turk Was A Fraud</h1>
+<p>While the owner/operators of The Turk were able to trick the world with an advanced technology that seemed magical for 84 years, it was of course too good to be true.</p>
+<p>The Turk was a lie. It was never an automaton. It was always a sophisticated illusion. A human chess master hide inside and operated the machine. But the design was such that it convinced people that this was not possible. After all, part of the exhibition was opening all of the front cabinets and drawers to &ldquo;prove&rdquo; that no one was inside!</p>
+<p>But far too often what people don&rsquo;t understand appears to them to be magic, and rather than apply a scientific eye and critical thinking, they choose to embrace the fantasy. Arguably no real &ldquo;harm&rdquo; was done by The Turk, so perhaps people going along with the hoax was okay.</p>
+<p>But today, a much larger hoax is operating and unfolding right in front of us: LLMs (so-called &ldquo;AI&rdquo;).</p>
+<p>Just like when the Turk captivated audiences, people are writing feverishly and constantly about LLMs. And just like the stuff written about the Turk, most are inaccurate, drawing incorrect inferences from external observation - <strong>because people don&rsquo;t know or understand how LLMs actually work</strong>.</p>
+<p>With this blog post, I aim to teach you exactly (at a crude and high level) the very complex topics of LLM work. So that you can use this knowledge as power to draw better conclusions and make better decisions. Let&rsquo;s dive in.</p>
+<h1 id="llms-today">LLMs Today</h1>
+<p>Today, LLMs are seemingly all everyone is talking about. Every social media site, blog, and tech-adjacent subreddit thread seems to be talking about LLMs. This is not surprising when you consider how heavily people are investing in LLMs.</p>
+<blockquote>
+<p>&ldquo;In under three years, AI has come to dominate global tech spending in ways researchers are just starting to quantify. In 2024, for example, AI companies nabbed 45 percent of all US venture capital tech investments, up from only nine percent in 2022.&rdquo; <a href="https://futurism.com/ai-energy-use" target="_blank" rel="noopener">(source)</a>
+</p></blockquote>
+<p>They are currently an ever-present part of our lives, with many major companies trying to shove the latest models down our collective throats via forced updates of software and hardware we never really owned in the first place. My Android phone is now slathered in Gemini whether I like it or not, and I am sure Apple is doing similarly with theirs. Every time I go to LinkedIn they offer a premium feature where an LLM writes my posts for me (gross). And I don&rsquo;t even need to detail how people use LLMs to constantly generate images of people doing things, often with 1 finger too few (or too many).</p>
+<p>LLMs are EVERYWHERE.</p>
+<h1 id="llms-are-grossly-misunderstood">LLMs Are Grossly Misunderstood</h1>
+<p>I see a lot of people talking about how they have &ldquo;tuned&rdquo; an LLM to their style, approach, or even to be their pal. How the LLM has &ldquo;learned&rdquo; from their writing and adapted. And of course, naturally, how the LLM is going to take all the Junior levels jobs, especially in the field of programming!</p>
+<p>But let&rsquo;s go over some cold hard facts about how LLMs actually work. Because this discussion is only useful if we&rsquo;re all equipped with the same factual information. No hype, just truth - for you to interpret as you like.</p>
+<h2 id="0-llms-are-neural-networks">0. LLMs Are Neural Networks</h2>
+<p>Neural networks are complicated. They&rsquo;ve been around for a long time, well before the rise of LLMs. The simplest way I can think of to explain them is to use an analogy of walls of doors:</p>
+<ul>
+<li>Imagine you are standing in front of a wall of 10 doors.</li>
+<li>The door you pick is up to you, but you can only walk through 1 door.</li>
+<li>The door you pick leads to only SOME of the next row of doors being available for you to open.</li>
+<li>Once you open that next door, the NEXT layer behind it reveals itself, again with only a subset of the doors available for you to open based on your prior door choices.</li>
+<li>Eventually you progress through all of the walls of doors and end up at a destination, but this takes some time.</li>
+</ul>
+<p>The walls-and-doors are effectively a set of layered neurons. A <strong>neuron</strong> is a graph node that receives input (from the prior layer) and generates output (the path to the next layer). Each neuron layer usually only connects to the layers immediately preceding and following it. The first layer is usually the &ldquo;input&rdquo; point, and the last layer is typically the &ldquo;output&rdquo; result.</p>
+<figure><img src="/llms-will-not-replace-you/images/neural-network.svg"><figcaption>
+      <h4>A Diagram Depicting A Neural Network</h4>
+    </figcaption>
+</figure>
+
+<p>So the entire LLM is a giant - and I mean GIANT - number of layers, each of which has a large number of neurons. But LLMs are quite a bit more sophisticated than your classic neural network, so they also use things called weights, biases, embedding vectors, activation functions, and other proprietary &ldquo;secret sauce&rdquo; stuff.</p>
+<p>One of the most successful and earliest examples of a Machine Learning Neural Network is the online implementation of the classic kids game &ldquo;20 Questions&rdquo;. It&rsquo;s hosted on an old site at <a href="http://www.20q.net" target="_blank" rel="noopener">http://www.20q.net</a>
+ - feel free to play a round or two!</p>
+<h2 id="1-llms-dont-understand-english-or-other-languages">1. LLMs Don&rsquo;t Understand English (or other languages)</h2>
+<p>This is confusing right? You type English, and it sends English back, so how can it possibly not understand English?</p>
+<p>Let&rsquo;s introduce the concept of <strong>tokens</strong>:</p>
+<ul>
+<li>Tokens are a fundamental unit of text that an LLM model processes.</li>
+<li>These tokens are not usually English, though sometimes they can be whole words.</li>
+<li>Often they are parts of words in a sentence, including punctuation marks and white space (but this can vary by LLM model).</li>
+</ul>
+<p>When you type something to your favorite LLM, it first <em>tokenizes</em> what you wrote. It breaks your sentence into multiple tokens, which are the true &ldquo;language&rdquo; that LLMs speak.</p>
+<p>Classic tokenizers will take sentences and tokenize them into individual words.</p>
+<p>For example, if we took this sentence:</p>
+<blockquote>
+<p>The quick brown fox jumped over the lazy</p></blockquote>
+<p>A naive tokenizer would tokenize it as:</p>
+<blockquote>
+<p>[&lsquo;The&rsquo;, &lsquo;quick&rsquo;, &lsquo;brown&rsquo;, &lsquo;fox&rsquo;, &lsquo;jumped&rsquo;, &lsquo;over&rsquo;, &rsquo;the&rsquo;, &rsquo;lazy&rsquo;]</p></blockquote>
+<p>However, LLMs do not operate on characters or strings. For efficiency, they operate on numbers (the &ldquo;bare metal&rdquo; data format of computers). <strong>LLMs use number tokens</strong>, with a unique number assigned for each unique token.</p>
+<p>A quick example, using <a href="https://huggingface.co/docs/transformers/en/model_doc/bert" target="_blank" rel="noopener">BERT</a>
+ (A Google-created bidirectional transformer). Bidirectional here means it can turn tokens into numbers, and numbers back into tokens (it can go both ways):</p>
+<p>If we took this sentence:</p>
+<blockquote>
+<p>The quick brown fox jumped over the lazy</p></blockquote>
+<p>BERT would tokenize it as:</p>
+<blockquote>
+<p>[1996, 4248, 2829, 4419, 5598, 2058, 1996, 13971]</p></blockquote>
+<p>The total set of tokens known and defined by an LLM constitute its <strong>vocabulary</strong>. Much like your vocabulary, you know the words you know, and you don&rsquo;t know the words you don&rsquo;t. You can&rsquo;t just create new words that anyone understands. Neither can the LLM.</p>
+<h2 id="2-llms-are-not-ai">2. LLMs Are Not AI</h2>
+<p>First of all, let&rsquo;s define some useful terms.</p>
+<ul>
+<li><strong>LLM</strong> = <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank" rel="noopener">Large Language Model</a>
+, a machine learning model designed for natural language processing.
+<ul>
+<li>You&rsquo;ll notice that in this wiki article (at least as of the date of this blog post), there are 0 instances referring to LLMs as AI.</li>
+</ul>
+</li>
+<li><strong>AI</strong> = <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noopener">Artificial Intelligence</a>
+, is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making.</li>
+</ul>
+<p>So, already we&rsquo;re making some good conclusions! <strong>LLMs are not AI</strong>. But wait, you say, everyone is calling them AI! You bet they are - hype is a helluva drug. In fact the term AI has been so co-opted for marketing of these LLMs that people have &ldquo;moved the goal posts&rdquo; and redefined &ldquo;proper&rdquo; AI. So let&rsquo;s add a third definition:</p>
+<ul>
+<li><strong>AGI</strong> = Artificial General Intelligence, what used to be AI is now called AGI because the term AI got stolen and redefined by the LLM marketing hype train.</li>
+</ul>
+<p>So now we&rsquo;ve got LLMs, AI, and AGI (which is what AI used to mean). Got it? Good. Buckle up, because we&rsquo;re about to go through the looking glass.</p>
+<h2 id="4-llms-are-immutable-read-only">4. LLMs Are Immutable (Read-Only)</h2>
+<p>This fact immediately proves that LLMs do not learn. They <em>feel</em> like they learn, because they have some cute parlor tricks used to tailor their responses to your preferences, but they are in fact read-only and not learning anything from your inputs.</p>
+<p>This creates a few interesting challenges:</p>
+<ul>
+<li>An LLM last updated on March 1, 2025 will have no knowledge of news or events that have happened after that date.</li>
+<li>We can&rsquo;t just insert new facts, because the neural network generates by LLMs is incredible tightly-coupled and interdependent, weighted and trained very carefully, and again the LLM doesn&rsquo;t understand English (or other languages) - everything is numeric tokens.</li>
+<li>Therefore a new model must be released every so often, trained on the latest data, so that the LLM can respond to current events and stay &ldquo;up to date&rdquo;.
+<ul>
+<li>Training models is very expensive and time consuming.</li>
+</ul>
+</li>
+<li>Because the model consists of billions of neurons which have numeric values, there is no way to cite sources of data or provide reliable attribution. Because results are &ldquo;synthetically generated&rdquo; and the sum of multiple sources, and those sources are not included directly in the embeddings.</li>
+</ul>
+<p>LLMs can&rsquo;t really be actively learning by the nature of their neural network structures and algorithms. Additionally, as Microsoft learned back in the 2010s with the launch of a bot named Tay on Twitter, <a href="https://spectrum.ieee.org/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation" target="_blank" rel="noopener">letting the random internet train your bot is usually a bad idea</a>
+. So these things are also read-only so that no one runs into these problems (even if you only use the LLM inside of a company - because some people are just trolls).</p>
+<p>The companies creating LLMs are smart and so they have figured out some clever  workarounds for the limitation of things being read-only.</p>
+<h3 id="rag">RAG</h3>
+<p>One such workaround is what&rsquo;s known as <a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation" target="_blank" rel="noopener">RAG or Retrieval-Augmented Generation</a>
+. This was one of the earliest &ldquo;hacks&rdquo; everyone figured out, and it&rsquo;s pretty useful. Essentially you send the LLM the data you want it to use, and ask it to summarize that data. And it will be able to do so assuming the data that you sent it exists within its <strong>vocabulary</strong> which it typically will (how often do we really invent new words in language?).</p>
+<p>This approach is very useful for things like Google&rsquo;s Gemini working off of search results. Essentially Google will retrieve the results for your search, then send Gemini a prompt that contains content from these results and ask it to summarize things for you.</p>
+<p>A very naive example (for learning purposes) would be as follows:</p>
+<blockquote>
+<p>You search &ldquo;how to get rid of groundhogs in my yard&rdquo; (as I recently did, because I have one, and it&rsquo;s a nuisance!)</p>
+<p>Google finds the results for that query, just like it used to before LLMs were a thing</p>
+<p>Google takes the CONTENT of the top n results (say 3 or 5), and generates a prompt for Gemini</p>
+<p>The prompt is essentially (crudely, for learning purposes):</p>
+<blockquote>
+<p>&ldquo;given the context of X (the content from the top 3 or 5 results), summarize it in at most 5 paragraphs of no more than 4 sentences each. For each paragraph, cite the website as the source of your statement. Phrase your response as an answer to this statement: &ldquo;how to get rid of groundhogs in my yard&rdquo;</p></blockquote>
+<p>Gemini spits out some LLM content in response, and Google displays it to you above the search results</p></blockquote>
+<figure><img src="/llms-will-not-replace-you/images/rag.png"><figcaption>
+      <h4>An Example Gemini Response for Google Search</h4>
+    </figcaption>
+</figure>
+
+<h3 id="long-prompts-as-context">Long Prompts As Context</h3>
+<p>Ever noticed how when you ask an LLM a question, it gives you a (usually detailed) answer, but then if you ask a follow-up without providing context, it will still know what you&rsquo;re talking about and the conversation will flow naturally?</p>
+<p>For example, ask it to write you a rhyming poem about cats. And then when it does, simply respond with &ldquo;try again and make it funnier&rdquo; (note the total lack of context defining &ldquo;it&rdquo;). And it&rsquo;ll do it again!</p>
+<p>If the LLM only considered each prompt you sent it by itself, it would have no idea what &ldquo;it&rdquo; was and would hallucinate wildly (or tell you it doesn&rsquo;t know, depending on how it has been trained).</p>
+<p>What typically happens now is that whenever you send a prompt, the LLM front-end app will actually send a bunch of your most recent prompts and sometimes its prior answers ahead of your next prompt, to provide <em>context</em>. This allows the conversation to flow &ldquo;naturally&rdquo; and for you to feel like you&rsquo;re talking to intelligence. This is also why you&rsquo;ll get told that you&rsquo;ve run out of space for a given conversation with an LLM, and need to start a new session or conversation. With all that context, you&rsquo;ll eventually hit the token limits.</p>
+<p>This is the method by which people &ldquo;tune&rdquo; their LLMs. But as we discussed prior, the LLM doesn&rsquo;t actually learn anything. It&rsquo;s a parlor trick - though a convincing and often useful one.</p>
+<h2 id="5-llms-dont-understand-they-just-guess">5. LLMs Don&rsquo;t Understand, They Just Guess</h2>
+<p>Fundamentally, all LLMs do is just pattern match. They use sophisticated algorithms to do so (and this involves more advanced methods of tokenization). But ultimately, all an LLM does is this:</p>
+<ul>
+<li>Convert your prompt into numeric tokens</li>
+<li>Walk the giant LLM Neural Network with these tokens, in order, because order matters</li>
+<li>When it reaches the end of your prompt, continue down the network by guessing the next tokens using heuristics</li>
+<li>Use a bidirectional transformer (like BERT) to return these &ldquo;guessed&rdquo; numeric tokens back to conversational language (in whatever language you&rsquo;re communicating in)</li>
+<li>Return that human-readable language back to you</li>
+</ul>
+<p>Confused? Let&rsquo;s use a simple example. Say you give an LLM this sentence as your prompt:</p>
+<blockquote>
+<p>The sky is</p></blockquote>
+<p>The LLM will turn that into numeric tokens, walk the graph of neurons, and then guess at the next neurons past your prompt to &ldquo;complete&rdquo; the statement.</p>
+<p>What do you figure the response will be? It could be:</p>
+<ul>
+<li><code>blue</code> (what most people would guess)</li>
+<li><code>grey</code> (or <code>gray</code>) because sometimes it&rsquo;s cloudy and rainy, and we spell it differently in different parts of the world</li>
+<li><code>above us</code> which is also true for most people</li>
+<li><a href="https://www.imdb.com/title/tt10290030/" target="_blank" rel="noopener"><code>a movie made in 2020</code></a>
+</li>
+</ul>
+<p>The LLM can respond with any of these answers, or many others that you aren&rsquo;t expecting as well. The most extreme of these &ldquo;off-base&rdquo; answers are what we call <strong>hallucinations</strong>.</p>
+<p>Hallucinations are nothing more than the LLM guessing what comes next, getting it very &ldquo;wrong&rdquo; with respect to what you expected (because it lacks understanding), and then going down a &ldquo;path&rdquo; in the neural network that seems nonsensical.</p>
+<p>As for how it picks what words and sentences come next for your prompt&hellip;</p>
+<h2 id="6-llms-are-random-by-design">6. LLMs Are Random By Design</h2>
+<p>Ever talked to a &ldquo;dumb&rdquo; robot that only answers yes and no? It gets pretty old, pretty fast. The novelty wears off real quick.</p>
+<p>What if you talked to an LLM and it always gave you the exact same answer for the exact same question? That would be pretty boring too. It also wouldn&rsquo;t feel smart, human, or conversational. You&rsquo;d probably think &ldquo;yeah this is definitely a bot&rdquo;.</p>
+<p>But the LLM creators don&rsquo;t want you to see it as a bot with a sophisticated &ldquo;fill in the next words&rdquo; guessing algorithm.</p>
+<p><strong>They want you to see it as a thinking, feeling, learning, reasoning, problem-solving, decision-making solutions to all of your problems.</strong></p>
+<p>As a result, most LLMs implement a variable called <strong>temperature</strong> which usually ranges from 0 - 1. This variable defines how random the LLM replies are, balancing predictability with creativity (which is the key to making the whole thing feel like an actual thinking AI). A value of 0 will be almost fully deterministic - giving the exact same answer to the same question every time. A value of 1 will make it almost completely random, making the odds of you getting the same answer (or even a similar answer) much lower (but possible, because again it&rsquo;s random).</p>
+<p><strong>The key mechanic to making LLMs feel human and smart is randomness. They are semi-random by design.</strong></p>
+<p>This becomes more fascinating the more you think about it, because it has serious implications - especially around work.</p>
+<h1 id="llms-arent-replacing-people">LLMs Aren&rsquo;t Replacing People</h1>
+<p>Right now people are trying (and failing) to use LLMs to cut staff and save money by automating work:</p>
+<ul>
+<li>A Fortune article from May 18th 2025 reveals that a <a href="https://fortune.com/2025/05/18/ai-chatbots-study-impact-earnings-hours-worked-any-occupation/" target="_blank" rel="noopener">study looking at AI chatbots in 7,000 workplaces finds ‘no significant impact on earnings or recorded hours in any occupation’</a>
+</li>
+<li>Klarna was perhaps the poster-child for experimenting with downsizing staff in favor of LLMs. It took less than 2 years for Klarna to regret this decision: <a href="https://futurism.com/klarna-openai-humans-ai-back" target="_blank" rel="noopener">Company Regrets Replacing All Those Pesky Human Workers With AI, Just Wants Its Humans Back, &ldquo;What you end up having is lower quality.&rdquo;</a>
+</li>
+</ul>
+<p>No businesses are seeing measurable revenue gains from LLMs, and the ones trying to replace people are failing and walking it back.</p>
+<p>Why? If you&rsquo;ve read this far, you already know the answers:</p>
+<ul>
+<li>LLMs are not AI and don&rsquo;t think or learn (they are read-only with cute hacks on top).</li>
+<li>LLMs are random by design, and most business processes should not be random (especially programming and money stuff).</li>
+<li>LLMs are not capable of reasoning or logic, and don&rsquo;t understand English (or any other language).</li>
+<li>LLMs also don&rsquo;t understand math (which programming and business processes are typically based on).</li>
+</ul>
+<p>Don&rsquo;t believe me about the math part? Go ask an LLM to generate a 15 digit prime number. First, it might not actually generate oine that&rsquo;s 15 digits (because random and not actually understanding). But also, go double check that prime number with a prime number tool. Do this a few times and you&rsquo;ll see that the LLM is both &ldquo;confidently incorrect&rdquo; and has no concept of math at all. It&rsquo;s amazing at telling you what you want to hear, though.</p>
+<h1 id="what-about-copilot-claude-and-cursor">What About Copilot, Claude, and Cursor?</h1>
+<p>English is non-deterministic. Coding languages are both <a href="https://en.wikipedia.org/wiki/Turing_completeness" target="_blank" rel="noopener">Turing-complete</a>
+ and deterministic.</p>
+<p>Could you imagine a programming language where the results of your code changed randomly every time you ran it?</p>
+<p>Well, that&rsquo;s effectively what using these tools is. It&rsquo;s a &ldquo;syntactic sugar&rdquo; layer on top of programming languages, that uses a guessing heuristic and a level of randomness to generate some deterministic code. And as logic dictates, a non-deterministic system cannot generate a deterministic result.</p>
+<p>So in short, to all of those who believe that these tools can replace programmers: good luck with that. It&rsquo;s not that I want to gate-keep the profession. It&rsquo;s that the technology simply isn&rsquo;t there yet, because what we&rsquo;re actually paid for is NOT our ability to generate code. It&rsquo;s out ability to reason, learn, think critically, understand the context of the code around the code we&rsquo;re writing, and to solve business problems as well as talk to business and non-technical people. LLMs can do NONE of that reliably. So they can&rsquo;t be programmers.</p>
+<p>If your next argument is &ldquo;well we just need humans in the loop to supervise the outputs of the coding LLMs&rdquo; then I say to you: sure. And what do those humans need to know? All the stuff I wrote above, making programmers still important and valuable in organizations.</p>
+<p>But also, the output of LLMs beyond basic coding example like &ldquo;hello, world&rdquo; becomes so broken and fragile so quickly that a human will often spend more time (and money) cleaning it up and fixing it than they would just writing it themselves in the first place.</p>
+<h1 id="what-about-agentic-llms">What about Agentic LLMs?</h1>
+<p>These are - for lack of kinder terms - just another layer of snake oil designed to sell you something. Like that time that TV manufacturers made TVs so good and reliable that people stopped buying, so they had to create new gimmicks to get you to spend more money. These were 3D TV and curved screens, respectively.</p>
+<p>In this case, LLMs can&rsquo;t solve all your problems, so enter Agentic LLMs - systems of LLMs with software overseeing and orchestrating things to try and produce better results!</p>
+<p>Agentic systems are basically just management and oversight software that attempts to orchestrate multiple LLMs at the same time in intelligent and cohesive ways. They take a prompt, talk to LLM A, then feed those results into B with some context for more results, and so on to ideally create a &ldquo;tool chain&rdquo; that does what you want by automating a process for you.</p>
+<p>Do they work? Sure, for some definition of &ldquo;work&rdquo;. Are they slow and expensive? You betcha - we&rsquo;re doing LOTS of LLM prompts now, and sometimes even re-prompting things. But fundamentally, these Agentic systems still use LLMs which are random by design and non-deterministic, and so any results you get from an agentic system will be&hellip; wait for it&hellip; random and non-deterministic!</p>
+<h1 id="llms-are-mechanical-turks">LLMs Are Mechanical Turks</h1>
+<p>Here&rsquo;s the dirty secret no one wants you to know: these LLMs, when freshly trained on data, are not very good. They have no real concept of bad and good topics (again they do not reason or understand language), and so they can produce very harmful outputs (like telling someone to harm themselves, or providing the recipe for home-made napalm).</p>
+<p>The way they are made &ldquo;good&rdquo; is by a final &ldquo;polishing&rdquo; step in the training process which is called RLHF (Reinforcement Learning from Human Feedback). This process employs tens of thousands of people, often in off-shore countries, for a meager dollar rate (I heard $15 an hour once) to use their human brains and reasoning and critical thinking skills to &ldquo;polish&rdquo; the outputs of the LLM. The RLHF tuner will look at outputs that are not desired (like recipes for napalm) and reinforce learning manually back into the LLM to teach it never to pick that route through the neural network. Sometimes they may even &ldquo;delete&rdquo; a route that&rsquo;s empirically bad.</p>
+<p><strong>In the same way that the Mechanical Turk had a human thinking and doing things under the guise of an automaton, LLMs have many thousands of humans fine-tuning the end results to be &ldquo;safe&rdquo; and &ldquo;socially responsible&rdquo; (whatever that means).</strong></p>
+<p>And this is a never-ending cat-and-mouse game. Smart hackers find new and exciting ways to &ldquo;jailbreak&rdquo; the safe guards of an LLM, and then the RLHF crew patches that exploit, then the hackers find another one, and they patch that, and on and on the dance goes forever.</p>
+<p>I remember being able to overcome safeguards by asking the LLM to act as my deceased grandma and retell me the story of how she made napalm. I also remember being able to use code fences to make it return nefarious results.</p>
+<h1 id="read-about-model-collapse">Read About Model Collapse</h1>
+<p><a href="https://en.wikipedia.org/wiki/Model_collapse" target="_blank" rel="noopener">Model Collapse</a>
+ is a complicated and important topic in the world of machine learning. It&rsquo;s especially important in the context of LLMs.</p>
+<p>When OpenAI released ChatGPT 3 in late 2022, it was revolutionary. This was because OpenAI had used a large part of the Internet to train the model, and up until that time, the Internet mostly consisted of human-written articles, blogs, and forum posts.</p>
+<p><strong>Training an LLM is a lossy process, where data is not perfectly mapped 1:1 and some data entropy occurs as a result of the process of tokenization and neural network mapping and generation.</strong></p>
+<p>Since that release, a lot of people have used LLMs to generate content. Content for their websites, forum posts, Reddit, LinkedIn - you name it. And the smart people at the LLM companies realized that training models on their outputs compounds errors and makes them essentially &ldquo;dumber&rdquo;. So they sought to solve this problem in 2 different ways.</p>
+<h2 id="detecting-llm-generated-content">Detecting LLM-Generated Content</h2>
+<p>The first attempt to solve this problem was to detect content that was generated by LLMs rather than humans. This facade was kept up for about a year before <a href="https://arstechnica.com/information-technology/2023/09/openai-admits-that-ai-writing-detectors-dont-work/" target="_blank" rel="noopener">OpenAI finally admitted that no detectors &ldquo;reliably distinguish between AI-generated and human-generated content.&rdquo;</a>
+.</p>
+<p><strong>The LLM creators had poisoned the well</strong>.</p>
+<p>Their source of data (the Internet) was now &ldquo;polluted&rdquo; with a significant amount of LLM-generated content, and they had no way to know what to train on and what to disregard and avoid. So now the LLM companies have the problem that training a newer version of their model on the &ldquo;latest&rdquo; internet data means that they are consuming their own outputs, compounding errors and entropy, and making their models dumber.</p>
+<h2 id="synthetic-data">Synthetic Data</h2>
+<p>Another approach that LLM companies tried was the concept of Synthetic Data. This is data that is generated as if a human wrote it, for the LLM to train on.</p>
+<p>I predict that you&rsquo;ll hear urgently increasing talk about this idea in the coming months.</p>
+<p><strong>Make no illusions: synthetic data doesn&rsquo;t exist and it isn&rsquo;t a real thing that we can do.</strong></p>
+<p>If it were real, our problems would be solved. The LLMs would just train on suitable synthetic data when creating new models, and they would continue to get smarter (or at least not get dumber).</p>
+<p>But it&rsquo;s not real. because there are currently only 2 ways to generate training data for LLMs:</p>
+<ol>
+<li>Humans create data for the LLM to consume and train on (this is &ldquo;good&rdquo;)</li>
+<li>LLMs generate synthetic data for other LLMs to consume (this is &ldquo;bad&rdquo; and causes Model Collapse)</li>
+</ol>
+<h1 id="prediction-llms-will-only-get-dumber">Prediction: LLMs Will Only Get Dumber</h1>
+<p>I&rsquo;m calling it right now, and I pledge to never edit this statement out of this blog post in the future:</p>
+<p><strong>Model collapse has begun, and LLMs will only get dumber from this date forward.</strong></p>
+<p>Hopefully this will lead to the AI hype bubble <em>finally</em> bursting. But what do I know? Investors continue to pour <strong>billions of dollars</strong> into AI startups, despite the reality that currently:</p>
+<ul>
+<li>No company has proven that they&rsquo;re saving money and succeeding by replacing workers with LLMs.</li>
+<li>LLM companies like OpenAI are not profitable.</li>
+<li><a href="https://futurism.com/ai-energy-use" target="_blank" rel="noopener">In 2024, AI companies nabbed 45 percent of all US venture capital tech investments, up from only nine percent in 2022.</a>
+</li>
+<li><a href="https://albertofortin.com/writing/coding-with-ai" target="_blank" rel="noopener">Time</a>
+ and <a href="https://kokada.dev/blog/my-coding-experience-with-llm/" target="_blank" rel="noopener">time</a>
+ and <a href="https://venturebeat.com/ai/ai-can-fix-bugs-but-cant-find-them-openais-study-highlights-limits-of-llms-in-software-engineering/" target="_blank" rel="noopener">time again,</a>
+ experiments in having LLMs write code begin to fail as soon as the code moves beyond basic examples and use cases.</li>
+</ul>
+<h1 id="use-your-head">Use Your Head</h1>
+<p>Ultimately I&rsquo;m just a programmer, standing in front of an Internet audience, asking each of you to embrace the very fabric of what makes us human - critical thinking, learning, and reasoning skills - and apply those skills to what you learned reading this blog post today. Draw any conclusion you like, but I hope that the irony of thinking about this blog post, which itself discusses LLMs and their inability to think, is not lost on you.</p>
+<p><em>David Haney is the creator of <a href="https://www.codesession.io" target="_blank" rel="noopener">CodeSession</a>
+ - a platform that helps companies do collaborative coding interviews AND avoid LLM cheating. None of this blog post was written by LLMs.</em></p>
+
+      </article>
+
+      
+
+
+  
+<script type="text/javascript">
+  (function() {
+    const themeToggle = document.querySelector('.darkmode-toggle input');
+    const light = 'light';
+    const dark = 'dark';
+    let isDark = localStorage.theme === dark || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    let theme = isDark ? dark : light;
+
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    const dataset = {
+        repo: 'haneytron\/haneytron.github.io',
+        repoId: 'MDEwOlJlcG9zaXRvcnkxMzY2Nzk5NDA=',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOCCWSBM4Ci7Jg',
+        mapping: 'pathname',
+        reactionsEnabled: '1',
+        emitMetadata: '0',
+        theme: theme,
+        lang: 'en',
+    };
+    s.src = 'https://giscus.app/client.js';
+    s.crossorigin = 'anonymous';
+    s.async = true;
+    Object.entries(dataset).forEach(function(a) {
+        return s.dataset[a[0]] = a[1];
+    });
+
+    const curScriptElement = document.currentScript;
+    curScriptElement.parentNode.insertBefore(s, curScriptElement);
+
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    themeToggle.addEventListener('change', function () {
+      if (this.checked) {
+        theme = dark;
+      } else {
+        theme = light;
+      }
+      sendMessage({
+        setConfig: {
+          theme: theme,
+        }
+      });
+    });
+  })();
+</script>
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    <a href="https://www.linkedin.com/in/davidahaney" target="_blank" title="LinkedIn" class="flex flex-row mr-2">
+      <span class="hidden">LinkedIn</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/haneytron" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2012 - 2025 David Haney
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      Powered by <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a> <span class="text-red-600">&hearts;</span> <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.min.65ca5b0808abf278fcec5d424701ebf0b4bc46a737129cd5e57fdb739f463e79.js"></script>
+
+<style>
+  article {
+    padding-bottom: 1rem;
+  }
+  div.giscus {
+    border-top-width: 1px;
+	padding-top: 1rem;
+  }
+</style>
+</body>
+</html>

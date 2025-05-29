@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>David Haney</copyright>
-    <lastBuildDate>Thu, 13 Mar 2025 22:43:13 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 29 May 2025 14:38:20 -0400</lastBuildDate>
     <atom:link href="https://www.davidhaney.io/tags/dataprotection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuring .NET Core Data Protection For Azure</title>
