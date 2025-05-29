@@ -26,7 +26,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-05-29T10:32:14-04:00">
-    <meta property="article:modified_time" content="2025-05-29T15:21:13-04:00">
+    <meta property="article:modified_time" content="2025-05-29T15:26:42-04:00">
     <meta property="article:tag" content="Llm">
     <meta property="article:tag" content="Ai">
     <meta property="article:tag" content="Snake Oil">
@@ -424,7 +424,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <p>[&lsquo;The&rsquo;, &lsquo;quick&rsquo;, &lsquo;brown&rsquo;, &lsquo;fox&rsquo;, &lsquo;jumped&rsquo;, &lsquo;over&rsquo;, &rsquo;the&rsquo;, &rsquo;lazy&rsquo;]</p></blockquote>
 <p>However, LLMs do not operate on characters or strings. For efficiency, they operate on numbers (the &ldquo;bare metal&rdquo; data format of computers). <strong>LLMs use number tokens</strong>, with a unique number assigned for each unique token.</p>
 <p>A quick example, using <a href="https://huggingface.co/docs/transformers/en/model_doc/bert" target="_blank" rel="noopener">BERT</a>
- (A Google-created bidirectional transformer). Bidirectional here means it can turn tokens into numbers, and numbers back into tokens (it can go both ways):</p>
+ (A Google-created bidirectional transformer). Bidirectional here means it can turn text into number tokens, and number tokens back into human-readable text (it can go both ways):</p>
 <p>If we took this sentence:</p>
 <blockquote>
 <p>The quick brown fox jumped over the lazy</p></blockquote>
