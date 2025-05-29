@@ -26,7 +26,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-05-29T10:32:14-04:00">
-    <meta property="article:modified_time" content="2025-05-29T15:52:03-04:00">
+    <meta property="article:modified_time" content="2025-05-29T15:52:32-04:00">
     <meta property="article:tag" content="Llm">
     <meta property="article:tag" content="Ai">
     <meta property="article:tag" content="Snake Oil">
@@ -343,7 +343,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 
     </i>
     <span>
-      23 minutes to read
+      24 minutes to read
     </span>
   </div>
 </div>
@@ -535,17 +535,19 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <ul>
 <li>LLMs are not AI and don&rsquo;t think or learn (they are read-only with cute hacks on top).</li>
 <li>LLMs are random by design, and most business processes should not be random (especially programming and money stuff).</li>
-<li>LLMs are not capable of reasoning or logic, and don&rsquo;t understand English (or any other language).</li>
+<li>LLMs don&rsquo;t understand English (or any other language).</li>
+<li>LLMs are not capable of reasoning or logic.</li>
 <li>LLMs also don&rsquo;t understand math (which programming and business processes are typically based on).</li>
 </ul>
 <h1 id="what-about-copilot-claude-and-cursor">What About Copilot, Claude, and Cursor?</h1>
 <p>English is non-deterministic. Coding languages are both <a href="https://en.wikipedia.org/wiki/Turing_completeness" target="_blank" rel="noopener">Turing-complete</a>
  and deterministic.</p>
 <p>Could you imagine a programming language where the results of your code changed randomly every time you ran it?</p>
-<p>Well, that&rsquo;s effectively what using these tools is. It&rsquo;s a &ldquo;syntactic sugar&rdquo; layer on top of programming languages, that uses a guessing heuristic and a level of randomness to generate some deterministic code.</p>
+<p>Well, that&rsquo;s effectively what using LLMs to write code creates. You can think of your favorite coding LLM as a &ldquo;non-deterministic transpiler&rdquo; on top of programming languages that uses a guessing heuristic and a level of randomness to generate some deterministic (but often incorrect) code.</p>
 <p><strong>But as logic dictates, a non-deterministic system cannot generate a deterministic result.</strong></p>
-<p>So in short, to all of those who believe that these tools can replace programmers: good luck with that. It&rsquo;s not that I want to gate-keep the profession. It&rsquo;s that the technology simply isn&rsquo;t there yet, because what we&rsquo;re actually paid for is NOT our ability to generate code. It&rsquo;s out ability to reason, learn, think critically, understand the context of the code around the code we&rsquo;re writing, and to solve business problems as well as talk to business and non-technical people. LLMs can do NONE of that reliably. So they can&rsquo;t be programmers.</p>
-<p>If your next argument is &ldquo;well we just need humans in the loop to supervise the outputs of the coding LLMs&rdquo; then I say to you: sure. And what do those humans need to know? All the stuff I wrote above, making programmers still important and valuable in organizations.</p>
+<p>So in short, to all of those who believe that these tools can replace programmers: good luck with that. It&rsquo;s not that I want to gate-keep the profession. It&rsquo;s that the technology simply isn&rsquo;t there yet, because what we&rsquo;re actually paid for is NOT our ability to generate code. It&rsquo;s our ability to reason, learn, think critically, understand the context of the code around the code we&rsquo;re writing, and to solve business problems as well as talk to business and non-technical people. LLMs can do NONE of that reliably. So they can&rsquo;t be programmers.</p>
+<p>If your next argument is <a href="https://pluralistic.net/2025/05/27/rancid-vibe-coding/#class-war" target="_blank" rel="noopener">&ldquo;well we just need humans in the loop to supervise the outputs of the coding LLMs&rdquo;</a>
+ then I say to you: sure. And what do those humans need to know? All the stuff I wrote above, making programmers still important and valuable in organizations.</p>
 <p>But also, the output of LLMs beyond basic coding example like &ldquo;hello, world&rdquo; becomes so broken and fragile so quickly that a human will often spend more time (and money) cleaning it up and fixing it than they would just writing it themselves in the first place.</p>
 <h1 id="what-about-agentic-llms">What About Agentic LLMs?</h1>
 <p>These are - for lack of kinder terms - just another layer of snake oil designed to sell you something. Like that time that TV manufacturers made TVs so good and reliable that people stopped buying, so they had to create new gimmicks to get you to spend more money. These were 3D TV and curved screens, respectively.</p>
@@ -561,24 +563,28 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <h1 id="read-about-model-collapse">Read About Model Collapse</h1>
 <p><a href="https://en.wikipedia.org/wiki/Model_collapse" target="_blank" rel="noopener">Model Collapse</a>
  is a complicated and important topic in the world of machine learning. It&rsquo;s especially important in the context of LLMs.</p>
-<p>When OpenAI released ChatGPT 3 in late 2022, it was revolutionary. This was because OpenAI had used a large part of the Internet to train the model, and up until that time, the Internet mostly consisted of human-written articles, blogs, and forum posts.</p>
+<p>When OpenAI released ChatGPT 3 in late 2022, it was revolutionary. This was partially because nothing like it had ever hit the mainstream before. This was also because OpenAI had used a large part of the Internet to train the model, and up until that time, the Internet mostly consisted of human-written articles, blogs, and forum posts.</p>
+<p>Have you noticed that almost all of the new models released since then have been underwhelming, offering diminishing returns?</p>
 <p><strong>Training an LLM is a lossy process, where data is not perfectly mapped 1:1 and some data entropy occurs as a result of the process of tokenization and neural network mapping and generation.</strong></p>
-<p>Since that release, a lot of people have used LLMs to generate content. Content for their websites, forum posts, Reddit, LinkedIn - you name it. And the smart people at the LLM companies realized that training models on their outputs compounds errors and makes them essentially &ldquo;dumber&rdquo;. So they sought to solve this problem in 2 different ways.</p>
+<p>Since that release, a lot of people have used LLMs to generate content. Content for their websites, forum posts, Reddit, LinkedIn - you name it. And the smart people at the LLM companies realized that training new models on their (or other models&rsquo;) outputs compounds errors and makes them essentially &ldquo;dumber&rdquo;.</p>
+<p><strong>The LLM creators had poisoned the well by enabling LLM generated content to saturate the Internet</strong>.</p>
+<p>To continue to make solid progress, they realized they needed trustworthy data to train on. They tried to solve this in a few ways.</p>
 <h2 id="detecting-llm-generated-content">Detecting LLM-Generated Content</h2>
 <p>The first attempt to solve this problem was to detect content that was generated by LLMs rather than humans. This facade was kept up for about a year before <a href="https://arstechnica.com/information-technology/2023/09/openai-admits-that-ai-writing-detectors-dont-work/" target="_blank" rel="noopener">OpenAI finally admitted that no detectors &ldquo;reliably distinguish between AI-generated and human-generated content.&rdquo;</a>
 .</p>
-<p><strong>The LLM creators had poisoned the well</strong>.</p>
-<p>Their source of data (the Internet) was now &ldquo;polluted&rdquo; with a significant amount of LLM-generated content, and they had no way to know what to train on and what to disregard and avoid. So now the LLM companies have the problem that training a newer version of their model on the &ldquo;latest&rdquo; internet data means that they are consuming their own outputs, compounding errors and entropy, and making their models dumber.</p>
+<p>Their source of data (the Internet) was now &ldquo;polluted&rdquo; with a significant amount of LLM-generated content, and they had no way to know what to train on and what to disregard and avoid. So now the LLM companies have the problem that training a newer version of their model on the &ldquo;latest&rdquo; Internet data means that they are consuming their own outputs, compounding errors and entropy, and making their models dumber.</p>
 <h2 id="synthetic-data">Synthetic Data</h2>
 <p>Another approach that LLM companies tried was the concept of Synthetic Data. This is data that is generated as if a human wrote it, for the LLM to train on.</p>
 <p>I predict that you&rsquo;ll hear urgently increasing talk about this idea in the coming months.</p>
 <p><strong>Make no illusions: synthetic data doesn&rsquo;t exist and it isn&rsquo;t a real thing that we can do.</strong></p>
 <p>If it were real, our problems would be solved. The LLMs would just train on suitable synthetic data when creating new models, and they would continue to get smarter (or at least not get dumber).</p>
-<p>But it&rsquo;s not real. because there are currently only 2 ways to generate training data for LLMs:</p>
+<p>But it&rsquo;s not real. Because there are currently only 2 ways to generate training data for LLMs:</p>
 <ol>
 <li>Humans create data for the LLM to consume and train on (this is &ldquo;good&rdquo;)</li>
-<li>LLMs generate synthetic data for other LLMs to consume (this is &ldquo;bad&rdquo; and causes Model Collapse)</li>
+<li>Machine (like LLMs) generate synthetic data for LLMs to consume (this is &ldquo;bad&rdquo; and causes Model Collapse)</li>
 </ol>
+<h2 id="data-partnerships">Data Partnerships</h2>
+<p>Some LLM companies are striking deals with popular forums and websites to gain licensed access to their content and data for training purposes. Sites like Reddit and Stack Overflow surely participate in these arrangements. The problem is that, because we cannot detect LLM-generated content, this data is not as valuable or trustworthy as one would like it to be. As a result these partnerships, in my opinion, are most likely ephemeral and little more than wishful thinking.</p>
 <h1 id="prediction-llms-will-only-get-dumber">Prediction: LLMs Will Only Get Dumber</h1>
 <p>I&rsquo;m calling it right now, and I pledge to never edit this statement out of this blog post in the future:</p>
 <p><strong>Model collapse has begun, and LLMs will only get dumber from this date forward.</strong></p>
@@ -599,6 +605,8 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 </ul>
 <h1 id="use-your-head">Use Your Head</h1>
 <p>Ultimately I&rsquo;m just a programmer, standing in front of an Internet audience, asking each of you to embrace the very fabric of what makes us human - critical thinking, learning, and reasoning skills - and apply those skills to what you learned reading this blog post today. Draw any conclusion you like, but I hope that the irony of thinking about this blog post, which itself discusses LLMs and their inability to think, is not lost on you.</p>
+<p><a href="https://www.freethink.com/robots-ai/arc-prize-agi" target="_blank" rel="noopener">LLMs are not the path to AGI.</a>
+</p>
 <p><em>David Haney is the creator of <a href="https://www.codesession.io" target="_blank" rel="noopener">CodeSession</a>
  - a platform that helps companies do collaborative coding interviews AND avoid LLM cheating. None of this blog post was written by LLMs.</em></p>
 <p><em>Special thanks to my good friend <a href="https://social.balpha.de/@balpha" target="_blank" rel="noopener">balpha</a>
