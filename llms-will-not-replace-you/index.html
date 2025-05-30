@@ -26,7 +26,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-05-29T10:32:14-04:00">
-    <meta property="article:modified_time" content="2025-05-29T16:58:19-04:00">
+    <meta property="article:modified_time" content="2025-05-29T23:22:47-04:00">
     <meta property="article:tag" content="Llm">
     <meta property="article:tag" content="Ai">
     <meta property="article:tag" content="Snake Oil">
@@ -387,20 +387,20 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 </figure>
 
 <h1 id="magical-thinking">Magical Thinking</h1>
-<p>As with the Turk, a lack of understanding can create a sense of wonder, mystery, or even supernatural influence. We see this often in children who are developing their understanding of the world. But we also see this in situations where complex technology is not fully grasped. Rather than apply a scientific eye and critical thinking, people instead choose to embrace the fantasy of possibility. Arguably no real &ldquo;harm&rdquo; was done by believing in The Turk, as it was a spectacle for amusement, so perhaps people going along with the ruse was harmless.</p>
-<p>But today, a $100 billion dollar ruse is operating and unfolding right in front of us: LLMs (often referred to as &ldquo;AI&rdquo;).</p>
-<p>Just like when the Turk captivated audiences, people are writing feverishly and constantly about LLMs. And just like the stuff written about the Turk, most are inaccurate, drawing incorrect inferences from external observations - <strong>because people don&rsquo;t know or understand how LLMs actually work</strong>.</p>
-<p>With this blog post, I aim to teach you exactly (at a crude and high level) how the LLMs actually work. My only goal is that you can use this knowledge as power to draw better conclusions and make better decisions. So let&rsquo;s dive in.</p>
+<p>As with the Turk, a lack of understanding can create a sense of wonder, mystery, or even supernatural influence. We see this often in children who are developing their understanding of the world. But we also see this in situations where complex technology is not fully grasped. Rather than apply a scientific eye and critical thinking, people instead choose to embrace the fantasy of possibility.</p>
+<p>Arguably no real &ldquo;harm&rdquo; was done by believing in The Turk, as it was a spectacle for amusement, so perhaps people going along with the ruse was harmless. But today, a $100 billion dollar ruse is operating and unfolding right in front of us: LLMs (often referred to as &ldquo;AI&rdquo;).</p>
+<p>Just like when the Turk captivated audiences, people are writing feverishly and constantly about LLMs. And just like the stuff written about the Turk, most articles are inaccurate, drawing incorrect inferences from external observations - <strong>because people don&rsquo;t know or understand how LLMs actually work</strong>.</p>
+<p>With this blog post, I aim to teach you exactly (at a very high level) how LLMs actually work. My only goal is that you can use this knowledge as power to draw better conclusions and make better decisions. So let&rsquo;s dive in.</p>
 <h1 id="llms-today">LLMs Today</h1>
-<p>Today, LLMs are seemingly all everyone is talking about. Every social media site, blog, and tech-adjacent news site or subreddit thread seems to be talking 24/7 about LLMs. This is not surprising when you consider how many billions of dollars investors are pumping into AI startups.</p>
+<p>Today, every social media site, blog, and tech-adjacent news site or subreddit thread seems to be talking 24/7 about LLMs. This is not surprising when you consider how many billions of dollars investors are pumping into AI startups.</p>
 <blockquote>
 <p>&ldquo;In under three years, AI has come to dominate global tech spending in ways researchers are just starting to quantify. In 2024, for example, AI companies nabbed 45 percent of all US venture capital tech investments, up from only nine percent in 2022.&rdquo; <a href="https://futurism.com/ai-energy-use" target="_blank" rel="noopener">(source)</a>
 </p></blockquote>
 <p>They are currently an ever-present part of our lives, with many major companies trying to force the latest models into our collective lives via forced updates of software and hardware that we never really owned in the first place. My Android phone is now slathered in Gemini whether I like it or not, and I am sure Apple is doing similarly with iOS. Every time I go to LinkedIn they offer a premium feature where an LLM writes my posts for me (gross). And I don&rsquo;t even need to detail how people use LLMs to constantly generate images of Miyazaki people doing things, often with 1 finger too few or too many (which is quite frankly hilarious).</p>
 <p>LLMs are EVERYWHERE.</p>
 <h1 id="llms-are-grossly-misunderstood">LLMs Are Grossly Misunderstood</h1>
-<p>I see a lot of people talking about how they have &ldquo;tuned&rdquo; an LLM to their writing style, ways of thinking, or even to be their pal. How the LLM has &ldquo;learned&rdquo; how to communicate more effectively with them from their writing. And of course, naturally, how the LLM is going to take all of the Junior level jobs - especially in the field of programming!</p>
-<p>But that&rsquo;s not at all how LLMs work, or what they do. So let&rsquo;s go over how LLMs <em>actually</em> work.</p>
+<p>I see a lot of people talking about how they have &ldquo;tuned&rdquo; an LLM to their writing style, ways of thinking, or even to be their pal. How the LLM has &ldquo;learned&rdquo; how to communicate more effectively with them from their writing. And of course, naturally, how the LLMs are going to take all of the Junior level jobs - especially in the field of programming!</p>
+<p>But it&rsquo;s clear to me that most people don&rsquo;t understand how LLMs <em>actually</em> work. So let&rsquo;s walk through it together. Buckle up.</p>
 <h2 id="0-llms-are-advanced-neural-networks">0. LLMs Are Advanced Neural Networks</h2>
 <p>Neural networks are complicated. They&rsquo;ve been around for a long time - well before the rise of LLMs. The simplest way I can think of to explain them is to use an analogy of walls of doors:</p>
 <ul>
@@ -419,7 +419,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
     </figcaption>
 </figure>
 
-<p><strong>LLMs are a special kind of advanced neural network.</strong> They combine the concepts of a traditional neural network with bleeding-edge techniques such as &ldquo;self-attention&rdquo;, &ldquo;attention heads&rdquo; and &ldquo;feed-forward networks&rdquo;. LLMs define their depth with <strong>parameters</strong> rather than neurons and layers. These are not neurons, and they don&rsquo;t map in a 1:1 fashion. Each parameter represents a a trained set of weights and biases that make up the overall model behavior. To give you an idea of how large these LLM networks are, they often have 200 or even 500 billion parameters - and sometimes even more. They are MASSIVE.</p>
+<p><strong>LLMs are a special kind of advanced neural network.</strong> They combine the concepts of a traditional neural network with bleeding-edge techniques such as &ldquo;self-attention&rdquo;, &ldquo;attention heads&rdquo; and &ldquo;feed-forward networks&rdquo;. LLMs define their depth with <strong>parameters</strong> rather than neurons and layers. These are not neurons, and they don&rsquo;t map in a 1:1 fashion. Each parameter represents a trained set of weights and biases that make up the overall model behavior. To give you an idea of how large these LLM networks are, they often have 200 or even 500 billion parameters - and sometimes even more. They are MASSIVE.</p>
 <h2 id="1-llms-dont-understand-english-or-other-languages">1. LLMs Don&rsquo;t Understand English (or other languages)</h2>
 <p>This is confusing right? You type English, and it sends English back, so how can it possibly not understand English?</p>
 <p>You can say the same as above for any other language too.</p>
@@ -427,7 +427,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <p>When you type something to your favorite LLM, it will first tokenize what you wrote. This process breaks your sentence into multiple tokens, which are the true &ldquo;language&rdquo; that LLMs speak. Classic tokenizers will tokenize sentences into individual words based on white space and punctuation. For example, if we sent this sentence:</p>
 <blockquote>
 <p>It was the best of times, it was the worst</p></blockquote>
-<p>A naive tokenizer might produce:</p>
+<p>A whitespace tokenizer might produce:</p>
 <blockquote>
 <p>[&lsquo;It&rsquo;, &lsquo;was&rsquo;, &rsquo;the&rsquo;, &lsquo;best&rsquo;, &lsquo;of&rsquo;, &rsquo;times&rsquo;, &lsquo;it&rsquo;, &lsquo;was&rsquo;, &rsquo;the&rsquo;, &lsquo;worst&rsquo;]</p></blockquote>
 <p>However, LLMs do not operate on character or string tokens. For performance and memory efficiency reasons, they operate on numbers (the &ldquo;bare metal&rdquo; data format of computers). <strong>LLMs use number tokens</strong>, with a unique number assigned for each unique token.</p>
@@ -436,7 +436,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <p>[2181, 574, 279, 1888, 315, 3115, 11, 433, 574, 279, 12047]</p></blockquote>
 <p>The total set of tokens known and defined by an LLM constitute its <strong>vocabulary</strong>. It works just like your vocabulary: you know the words you know, and you don&rsquo;t know the words you don&rsquo;t. Same for the LLM. It can only understand and reply to tokens it has in its vocabulary.</p>
 <h2 id="2-llms-are-immutable-read-only">2. LLMs Are Immutable (Read-Only)</h2>
-<p>LLMs are &ldquo;frozen in time&rdquo; with the knowledge they were trained on. They do not learn. They <em>feel</em> like they learn, because they have some cute parlor tricks used to tailor their responses to your preferences, but they are in fact read-only and not learning anything from your inputs.</p>
+<p>LLMs are &ldquo;frozen in time&rdquo; with the knowledge they were trained on. They do not learn. They <em>feel</em> like they learn, because they employ some tricks used to better pattern-match how you write or talk, but they are in fact read-only and not learning anything from your inputs.</p>
 <p>This creates a few interesting challenges:</p>
 <ul>
 <li>An LLM last updated on March 1, 2025 will have no knowledge of news or events that have happened after that date.</li>
@@ -508,7 +508,7 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <p>Ever talked to a &ldquo;dumb&rdquo; robot that only answers yes and no? It gets pretty old, pretty fast. The novelty wears off real quick.</p>
 <p>Going beyond binary bots, think of the Magic 8-Ball toy and its finite set of a dozen-ish answers. It&rsquo;s random, it varies, but it&rsquo;s not THAT random and so the novelty quickly fades. <em>Outlook not so good.</em></p>
 <p>What if you talked to an LLM and it always gave you the exact same answer for the exact same question? That would be pretty boring too. It also wouldn&rsquo;t feel smart, human, or conversational. You&rsquo;d probably think &ldquo;yeah this is definitely a bot&rdquo;.</p>
-<p>But the LLM creators don&rsquo;t want you to see it for what it is: a bot with a sophisticated &ldquo;fill in the next words&rdquo; guessing algorithm.</p>
+<p>But the LLM creators don&rsquo;t want you to see it for what it is: a bot with a sophisticated &ldquo;guess the next words from the training data&rdquo; algorithm.</p>
 <p><strong>They want you to see it as a thinking, feeling, learning, reasoning, problem-solving, decision-making solutions to all of your problems.</strong></p>
 <p>As a result, most LLMs implement a variable called <strong>temperature</strong> which usually ranges in value from 0 to 1. This variable defines how random the LLM replies are, balancing predictability with creativity (which is the key to making the whole thing feel like an actual thinking AI). A value of 0 will be almost fully deterministic - giving the exact same answer to the same question every time. A value of 1 will make it almost completely random, making the odds of you getting the same answer (or even a similar answer) much lower (but possible, because again it&rsquo;s random).</p>
 <p><strong>The key mechanic to making LLMs feel human and smart is randomness. They are semi-random by design.</strong></p>
@@ -524,10 +524,10 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
 <p>No businesses are seeing measurable revenue gains from LLMs, and the ones trying to replace people are failing and walking it back.</p>
 <p>Why? If you&rsquo;ve read this far, you already know the answers:</p>
 <ul>
-<li>LLMs don&rsquo;t think or learn (they are read-only with cute hacks on top).</li>
+<li>LLMs are read-only (frozen in time).</li>
 <li>LLMs are random by design, and most business processes should not be random (especially programming and money stuff).</li>
 <li>LLMs don&rsquo;t understand English (or any other human language).</li>
-<li>LLMs are not capable of reasoning or logic.</li>
+<li>LLMs do not think, and are not capable of reasoning or logic.</li>
 <li>LLMs also don&rsquo;t understand math (which programming and business processes are typically based on).</li>
 </ul>
 <h1 id="what-about-copilot-claude-and-cursor">What About Copilot, Claude, and Cursor?</h1>
@@ -535,18 +535,19 @@ The Mechanical Turk The Mechanical Turk- or “The Turk” as people called it 
  and deterministic.</p>
 <p>You can think of your favorite coding LLM as a &ldquo;non-deterministic transpiler&rdquo; that uses a guessing heuristic and a configurable level of randomness to generate some deterministic code.</p>
 <p><strong>But as logic dictates, a non-deterministic system cannot generate a deterministic result.</strong></p>
+<blockquote>
+<p>Non-deterministic systems are characterized by unpredictability and inherent randomness, meaning that the same input can lead to different outputs. Determinism, on the other hand, implies a system where the output is entirely determined by the input, with no room for chance or variation.</p></blockquote>
 <p>Humans aren&rsquo;t always deterministic, but we have the ability to learn and reason. LLMs don&rsquo;t. That&rsquo;s why we can fix their code but they can&rsquo;t reliably fix ours.</p>
-<p>As developers, what we&rsquo;re actually paid for is NOT our ability to generate code. It&rsquo;s our ability to reason, learn, think critically, understand the context of the code around the code we&rsquo;re writing, and to solve business problems as well as make presentations, draw diagrams, and present to others. LLMs can do NONE of that reliably. So they can&rsquo;t be programmers.</p>
+<p>As developers, what we&rsquo;re actually paid for is NOT our ability to generate code. It&rsquo;s our ability to reason, learn, think critically, understand the context of the code around the code we&rsquo;re writing, and to solve business problems as well as make presentations, draw diagrams, and present to others. LLMs can do NONE of that reliably.</p>
 <p>If your next argument is <a href="https://pluralistic.net/2025/05/27/rancid-vibe-coding/#class-war" target="_blank" rel="noopener">&ldquo;well we just need a few humans in the loop to supervise the outputs of the coding LLMs&rdquo;</a>
- then I say to you: sure. And what do those humans need to know? All the stuff I wrote above, making programmers still important and valuable in organizations.</p>
-<p>But also, if you search around Reddit for personal experiences with coding LLMs, you&rsquo;ll see that usually the code that LLMs produces becomes so broken and fragile so quickly that a human will often spend more time (and money) cleaning it up and fixing it than they would just writing it from scratch themselves in the first place.</p>
+ then I say to you: sure. And what do those humans need to know? All the stuff I wrote above, making programmers still important and valuable in organizations even if this unfortunate future were to occur.</p>
 <h1 id="what-about-agentic-llms">What About Agentic LLMs?</h1>
-<p>Businesses and people generally discover that a single LLM cannot reliably solve their automation or process problems. Enter Agentic LLMs - systems of LLMs with software overseeing and orchestrating things to try and produce better results!</p>
+<p>Businesses and people generally discover that a single LLM cannot reliably solve their automation or process problems. Enter Agentic LLMs - systems of LLMs with software overseeing and orchestrating things and adding tools to try and produce better results!</p>
 <p>Agentic systems are basically just management and oversight software that attempts to orchestrate multiple LLMs at the same time with other tools in intelligent and cohesive ways. They take a prompt, talk to LLM A, then feed those results into B with some context for more results, and then pass that to a bash shell to execute a command, and so on to ideally create a &ldquo;tool chain&rdquo; that does what you want by automating a process for you.</p>
 <p>Do they work? Sure, for some definition of &ldquo;work&rdquo;. But fundamentally, these Agentic systems still use LLMs which are random by design and non-deterministic, and so any results you get from an Agentic system will be&hellip; random and non-deterministic!</p>
 <h1 id="llms-are-mechanical-turks">LLMs Are Mechanical Turks</h1>
-<p>Here&rsquo;s the dirty secret no one wants you to know: these LLMs, when freshly trained on data, have such complicated neural networks that no one can test every possible path. And because there are so many billions and billions of paths, there are probably a few that are problematic or not ideal. As LLMs have no real concept of bad and good topics (again they do not reason or understand language), they can sometimes produce very harmful outputs (like telling someone to harm themselves, or providing the recipe for home-made napalm).</p>
-<p>The way they are made &ldquo;good&rdquo; is by a final &ldquo;polishing&rdquo; step in the training process which is called RLHF (Reinforcement Learning from Human Feedback). This process employs tens of thousands of people, often in off-shore countries, for a meager dollar rate (I heard $15 an hour once) to use their human brains and reasoning and critical thinking skills to &ldquo;polish&rdquo; the outputs of the LLM. The RLHF tuner will look at outputs that are not desired (like recipes for napalm) and reinforce learning manually back into the LLM to teach it never to pick that route through the neural network again.</p>
+<p>Here&rsquo;s the dirty secret no one wants you to know: these LLMs, when freshly trained on data, have such complicated neural networks that no one can test every possible output path. And because there are billions and billions of paths, there are probably a few that are problematic or not ideal. As LLMs have no real concept of bad and good topics (again they do not reason or understand language), they can sometimes produce very harmful outputs (like telling someone to harm themselves, or providing the recipe for home-made napalm).</p>
+<p>The way they are made &ldquo;good&rdquo; is by a final &ldquo;polishing&rdquo; step in the training process which is called RLHF (Reinforcement Learning from Human Feedback). This process employs tens of thousands of people, often in off-shore countries, typically for a meager dollar rate (I heard $15 an hour once) to use their human brains and reasoning and critical thinking skills to &ldquo;polish&rdquo; the outputs of the LLM. The RLHF tuner will look at outputs that are not desired (like recipes for napalm) and reinforce learning manually back into the LLM to teach it never to pick that route through the neural network again.</p>
 <p><strong>In the same way that the Mechanical Turk had a human thinking and doing things under the guise of an automaton, LLMs have many thousands of humans fine-tuning the end results to be &ldquo;safe&rdquo; and &ldquo;socially responsible&rdquo;.</strong></p>
 <p>And this is a never-ending cat-and-mouse game. Smart hackers find new and exciting ways to &ldquo;jailbreak&rdquo; the finely-tuned safeguards of an LLM, and then the RLHF crew patches that exploit, then the hackers find another one, and they patch that, and on and on the dance goes forever.</p>
 <p><em>The secret ingredient is people.</em></p>
